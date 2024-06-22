@@ -1,59 +1,60 @@
 import React from "react";
+import { useSpring, animated } from 'react-spring';
+import { useState, useEffect, useRef } from 'react'
+
+function Project() {
+	const bottomTriggerRef = useRef(null)
+
+	function useFadeIn(bottomTriggerRef) {
+		const [isVisible, setIsVisible] = useState(false);
+
+		useEffect(() => {
+
+			const handleScroll = () => {
+				const scrollY = window.scrollY;
+				const fadeInPoint = window.innerHeight * 1.75;
+
+				// As soon as bottom trigger make set to true
+				const bottomTriggerInView = bottomTriggerRef.current &&
+											bottomTriggerRef.current.getBoundingClientRect().top < window.innerHeight;
+
+				if (scrollY > fadeInPoint && !bottomTriggerInView) {
+					setIsVisible(true);
+				} else {
+					setIsVisible(false);
+				}
+			};
+
+			window.addEventListener('scroll', handleScroll);
+			return () => window.removeEventListener('scroll', handleScroll);
+		}, []);
+
+		return useSpring({
+			opacity: isVisible ? 1 : 0,
+			config: { duration: 250 }
+		});
+	};
+
+	return (
+		<>
+			<div className="w-full h-[250vh] flex px-[10%] items-start justify-between">
+				<animated.div style={useFadeIn(bottomTriggerRef)} className="w-full h-[50vh] bg-purple-400 sticky top-[25vh]">AgroBot</animated.div>
+				<div className="w-full h-[50vh] bg-green-400 relative top-[100vh]">CAD MODEL</div>
+			</div>
+			<div ref={bottomTriggerRef} className="bg-red-500 h-[10vh]">TRIGGER</div>
+		</>
+	)
+}
 
 function HomeProjects() {
-    return (
-        <div className="bg-[#CDFF70]">
-            <div className="w-full h-[400vh] px-[10%] flex justify-between items-start">
-                <div className="w-[50%] px-[5%] sticky top-[25vh]">
-                    <h1 className="mb-4 text-[86px] text-[#2E1B0F] font-bold p-4 rounded-[28px] bg-[#ffffffcb]">AgroBot</h1>
-                    <p className="text-[18px] text-[#2E1B0F] text-justify mb-6 p-4 rounded-[28px] bg-[#ffffffcb] drop-shadow-lg">
-                        The Run is a stream in the Dutch province of North Brabant. It is a left tributary of the Dommel and part of the Meuse basin.
-                        The Run originates near the town of Weebosch and flows in a general northeast direction towards Veldhoven. South of Eersel it flows near the hamlets of Stokkelen, Schadewijk and Stevert.
-                    </p>
-                    <div className="w-full flex justify-left">
-                        <div className="h-12 px-12 bg-[#2E1B0F] rounded-full flex justify-center items-center font-bold text-white text-[24px]">Learn More &gt;</div>
-                    </div>
-                </div>
-                <div className="w-[50%] h-[40%] pl-[10%] flex justify-center items-center">
-                    <div className="w-full h-full bg-[#2E1B0F] rounded-lg">
 
-                    </div>
-                </div>
-            </div>
-            <div className="w-full h-[400vh] px-[10%] flex justify-between items-start">
-                <div className="w-[50%] px-[5%] sticky top-[25vh]">
-                    <h1 className="mb-4 text-[86px] text-[#2E1B0F] font-bold p-4 rounded-">AgroPonics</h1>
-                    <p className="text-[18px] text-[#2E1B0F] text-justify mb-6">
-                        The Run is a stream in the Dutch province of North Brabant. It is a left tributary of the Dommel and part of the Meuse basin.
-                        The Run originates near the town of Weebosch and flows in a general northeast direction towards Veldhoven. South of Eersel it flows near the hamlets of Stokkelen, Schadewijk and Stevert.
-                    </p>
-                    <div className="w-full h-12 bg-[#D9D9D9] rounded-lg">
-                    </div>
-                </div>
-                <div className="w-[50%] h-[40%] pl-[10%] flex justify-center items-center">
-                    <div className="w-full h-full bg-[#2E1B0F] rounded-lg">
-
-                    </div>
-                </div>
-            </div>
-            <div className="w-full h-[400vh] px-[10%] flex justify-between items-start">
-                <div className="w-[50%] px-[5%] sticky top-[25vh]">
-                    <h1 className="mb-4 text-[86px] text-[#2E1B0F] font-bold p-4 rounded-">AgroPicker</h1>
-                    <p className="text-[18px] text-[#2E1B0F] text-justify mb-6">
-                        The Run is a stream in the Dutch province of North Brabant. It is a left tributary of the Dommel and part of the Meuse basin.
-                        The Run originates near the town of Weebosch and flows in a general northeast direction towards Veldhoven. South of Eersel it flows near the hamlets of Stokkelen, Schadewijk and Stevert.
-                    </p>
-                    <div className="w-full h-12 bg-[#D9D9D9] rounded-lg">
-                    </div>
-                </div>
-                <div className="w-[50%] h-[40%] pl-[10%] flex justify-center items-center">
-                    <div className="w-full h-full bg-[#2E1B0F] rounded-lg">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+	return (
+		<>
+			<Project />
+			<Project />
+			<Project />
+		</>
+	)
 }
 
 export default HomeProjects
