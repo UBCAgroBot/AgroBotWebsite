@@ -13,7 +13,7 @@ import {
     Sponsorship,
     Recruitment,
     ContactUs,
-    AboutUs,
+    About,
     AgroPonics,
     AgroBot,
 } from "./pages";
@@ -31,7 +31,7 @@ function App() {
                 <Route path="/sponsorship" element={<Sponsorship />} />
                 <Route path="/recruitment" element={<Recruitment />} />
                 <Route path="/contactUs" element={<ContactUs />} />
-                <Route path="/aboutUs" element={<AboutUs />} />
+                <Route path="/about" element={<About />} />
                 <Route path="/agroponics" element={<AgroPonics />} />
                 <Route path="/agrobot" element={<AgroBot />} />
             </Routes>

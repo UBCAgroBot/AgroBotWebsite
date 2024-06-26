@@ -37,13 +37,13 @@ function Project({ ProjectName, background }) {
 
 	return (
 		<div ref={containerRef} className="w-full h-[250vh] flex px-[10%] items-start justify-between" style={background}>
-			<animated.div style={useFadeIn(containerRef)} className="w-[47.5%] h-[50vh] sticky top-[25vh]">
+			<animated.div style={useFadeIn(containerRef)} className="w-[36%] h-[50vh] sticky top-[25vh]">
 				<div className="w-full h-full text-[#2E1B0F] flex flex-col justify-center">
 					<div>
-						<h1 className="px-8 bg-[#ffffffe8] rounded-[36px] text-[56px] font-black inline-block mb-4 drop-shadow-xl">{ProjectName}</h1>
+						<h1 className="px-4 bg-[#ffffffe8] rounded-[36px] text-[56px] font-black inline-block mb-4 drop-shadow-xl">{ProjectName}</h1>
 					</div>
 					<div>
-						<p className="p-8 bg-[#ffffffe8] rounded-[36px] text-[20px] mb-7 drop-shadow-xl">
+						<p className="p-4 bg-[#ffffffe8] rounded-[36px] text-[20px] mb-7 drop-shadow-xl">
 							The University of British Columbia (UBC) is a public research university with
 							campuses near Vancouver and Okanagan in British Columbia, Canada. Established
 							in 1908, it is the oldest university in British Columbia. With an annual research
@@ -65,8 +65,8 @@ function HomeProjects() {
 	return (
 		<div className="bg-[#CDFF70]">
 			<Project ProjectName="AgroBot"  />
-			<Project ProjectName="AgroPonics" background={{ background: "linear-gradient(to bottom, #CDFF70, #78BE20)" }} />
-			<Project ProjectName="AgroPicker" background={{ background: "#78BE20"}}/>
+			<Project ProjectName="AgroPonics " background={{ background: "linear-gradient(to bottom, #CDFF70, #78BE20)" }} />
+			<Project ProjectName="AgroPicker " background={{ background: "#78BE20"}}/>
 		</div>
 	)
 }
