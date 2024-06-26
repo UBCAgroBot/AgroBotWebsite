@@ -24,7 +24,7 @@ function OurStory() {
 	}, [containerRef]);
 
     return (
-        <div ref={containerRef} className="py-[20vh] w-full bg-[#CDFF70] flex justify-between items-center">
+        <div ref={containerRef} className="py-[5vh] w-full bg-[#CDFF70] flex justify-between items-center">
             <img className='w-[40%] h-[500px] bg-[#2E1B0F]' src={farm}
                 style={{ marginTop: offsetY }}
             />
