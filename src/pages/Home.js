@@ -1,4 +1,4 @@
-import { HomeBanner, OurSponsors, OurMission, HomeProjects } from '../components';
+import { HomeBanner, OurMission, HomeProjects } from '../components';
 
 function Home() {
 
@@ -8,7 +8,7 @@ function Home() {
 
             <OurMission></OurMission>
             
-            {/* <HomeProjects></HomeProjects> */}
+            <HomeProjects></HomeProjects>
 
             {/* <OurSponsors/> */}
         </>

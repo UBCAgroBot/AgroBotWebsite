@@ -1,69 +1,100 @@
 import React from "react";
-import { HomeAutomation, HomeDataCollection, HomeModularChassis, HomeTargetedAction, HomeChemicalBalancing, HomeFullyAutonomous, HomeNutrientCycling, } from '../../assets';
-import { MdChevronRight } from 'react-icons/md';
-import { SectionHeader } from '../common';
-import * as t from "../../constant/home.js";
+import { useSpring, animated } from "react-spring";
+import { useState, useEffect, useRef } from "react";
+import { FaChevronRight } from "react-icons/fa";
+import AgrobotsModel from "../projects/AgrobotsModel";
 
-function Img(props) {
-    return (
-        <div className='w-full h-full flex justify-center items-center flex-col'>
-            <img alt='slideshow' src={props.imgSrc} className='h-[90%] rounded-[14px]'></img>
-            <h3 className='p-2 text-center font-bold text-[18px]'>{props.children}</h3>
+function Project({ ProjectName, background }) {
+  const containerRef = useRef(null);
+
+  function useFadeIn(containerRef) {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        const height = window.innerHeight;
+        const containerTop = containerRef.current.getBoundingClientRect().top;
+        const containerBottom =
+          containerRef.current.getBoundingClientRect().bottom;
+
+        console.log(containerBottom + ", " + height);
+
+        if (containerTop < 200 && containerBottom > height + 200) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      };
+
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, [containerRef]);
+
+    return useSpring({
+      opacity: isVisible ? 1 : 0,
+      config: { duration: 200 },
+    });
+  }
+
+  return (
+    <div
+      ref={containerRef}
+      className="w-full h-[250vh] flex px-[10%] items-start justify-between"
+      style={background}
+    >
+      <animated.div
+        style={useFadeIn(containerRef)}
+        className="w-[36%] h-[50vh] sticky top-[25vh]"
+      >
+        <div className="w-full h-full text-[#2E1B0F] flex flex-col justify-center">
+          <div>
+            <h1 className="px-4 bg-[#ffffffe8] rounded-[36px] text-[56px] font-black inline-block mb-4 drop-shadow-xl">
+              {ProjectName}
+            </h1>
+          </div>
+          <div>
+            <p className="p-4 bg-[#ffffffe8] rounded-[36px] text-[20px] mb-7 drop-shadow-xl">
+              The University of British Columbia (UBC) is a public research
+              university with campuses near Vancouver and Okanagan in British
+              Columbia, Canada. Established in 1908, it is the oldest university
+              in British Columbia. With an annual research budget of $773
+              million, UBC funds over 10,000 projects a year.[4]
+            </p>
+          </div>
+          <div>
+            <a
+              href="#"
+              className="p-3 px-8 text-[24px] bg-[#2E1B0F] text-white font-bold rounded-[36px] drop-shadow-xl"
+            >
+              LEARN MORE <FaChevronRight className="inline mb-1" />{" "}
+            </a>
+          </div>
         </div>
-    );
-}
-
-function Project(props) {
-
-    const { children, projectNum, text, img1, img2, img3, img4, imgText1, imgText2, imgText3, imgText4, panelStyle, link } = props;
-
-    return (
-        <div style={panelStyle} className='flex flex-col rounded-[16px] w-full md:w-[49%] mt-4 md:mt-0 p-[4%]'>
-            <div className='flex w-full items-center my-[4%]'>
-                <div className=''>
-                    <h3 className='text-[#88BE22] font-bold text-[16px] md:text-[20px]'>PROJECT_{projectNum}</h3>
-                    <h2 className='text-[24px] md:text-[36px]'>{children}</h2>
-                </div>
-                <p className='ml-4 text-[16px] text-right'>{text}</p>
-            </div>
-            <div className='bg-[#FFFFFF80] mx-[-5%] px-[5%] my-[4%] rounded-[14px]'>
-                <div className='flex justify-between my-4'>
-                    <div className='w-[48%] rounded-[14px]'><Img imgSrc={img1}>{imgText1}</Img></div>
-                    <div className='w-[48%] rounded-[14px]'><Img imgSrc={img2}>{imgText2}</Img></div>
-                </div>
-                <div className='flex justify-between my-4'>
-                    <div className='w-[48%] rounded-[14px]'><Img imgSrc={img3}>{imgText3}</Img></div>
-                    <div className='w-[48%] rounded-[14px]'><Img imgSrc={img4}>{imgText4}</Img></div>
-                </div>
-            </div>
-            <div className='flex items-center justify-center mt-auto'>
-                <a href={link} className='flex items-center justify-center text-black font-bold bg-[#FFFFFF80] rounded-[14px] p-4 px-[10%]'>{t.project_bottom_text}{children} <MdChevronRight /></a>
-            </div>
-        </div>
-    );
+      </animated.div>
+      <div className="w-[47.5%] h-[50vh] bg-[#2E1B0F] relative top-[100vh] rounded-lg">
+        <AgrobotsModel />
+      </div>
+    </div>
+  );
 }
 
 function HomeProjects() {
-
-    const leftPanelStyle = {
-        background: `linear-gradient(35deg, rgba(207,239,148,1) 0%, rgba(207,239,148,0.75) 35%, rgba(207,239,148,0.75) 65%, rgba(207,239,148,1) 100%)`
-    }
-
-    const rightPanelStyle = {
-        background: `linear-gradient(75deg, rgba(207,239,148,1) 0%, rgba(207,239,148,0.75) 35%, rgba(207,239,148,0.75) 65%, rgba(207,239,148,1) 100%)`
-    }
-
-    return (
-        <div className="w-full my-[10vh]">
-            <div className='w-[80vw] mx-auto text-black'>
-                <SectionHeader>{t.projects_title}</SectionHeader>
-                <div className="flex w-full flex-col md:flex-row md:justify-between pt-8">
-                    <Project projectNum="1" text={t.project_1_subtitle} img1={HomeTargetedAction}  img2={HomeDataCollection}  img3={HomeModularChassis}    img4={HomeAutomation}        imgText1={t.project_1_img_1_subtitle} imgText2={t.project_1_img_2_subtitle} imgText3={t.project_1_img_3_subtitle} imgText4={t.project_1_img_4_subtitle} panelStyle={leftPanelStyle} link='/agrobot'>{t.project_1_title}</Project>
-                    <Project projectNum="2" text={t.project_2_subtitle} img1={HomeFullyAutonomous} img2={HomeNutrientCycling} img3={HomeChemicalBalancing} img4={HomeChemicalBalancing} imgText1={t.project_2_img_1_subtitle} imgText2={t.project_2_img_2_subtitle} imgText3={t.project_2_img_3_subtitle} imgText4={t.project_2_img_4_subtitle} panelStyle={rightPanelStyle} link='/agroponics'>{t.project_2_title}</Project>
-                </div>
-            </div>
-        </div>
-    );
+  return (
+    <div className="bg-[#CDFF70]">
+      <Project ProjectName="AgroBot" />
+      <Project
+        ProjectName="AgroPonics "
+        background={{
+          background: "linear-gradient(to bottom, #CDFF70, #78BE20)",
+        }}
+      />
+      <Project
+        ProjectName="AgroPicker "
+        background={{ background: "#78BE20" }}
+      />
+    </div>
+  );
 }
 
 export default HomeProjects;
+

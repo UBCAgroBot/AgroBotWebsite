@@ -7,7 +7,7 @@ import {
   Sponsorship,
   Recruitment,
   ContactUs,
-  AboutUs,
+  About,
 } from "./pages";
 
 import { Footer } from "./components/common";
@@ -22,7 +22,7 @@ function App() {
         <Route path="/sponsorship" element={<Sponsorship />} />
         <Route path="/recruitment" element={<Recruitment />} />
         <Route path="/contactUs" element={<ContactUs />} />
-        <Route path="/aboutUs" element={<AboutUs />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </Router>
@@ -30,4 +30,3 @@ function App() {
 }
 
 export default App;
-
