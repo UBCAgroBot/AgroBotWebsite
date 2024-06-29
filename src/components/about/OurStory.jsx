@@ -12,7 +12,7 @@ function OurStory() {
 			if (containerRef.current.getBoundingClientRect().top > 0 || 
 				containerRef.current.getBoundingClientRect().bottom > 0) {
 					// Set offset to offset of top of component
-					setOffsetY(containerRef.current.getBoundingClientRect().top * 0.5)
+					setOffsetY(containerRef.current.getBoundingClientRect().top * 0.15)
 				}
 		};
 
@@ -23,24 +23,27 @@ function OurStory() {
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, [containerRef]);
 
-    return (
-        <div ref={containerRef} className="py-[5vh] w-full bg-[#CDFF70] flex justify-between items-center">
-            <img className='w-[40%] h-[500px] bg-[#2E1B0F]' src={farm}
-                style={{ marginTop: offsetY }}
-            />
-            <div className='mr-[5%] w-[50%] text-right'>
-                <h1 className="text-[#2E1B0F] bg-[#FFFFFFD0] inline-block p-2 px-6 font-bold text-[28px] rounded-full mb-4 shadow-xl">WHO WE ARE</h1>
-                <p className="text-[#2E1B0F] bg-[#FFFFFFD0] inline-block p-4 px-6 text-[24px] rounded-[36px] text-left">
-                    Agrobot is a bunch of goofballs and fuzzy cats that masquerade in
-                    the daytime as engineering students and cs students. Agrobot is a
-                    bunch of goofballs and fuzzy cats that masquerade in the daytime as
-                    engineering students and cs students.Agrobot is a bunch of goofballs
-                    and fuzzy cats that masquerade in the daytime as engineering
-                    students and cs students.Agrobot is a
-                </p>
-            </div>
-        </div>
-    )
+	return (
+		<div ref={containerRef} className="py-[20vh] w-full bg-[#1F5200] flex justify-between items-center">
+			<img className='w-[50%] max-h-[800px] bg-[#2E1B0F] cover' src={farm}
+				style={{ marginTop: offsetY }}
+			/>
+            <div className='mr-[5%] w-[40%] text-right'>
+				<h1 className="text-[#2E1B0F] bg-[#FFFFFFD0] inline-block p-2 px-6 font-bold text-[36px] rounded-full mb-4 drop-shadow-xl">OUR STORY</h1>
+				<p className="text-black bg-[#FFFFFFD0] inline-block p-4 px-6 text-[24px] rounded-[36px] drop-shadow-xl text-left">
+					Agrobot is a bunch of goofballs and fuzzy cats that masquerade 
+					in the daytime as engineering students and cs students. Agrobot 
+					is a bunch of goofballs and fuzzy cats that masquerade in the 
+					daytime as engineering students and cs students.Agrobot is a 
+					bunch of goofballs and fuzzy cats that masquerade in the daytime 
+					as engineering students and cs students. Agrobot is a jsid jdw 
+					daytime as engineering students and cs students.Agrobot is a 
+					bunch of goofballs and fuzzy cats that masquerade in the daytime 
+					as engineering students and cs students. Agrobot is a
+				</p>
+			</div>
+		</div>
+	)
 }
 
 export default OurStory

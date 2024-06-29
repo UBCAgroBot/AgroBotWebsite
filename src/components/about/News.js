@@ -21,12 +21,12 @@ function News() {
     const [scrollX, setScrollX] = useState(0)
     const NewsCardRef = useRef(null);
     const NewsContainerRef = useRef(null);
-    const [showLeftArrow, setShowLeftArrow] = useState(false)
-    const [showRightArrow, setShowRightArrow] = useState(false)
+    const [leftArrowOpacity, setLeftArrowOpacity] = useState(0)
+    const [rightArrowOpacity, setRightArrowOpacity] = useState(1)
 
     useEffect(() => {
         if (NewsCardRef.current) {
-            setNewsCardWidth(NewsCardRef.current.offsetWidth);
+            setNewsCardWidth(NewsCardRef.current.offsetWidth + 32);
         }
     }, [])
 
@@ -35,7 +35,7 @@ function News() {
             setLeftCardIndex(0)
             return
         }
-        
+
         if (leftCardIndex > NewsContainerRef.current.children.length) {
             setLeftCardIndex(NewsContainerRef.current.children.length)
             return
@@ -52,52 +52,50 @@ function News() {
             });
         }
 
-        if (leftCardIndex > 0) { setShowLeftArrow(true) }
-        else { setShowLeftArrow(false) }
+        if (leftCardIndex > 0) { setLeftArrowOpacity(1) }
+        else { setLeftArrowOpacity(0) }
 
         if (leftCardIndex < NewsContainerRef.current.children.length - 1 &&
             scrollX + NewsContainerRef.current.clientWidth < NewsContainerRef.current.scrollWidth) {
-            setShowRightArrow(true) 
+            setRightArrowOpacity(1)
         }
-        else { setShowRightArrow(false) }
+        else { setRightArrowOpacity(0) }
 
 
     }, [scrollX])
 
     return (
-        <div className="w-full bg-[#CDFF70] py-[10vh] relative">
-
-            { showLeftArrow ?
-                <div className="w-[200px] h-full absolute top-0 left-0" style={{ background: "linear-gradient(-90deg, rgba(205,255,112,0) 0%, rgba(205,255,112,1) 50%, rgba(205,255,112,1) 100%)" }}>
-                    <div className="h-full flex items-center justify-start ml-8 cursor-pointer" onClick={() => { setLeftCardIndex(leftCardIndex - 1) }}>
-                        <FaChevronRight size='64px' style={{ transform: 'rotate(180deg)' }} />
-                    </div>
+        <div className="bg-[#CDFF70] py-[16vh]">
+            <h1 className="ml-[72px] text-[#2E1B0F] bg-[#FFFFFFD0] inline-block p-2 px-6 font-bold text-[28px] rounded-full mb-4 shadow-md">
+                AgroBot News
+            </h1>
+            <div className="flex items-center">
+                <div className="h-full transition-opacity duration-300 ease-in-out cursor-pointer p-2"
+                    style={{ opacity: leftArrowOpacity }}
+                    onClick={() => { setLeftCardIndex(leftCardIndex - 1) }}
+                >
+                    <FaChevronRight size='64px' style={{ transform: 'rotate(180deg)' }} />
                 </div>
-                :
-                <></>
-            }
 
-            <div ref={NewsContainerRef} className="w-full flex overflow-x-hidden px-4">
-                <NewsCard ref={NewsCardRef} bgImage={TeamAgroBot} title="2023 Competition" />
-                <NewsCard bgImage={AgroBotBlueBg} title="Chasis Prototype" />
-                <NewsCard bgImage={StudentsWorking} title="AgroPonics Launch" />
-                <NewsCard bgImage={TeamAgroBot} title="Extra" />
-                <NewsCard bgImage={TeamAgroBot} title="Extra" />
-                <NewsCard bgImage={TeamAgroBot} title="Extra" />
-                <NewsCard bgImage={TeamAgroBot} title="Extra" />
-                <NewsCard bgImage={TeamAgroBot} title="Extra" />
-                <NewsCard bgImage={TeamAgroBot} title="Extra" />
+                <div ref={NewsContainerRef} className="w-full flex overflow-x-hidden">
+                    <NewsCard ref={NewsCardRef} bgImage={TeamAgroBot} title="2023 Competition" />
+                    <NewsCard bgImage={AgroBotBlueBg} title="Chasis Prototype" />
+                    <NewsCard bgImage={StudentsWorking} title="AgroPonics Launch" />
+                    <NewsCard bgImage={TeamAgroBot} title="Extra" />
+                    <NewsCard bgImage={TeamAgroBot} title="Extra" />
+                    <NewsCard bgImage={TeamAgroBot} title="Extra" />
+                    <NewsCard bgImage={TeamAgroBot} title="Extra" />
+                    <NewsCard bgImage={TeamAgroBot} title="Extra" />
+                    <NewsCard bgImage={TeamAgroBot} title="Extra" />
+                </div>
+
+                <div className="h-full transition-opacity duration-300 ease-in-out cursor-pointer p-2"
+                    style={{ opacity: rightArrowOpacity, }}
+                    onClick={() => { setLeftCardIndex(leftCardIndex + 1) }}
+                >
+                    <FaChevronRight size='64px' />
+                </div>
             </div>
-
-            { showRightArrow ?
-                <div className="w-[200px] h-full absolute top-0 right-0" style={{ background: "linear-gradient(90deg, rgba(205,255,112,0) 0%, rgba(205,255,112,1) 50%, rgba(205,255,112,1) 100%)" }}>
-                    <div className="h-full flex items-center justify-end mr-8 cursor-pointer" onClick={() => { setLeftCardIndex(leftCardIndex + 1) }}>
-                        <FaChevronRight size='64px' />
-                    </div>
-                </div>
-                :
-                <></>
-            }
         </div>
     )
 }

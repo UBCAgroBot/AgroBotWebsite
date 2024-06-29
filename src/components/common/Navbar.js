@@ -8,7 +8,6 @@ import { AGROBOT_ICON } from "../../assets";
 const Navbar = () => {
   const [isMenuOpen, setMobileMenu] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
-  const [navbarBg, setNavbarBg] = useState(false);
   const location = useLocation();
 
   const dropdown_hover_timing = 0;
@@ -22,32 +21,13 @@ const Navbar = () => {
       setIsSubMenuOpen(!isSubMenuOpen);
   }
 
-
-
-  
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 180 || location.pathname !== '/') { 
-        setNavbarBg(true);
-      } else {
-        setNavbarBg(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
-    <header className={`h-[10vh] w-full sticky top-0 left-0 right-0 z-[100] ${navbarBg ? '' : 'bg-[#91D0F2]'}`}>
+    <header className='h-12 w-full fixed top-4 z-40'>
       <nav className="h-full flex items-center justify-center">
-        <div className="h-[80%] w-[90%] flex items-center justify-between py-4 md:px-8 px-4 bg-glass bg-transparent shadow-glass backdrop-blur-glass border-glass">
-          <div className="font-bold cursor-pointer flex items-center">
-            <a href="/"><img className="h-12 w-12 mr-5" src={AGROBOT_ICON} alt="UBC Agrobot" /></a>
-            <a href="/" className="font-bold text-[20px]">UBC Agrobot</a>
+        <div className="h-full w-[96%] flex items-center justify-between px-2 pr-6 bg-white shadow-glass backdrop-blur-glass rounded-full">
+          <div className="h-full font-bold cursor-pointer flex items-center">
+            <a href="/"><img className="h-9 mr-3" src={AGROBOT_ICON} alt="UBC AGROBOT" /></a>
+            <a href="/" className="font-bold text-[28px]">UBC AGROBOT</a>
           </div>
 
           <ul className="list-none lg:flex items-center gap-8 hidden">
@@ -68,7 +48,7 @@ const Navbar = () => {
                 </a>
                 {e.dropdown && isSubMenuOpen && (
                   <ul
-                    className="absolute top-full left-[-40px] px-[40px] pb-[20px] bg-glass bg-transparent shadow-glass backdrop-blur-glass border-glass backdrop-blur-md rounded"
+                    className="absolute top-full left-[-40px] px-[40px] pb-[20px] bg-white rounded"
                     style={{ transition: `all ${dropdown_hover_timing}ms` }}
                   >
                     {e.dropdown.map((item) => (
@@ -118,8 +98,8 @@ const Navbar = () => {
             <a href="/contactus" className="block hover:text-grey-400 my-2 mx-4">
               Contact Us
             </a>
-            <a href="/aboutus" className="block hover:text-grey-400 my-2 mx-4">
-              About us
+            <a href="/about" className="block hover:text-grey-400 my-2 mx-4">
+              About
             </a>
           </div>
         )}

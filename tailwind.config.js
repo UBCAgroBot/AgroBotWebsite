@@ -15,6 +15,9 @@ module.exports = {
       placeholderColor: {
         'custom-green': '#78BE20', // Example custom color
       },
+      filter: {
+        'figma-shadow': 'drop-shadow(0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.5))',
+      },
     },
   },
   variants: {
