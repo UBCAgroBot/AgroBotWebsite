@@ -1,31 +1,20 @@
 import React from "react";
+import { Navbar } from "./components";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
-    Navbar
-} from "./components";
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-} from "react-router-dom";
-import {
-    Home,
-    Projects,
-    Sponsorship,
-    Recruitment,
-    ContactUs,
-    About,
-    AgroPonics,
-    AgroBot,
+  Home,
+  Projects,
+  Sponsorship,
+  Recruitment,
+  ContactUs,
+  About,
 } from "./pages";
 
-import {
-    Footer
-} from "./components/common";
+import { Footer } from "./components/common";
 
 function App() {
     return (
         <Router>
-            <Navbar />
             <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route path="/projects" element={<Projects />} />
