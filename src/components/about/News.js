@@ -65,10 +65,10 @@ function News() {
     }, [scrollX])
 
     return (
-        <div className="bg-[#CDFF70] py-[16vh]">
-            <h1 className="ml-[72px] text-[#2E1B0F] bg-[#FFFFFFD0] inline-block p-2 px-6 font-bold text-[28px] rounded-full mb-4 shadow-md">
-                AgroBot News
-            </h1>
+        <div className="bg-[#CDFF70] px-4 py-[16vh]">
+			<h1 className="text-[#2E1B0F] bg-[#FFFFFFD0] inline-block p-4 mb-4 px-7 font-bold text-[36px] rounded-full drop-shadow-2xl shadow-lg">
+				News
+			</h1>
             <div className="flex items-center">
                 <div className="h-full transition-opacity duration-300 ease-in-out cursor-pointer p-2"
                     style={{ opacity: leftArrowOpacity }}

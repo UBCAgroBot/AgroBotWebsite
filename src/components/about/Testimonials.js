@@ -45,7 +45,7 @@ function Testimonials() {
 	return (
 		<div className="p-4 bg-[#CDFF70] relative">
 			<h1 className="text-[#2E1B0F] bg-[#FFFFFFD0] inline-block p-4 px-7 font-bold text-[36px] rounded-full drop-shadow-2xl shadow-lg">
-				TESTIMONIALS
+				Testimonials
 			</h1>
 			<div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 max-h-[33rem] overflow-hidden">
 				<ul className="space-y-4 my-8">
