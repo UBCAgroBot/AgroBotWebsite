@@ -15,6 +15,7 @@ import { Footer } from "./components/common";
 function App() {
     return (
         <Router>
+            <Navbar />
             <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route path="/projects" element={<Projects />} />
@@ -22,8 +23,6 @@ function App() {
                 <Route path="/recruitment" element={<Recruitment />} />
                 <Route path="/contactUs" element={<ContactUs />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/agroponics" element={<AgroPonics />} />
-                <Route path="/agrobot" element={<AgroBot />} />
             </Routes>
             <Footer />
         </Router>
