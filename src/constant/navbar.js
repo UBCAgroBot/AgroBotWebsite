@@ -20,8 +20,8 @@ export const navLinks = [
         link : "/recruitment"
     },
     {
-        id : "Contact us",
-        link : "/contactUs"
+        id : "Contact",
+        link : "/contact"
     },
     {
         id : "About",

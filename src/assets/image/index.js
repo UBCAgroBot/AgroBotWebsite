@@ -48,11 +48,6 @@ import AgroponicsRooftop from './AgroponicsRooftop.png'
 import EmailSideIcon from './EmailSideIcon.png';
 import SocialSideIcon from './SocialSideIcon.png';
 import LocationSideIcon from './LocationSideIcon.png';
-import AgrobotEmailIcon from './AgrobotEmailIcon.png';
-import AgrobotFacebookIcon from './AgrobotFacebookIcon.png';
-import AgrobotLocationIcon from './AgrobotLocationIcon.png';
-import AgrobotLinkedInIcon from './AgrobotLinkedInIcon.png';
-import AgrobotInstagramIcon from './AgrobotInstagramIcon.png';
 import AgroponicsS2 from './AgroponicsS2.png';
 
 import SponsorIcon from './SponsorIcon.png';
@@ -118,11 +113,6 @@ export {
     LocationSideIcon,
     SponsorIcon,
     WorkingWithWires,
-    AgrobotEmailIcon,
-    AgrobotFacebookIcon,
-    AgrobotLocationIcon,
-    AgrobotLinkedInIcon,
-    AgrobotInstagramIcon,
     temp_robot_blueprint,
     temp_circuitry,
     temp_maintenance,

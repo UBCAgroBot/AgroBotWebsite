@@ -6,7 +6,7 @@ import {
   Projects,
   Sponsorship,
   Recruitment,
-  ContactUs,
+  Contact,
   About,
 } from "./pages";
 
@@ -21,7 +21,7 @@ function App() {
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/sponsorship" element={<Sponsorship />} />
                 <Route path="/recruitment" element={<Recruitment />} />
-                <Route path="/contactUs" element={<ContactUs />} />
+                <Route path="/contact" element={<Contact />} />
                 <Route path="/about" element={<About />} />
             </Routes>
             <Footer />
