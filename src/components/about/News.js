@@ -65,9 +65,9 @@ function News() {
     }, [scrollX])
 
     return (
-        <div className="bg-[#CDFF70] px-4 py-[16vh]">
-			<h1 className="text-[#2E1B0F] bg-[#FFFFFFD0] inline-block p-4 mb-4 px-7 font-bold text-[36px] rounded-full drop-shadow-2xl shadow-lg">
-				News
+        <div className="bg-[#CDFF70] px-4 py-64">
+			<h1 className="text-[#2E1B0F] text-[64px] font-bold text-center my-8">
+				AgroBot News
 			</h1>
             <div className="flex items-center">
                 <div className="h-full transition-opacity duration-300 ease-in-out cursor-pointer p-2"

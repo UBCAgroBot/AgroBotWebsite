@@ -9,7 +9,7 @@ import { SponsorshipS1, SponsorshipS2, SponsorshipS3 } from "./sponsorship";
 import { HomeBanner, OurMission, HomeProjects } from "./home";
 import { OurSponsors } from "./common";
 import { Agrobots, Agroponics, Agropicker } from "./projects";
-import { MailForm } from "./contact";
+import { MailForm, Map } from "./contact";
 
 export {
   Navbar,
@@ -24,6 +24,7 @@ export {
   Agroponics,
   Agropicker,
   MailForm,
+  Map,
   HomeProjects,
   WantToHelp,
   SectionHeader,

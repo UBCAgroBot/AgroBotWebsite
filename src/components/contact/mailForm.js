@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { MdChevronRight } from "react-icons/md";
 import { createClient } from '@supabase/supabase-js'
+import { IoSend } from "react-icons/io5";
+import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
+import { LuMail } from "react-icons/lu";
 
 const supabaseUrl = 'https://rpsuamzzbfswevkexntj.supabase.co'
 const supabaseKey = process.env.REACT_APP_SUPABASE_KEY
@@ -35,42 +37,69 @@ function MailForm() {
 	};
 
 	return (
-		<div className="m-8 bg-[#2E1B0F] px-8 rounded-[46px] w-[84%]">
-			<h3 className="text-[#78BE20] text-[46px] font-bold p-4">Send us a message:</h3>
-			<form onSubmit={handleSubmit}>
-				<div className="flex justify-between">
-					<input
-						type="text"
-						placeholder="Name"
-						className="bg-[#FFFFFF20] border-none rounded-full w-full mr-2 text-[#78BE20] text-[36px]"
-						value={name}
-						onChange={(e) => setName(e.target.value)}
-					/>
-					<input
-						type="email"
-						placeholder="Email"
-						className="bg-[#FFFFFF20] border-none rounded-full w-full ml-2 text-[#78BE20] text-[36px]"
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}
-					/>
+		<div className="w-full min-h-full">
+			<div className="flex flex-col items-center pt-16">
+				<div className="w-[60%]">
+					<h3 className="text-[#2E1B0F] font-bold text-[64px]">Contact Us</h3>
+					<p className="text-[#2E1B0F] text-[32px]">Our team would love <br /> to hear from you.</p>
+					<form onSubmit={handleSubmit} className="my-8 flex flex-col">
+						<div className="flex justify-between">
+							<div className='w-[49%]'>
+								<label>First name</label>
+								<input
+									type="text"
+									placeholder="first"
+									className="my-2 text-[32px] w-full bg-[#CDFF70] rounded-[24px] border-[4px] border-[#2E1B0F]"
+									value={name}
+									onChange={(e) => setName(e.target.value)}
+								/>
+							</div>
+							<div className="w-[49%]">
+								<label>Last name</label>
+								<input
+									type="text"
+									placeholder="last"
+									className="my-2 text-[32px] w-full bg-[#CDFF70] rounded-[24px] border-[4px] border-[#2E1B0F]"
+								/>
+							</div>
+						</div>
+						<label>Email</label>
+						<input
+							type="email"
+							placeholder="Email"
+							className="my-2 text-[32px] bg-[#CDFF70] rounded-[24px] border-[4px] border-[#2E1B0F]"
+							value={email}
+							onChange={(e) => setEmail(e.target.value)}
+						/>
+						<label>Phone</label>
+						<input
+							type="tel"
+							placeholder="Phone number"
+							className="my-2 text-[32px] bg-[#CDFF70] rounded-[24px] border-[4px] border-[#2E1B0F]"
+						/>
+						<label>Message</label>
+						<input
+							type="textarea"
+							placeholder="Message"
+							className="p-2 my-2 text-[32px] bg-[#CDFF70] rounded-[24px] border-[4px] border-[#2E1B0F] min-h-[4em]"
+							value={message}
+							onChange={(e) => setMessage(e.target.value)}
+						/>
+						<button className="my-2 p-2 text-[32px] bg-[#2E1B0F] rounded-[24px] border-[4px] border-[#2E1B0F] text-[#CDFF70]" type='submit'>
+							<p className="font-bold">Send message <IoSend className="inline pb-[2px]" /></p>
+						</button>
+					</form>
 				</div>
-				{/* <input
-					type="subject"
-					placeholder="Subject"
-					className="bg-[#FFFFFF20] border-none rounded-full w-full text-[#78BE20] text-[36px] leading-6 my-4 py-[0.5rem] px-[0.75rem]"
-					value={subject}
-					onChange={(e) => setSubject(e.target.value)}
-				/> */}
-				<input
-					placeholder="Message"
-					className="bg-[#FFFFFF20] border-none rounded-[46px] w-full text-[#78BE20] text-[36px] leading-6 py-[0.5rem] px-[0.75rem] my-4 min-h-[8rem]"
-					value={message}
-					onChange={(e) => setMessage(e.target.value)}
-				/>
-				<button className="" type='submit'>
-					Send <MdChevronRight />
-				</button>
-			</form>
+				<div className="w-[60%] pt-16">
+					<h1 className='text-[#2E1B0F] text-[32px]'>You can also reach out to us on social media!</h1>
+					<div className="flex justify-between mx-auto my-12">
+						<div><div className="bg-[#2E1B0F] rounded-xl p-0 flex justify-center items-center w-24 h-24"><LuMail      size='64' color="#CDFF70" /></div></div>
+						<div><div className="bg-[#2E1B0F] rounded-xl p-2 flex justify-center items-center w-24 h-24"><FaInstagram size='64' color="#CDFF70" /></div></div>
+						<div><div className="bg-[#2E1B0F] rounded-xl p-2 flex justify-center items-center w-24 h-24"><FaLinkedin  size='64' color="#CDFF70" /></div></div>
+						<div><div className="bg-[#2E1B0F] rounded-xl p-2 flex justify-center items-center w-24 h-24"><FaFacebook  size='64' color="#CDFF70" /></div></div>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 }
