@@ -3,10 +3,11 @@ import TeamAgroBot from '../../assets/image/AgroBotWithTeamOnGrass.jpg'
 import AgroBotBlueBg from '../../assets/image/AgroBotBlueBg.png'
 import StudentsWorking from '../../assets/image/studentsWorking.jpg'
 import { FaChevronRight } from "react-icons/fa";
+import { ArticleOverlay } from "./ArticleOverlay"
 
-const NewsCard = React.forwardRef((({ bgColor, bgImage, title }, ref) => {
+const NewsCard = React.forwardRef((({ overlayFn, bgColor, bgImage, title }, ref) => {
     return (
-        <div ref={ref} className="flex flex-col mx-4 w-[30%] overflow-hidden shrink-0">
+        <div ref={ref} onClick={() => overlayFn(true)} className="flex flex-col mx-4 w-[30%] overflow-hidden shrink-0">
             <div className="h-[300px] rounded-lg" style={bgColor}>
                 <img src={bgImage} alt='news card' className="h-full w-full object-cover rounded-lg" />
             </div>
@@ -16,6 +17,7 @@ const NewsCard = React.forwardRef((({ bgColor, bgImage, title }, ref) => {
 }))
 
 function News() {
+    const [showOverlay, setShowOverlay] = useState(false)
     const [leftCardIndex, setLeftCardIndex] = useState(0)
     const [newsCardWidth, setNewsCardWidth] = useState(0)
     const [scrollX, setScrollX] = useState(0)
@@ -66,6 +68,7 @@ function News() {
 
     return (
         <div className="bg-[#CDFF70] px-4 py-64">
+            {showOverlay ? <ArticleOverlay overlayFn={setShowOverlay}/> : null}
 			<h1 className="text-[#2E1B0F] text-[64px] font-bold text-center my-8">
 				AgroBot News
 			</h1>
@@ -77,16 +80,16 @@ function News() {
                     <FaChevronRight size='64px' style={{ transform: 'rotate(180deg)' }} />
                 </div>
 
-                <div ref={NewsContainerRef} className="w-full flex overflow-x-hidden">
-                    <NewsCard ref={NewsCardRef} bgImage={TeamAgroBot} title="2023 Competition" />
-                    <NewsCard bgImage={AgroBotBlueBg} title="Chasis Prototype" />
-                    <NewsCard bgImage={StudentsWorking} title="AgroPonics Launch" />
-                    <NewsCard bgImage={TeamAgroBot} title="Extra" />
-                    <NewsCard bgImage={TeamAgroBot} title="Extra" />
-                    <NewsCard bgImage={TeamAgroBot} title="Extra" />
-                    <NewsCard bgImage={TeamAgroBot} title="Extra" />
-                    <NewsCard bgImage={TeamAgroBot} title="Extra" />
-                    <NewsCard bgImage={TeamAgroBot} title="Extra" />
+                <div onClick={() => setShowOverlay(true)} ref={NewsContainerRef} className="w-full flex overflow-x-hidden">
+                    <NewsCard ref={NewsCardRef} overlayFn={setShowOverlay} bgImage={TeamAgroBot} title="2023 Competition" />
+                    <NewsCard overlayFn={setShowOverlay} bgImage={AgroBotBlueBg} title="Chasis Prototype" />
+                    <NewsCard overlayFn={setShowOverlay} bgImage={StudentsWorking} title="AgroPonics Launch" />
+                    <NewsCard overlayFn={setShowOverlay} bgImage={TeamAgroBot} title="Extra" />
+                    <NewsCard overlayFn={setShowOverlay} bgImage={TeamAgroBot} title="Extra" />
+                    <NewsCard overlayFn={setShowOverlay} bgImage={TeamAgroBot} title="Extra" />
+                    <NewsCard overlayFn={setShowOverlay} bgImage={TeamAgroBot} title="Extra" />
+                    <NewsCard overlayFn={setShowOverlay} bgImage={TeamAgroBot} title="Extra" />
+                    <NewsCard overlayFn={setShowOverlay} bgImage={TeamAgroBot} title="Extra" />
                 </div>
 
                 <div className="h-full transition-opacity duration-300 ease-in-out cursor-pointer p-2"
