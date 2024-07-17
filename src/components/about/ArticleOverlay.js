@@ -15,7 +15,6 @@ function ArticleOverlay({ overlayFn }) {
     // If the click happened on the overlay we close the article.
     // If the click happened on the article we do nothing.
     function CheckClick(event) {
-        console.log(event.target.id);
         if (event.target.id === 'outer-overlay') {
             overlayFn(false)
         }

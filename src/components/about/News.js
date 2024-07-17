@@ -5,9 +5,14 @@ import StudentsWorking from '../../assets/image/studentsWorking.jpg'
 import { FaChevronRight } from "react-icons/fa";
 import { ArticleOverlay } from "./ArticleOverlay"
 
+import * as Comp2023 from '../../constant/Articles/2023_Competition copy 2'
+import * as AgroPL from '../../constant/Articles/AgroPonicsLaunch'
+import * as Extra from '../../constant/Articles/Extra'
+import * as Chassis from '../../constant/Articles/ChasisPrototype'
+
 const NewsCard = React.forwardRef((({ overlayFn, bgColor, bgImage, title }, ref) => {
     return (
-        <div ref={ref} onClick={() => overlayFn(true)} className="flex flex-col mx-4 w-[30%] overflow-hidden shrink-0">
+        <div ref={ref} onClick={() => overlayFn(true)} className="flex flex-col mx-4 w-[30%] overflow-hidden shrink-0 cursor-pointer">
             <div className="h-[300px] rounded-lg" style={bgColor}>
                 <img src={bgImage} alt='news card' className="h-full w-full object-cover rounded-lg" />
             </div>
@@ -65,6 +70,17 @@ function News() {
 
 
     }, [scrollX])
+
+    const articles = [
+        {
+            'title': Comp2023.title, 'img_src': Comp2023.img_src, 'profile_src': Comp2023.profile_src,
+            'author': Comp2023.author, 'updates': Comp2023.updated, 'content': Comp2023.content
+        },
+        {
+            'title': AgroPL.title, 'img_src': AgroPL.img_src, 'profile_src': AgroPL.profile_src,
+            'author': AgroPL.author, 'updates': AgroPL.updated, 'content': AgroPL.content
+        }
+    ]
 
     return (
         <div className="bg-[#CDFF70] px-4 py-64">

@@ -39,7 +39,7 @@ function MailForm() {
 	return (
 		<div className="w-full min-h-full">
 			<div className="flex flex-col items-center pt-16">
-				<div className="w-[60%]">
+				<div className="w-[75%]">
 					<h3 className="text-[#2E1B0F] font-bold text-[64px]">Contact Us</h3>
 					<p className="text-[#2E1B0F] text-[32px]">Our team would love <br /> to hear from you.</p>
 					<form onSubmit={handleSubmit} className="my-8 flex flex-col">
@@ -90,13 +90,13 @@ function MailForm() {
 						</button>
 					</form>
 				</div>
-				<div className="w-[60%] pt-16">
-					<h1 className='text-[#2E1B0F] text-[32px]'>You can also reach out to us on social media!</h1>
+				<div className="w-[75%] pt-12">
+					<h3 className="text-[#2E1B0F] font-bold text-[64px]">Or, reach us on</h3>
 					<div className="flex justify-between mx-auto my-12">
-						<div><div className="bg-[#2E1B0F] rounded-xl p-0 flex justify-center items-center w-24 h-24"><LuMail      size='64' color="#CDFF70" /></div></div>
-						<div><div className="bg-[#2E1B0F] rounded-xl p-2 flex justify-center items-center w-24 h-24"><FaInstagram size='64' color="#CDFF70" /></div></div>
-						<div><div className="bg-[#2E1B0F] rounded-xl p-2 flex justify-center items-center w-24 h-24"><FaLinkedin  size='64' color="#CDFF70" /></div></div>
-						<div><div className="bg-[#2E1B0F] rounded-xl p-2 flex justify-center items-center w-24 h-24"><FaFacebook  size='64' color="#CDFF70" /></div></div>
+						<div className="flex flex-col items-center justify-center font-bold"><div className="bg-[#2E1B0F] rounded-xl p-0 mb-2 flex justify-center items-center w-24 h-24"><LuMail      size='64' color="#CDFF70" /></div>agrobot@gmail.com</div>
+						<div className="flex flex-col items-center justify-center font-bold"><div className="bg-[#2E1B0F] rounded-xl p-2 mb-2 flex justify-center items-center w-24 h-24"><FaInstagram size='64' color="#CDFF70" /></div>@agrobot</div>
+						<div className="flex flex-col items-center justify-center font-bold"><div className="bg-[#2E1B0F] rounded-xl p-2 mb-2 flex justify-center items-center w-24 h-24"><FaLinkedin  size='64' color="#CDFF70" /></div>UBC Agrobot</div>
+						<div className="flex flex-col items-center justify-center font-bold"><div className="bg-[#2E1B0F] rounded-xl p-2 mb-2 flex justify-center items-center w-24 h-24"><FaFacebook  size='64' color="#CDFF70" /></div>UBC Agrobot</div>
 					</div>
 				</div>
 			</div>
