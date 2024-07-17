@@ -72,7 +72,7 @@ function Project({ ProjectName, background }) {
         </div>
       </animated.div>
       <div className="w-[47.5%] h-[50vh] bg-[#2E1B0F] relative top-[100vh] rounded-lg">
-        <AgrobotsModel />
+        <AgrobotsModel ref={null} position={[0, 1, 0]} scale={[3, 3, 3]} />
       </div>
     </div>
   );
@@ -97,4 +97,3 @@ function HomeProjects() {
 }
 
 export default HomeProjects;
-
