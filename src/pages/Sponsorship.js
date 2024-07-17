@@ -21,7 +21,7 @@ const Sponsorship = () => {
             <div className="min-h-screen px-48 pb-24">
                 <h1 className="text-[96px] font-bold">Sponsor <br />UBC Agrobot</h1>
                 <p className="text-[48px] font-medium w-[100%] pt-5">Sponsors are the lifeblood of UBC Agrobot. If you would like to help us build the future of farming send us an email at <u>agrobot@gmail.com</u>. For  detailed information about sponsorship you can read our <u>sponsorship package</u>.</p>
-                <h2 className="text-[64px] font-bold pt-32">Sponsorship tiers</h2>
+                <h2 className="text-[64px] font-bold pt-16">Sponsorship tiers</h2>
                 <div className="flex justify-between pt-12">
                     <div className="w-[400px] h-[700px] bg-[#2E1B0F] rounded-[46px] flex flex-col items-center pt-12">
                         <div className="w-[300px] h-[250px] bg-[#1F5200] rounded-[46px] flex justify-center items-center">
@@ -64,8 +64,8 @@ const Sponsorship = () => {
                 ))}
             </div>
             <div className="flex flex-col justify-center items-center pt-32">
-                <p className="text-[48px] font-semibold text-center leading-[80px]">We would love for you to join the team!<br />
-                <a className="underline font-bold cursor-pointer text-[56px] decoration-[#68beed]">Sponsor us <FaArrowRight className="inline" color="#68beed" /></a></p>
+                <p className="text-[48px] font-semibold text-center leading-[80px] bg-glass p-8 text-[#2E1B0F] rounded-[46px]">We would love for you to join the team!<br />
+                <a className="font-bold cursor-pointer text-[56px] decoration-[#68beed] text-[#68beed]">Sponsor us <FaArrowRight className="inline" color="#68beed" /></a></p>
             </div>
         </div>
     );
