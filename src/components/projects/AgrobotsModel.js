@@ -1,40 +1,48 @@
-import React, { useRef } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Box, OrbitControls } from "@react-three/drei";
+import React, { useRef, useState, useEffect } from "react";
+import { Canvas, useFrame, useLoader } from "@react-three/fiber";
+import { useGLTF, Box, OrbitControls, DragControls } from "@react-three/drei";
 import * as THREE from "three";
+import path from "./untitled.glb";
 
-const SpinningBox = () => {
+const SpinningBox = ({ position, scale }) => {
   const ref = useRef();
-  const spinSpeed = useRef(0.005);
+  const { scene } = useGLTF(path);
 
   useFrame(() => {
-    ref.current.rotation.x += spinSpeed.current;
-    ref.current.rotation.y += spinSpeed.current;
+    ref.current.rotation.x += 0.0005;
+    ref.current.rotation.y += 0.005;
   });
 
   return (
-    <Box ref={ref} args={[1, 1, 1]}>
-      <meshStandardMaterial attach="material" color="orange" />
-    </Box>
+    <primitive object={scene} scale={scale} position={position} ref={ref} />
   );
 };
 
-const AgrobotsModel = ({ controlRef, setRotationState }) => {
+const AgrobotsModel = ({ controlRef, scale, position }) => {
+  let x = position[0];
+  let y = position[1];
+  let z = position[2];
   return (
     <Canvas>
       <ambientLight />
-      <pointLight position={[10, 10, 10]} />
+      <mesh scale={[2, 2, 2]} />
       <OrbitControls
         makeDefault
-        ref={controlRef}
         enableZoom={false}
         enablePan={false}
-        rotateSpeed={0.4}
-        target={new THREE.Vector3(0, 0, 0)}
+        screenSpacePanning={false}
+        maxAzimuthAngle={Infinity}
+        maxPolarAngle={Math.PI}
+        minAzimuthAngle={-Infinity}
+        minPolarAngle={0}
+        enableRotate={true}
+        target={new THREE.Vector3(x, y, z)}
       />
-      <SpinningBox />
+      <SpinningBox scale={scale} position={position} />
     </Canvas>
   );
 };
 
 export default AgrobotsModel;
+
+useGLTF.preload(path);
