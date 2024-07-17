@@ -1,64 +1,56 @@
-import React from "react";
-import { TitleBanner, PortfolioS1, StatsBar } from "../components";
-import { RecruitmentImage } from "../assets";
-import NotificationBanner from "../components/common/NotificationBanner";
-import {
-  LEARN_MORE_LINK,
-  NON_UBC_DESCRIPTION,
-  NON_UBC_TITLE,
-  RECRUITMENT_STATUS_DESCRIPTION,
-  RECRUITMENT_STATUS_TITLE,
-  subTeamDiscriptions,
-} from "../constant/recruitment";
-import RecruitmentS1 from "../components/recruitment/recruitment-s1";
-import RecruitmentS2 from "../components/recruitment/recruitment-s2";
-import RecruitmentS3 from "../components/recruitment/recruitment-s3";
-import RecruitmentS4 from "../components/recruitment/recruitment-s4";
-import RecruitmentS5 from "../components/recruitment/recruitment-s5";
+import React, { useState } from "react";
+import { SubteamOverlay } from "../components/recruitment/SubteamOverlay";
+
+function SubteamBox({ emoji, title, bulletPoints, bg, overlayFn }) {
+	return (
+		<div className="w-[330px] h-[480px] bg-[#2E1B0F] rounded-[46px] flex flex-col items-center pt-[10px] text-white">
+			<div className="w-[310px] h-[250px] rounded-[46px] flex justify-center items-center" style={{background: bg}}>
+				<p className="text-[128px]">{emoji}</p>
+			</div>
+			<h1 className="text-[48px] font-medium">{title}</h1>
+			<ul className="text-[20px] pt-8 px-12 list-disc">
+				{bulletPoints.map(text => 
+					<li>{text}</li>
+				)}
+			</ul>
+			<button onClick={() => overlayFn(true)} className="text-[20px] pt-4">Learn more +</button>
+		</div>
+	)
+}
 
 function Recruitment() {
-  return (
-    <div className="bg-[#F8F7F1] w-screen">
-      <TitleBanner
-        toColor="#5d3c3a"
-        fromColor="#9da28d"
-        imageSrc={RecruitmentImage}
-        imageClassName="absolute right-0 bottom-0 w-4/12"
-      >
-        Recruitment
-      </TitleBanner>
-      <div className="md:max-w-[90%] md:mx-auto">
-        <NotificationBanner
-          titleText={RECRUITMENT_STATUS_TITLE}
-          descriptionText={RECRUITMENT_STATUS_DESCRIPTION}
-          dismissable={true}
-        ></NotificationBanner>
-      </div>
-      <RecruitmentS1></RecruitmentS1>
-      <RecruitmentS2></RecruitmentS2>
-      <RecruitmentS3></RecruitmentS3>
-      <RecruitmentS4></RecruitmentS4>
-      <RecruitmentS5
-        title="Subteam Descriptions"
-        subTeamDescriptions={subTeamDiscriptions.filter(
-          (subTeam) => subTeam.technical === true
-        )}
-        id={LEARN_MORE_LINK.replace("#", "")}
-      ></RecruitmentS5>
-      <RecruitmentS5
-        title="Interested in non-technical roles?"
-        subTeamDescriptions={subTeamDiscriptions.filter(
-          (subTeam) => subTeam.technical === false
-        )}
-      ></RecruitmentS5>
-      {/* <NotificationBanner
-        titleText={NON_UBC_TITLE}
-        descriptionText={NON_UBC_DESCRIPTION}
-        subtle={true}
-        additionalClasses={"my-12"}
-      ></NotificationBanner> */}
-    </div>
-  );
+
+	const [showSubteam, setShowSubteam] = useState(false);
+
+	return (
+		<div className="min-h-screen pt-48 pb-32 w-[1262px] mx-auto">
+			{showSubteam ? <SubteamOverlay overlayFn={setShowSubteam} />
+				:
+				null
+			}
+			<h1 className="text-[96px] font-bold">Join the<br />Agrobot team!</h1>
+			<p className="text-[48px] font-medium pt-8">Applications are open until January 27th! Before you apply you should read our recruitment package. When you are ready you can fill out the application forum.</p>
+			<div className="w-full bg-black h-64 my-16"></div>
+			<h2 className="text-[64px] font-semibold my-12 mt-20">AgroBot Subteams:</h2>
+			<div className="flex justify-between">
+				<SubteamBox overlayFn={setShowSubteam} bg="#91D0F2" emoji='🤖' title='Applied AI' bulletPoints={["develop AI models to detect weeds"]} />
+				<SubteamBox overlayFn={setShowSubteam} bg="#1F5200" emoji='🏎️' title='Chassis' bulletPoints={["Build the agrobot chassis"]} />
+				<SubteamBox overlayFn={setShowSubteam} bg="#91D0F2" emoji='🔋' title='Powertrain' bulletPoints={["Build the agrobot powertrain"]} />
+			</div>
+			<h2 className="text-[64px] font-semibold my-12 mt-20">AgroPonics Subteams:</h2>
+			<div className="flex justify-between">
+				<SubteamBox overlayFn={setShowSubteam} bg="#91D0F2" emoji='🤖' title='Applied AI' bulletPoints={["develop AI models to detect weeds"]} />
+				<SubteamBox overlayFn={setShowSubteam} bg="#1F5200" emoji='🏎️' title='Chassis' bulletPoints={["Build the agrobot chassis"]} />
+				<SubteamBox overlayFn={setShowSubteam} bg="#91D0F2" emoji='🔋' title='Powertrain' bulletPoints={["Build the agrobot powertrain"]} />
+			</div>
+			<h2 className="text-[64px] font-semibold my-12 mt-20">Admin Subteams:</h2>
+			<div className="flex justify-between">
+				<SubteamBox overlayFn={setShowSubteam} bg="#91D0F2" emoji='🖍️' title='WebDev' bulletPoints={["suffer in figma and yell at React"]} />
+				<SubteamBox overlayFn={setShowSubteam} bg="#1F5200" emoji='💵' title='Finance' bulletPoints={["Get those sponsorship $$$"]} />
+				<SubteamBox overlayFn={setShowSubteam} bg="#91D0F2" emoji='🎤' title='Marketing' bulletPoints={["Build the agrobot powertrain"]} />
+			</div>
+		</div>
+	);
 }
 
 export default Recruitment;

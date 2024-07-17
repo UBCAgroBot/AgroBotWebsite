@@ -6,12 +6,12 @@ import Testimonials from "../components/about/Testimonials";
 
 function AboutUs() {
     return (
-        <>
-            <WhoWeAre />
+        <div className="bg-[#CDFF70]">
             <OurStory />
-            <News />
             <Testimonials />
-        </>
+            <WhoWeAre />
+            <News />
+        </div>
     );
 };
 

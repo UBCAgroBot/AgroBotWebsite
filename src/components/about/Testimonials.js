@@ -43,8 +43,8 @@ function Testimonials() {
 	]
 
 	return (
-		<div className="p-4 bg-[#CDFF70] relative">
-			<h1 className="text-[#2E1B0F] bg-[#FFFFFFD0] inline-block p-4 px-7 font-bold text-[36px] rounded-full drop-shadow-2xl shadow-lg">
+		<div className="p-4 bg-[#CDFF70] text-[#2E1B0F] relative mt-96">
+			<h1 className=" text-[64px] font-bold text-center my-8">
 				Testimonials
 			</h1>
 			<div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 max-h-[33rem] overflow-hidden">
@@ -65,6 +65,7 @@ function Testimonials() {
 				</ul>
 			</div>
 			<div className="bg-gradient-to-b from-[#CDFF7000] to-[#CDFF70] absolute left-0 bottom-0 w-full h-[22rem]" />
+			<div className="bg-glass shadow-lg font-bold p-4 px-7 text-[36px] rounded-full absolute bottom-8 left-1/2 transform -translate-x-1/2">Show more</div>
 		</div>
 	)
 }

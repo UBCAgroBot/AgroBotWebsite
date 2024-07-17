@@ -45,7 +45,7 @@ export const Agrobots = () => {
           <div className="w-[50%]"></div>
         </div>
       </div>
-      <AgrobotsModel ref={modelRef} position={[1, 0, 0]} scale={[1, 1, 1]} />
+      <AgrobotsModel ref={modelRef} position={[1.25, 5, 0]} scale={[1, 1, 1]} />
     </main>
   );
 };
