@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Card({ name, title, quote }) {
 	return (
@@ -21,6 +21,8 @@ function Card({ name, title, quote }) {
 
 function Testimonials() {
 
+	const [showMore, setShowMore] = useState(false)
+
 	const testimonials = [
 		{ name: "Arman Drismir", title: "Web Developer", quote: "Have been working with CSS for over ten years and Tailwind just makes my life easier. It is still CSS and you use flex grid etc but just quicker to write and maintain. You should give it a try" },
 		{ name: "Kori H.", title: "Web Developer", quote: "the best club" },
@@ -31,14 +33,19 @@ function Testimonials() {
 	const row_one = [
 		{ name: "Arman Drismir", title: "Web Developer", quote: "Have been working with CSS for over ten years and Tailwind just makes my life easier. It is still CSS and you use flex grid etc but just quicker to write and maintain. You should give it a try" },
 		{ name: "Ishaan Datta", title: "ML Engineer", quote: "Just a heads up I won't be able to make the meeting today since I'm studying for my final", },
+		{ name: "Arman Drismir", title: "Web Developer", quote: "Have been working with CSS for over ten years and Tailwind just makes my life easier. It is still CSS and you use flex grid etc but just quicker to write and maintain. You should give it a try" },
+		{ name: "Ishaan Datta", title: "ML Engineer", quote: "Just a heads up I won't be able to make the meeting today since I'm studying for my final", },
 	]
 
 	const row_two = [
 		{ name: "Kori H.", title: "Web Developer", quote: "the best club" },
 		{ name: "Robbie Baker", title: "CEO", quote: "I cant seem to get a background color I like for the projects section. Here are screenshots with about 0%, 30%, and 80% opacity. Do any of you have thoughts about which one looks the best?" },
+		{ name: "Kori H.", title: "Web Developer", quote: "the best club" },
+		{ name: "Robbie Baker", title: "CEO", quote: "I cant seem to get a background color I like for the projects section. Here are screenshots with about 0%, 30%, and 80% opacity. Do any of you have thoughts about which one looks the best?" },
 	]
 
 	const row_three = [
+		{ name: "María Loo", title: "Marketing", quote: "Have been working with CSS for over ten years and Tailwind just makes my life easier. It is still CSS and you use flex grid etc but just quicker to write and maintain. You should give it a try Have been working with CSS for over ten years and Tailwind just makes my life easier. It is still CSS and you use flex grid etc but just quicker to write and maintain. You should give it a try " },
 		{ name: "María Loo", title: "Marketing", quote: "Have been working with CSS for over ten years and Tailwind just makes my life easier. It is still CSS and you use flex grid etc but just quicker to write and maintain. You should give it a try Have been working with CSS for over ten years and Tailwind just makes my life easier. It is still CSS and you use flex grid etc but just quicker to write and maintain. You should give it a try " },
 	]
 
@@ -47,7 +54,7 @@ function Testimonials() {
 			<h1 className=" text-[64px] font-bold text-center my-8">
 				Testimonials
 			</h1>
-			<div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 max-h-[33rem] overflow-hidden">
+			<div className={`grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 overflow-hidden ${showMore ? '' : 'max-h-[33rem]'}`}>
 				<ul className="space-y-4 my-8">
 					{row_one.map((testimonial, index) => (
 						<Card key={index} name={testimonial.name} title={testimonial.title} quote={testimonial.quote} />
@@ -64,8 +71,14 @@ function Testimonials() {
 					))}
 				</ul>
 			</div>
-			<div className="bg-gradient-to-b from-[#CDFF7000] to-[#CDFF70] absolute left-0 bottom-0 w-full h-[22rem]" />
-			<div className="bg-glass shadow-lg font-bold p-4 px-7 text-[36px] rounded-full absolute bottom-8 left-1/2 transform -translate-x-1/2">Show more</div>
+			{showMore ? 
+				null
+				:
+				<div className="bg-gradient-to-b from-[#CDFF7000] to-[#CDFF70] absolute left-0 bottom-0 w-full h-[22rem]" /> 
+			}
+			<button onClick={() => setShowMore(!showMore)} className="bg-glass shadow-lg font-bold p-4 px-7 text-[36px] rounded-full absolute bottom-8 left-1/2 transform -translate-x-1/2">
+				{showMore ? 'Show Less' : 'Show More'}
+			</button>
 		</div>
 	)
 }
