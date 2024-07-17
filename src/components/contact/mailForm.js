@@ -78,10 +78,9 @@ function MailForm() {
 							className="my-2 text-[32px] bg-[#CDFF70] rounded-[24px] border-[4px] border-[#2E1B0F]"
 						/>
 						<label>Message</label>
-						<input
-							type="textarea"
+						<textarea
 							placeholder="Message"
-							className="p-2 my-2 text-[32px] bg-[#CDFF70] rounded-[24px] border-[4px] border-[#2E1B0F] min-h-[4em]"
+							className="p-3 my-2 text-[32px] bg-[#CDFF70] rounded-[24px] border-[4px] border-[#2E1B0F] min-h-[4em]"
 							value={message}
 							onChange={(e) => setMessage(e.target.value)}
 						/>
@@ -91,12 +90,12 @@ function MailForm() {
 					</form>
 				</div>
 				<div className="w-[75%] pt-12">
-					<h3 className="text-[#2E1B0F] font-bold text-[64px]">Or, reach us on</h3>
-					<div className="flex justify-between mx-auto my-12">
-						<div className="flex flex-col items-center justify-center font-bold"><div className="bg-[#2E1B0F] rounded-xl p-0 mb-2 flex justify-center items-center w-24 h-24"><LuMail      size='64' color="#CDFF70" /></div>agrobot@gmail.com</div>
-						<div className="flex flex-col items-center justify-center font-bold"><div className="bg-[#2E1B0F] rounded-xl p-2 mb-2 flex justify-center items-center w-24 h-24"><FaInstagram size='64' color="#CDFF70" /></div>@agrobot</div>
-						<div className="flex flex-col items-center justify-center font-bold"><div className="bg-[#2E1B0F] rounded-xl p-2 mb-2 flex justify-center items-center w-24 h-24"><FaLinkedin  size='64' color="#CDFF70" /></div>UBC Agrobot</div>
-						<div className="flex flex-col items-center justify-center font-bold"><div className="bg-[#2E1B0F] rounded-xl p-2 mb-2 flex justify-center items-center w-24 h-24"><FaFacebook  size='64' color="#CDFF70" /></div>UBC Agrobot</div>
+					<h3 className="text-[#2E1B0F] font-bold text-[64px]">Or via social media</h3>
+					<div className="flex mx-auto my-12">
+						<div className="flex flex-col items-center justify-center font-bold mr-8"><div className="bg-[#2E1B0F] rounded-xl p-0 mb-2 flex justify-center items-center w-24 h-24"><LuMail      size='64' color="#CDFF70" /></div></div>
+						<div className="flex flex-col items-center justify-center font-bold mr-8"><div className="bg-[#2E1B0F] rounded-xl p-2 mb-2 flex justify-center items-center w-24 h-24"><FaInstagram size='64' color="#CDFF70" /></div></div>
+						<div className="flex flex-col items-center justify-center font-bold mr-8"><div className="bg-[#2E1B0F] rounded-xl p-2 mb-2 flex justify-center items-center w-24 h-24"><FaLinkedin  size='64' color="#CDFF70" /></div></div>
+						<div className="flex flex-col items-center justify-center font-bold mr-8"><div className="bg-[#2E1B0F] rounded-xl p-2 mb-2 flex justify-center items-center w-24 h-24"><FaFacebook  size='64' color="#CDFF70" /></div></div>
 					</div>
 				</div>
 			</div>
