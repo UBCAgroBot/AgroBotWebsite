@@ -54,7 +54,7 @@ function Testimonials() {
 			<h1 className=" text-[64px] font-bold text-center my-8">
 				Testimonials
 			</h1>
-			<div className={`grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 overflow-hidden ${showMore ? '' : 'max-h-[33rem]'}`}>
+			<div className={`grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 overflow-hidden ${showMore ? '' : 'max-h-[33rem]'} ${showMore ? 'pb-[72px]' : ''}`}>
 				<ul className="space-y-4 my-8">
 					{row_one.map((testimonial, index) => (
 						<Card key={index} name={testimonial.name} title={testimonial.title} quote={testimonial.quote} />
@@ -76,7 +76,10 @@ function Testimonials() {
 				:
 				<div className="bg-gradient-to-b from-[#CDFF7000] to-[#CDFF70] absolute left-0 bottom-0 w-full h-[22rem]" /> 
 			}
-			<button onClick={() => setShowMore(!showMore)} className="bg-glass shadow-lg font-bold p-4 px-7 text-[36px] rounded-full absolute bottom-8 left-1/2 transform -translate-x-1/2">
+			<button
+				onClick={() => setShowMore(!showMore)}
+				className="bg-glass shadow-lg font-bold p-4 px-7 text-[36px] rounded-full absolute bottom-8 left-1/2 transform -translate-x-1/2"
+				>
 				{showMore ? 'Show Less' : 'Show More'}
 			</button>
 		</div>
