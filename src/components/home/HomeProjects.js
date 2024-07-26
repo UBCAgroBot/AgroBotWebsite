@@ -48,12 +48,12 @@ function Project({ ProjectName, background }) {
       >
         <div className="w-full h-full text-[#2E1B0F] flex flex-col justify-center">
           <div>
-            <h1 className="px-4 bg-[#ffffffe8] rounded-[36px] text-[56px] font-black inline-block mb-4 drop-shadow-xl">
+            <h1 className="px-6 p-2 bg-glass shadow-xl rounded-[36px] text-[56px] font-black inline-block mb-4 drop-shadow-xl">
               {ProjectName}
             </h1>
           </div>
           <div>
-            <p className="p-4 bg-[#ffffffe8] rounded-[36px] text-[20px] mb-7 drop-shadow-xl">
+            <p className="p-6 bg-glass shadow-xl rounded-[36px] text-[20px] mb-7 drop-shadow-xl">
               The University of British Columbia (UBC) is a public research
               university with campuses near Vancouver and Okanagan in British
               Columbia, Canada. Established in 1908, it is the oldest university
