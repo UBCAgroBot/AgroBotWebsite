@@ -2,9 +2,15 @@ import React from "react";
 import { useSpring, animated } from "react-spring";
 import { useState, useEffect, useRef } from "react";
 import { FaChevronRight } from "react-icons/fa";
-import AgrobotsModel from "../projects/AgrobotsModel";
+import {Agrobotmd} from "../projects/utils/Agrobotmd";
+import AgroponicView from "../projects/agroponics/AgroponicView";
+import AgropickerView from "../projects/agropicker/AgropickerView";
 
-function Project({ ProjectName, background }) {
+const AgrobotMod = <Agrobotmd />;
+const AgroponicMod = <AgroponicView/>;
+const AgropickerMod = <AgropickerView/>
+
+function Project({ ProjectName, background, ModelComponent }) {
   const containerRef = useRef(null);
 
   function useFadeIn(containerRef) {
@@ -16,8 +22,6 @@ function Project({ ProjectName, background }) {
         const containerTop = containerRef.current.getBoundingClientRect().top;
         const containerBottom =
           containerRef.current.getBoundingClientRect().bottom;
-
-        console.log(containerBottom + ", " + height);
 
         if (containerTop < 200 && containerBottom > height + 200) {
           setIsVisible(true);
@@ -72,7 +76,7 @@ function Project({ ProjectName, background }) {
         </div>
       </animated.div>
       <div className="w-[47.5%] h-[50vh] bg-[#2E1B0F] relative top-[100vh] rounded-lg">
-        <AgrobotsModel ref={null} position={[0, 0, 0]} scale={[3, 3, 3]} />
+        {ModelComponent} 
       </div>
     </div>
   );
@@ -81,15 +85,17 @@ function Project({ ProjectName, background }) {
 function HomeProjects() {
   return (
     <div className="bg-[#CDFF70]">
-      <Project ProjectName="AgroBot" />
+      <Project ProjectName="AgroBot" ModelComponent={AgrobotMod} />
       <Project
         ProjectName="AgroPonics "
+        ModelComponent={AgroponicMod}
         background={{
           background: "linear-gradient(to bottom, #CDFF70, #78BE20)",
         }}
       />
       <Project
         ProjectName="AgroPicker "
+        ModelComponent={AgropickerMod}
         background={{ background: "#78BE20" }}
       />
     </div>

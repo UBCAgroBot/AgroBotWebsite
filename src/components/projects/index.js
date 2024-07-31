@@ -1,5 +1,4 @@
-import { Agrobots } from "./Agrobots.js";
-import { Agroponics } from "./Agroponics.js";
-import { Agropicker } from "./Agropicker.js";
+import AgrobotsPage from "./AgrobotsPage";
+import AgroponicsPage from "./AgroponicsPage";
 
-export { Agrobots, Agroponics, Agropicker };
+export { AgrobotsPage, AgroponicsPage }

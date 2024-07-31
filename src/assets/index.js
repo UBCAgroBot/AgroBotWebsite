@@ -1,4 +1,10 @@
 import {
+  agrobotFarmInto,
+  AgrobotBackground,
+  AgroponicsFarm,
+  FarmPath,
+  AgrobotModel2D,
+AgrobotHero,
   agrobotFarm,
   AGROBOT_ICON,
   TeamPhoto,
@@ -59,6 +65,12 @@ import {
 } from "./image";
 
 export {
+  agrobotFarmInto,
+  AgroponicsFarm,
+  AgrobotModel2D,
+  AgrobotHero,
+  FarmPath,
+  AgrobotBackground,
   AgroponicsS2,
   AGROBOT_ICON,
   TeamPhoto,

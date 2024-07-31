@@ -8,7 +8,7 @@ import {
 import { SponsorshipS1, SponsorshipS2, SponsorshipS3 } from "./sponsorship";
 import { HomeBanner, OurMission, HomeProjects } from "./home";
 import { OurSponsors } from "./common";
-import { Agrobots, Agroponics, Agropicker } from "./projects";
+import { AgrobotsPage } from "./projects";
 import { MailForm, Map } from "./contact";
 
 export {
@@ -20,9 +20,7 @@ export {
   HomeBanner,
   OurMission,
   OurSponsors,
-  Agrobots,
-  Agroponics,
-  Agropicker,
+  AgrobotsPage,
   MailForm,
   Map,
   HomeProjects,

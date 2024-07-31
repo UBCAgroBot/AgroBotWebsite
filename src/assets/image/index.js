@@ -1,4 +1,9 @@
+import AgroponicsFarm from "./AgroponicsRiver.jpeg"
 import agrobotFarm from "./Farm.jpeg";
+import AgrobotBackground from "./AgrobotsBackground.jpeg"
+import AgrobotHero from "./AgrobotHero.jpeg"
+import FarmPath from "./FarmPath.jpeg";
+import AgrobotModel2D from "./AgrobotModel2D.jpg"
 import apsc from "./apsc.png";
 import AGROBOT_ICON from "./AGROBOT_ICON.png";
 import chbe from "./chbe.png";
@@ -58,9 +63,16 @@ import temp_robot_blueprint from "./temp_robot_blueprint.png";
 import temp_circuitry from "./temp_circuitry.png";
 import temp_maintenance from "./temp_maintenance.png";
 import agrobotChassisTemp from "./agrobotChassisTemp.jpeg";
+import agrobotFarmInto from "./Farm.jpeg";
 
 export {
   AGROBOT_ICON,
+  AgrobotModel2D,
+  AgroponicsFarm,
+  AgrobotHero,
+  FarmPath,
+  AgrobotBackground,
+  agrobotFarmInto,
   agrobotFarm,
   AgroponicsS2,
   apsc,
