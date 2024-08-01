@@ -22,15 +22,15 @@ const Navbar = () => {
 	}
 
 	return (
-		<header className='h-16 w-full fixed top-8 z-40'>
+		<header className='h-14 w-full fixed top-4 z-40 text-[22px]'>
 			<nav className="h-full flex items-center justify-center">
 				<div className="h-full w-[96%] flex items-center justify-between px-2 pr-6 bg-glass hover:bg-white duration-300 ease-in-out shadow-glass backdrop-blur-glass rounded-full text-[#2E1B0F]">
 					<div className="h-full font-bold cursor-pointer flex items-center">
-						<a href="/"><img className="h-12 mr-3" src={AGROBOT_ICON} alt="UBC AGROBOT" /></a>
-						<a href="/" className="font-bold text-[32px]">UBC AGROBOT</a>
+						<a href="/"><img className="h-11 mr-3" src={AGROBOT_ICON} alt="UBC AGROBOT" /></a>
+						<a href="/" className="font-bold text-[26px]">UBC AGROBOT</a>
 					</div>
 
-					<ul className="list-none lg:flex items-center gap-8 hidden text-[24px]">
+					<ul className="list-none lg:flex items-center gap-8 hidden">
 						{navLinks.map((e) => (
 							<li
 								key={e.id}

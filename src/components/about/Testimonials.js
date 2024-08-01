@@ -50,8 +50,8 @@ function Testimonials() {
 	]
 
 	return (
-		<div className="p-4 bg-[#CDFF70] text-[#2E1B0F] relative mt-96">
-			<h1 className=" text-[64px] font-bold text-center my-8">
+		<div className="p-4 bg-[#CDFF70] text-[#2E1B0F] relative mt-24">
+			<h1 className=" text-[48px] font-bold text-center mt-8 mb-4">
 				Testimonials
 			</h1>
 			<div className={`grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 overflow-hidden ${showMore ? '' : 'max-h-[33rem]'} ${showMore ? 'pb-[72px]' : ''}`}>

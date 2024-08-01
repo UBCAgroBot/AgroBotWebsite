@@ -87,7 +87,7 @@ function News() {
     return (
         <div className="bg-[#CDFF70] px-4 py-64">
             {showOverlay ? <ArticleOverlay deactivateFn={DeactivateArticle} articleName={overlayKey} /> : null}
-			<h1 className="text-[#2E1B0F] text-[64px] font-bold text-center my-8">
+			<h1 className="text-[#2E1B0F] text-[48px] font-bold text-center my-8">
 				AgroBot News
 			</h1>
             <div className="flex items-center">

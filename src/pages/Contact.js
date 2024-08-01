@@ -6,7 +6,7 @@ import { LuMail } from "react-icons/lu";
 function ContactUs() {
 
 	return (
-		<div className="bg-[#CDFF70] pt-64 pb-64">
+		<div className="bg-[#CDFF70] pt-32 pb-64">
 			<div className="w-full h-[1250px] flex justify-between">
 				<div className="w-[60%]">
 					<MailForm />

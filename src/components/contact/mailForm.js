@@ -40,8 +40,8 @@ function MailForm() {
 		<div className="w-full min-h-full">
 			<div className="flex flex-col items-center pt-16">
 				<div className="w-[75%]">
-					<h3 className="text-[#2E1B0F] font-bold text-[64px]">Contact Us</h3>
-					<p className="text-[#2E1B0F] text-[32px]">Our team would love <br /> to hear from you.</p>
+					<h3 className="font-bold text-[48px] mb-2">Contact Us</h3>
+					<p className="text-[32px]">Our team would love <br /> to hear from you.</p>
 					<form onSubmit={handleSubmit} className="my-8 flex flex-col">
 						<div className="flex justify-between">
 							<div className='w-[49%]'>

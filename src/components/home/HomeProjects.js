@@ -2,104 +2,88 @@ import React from "react";
 import { useSpring, animated } from "react-spring";
 import { useState, useEffect, useRef } from "react";
 import { FaChevronRight } from "react-icons/fa";
-import {Agrobotmd} from "../projects/utils/Agrobotmd";
+import { Agrobotmd } from "../projects/utils/Agrobotmd";
 import AgroponicView from "../projects/agroponics/AgroponicView";
 import AgropickerView from "../projects/agropicker/AgropickerView";
 
 const AgrobotMod = <Agrobotmd />;
-const AgroponicMod = <AgroponicView/>;
-const AgropickerMod = <AgropickerView/>
+const AgroponicMod = <AgroponicView />;
+const AgropickerMod = <AgropickerView />
 
 function Project({ ProjectName, background, ModelComponent }) {
-  const containerRef = useRef(null);
+	const containerRef = useRef(null);
 
-  function useFadeIn(containerRef) {
-    const [isVisible, setIsVisible] = useState(false);
+	function useFadeIn(containerRef) {
+		const [isVisible, setIsVisible] = useState(false);
 
-    useEffect(() => {
-      const handleScroll = () => {
-        const height = window.innerHeight;
-        const containerTop = containerRef.current.getBoundingClientRect().top;
-        const containerBottom =
-          containerRef.current.getBoundingClientRect().bottom;
+		useEffect(() => {
+			const handleScroll = () => {
+				const height = window.innerHeight;
+				const containerTop = containerRef.current.getBoundingClientRect().top;
+				const containerBottom =
+					containerRef.current.getBoundingClientRect().bottom;
 
-        if (containerTop < 200 && containerBottom > height + 200) {
-          setIsVisible(true);
-        } else {
-          setIsVisible(false);
-        }
-      };
+				if (containerTop < 200 && containerBottom > height + 200) {
+					setIsVisible(true);
+				} else {
+					setIsVisible(false);
+				}
+			};
 
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-    }, [containerRef]);
+			window.addEventListener("scroll", handleScroll);
+			return () => window.removeEventListener("scroll", handleScroll);
+		}, [containerRef]);
 
-    return useSpring({
-      opacity: isVisible ? 1 : 0,
-      config: { duration: 200 },
-    });
-  }
+		return useSpring({
+			opacity: isVisible ? 1 : 0,
+			config: { duration: 200 },
+		});
+	}
 
-  return (
-    <div
-      ref={containerRef}
-      className="w-full h-[250vh] flex px-[10%] items-start justify-between"
-      style={background}
-    >
-      <animated.div
-        style={useFadeIn(containerRef)}
-        className="w-[36%] h-[50vh] sticky top-[25vh]"
-      >
-        <div className="w-full h-full text-[#2E1B0F] flex flex-col justify-center">
-          <div>
-            <h1 className="px-6 p-2 bg-glass shadow-xl rounded-[36px] text-[56px] font-black inline-block mb-4 drop-shadow-xl">
-              {ProjectName}
-            </h1>
-          </div>
-          <div>
-            <p className="p-6 bg-glass shadow-xl rounded-[36px] text-[20px] mb-7 drop-shadow-xl">
-              The University of British Columbia (UBC) is a public research
+	return (
+		<div
+			ref={containerRef}
+			className="w-full h-[250vh] flex px-[10%] items-start justify-between"
+			style={background}
+		>
+			<animated.div
+				style={useFadeIn(containerRef)}
+				className="w-[40%] sticky top-[25vh]"
+			>
+				<div className="w-full h-full bg-glass rounded-[46px] p-8 shadow-sm">
+					<h2 className="text-[48px] font-bold mb-4">{ProjectName}</h2>
+					<p className="text-[24px]">The University of British Columbia (UBC) is a public research
               university with campuses near Vancouver and Okanagan in British
-              Columbia, Canada. Established in 1908, it is the oldest university
-              in British Columbia. With an annual research budget of $773
-              million, UBC funds over 10,000 projects a year.[4]
-            </p>
-          </div>
-          <div>
-            <a
-              href="#"
-              className="p-3 px-8 text-[24px] bg-[#2E1B0F] text-white font-bold rounded-[36px] drop-shadow-xl"
-            >
-              LEARN MORE <FaChevronRight className="inline mb-1" />{" "}
-            </a>
-          </div>
-        </div>
-      </animated.div>
-      <div className="w-[47.5%] h-[50vh] bg-[#2E1B0F] relative top-[100vh] rounded-lg">
-        {ModelComponent} 
-      </div>
-    </div>
-  );
+              Columbia, Canada. Established in 1908.
+			  </p>
+			  <button className="px-4 py-2 mt-4 bg-[#2E1B0F] font-medium text-[24px] rounded-full text-white">Learn More</button>
+				</div>
+			</animated.div>
+			<div className="w-[47.5%] h-[50vh] bg-[#2E1B0F] relative top-[100vh] rounded-lg">
+				{ModelComponent}
+			</div>
+		</div>
+	);
 }
 
 function HomeProjects() {
-  return (
-    <div className="bg-[#CDFF70]">
-      <Project ProjectName="AgroBot" ModelComponent={AgrobotMod} />
-      <Project
-        ProjectName="AgroPonics "
-        ModelComponent={AgroponicMod}
-        background={{
-          background: "linear-gradient(to bottom, #CDFF70, #78BE20)",
-        }}
-      />
-      <Project
-        ProjectName="AgroPicker "
-        ModelComponent={AgropickerMod}
-        background={{ background: "#78BE20" }}
-      />
-    </div>
-  );
+	return (
+		<div className="bg-[#CDFF70]">
+			<Project ProjectName="AgroBot" ModelComponent={AgrobotMod} />
+			<Project
+				ProjectName="AgroPonics "
+				ModelComponent={AgroponicMod}
+				background={{
+					background: "linear-gradient(to bottom, #CDFF70, #78BE20)",
+				}}
+			/>
+			<Project
+				ProjectName="AgroPicker "
+				ModelComponent={AgropickerMod}
+				background={{ background: "#78BE20" }}
+			/>
+		</div>
+	);
 }
 
 export default HomeProjects;

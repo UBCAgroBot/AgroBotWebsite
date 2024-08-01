@@ -9,8 +9,6 @@ function Home() {
             <OurMission></OurMission>
             
             <HomeProjects></HomeProjects>
-
-            {/* <OurSponsors/> */}
         </>
     );
 };

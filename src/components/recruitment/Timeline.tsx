@@ -4,13 +4,13 @@ import { TbTriangleInvertedFilled } from "react-icons/tb";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 function Timeline() {
-    const start_day = new Date(2024, 0, 1)
-    const end_day = new Date(2024, 9, 1)
+    const start_day = new Date(2024, 6, 1)
+    const end_day = new Date(2024, 11, 25)
     const today = new Date()
 
     if (today > end_day) {
-        return(
-            <p className="text-[48px] font-medium pt-8 pb-16">We are not taking applications right now. If you are still interested you can email us at <a href="mailto:ubcagrobot@gmail.com" className="underline">ubcagrobot@gmail.com</a>.</p>
+        return (
+            <p className="text-[32px] font-medium pt-8 pb-16">We are not taking applications right now. If you are still interested you can email us at <a href="mailto:ubcagrobot@gmail.com" className="underline">ubcagrobot@gmail.com</a>.</p>
         )
     }
 
@@ -50,8 +50,8 @@ function Timeline() {
 
     return (
         <>
-            <p className="text-[48px] font-medium pt-8 pb-16">Applications are open until January 27th! Before you apply you should read our recruitment package. When you are ready you can fill out the application form.</p>
-            <div className="w-[1262px] h-[375px] relative text-white font-medium text-[32px]">
+            <p className="text-[32px] font-medium pt-8 pb-16">Applications are open until January 27th! Before you apply you should read our recruitment package. When you are ready you can fill out the application form.</p>
+            <div className="w-full h-[375px] relative text-white font-medium text-[32px]">
                 <div className="absolute left-[95px] top-[190px] w-[85%] h-5 bg-black rounded-full"></div>
                 {/* start date */}
                 <h3 className="text-black text-center absolute left-[88px] top-[46px] font-bold">Applications<br />Open</h3>

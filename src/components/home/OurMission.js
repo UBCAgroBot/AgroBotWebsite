@@ -156,16 +156,13 @@ function RectangleAnimation() {
 
 function OurMission() {
   return (
-    <div className="w-full h-[100vh] bg-[#CDFF70] px-[10%] flex justify-center items-center">
-      <div className="w-[50%] px-[5%]">
+    <div className="mx-auto w-[1000px] h-[100vh] bg-[#CDFF70] flex justify-center items-center">
+      <div className="w-[50%]">
         <h1 className="mb-4 font-bold text-[48px] text-[#2E1B0F]">
-          A fully integrated suite of fertilizing and exterminating products
+          The complete farming solution.
         </h1>
-        <p className="text-[18px] text-[#2e1b0fa7]">
-          Reduce costs, grow revenue, and run your business more efficiently on
-          a fully integrated platform. Use UBC AGrobot to handle all of your
-          payments-related needs, manage revenue operations, and launch (or
-          invent) new business models.
+        <p className="text-[32px] text-[#2e1b0fa7]">
+          handle all of your payments-related needs, manage revenue operations, and launch.
         </p>
       </div>
       <div className="ml-[10%] flex justify-center items-center">
