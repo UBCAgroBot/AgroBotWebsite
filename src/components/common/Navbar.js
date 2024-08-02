@@ -23,8 +23,8 @@ const Navbar = () => {
 
 	return (
 		<header className='h-14 w-full fixed top-4 z-40 text-[22px]'>
-			<nav className="h-full flex items-center justify-center">
-				<div className="h-full w-[96%] flex items-center justify-between px-2 pr-6 bg-glass hover:bg-white duration-300 ease-in-out shadow-glass backdrop-blur-glass rounded-full text-[#2E1B0F]">
+			<nav className="h-full flex flex-col items-center justify-center">
+				<div className={`h-full w-[96vw] flex items-center justify-between px-2 pr-6 bg-glass hover:bg-white duration-300 ease-in-out shadow-glass backdrop-blur-glass text-[#2E1B0F] rounded-full ${isMenuOpen ? 'rounded-b-[0px] rounded-t-2xl' : 'rounded-b-full'}`}>
 					<div className="h-full font-bold cursor-pointer flex items-center">
 						<a href="/"><img className="h-11 mr-3" src={AGROBOT_ICON} alt="UBC AGROBOT" /></a>
 						<a href="/" className="font-bold text-[26px]">UBC AGROBOT</a>
@@ -40,21 +40,19 @@ const Navbar = () => {
 							>
 								<a
 									href={e.link}
-									className={`transition-all duration-200 flex items-center ${location.pathname === e.link ? 'font-bold' : ''
-										}`}
-								>
+									className={`transition-all duration-200 flex items-center ${location.pathname === e.link ? 'font-bold' : ''}`}>
 									{e.id} {e.dropdown && <FaChevronDown size='16px' style={{ margin: '3px 0 0 4px' }} />}
 								</a>
 								{e.dropdown && isSubMenuOpen && (
 									<ul
-										className="absolute top-full left-[-40px] px-[40px] pb-[20px] bg-white rounded"
+										className="absolute left-[-32px] px-[32px] pb-[16px] bg-white rounded-2xl pt-1"
 										style={{ transition: `all ${dropdown_hover_timing}ms` }}
 									>
 										{e.dropdown.map((item) => (
-											<li key={item.id}>
+											<li key={item.id} className="">
 												<a
 													href={item.link}
-													className="block text-[#291305] py-[2px] px-0"
+													className="block py-1 px-0"
 												>
 													{item.id}
 												</a>
@@ -69,7 +67,7 @@ const Navbar = () => {
 					{/* menu button for small devices */}
 					<button
 						onClick={toggleMobileMenu}
-						className="lg:hidden text-[#8cbc24] text-3xl "
+						className="lg:hidden text-black text-3xl "
 					>
 						<HiOutlineMenu />
 					</button>
@@ -77,27 +75,27 @@ const Navbar = () => {
 
 				{/* nav items for small devices */}
 				{isMenuOpen && (
-					<div className="w-full bg-[#F8F7F1] text-[#8cbc24] text-lg font-bold rounded py-4">
-						<a href="/" className="block hover:text-grey-400 my-2 mx-4">
+					<div className="w-[96vw] bg-white absolute top-full rounded-b-[32px] text-center">
+						<a href="/" className="block">
 							Home
 						</a>
-						<a href="/projects" className="block hover:text-grey-400 my-2 mx-4">
+						<a href="/projects" className="block">
 							Projects
 							<span className='font-normal'>
-								<a href="/agrobot" className="block hover:text-grey-400 my-2 mx-4">AgroBot</a>
-								<a href="/agroponics" className="block hover:text-grey-400 my-2 mx-4">AgroPonics</a>
+								<a href="/agrobot" className="block">AgroBot</a>
+								<a href="/agroponics" className="block">AgroPonics</a>
 							</span>
 						</a>
-						<a href="/sponsorship" className="block hover:text-grey-400 my-2 mx-4">
+						<a href="/sponsorship" className="block">
 							Sponsorship
 						</a>
-						<a href="/recruitment" className="block hover:text-grey-400 my-2 mx-4">
+						<a href="/recruitment" className="block">
 							Recruitment
 						</a>
-						<a href="/contact" className="block hover:text-grey-400 my-2 mx-4">
+						<a href="/contact" className="block">
 							Contact
 						</a>
-						<a href="/about" className="block hover:text-grey-400 my-2 mx-4">
+						<a href="/about" className="block">
 							About
 						</a>
 					</div>
