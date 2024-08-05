@@ -5,6 +5,7 @@ import AgrobotHero from "./AgrobotHero.jpeg"
 import FarmPath from "./FarmPath.jpeg";
 import AgrobotModel2D from "./AgrobotModel2D.jpg"
 import AgroponicModel2D from "./AgroponicModel2D.png"
+import AgroArm2DModel from "./Agroarm2DModel.png";
 import apsc from "./apsc.png";
 import AGROBOT_ICON from "./AGROBOT_ICON.png";
 import chbe from "./chbe.png";
@@ -71,6 +72,7 @@ export {
   AgrobotModel2D,
   AgroponicsFarm,
   AgrobotHero,
+  AgroArm2DModel,
   FarmPath,
   AgrobotBackground,
   agrobotFarmInto,

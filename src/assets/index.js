@@ -1,5 +1,6 @@
 import {
   AgroponicModel2D,
+AgroArm2DModel,
   agrobotFarmInto,
   AgrobotBackground,
   AgroponicsFarm,
@@ -72,6 +73,7 @@ export {
   AgrobotModel2D,
   AgrobotHero,
   FarmPath,
+  AgroArm2DModel,
   AgrobotBackground,
   AgroponicsS2,
   AGROBOT_ICON,
