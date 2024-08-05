@@ -5,6 +5,9 @@ import Subteams from "./agroponics/Subteams";
 const AgroponicsPage = () => {
   return (
     <main
+      style={{
+        overflowX: "hidden",
+      }}
     >
       <AgroponicsMain />
       <Subteams />

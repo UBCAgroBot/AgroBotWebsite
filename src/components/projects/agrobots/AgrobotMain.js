@@ -1,5 +1,4 @@
 import gsap from "gsap";
-import { AgrobotHero } from "../../../assets";
 import { useGSAP } from "@gsap/react";
 import { useState, useRef, useEffect } from "react";
 import ModelViewer from "./ModelView";
@@ -8,15 +7,32 @@ import * as THREE from "three";
 import { Preload, View } from "@react-three/drei";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
+import { useMediaQuery } from "react-responsive";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(MotionPathPlugin);
 
 const AgrobotMain = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+  const isMobile = width >= 800;
   const cameraRef = useRef();
   const modelRef = useRef(new THREE.Group());
   const [rotation, setRotation] = useState(0);
   const [headerBottom, setHeaderBottom] = useState(0);
+  const isLaptopOrMobile = useMediaQuery({
+    query: '(min-width: 1224px)'
+  })
+
+  function handleResize() {
+    setWidth(window.innerWidth);
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize());
+    return () => {
+      window.removeEventListener('resize', handleResize())
+    }
+  });
 
   useEffect(() => {
     const header = document.getElementById("tag");
@@ -28,28 +44,27 @@ const AgrobotMain = () => {
 
   const height = window.innerHeight / 3;
 
-
   useGSAP(() => {
     const model = "#view";
 
-    gsap.to('#sunrise-overlay', {
-      delay: 1,
+    gsap.to("#sunrise-overlay", {
+      delay: 2,
       duration: 1,
       opacity: 0,
       zIndex: 0,
-    })
+    });
 
-    gsap.to('#agrobotmain-section', {
-      delay: 1,
+    gsap.to("#agrobotmain-section", {
+      delay: 2,
       duration: 1,
-    })
+    });
 
     const timeline = gsap
       .timeline({
         scrollTrigger: {
           trigger: model,
           start: "top top+=36.5%",
-          markers: true,
+          markers: false,
           end: height,
           scrub: 2,
           pinType: "transform",
@@ -84,8 +99,7 @@ const AgrobotMain = () => {
         YPercent: 100,
         duration: 0.5,
         delay: 0.01,
-      })
-
+      });
   }, []);
 
   return (
@@ -141,34 +155,44 @@ const AgrobotMain = () => {
               mollis est
             </p>
           </div>
-          <div
-            id="main-model-container"
-            className="absolute w-full h-full  md:h-[90vh] overflow-hidden"
-          >
-            <ModelViewer
-              groupRef={modelRef}
-              gsapType="view"
-              cameraRef={cameraRef}
-              setRotation={setRotation}
-            />
-            <Canvas
-              id="model"
-              frameloop="always"
-              className="w-full h-full"
-              style={{
-                position: "fixed",
-                top: 0,
-                bottom: 0,
-                left: 0,
-                right: 0,
-                overflow: "hidden",
-              }}
-              eventSource={document.getElementById("root")}
+
+          {isMobile ? (
+            <div
+              id="main-model-container"
+              className="absolute w-full h-full  md:h-[90vh] overflow-hidden"
             >
-              <View.Port />
-              <Preload all />
-            </Canvas>
-          </div>
+              <ModelViewer
+                groupRef={modelRef}
+                gsapType="view"
+                cameraRef={cameraRef}
+                setRotation={setRotation}
+              />
+              <Canvas
+                id="model"
+                frameloop="always"
+                className="w-full h-full"
+                style={{
+                  position: "fixed",
+                  top: 0,
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  overflow: "hidden",
+                }}
+                eventSource={document.getElementById("root")}
+              >
+                <View.Port />
+                <Preload all />
+              </Canvas>
+            </div>
+          ) : (
+            <div>
+            <img
+            src="../../../assets/image/AgrobotModel2D.jpg"
+            alt="agrobot photo"
+            />
+            </div>
+          )}
         </div>
       </div>
     </section>

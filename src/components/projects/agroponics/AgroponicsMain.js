@@ -28,7 +28,7 @@ const AgroponicsMain = () => {
         scrollTrigger: {
           trigger: model,
           start: "top top+=30.5%",
-          markers: true,
+          markers: false,
           end: height,
           scrub: 2,
           pinType: "transform",
