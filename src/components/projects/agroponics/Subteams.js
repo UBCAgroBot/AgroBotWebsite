@@ -10,6 +10,7 @@ const Subteams = () => {
         backgroundImage: `url(${AgroponicsFarm})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
         maxWidth: "100vw",
         minWidth: "100vw",
       }}>

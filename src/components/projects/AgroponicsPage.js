@@ -7,6 +7,7 @@ const AgroponicsPage = () => {
     <main
       style={{
         overflowX: "hidden",
+        overflowY: "hidden"
       }}
     >
       <AgroponicsMain />

@@ -10,12 +10,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { useGSAP } from "@gsap/react";
 import { calculateNewValue } from "@testing-library/user-event/dist/utils";
+import { useMediaQuery } from "react-responsive";
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
 function calculateViewportWidth() {
   const width = window.innerWidth;
-  const xRatio = [0.7, 0.67, 0.3, 0.65, 0.23, 0.5, 0.48, 0.45, 0.3]
+  const xRatio = [0.7, 0.67, 0.3, 0.60, 0.23, 0.5, 0.48, 0.45, 0.3]
   const xPosition = [];
 
   for (let i = 0; i < xRatio.length; i++) {
@@ -42,7 +43,7 @@ function calculateViewportHeight() {
 const Subteams = () => {
   const xPos = calculateViewportWidth();
   const yPos = calculateViewportHeight();
-  console.log(3.9 * window.innerHeight)
+  const isMobile = useMediaQuery({ query: '(max-width: 1200px)' })
 
   let model = "#DAgrobot";
   const path = [
@@ -102,12 +103,14 @@ const Subteams = () => {
         minWidth: "100vw",
       }}
     >
+      {!isMobile &&
       <img
         id="DAgrobot"
         className="absolute size-[15rem] z-[1]"
         src={AgrobotModel2D}
         alt="img"
       />
+}
       <AppliedAi />
       <Chassis />
       <Electrical />

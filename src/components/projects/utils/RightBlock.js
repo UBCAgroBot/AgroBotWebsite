@@ -11,7 +11,7 @@ const RightBlock = ({ title, titleContent, bodyContent }) => {
   const titleTag = "#" + titleHeader;
   const bodyTag = "#" + titleBody;
   const [width, setWidth] = useState(window.innerWidth);
-  const isMobile = width >= 800;
+  const isMobile = width <= 800;
 
   function handleResize() {
     setWidth(window.innerWidth);
@@ -66,7 +66,7 @@ const RightBlock = ({ title, titleContent, bodyContent }) => {
     );
   }, []);
 
-  if (isMobile) {
+  if (!isMobile) {
     return (
       <div className="flex w-[100lvw] h-[75lvh] z-[5]">
         <div className="w-[50%]"></div>

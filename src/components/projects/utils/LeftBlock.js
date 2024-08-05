@@ -11,7 +11,7 @@ const LeftBlock = ({ title, titleContent, bodyContent }) => {
   const titleTag = "#" + titleHeader;
   const bodyTag = "#" + titleBody;
   const [width, setWidth] = useState(window.innerWidth);
-  const isMobile = width >= 800;
+  const isMobile = width <= 800;
 
   function handleResize() {
     setWidth(window.innerWidth);
@@ -69,7 +69,7 @@ const LeftBlock = ({ title, titleContent, bodyContent }) => {
     );
   }, []);
 
-  if (isMobile) {
+  if (!isMobile) {
     return (
       <div className="flex flex-col items-center justify-center w-[50vw] z-[5]">
         <div id={titleHeader}>
@@ -79,26 +79,30 @@ const LeftBlock = ({ title, titleContent, bodyContent }) => {
         </div>
         <div
           id={titleBody}
-          className=" bg-glass mt-[2rem] border-2 min-w-[20%] max-w-[40rem] border-black rounded-3xl opacity-0"
+          className="bg-glass mt-[2rem] border-2 min-w-[20%] max-w-[40rem] border-black rounded-3xl opacity-0"
         >
-          <p className="text-[1.2rem] m-[20px]">{bodyContent}</p>
+          <p className="text-[1.0rem] m-[20px]">{bodyContent}</p>
         </div>
         <div className="w-[50%]"></div>
       </div>
     );
   } else {
     return (
-      <div className="flex flex-col  items-center">
-        <div id={titleHeader}>
-          <h1 className="w-auto px-[1rem] bg-glass font-bold text-[3rem] text-center rounded-1xl">
-            {titleContent}
-          </h1>
-        </div>
-        <div
-          id={titleBody}
-          className=" bg-glass mt-[1rem] max-w-[80vw] border-2 border-black rounded-3xl opacity-0"
-        >
-          <p className="text-[0.9rem] m-[20px]">{bodyContent}</p>
+      <div className="flex w-[100lvw] h-[75lvh] z-[5] m-5">
+        <div className=""></div>
+
+        <div className="flex flex-col items-center justify-center ">
+          <div id={titleHeader} className="">
+            <h1 className="w-auto px-[1rem] bg-glass font-bold text-[2rem] text-center rounded-3xl">
+              {titleContent}
+            </h1>
+          </div>
+          <div
+            id={titleBody}
+            className=" bg-glass mt-[2rem] border-2 min-w-[20%] max-w-[40rem] border-black rounded-3xl opacity-0"
+          >
+            <p className="text-[0.9rem] m-[20px]">{bodyContent}</p>
+          </div>
         </div>
       </div>
     );

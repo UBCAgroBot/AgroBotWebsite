@@ -10,7 +10,8 @@ const AgrobotsPage = () => {
         backgroundSize: "auto",
         backgroundRepeat: "repeat",
         maxWidth: "100vw",
-        overflowX: "hidden"
+        overflowX: "hidden",
+        overflowY: "hidden"
       }}
     >
       <AgrobotMain />
