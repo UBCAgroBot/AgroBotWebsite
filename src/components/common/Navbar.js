@@ -68,29 +68,27 @@ const Navbar = () => {
 
 			{/* nav items for small devices */}
 			{isMenuOpen && (
-				<ul className="lg:hidden w-[96%] mx-auto mt-2 p-8 bg-white rounded-[40px] z-[100]">
+				<ul className="lg:hidden w-[96%] mx-auto mt-2 z-[100] text-center bg-white rounded-[46px] my-1 p-3">
 					{navLinks.map((value, index) => (
-						<li
-							key={index.id}
-							className="relative"
-							onMouseEnter={() => toggleProjectsMenu(value.dropdown)}
-							onMouseLeave={() => toggleProjectsMenu(value.dropdown)}
-						>
-							{!value.dropdown && <Link to={value.link} className={`m-2 p-2 rounded-full transition-all duration-200 flex items-center ${location.pathname === value.link ? 'font-bold' : ''}`}>
-								{value.id} {value.dropdown && <FaChevronDown size='16px' style={{ margin: '3px 0 0 4px' }} />}
-							</Link>}
-							{value.dropdown && (
-								<ul className=" bg-white rounded-2xl" >
+						<>
+							{value.dropdown ?
+								<>
 									{value.dropdown.map((item) => (
-										<li key={item.id} className="p-2 m-2">
-											<Link to={item.link} className="">
+										<li key={item.id} className=" rounded-full my-1 p-3">
+											<Link to={item.link} onClick={toggleMobileMenu}>
 												{item.id}
 											</Link>
 										</li>
 									))}
-								</ul>
-							)}
-						</li>
+								</>
+								:
+								<li key={index.id} className="rounded-full my-1 p-3">
+									<Link to={value.link} onClick={toggleMobileMenu}>
+										{value.id}
+									</Link>
+								</li>
+							}
+						</>
 					))}
 				</ul>
 			)}
