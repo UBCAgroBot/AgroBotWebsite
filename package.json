@@ -1,6 +1,7 @@
 {
   "name": "agrobotwebsite",
   "version": "0.1.0",
+  "homepage": "https://ubcagrobot.github.io/AgroBotWebsite/",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.1.0",
@@ -20,10 +21,12 @@
     "@testing-library/user-event": "^13.5.0",
     "d3-ease": "^3.0.1",
     "dotenv": "^16.4.5",
+    "gh-pages": "^6.1.1",
     "gsap": "^3.12.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
+    "react-responsive": "^10.0.0",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.21.3",
     "react-scripts": "^5.0.1",
@@ -35,6 +38,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "CI=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

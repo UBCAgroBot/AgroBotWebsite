@@ -5,13 +5,16 @@ import { FaChevronRight } from "react-icons/fa";
 import { Agrobotmd } from "../projects/utils/Agrobotmd";
 import AgroponicView from "../projects/agroponics/AgroponicView";
 import AgropickerView from "../projects/agropicker/AgropickerView";
+import { AgrobotModel2D, AgroArm2DModel, AgroponicModel2D } from "../../assets";
+import { useMediaQuery } from "react-responsive";
 
-const AgrobotMod = <Agrobotmd />;
-const AgroponicMod = <AgroponicView />;
-const AgropickerMod = <AgropickerView />
+const AgrobotMod =  <Agrobotmd /> 
+const AgroponicMod =  <AgroponicView /> 
+const AgropickerMod =  <AgropickerView /> 
 
-function Project({ ProjectName, background, ModelComponent }) {
+function Project({ ProjectName, background, ModelComponent, MobileImg }) {
 	const containerRef = useRef(null);
+	const isMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
 	function useFadeIn(containerRef) {
 		const [isVisible, setIsVisible] = useState(false);
@@ -59,9 +62,16 @@ function Project({ ProjectName, background, ModelComponent }) {
 			  <button className="px-4 py-2 mt-4 bg-[#2E1B0F] font-medium text-[24px] rounded-full text-white">Learn More</button>
 				</div>
 			</animated.div>
+			{!isMobile &&
 			<div className="w-[47.5%] h-[50vh] bg-[#2E1B0F] relative top-[100vh] rounded-lg">
 				{ModelComponent}
 			</div>
+			}
+			{isMobile && 
+			<div className="w-[47.5%] h-[50vh] bg-[#2E1B0F] relative top-[100vh] rounded-lg">
+				<img src={MobileImg}></img>
+			</div>	
+			}
 		</div>
 	);
 }
@@ -69,10 +79,11 @@ function Project({ ProjectName, background, ModelComponent }) {
 function HomeProjects() {
 	return (
 		<div className="bg-[#CDFF70]">
-			<Project ProjectName="AgroBot" ModelComponent={AgrobotMod} />
+			<Project ProjectName="AgroBot" MobileImg={AgrobotModel2D} ModelComponent={AgrobotMod} />
 			<Project
 				ProjectName="AgroPonics "
 				ModelComponent={AgroponicMod}
+				MobileImg={AgroponicModel2D}
 				background={{
 					background: "linear-gradient(to bottom, #CDFF70, #78BE20)",
 				}}
@@ -81,6 +92,7 @@ function HomeProjects() {
 				ProjectName="AgroPicker "
 				ModelComponent={AgropickerMod}
 				background={{ background: "#78BE20" }}
+				MobileImg={AgroArm2DModel}
 			/>
 		</div>
 	);
