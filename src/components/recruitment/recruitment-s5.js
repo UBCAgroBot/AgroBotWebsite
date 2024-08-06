@@ -5,8 +5,6 @@ import { HiMinus, HiPlus } from "react-icons/hi";
 
 const RecruitmentS5 = (props) => {
     const { title, subTeamDescriptions, id } = props;
-    console.log(title);
-    console.log(subTeamDescriptions);
     return (
         <div id={id} className="mt-12 text-center mx-auto p-6">
             <div class="col">
@@ -21,7 +19,6 @@ const RecruitmentS5 = (props) => {
 
 function SubTeamList(props) {
     const { subTeamDescriptions } = props;
-    console.log(subTeamDescriptions);
     const [selectedIndex, setSelectedIndex] = React.useState(true);
 
     const handleClick = (index) => {

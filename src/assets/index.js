@@ -62,6 +62,7 @@ AgrobotHero,
   temp_robot_blueprint,
   temp_maintenance,
   agrobotChassisTemp,
+  UBCArtsNyah,
 } from "./image";
 
 export {
@@ -127,5 +128,6 @@ export {
   temp_circuitry,
   temp_maintenance,
   agrobotChassisTemp,
+  UBCArtsNyah,
 };
 

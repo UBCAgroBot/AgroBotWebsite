@@ -55,6 +55,7 @@ import EmailSideIcon from "./EmailSideIcon.png";
 import SocialSideIcon from "./SocialSideIcon.png";
 import LocationSideIcon from "./LocationSideIcon.png";
 import AgroponicsS2 from "./AgroponicsS2.png";
+import UBCArtsNyah from "./UBCArts-Nyah.jpeg"
 
 import SponsorIcon from "./SponsorIcon.png";
 import WorkingWithWires from "./WorkingWithWires.png";
@@ -130,5 +131,6 @@ export {
   temp_circuitry,
   temp_maintenance,
   agrobotChassisTemp,
+  UBCArtsNyah,
 };
 
