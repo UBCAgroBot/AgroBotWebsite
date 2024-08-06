@@ -7,6 +7,20 @@ module.exports = {
   ],
   theme: {
     extend: {
+      margin: {
+        'standard': '192px',
+        'mobile-standard': '192px'
+      },
+      width: {
+        'content': '1000px',
+        'mobile-content': '300px',
+      },
+      fontSize: {
+        'header': '48px',
+        'body': '32px',
+        'mobile-header': '40px',
+        'mobile-body': '24px'
+      },
       fontFamily: {
         'RobotoMono': ['Roboto Mono', 'monospace'],
         'Inter': ['Inter', 'sans-serif'],
