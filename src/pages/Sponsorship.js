@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 
-import { ieee, fcc, ece, chbe, lfs, gage } from "../assets";
+import { ieee, fcc, ece, chbe, lfs, gage, UBCArtsNyah } from "../assets";
 import { FaArrowRight } from "react-icons/fa6";
 
 function SponsorTier({ title, emoji, price, bullets }) {
@@ -36,6 +36,7 @@ const Sponsorship = () => {
 		{ image: chbe, alt: 'chbe' },
 		{ image: lfs, alt: 'lfs' },
 		{ image: gage, alt: 'gage' },
+		{ image: UBCArtsNyah, alt: 'UBCArts'}
 	];
 
 	var settings = {
@@ -52,22 +53,11 @@ const Sponsorship = () => {
 
 	return (
 		<>
-			<div className="w-[300px] pt-32 lg:pt-48 lg:w-[1000px] mx-auto">
-				<link
-					rel="stylesheet"
-					type="text/css"
-					charSet="UTF-8"
-					href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-				/>
-				<link
-					rel="stylesheet"
-					type="text/css"
-					href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-				/>
+			<div className="w-mobile-content mt-mobile-standard lg:mt-standard lg:w-content mx-auto">
 				<div className="min-h-screen pb-24">
-					<h1 className="text-[40px] lg:text-[48px] font-bold">Sponsor <br />UBC Agrobot</h1>
-					<p className="text-[24px] lg:text-[32px] font-medium w-[100%] pt-5">Sponsors are the lifeblood of UBC Agrobot. If you would like to help us build the future of farming send us an email at <a href="mailto:ubcagrobot@gmail.com"><u>agrobot@gmail.com</u></a>. For  detailed information about sponsorship you can read our <u>sponsorship package</u>.</p>
-					<h2 className="text-[24px] lg:text-[32px] font-bold pt-16">Sponsorship tiers</h2>
+					<h1 className="text-mobile-header lg:text-header font-bold">Sponsor <br />UBC Agrobot</h1>
+					<p className="text-mobile-body lg:text-body font-medium w-[100%] pt-5">Sponsors are the lifeblood of UBC Agrobot. If you would like to help us build the future of farming send us an email at <a href="mailto:ubcagrobot@gmail.com"><u>agrobot@gmail.com</u></a>. For  detailed information about sponsorship you can read our <u>sponsorship package</u>.</p>
+					<h2 className="text-mobile-body lg:text-body font-bold pt-16">Sponsorship tiers</h2>
 					<div className="flex-col lg:flex-row flex justify-between pt-12">
 						<SponsorTier title="Seedling" emoji="🌱" price="$100+" bullets={["logo on website", "logo on marketing"]} />
 						<SponsorTier title="Sapling" emoji="🪴" price="$500+" bullets={["logo on website", "logo on marketing"]} />
@@ -75,14 +65,20 @@ const Sponsorship = () => {
 					</div>
 				</div>
 			</div>
-			<Slider {...settings} className="h-[300px] py-[50px] bg-[#FFFFFF80] w-screen flex justify-center overflow-hidden">
-				{items.map((item, index) => (
-					<img className="h-[200px] w-[200px] object-contain mx-8" src={item.image} alt={item.alt} key={index} />
+			<div className='bg-glass w-full md:w-full overflow-hidden flex after:content[""] after:dark:from-brand-dark after:from-background after:bg-gradient-to-l after:right-0 after:top-0 after:bottom-0 after:w-20 after:z-10 after:absolute before:content[""] before:dark:from-brand-dark before:from-background before:bg-gradient-to-r before:left-0 before:top-0 before:bottom-0 before:w-20 before:z-10 before:absolute'>
+				{[...Array(2)].map((arr, i) => (
+					<div className='flex flex-nowrap animate-slide'>
+						{items.map((item, i) => (
+							<div key={item.alt} className='relative w-[175px] m-5 shrink-0 flex items-center'>
+								<img src={item.image} alt={item.alt} className="object-contain max-w-none w-[100px] filter" />
+							</div>
+						))}
+					</div>
 				))}
-			</Slider>
+			</div>
 			<div className="mx-auto w-[280px] lg:w-[600px] bg-[#2E1B0F] rounded-[46px] flex flex-col justify-center items-center my-24 p-8">
-				<p className=" text-white text-[24px] lg:text-[32px] font-medium text-center pb-2 lg:pb-6">We would love to have you!</p>
-				<a href="mailto:ubcagrobot@gmail.com" className="font-bold cursor-pointer text-[32px] lg:text-[48px] text-[#78be20]">Sponsor us <FaArrowRight className="inline" color="#78be20" /></a>
+				<p className=" text-white text-mobile-body lg:text-body font-medium text-center pb-2 lg:pb-6">We would love to have you!</p>
+				<a href="mailto:ubcagrobot@gmail.com" className="text-center font-bold cursor-pointer text-mobile-header lg:text-header text-[#78be20]">Sponsor us <FaArrowRight className="inline" color="#78be20" /></a>
 			</div>
 		</>
 	);
