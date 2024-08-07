@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Slider from "react-slick";
 
 import { ieee, fcc, ece, chbe, lfs, gage, UBCArtsNyah } from "../assets";
 import { FaArrowRight } from "react-icons/fa6";
