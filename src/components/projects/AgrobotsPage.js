@@ -1,8 +1,12 @@
 import { AgrobotBackground } from "../../assets";
 import AgrobotMain from "./agrobots/AgrobotMain";
 import Subteams from "./agrobots/Subteams";
+import React, { useEffect } from "react";
 
 const AgrobotsPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <main
       style={{
@@ -11,7 +15,7 @@ const AgrobotsPage = () => {
         backgroundRepeat: "repeat",
         maxWidth: "100vw",
         overflowX: "hidden",
-        overflowY: "hidden"
+        overflowY: "hidden",
       }}
     >
       <AgrobotMain />
