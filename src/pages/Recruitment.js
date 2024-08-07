@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import { Timeline } from '../components/recruitment/Timeline.tsx'
 import { SubteamOverlay } from "../components/recruitment/SubteamOverlay";
 
 function SubteamBox({ emoji, title, bulletPoints, bg, overlayFn }) {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 	return (
 		<div className="w-[312px] h-[500px] bg-[#2E1B0F] rounded-[46px] flex flex-col items-center pt-[10px] text-white">
 			<div className="w-[286px] h-[250px] rounded-[46px] flex justify-center items-center" style={{background: bg}}>

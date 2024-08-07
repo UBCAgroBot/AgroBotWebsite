@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MailForm, Map } from '../components';
 import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 import { LuMail } from "react-icons/lu";
 
 function ContactUs() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
 	return (
 		<div className="bg-[#CDFF70] pt-32 pb-64">

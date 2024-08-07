@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 
 import { ieee, fcc, ece, chbe, lfs, gage } from "../assets";
 import { FaArrowRight } from "react-icons/fa6";
 
 function SponsorTier({ title, emoji, price, bullets }) {
-
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 	return (
 		<div className="mb-4 lg:mb-0 w-[312px] bg-[#2E1B0F] rounded-[46px] flex flex-col items-center pt-4 pb-6">
 			<div className="w-[286px] h-[128px] lg:h-[250px] bg-[#1F5200] rounded-[46px] flex justify-center items-center">
