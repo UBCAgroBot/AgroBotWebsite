@@ -8,9 +8,9 @@ function AboutUs() {
     return (
         <div className="bg-[#CDFF70]">
             <OurStory />
-            {/* <Testimonials />
-            <WhoWeAre /> */}
-            {/* <News /> */}
+            <Testimonials />
+            <WhoWeAre />
+            <News />
         </div>
     );
 };

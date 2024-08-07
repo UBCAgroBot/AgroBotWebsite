@@ -8,11 +8,11 @@ import { ArticleOverlay } from "./ArticleOverlay"
 
 const NewsCard = React.forwardRef((({ activateFn, bgImage, title, overlayName }, ref) => {
     return (
-        <div ref={ref} onClick={() => activateFn(overlayName)} className="flex flex-col mx-4 w-[30%] overflow-hidden shrink-0 cursor-pointer">
+        <div ref={ref} onClick={() => activateFn(overlayName)} className="flex flex-col mb-8 lg:mb-0 lg:mx-4 w-full lg:w-[30%] overflow-hidden shrink-0 cursor-pointer">
             <div className="h-[300px] rounded-lg">
                 <img src={bgImage} alt='news card' className="h-full w-full object-cover rounded-lg" />
             </div>
-            <h2 className='m-2 text-[28px] font-bold'>{title}<FaChevronRight size='24px' className="inline" /></h2>
+            <h2 className='m-2 text-center lg:text-left text-mobile-body font-medium'>{title}<FaChevronRight size='20px' className="inline ml-1" /></h2>
         </div>
     )
 }))
@@ -85,12 +85,12 @@ function News() {
     }
 
     return (
-        <div className="bg-[#CDFF70] px-4 py-64">
+        <div className="w-[300px] mx-auto lg:w-[100vw] bg-[#CDFF70] my-16">
             {showOverlay ? <ArticleOverlay deactivateFn={DeactivateArticle} articleName={overlayKey} /> : null}
-			<h1 className="text-[#2E1B0F] text-[48px] font-bold text-center my-8">
+			<h1 className="text-[#2E1B0F] text-mobile-header lg:text-header font-bold text-center my-8">
 				AgroBot News
 			</h1>
-            <div className="flex items-center">
+            <div className="w-full flex flex-col lg:flex-row items-center">
                 <div className="h-full transition-opacity duration-300 ease-in-out cursor-pointer p-2"
                     style={{ opacity: leftArrowOpacity }}
                     onClick={() => { setLeftCardIndex(leftCardIndex - 1) }}
@@ -98,7 +98,7 @@ function News() {
                     <FaChevronRight size='64px' style={{ transform: 'rotate(180deg)' }} />
                 </div>
 
-                <div ref={NewsContainerRef} className="w-full flex overflow-x-hidden">
+                <div ref={NewsContainerRef} className="w-full flex flex-col lg:flex-row overflow-x-hidden">
                     <NewsCard activateFn={ActivateArticle} overlayName="Comp2023"         bgImage={TeamAgroBot}      title="2023 Competition" ref={NewsCardRef}/>
                     <NewsCard activateFn={ActivateArticle} overlayName="ChasisPrototype"  bgImage={AgroBotBlueBg}    title="Chasis Prototype" />
                     <NewsCard activateFn={ActivateArticle} overlayName="AgroPonicsLaunch" bgImage={StudentsWorking}  title="AgroPonics Launch" />
