@@ -7,11 +7,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Navigation = () => {
   const [width, setWidth] = useState(window.innerWidth);
-  const titleHeader = "navigation"
+  const titleHeader = "navigation";
   const titleContent = "Navigation & Embedded Systems";
   const titleBody = "body";
-  const bodyContent = "Applied AI is looking to change the way we farm and is paving the way for a sustainable future. Leveraging cutting edge research in artificial intelligence and machine learning to develop practical solutions to optimize crop yield, minimize costs, and reduce environmental impact."
-  const isMobile = width <= 800;
+  const bodyContent =
+    "The Navigation & Embedded Systems sub-team is responsible for developing sophisticated systems that guide AgroBot through crop fields autonomously. By integrating a range of sensors such as depth cameras, LiDAR, GPS, and IMU, the team ensures that AgroBot can plan and execute precise paths, avoiding crop damage and optimizing field traversal. The team's innovative designs and implementations are crucial for achieving fully autonomous operation, making efficient and careful navigation through diverse agricultural environments possible.";
+  const isMobile = width <= 700;
 
   function handleResize() {
     setWidth(window.innerWidth);
@@ -49,7 +50,7 @@ const Navigation = () => {
   useGSAP(() => {
     const timeline = gsap.timeline({
       scrollTrigger: {
-        trigger: "body",
+        trigger: "#body",
         start: "top center",
       },
     });
@@ -71,15 +72,15 @@ const Navigation = () => {
 
   if (!isMobile) {
     return (
-      <div className="flex flex-col items-center justify-center w-[50vw] z-[5]">
-        <div id={titleHeader}>
-          <h1 className="w-auto px-[1rem] bg-glass font-bold text-[5rem] text-center rounded-3xl">
+      <div className="flex flex-col items-center justify-center w-[50vw] z-[50] m-10 mt-[100px]">
+        <div id={titleHeader} className="z-50">
+          <h1 className="w-auto px-[0.5rem] bg-glass font-bold text-[4rem] z-[100] text-center rounded-3xl">
             {titleContent}
           </h1>
         </div>
         <div
           id={titleBody}
-          className="bg-glass mt-[2rem] border-2 min-w-[20%] max-w-[40rem] border-black rounded-3xl opacity-0"
+          className="bg-glass mt-[2rem] border-2 min-w-[20%] max-w-[40rem] z-[50] border-black rounded-3xl opacity-0"
         >
           <p className="text-[1.0rem] m-[20px]">{bodyContent}</p>
         </div>
@@ -88,7 +89,7 @@ const Navigation = () => {
     );
   } else {
     return (
-      <div className="flex w-[100lvw] h-[75lvh] z-[5]">
+      <div className="flex w-[100lvw] h-[50lvh] z-[50]">
         <div className=""></div>
 
         <div className="flex flex-col items-center justify-center ">

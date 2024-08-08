@@ -76,7 +76,8 @@ const AgroponicsMain = () => {
     <section id="agroponicmain-section" className="h-[150vh] bg-black">
       {isMobile && <img
         src={AgroponicModel2D}
-        style={{ position: "absolute", top: "200px" }}>
+        alt="image of agrobot"
+        style={{ display: "flex", paddingTop: "500px" }}>
       </img>}
       {!isMobile && <AgroponicView gsapType={"view"} />}
       <div
@@ -127,7 +128,7 @@ const AgroponicsMain = () => {
           <div
             className=" absolute h-full w-full flex-center flex-col"
           ></div><div className="flex flex-col items-center w-full h-full ">
-            <div style={{ position: "absolute", top: "500px" }}>
+            <div style={{ position: "flex", top: "700px" }}>
               <h1
                 id="main-header"
                 className="text-[3.5rem] text-center opacity-1 m-[10px] font-bold text-white"

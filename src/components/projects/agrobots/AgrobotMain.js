@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useState, useRef, useEffect } from "react";
-import { Agrobotmd } from "../utils/Agrobotmd"; 
+import { Agrobotmd } from "../utils/Agrobotmd";
 import ModelViewer from "./ModelView";
 import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
@@ -22,18 +22,18 @@ const AgrobotMain = () => {
   const [rotation, setRotation] = useState(0);
   const [headerBottom, setHeaderBottom] = useState(0);
   const isLaptop = useMediaQuery({
-    query: '(min-width: 1224px)'
-  })
+    query: "(min-width: 1224px)",
+  });
 
   function handleResize() {
     setWidth(window.innerWidth);
   }
 
   useEffect(() => {
-    window.addEventListener('resize', handleResize());
+    window.addEventListener("resize", handleResize());
     return () => {
-      window.removeEventListener('resize', handleResize())
-    }
+      window.removeEventListener("resize", handleResize());
+    };
   });
 
   useEffect(() => {
@@ -121,90 +121,81 @@ const AgrobotMain = () => {
         style={{ top: "50%", transform: "translateY(-50%)" }}
       ></div>
 
-    {isLaptop &&
-      <div
-        className="w-full h-full flex items-center flex-col"
-        style={{ position: "absolute", top: `${headerBottom}px` }}
-      >
-        <div className="flex flex-col items-center w-full h-full ">
-          <div style={{ position: "absolute", top: "500px", right: "50px" }}>
-            <h1
-              id="main-header"
-              className="text-[10rem] opacity-1 font-bold text-white"
-            >
-              Agrobot
-            </h1>
-            <p
-              id="main-body"
-              className="w-[42vw] ml-5 mt-5 text-[15rem], opacity-1 font-bold text-white"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-              placerat, dolor eget tincidunt interdum, sapien lacus egestas
-              libero, vitae tincidunt nisi dolor et purus. Sed ac velit sit amet
-              quam convallis vestibulum a nec nisl. Vestibulum non nisl lectus.
-              Proin nec scelerisque mauris. Quisque euismod orci ut ipsum
-              convallis, sed sodales erat dapibus. Integer eget orci augue.
-              Suspendisse eget mauris vel ex eleifend sagittis. Morbi at nunc
-              nulla. Vivamus vel suscipit nunc. Proin vel cursus nisi. Phasellus
-              bibendum efficitur justo, sed volutpat purus efficitur in. Cras
-              sit amet semper lacus, eget lacinia nunc. Suspendisse vitae eros
-              sollicitudin, dictum libero sit amet, ultricies elit. Ut et
-              tincidunt urna. Cras nec nibh sit amet tortor interdum convallis.
-              Donec id risus at lacus ultricies commodo. Nulla facilisi. Nam
-              vitae felis in magna sodales mollis in a elit. Ut bibendum
-              sagittis leo, a finibus magna tristique id. Aliquam posuere lectus
-              non fermentum viverra. Nulla facilisi. Morbi et nulla sed leo
-              ultrices pharetra nec at arcu. Duis vel hendrerit risus, vel
-              mollis est
-            </p>
-          </div> 
-        <Agrobotmd /> 
+      {isLaptop && (
+        <div
+          className="w-full h-full flex items-center flex-col"
+          style={{ position: "absolute", top: `${headerBottom}px` }}
+        >
+          <div className="flex flex-col items-center w-full h-full ">
+            <div style={{ position: "absolute", top: "500px", right: "50px" }}>
+              <h1
+                id="main-header"
+                className="text-[10rem] opacity-1 font-bold text-white"
+              >
+                Agrobot
+              </h1>
+              <p
+                id="main-body"
+                className="w-[42vw] ml-5 mt-5 text-[15rem], opacity-1 font-bold text-white"
+              >
+                An autonomous robot utilizing AI and machine learning for
+                precise intra-row weeding and data collection. It identifies and
+                eliminates weeds without harming crops, reducing the need for
+                chemical pesticides. Additionally, the robot collects data on
+                crop health to help farmers make better, more informed
+                decisions. AgroBot is a product of collaboration between five
+                different sub-teams, each playing a pivotal role in its
+                development and performance:
+              </p>
+            </div>
+            <Agrobotmd />
+          </div>
         </div>
-      </div>
-}
-  {!isLaptop &&
-      <div
-        className="w-full h-full flex items-center flex-col"
-        style={{ position: "absolute", top: `${headerBottom}px` }}
-      >
-        <div className="flex flex-col items-center w-full h-full ">
-          <div style={{ position: "absolute", top: "500px" }}>
-            <h1
-              id="main-header"
-              className="text-[5rem] text-center opacity-1 font-bold text-white"
-            >
-              Agrobot
-            </h1>
-            <p
-              id="main-body"
-              className="w-[40vpw] mt-5 opacity-1 text-center mx-5 font-bold text-white"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-              placerat, dolor eget tincidunt interdum, sapien lacus egestas
-              libero, vitae tincidunt nisi dolor et purus. Sed ac velit sit amet
-              quam convallis vestibulum a nec nisl. Vestibulum non nisl lectus.
-              Proin nec scelerisque mauris. Quisque euismod orci ut ipsum
-              convallis, sed sodales erat dapibus. Integer eget orci augue.
-              Suspendisse eget mauris vel ex eleifend sagittis. Morbi at nunc
-              nulla. Vivamus vel suscipit nunc. Proin vel cursus nisi. Phasellus
-              bibendum efficitur justo, sed volutpat purus efficitur in. Cras
-              sit amet semper lacus, eget lacinia nunc. Suspendisse vitae eros
-              sollicitudin, dictum libero sit amet, ultricies elit. Ut et
-              tincidunt urna. Cras nec nibh sit amet tortor interdum convallis.
-              Donec id risus at lacus ultricies commodo. Nulla facilisi. Nam
-              vitae felis in magna sodales mollis in a elit. Ut bibendum
-              sagittis leo, a finibus magna tristique id. Aliquam posuere lectus
-              non fermentum viverra. Nulla facilisi. Morbi et nulla sed leo
-              ultrices pharetra nec at arcu. Duis vel hendrerit risus, vel
-              mollis est
-            </p>
-          </div> 
-          <img src={AgrobotModel2D}
-          style={{position: "absolute", top: "100px"}}
-          ></img>
+      )}
+      {!isLaptop && (
+        <div
+          className="w-full h-full flex items-center flex-col"
+          style={{ position: "absolute", top: `${headerBottom}px` }}
+        >
+          <div className="flex flex-col items-center w-full h-full ">
+            <div style={{ position: "absolute", top: "500px" }}>
+              <h1
+                id="main-header"
+                className="text-[5rem] text-center opacity-1 font-bold text-white"
+              >
+                Agrobot
+              </h1>
+              <p
+                id="main-body"
+                className="w-[40vpw] mt-5 opacity-1 text-center mx-5 font-bold text-white"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                placerat, dolor eget tincidunt interdum, sapien lacus egestas
+                libero, vitae tincidunt nisi dolor et purus. Sed ac velit sit
+                amet quam convallis vestibulum a nec nisl. Vestibulum non nisl
+                lectus. Proin nec scelerisque mauris. Quisque euismod orci ut
+                ipsum convallis, sed sodales erat dapibus. Integer eget orci
+                augue. Suspendisse eget mauris vel ex eleifend sagittis. Morbi
+                at nunc nulla. Vivamus vel suscipit nunc. Proin vel cursus nisi.
+                Phasellus bibendum efficitur justo, sed volutpat purus efficitur
+                in. Cras sit amet semper lacus, eget lacinia nunc. Suspendisse
+                vitae eros sollicitudin, dictum libero sit amet, ultricies elit.
+                Ut et tincidunt urna. Cras nec nibh sit amet tortor interdum
+                convallis. Donec id risus at lacus ultricies commodo. Nulla
+                facilisi. Nam vitae felis in magna sodales mollis in a elit. Ut
+                bibendum sagittis leo, a finibus magna tristique id. Aliquam
+                posuere lectus non fermentum viverra. Nulla facilisi. Morbi et
+                nulla sed leo ultrices pharetra nec at arcu. Duis vel hendrerit
+                risus, vel mollis est
+              </p>
+            </div>
+            <img
+              src={AgrobotModel2D}
+              style={{ position: "absolute", top: "100px" }}
+            ></img>
+          </div>
         </div>
-      </div>
-}
+      )}
     </section>
   );
 };

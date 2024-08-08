@@ -6,10 +6,7 @@ const AppliedAi = () => {
       <LeftBlock
         title="ai"
         titleContent="Applied Ai"
-        bodyContent="
-                        Applied AI is looking to change the way we farm and is paving the way for a sustainable future. Leveraging cutting edge research in artificial intelligence and machine learning to develop practical solutions to optimize crop yield, minimize costs, and reduce environmental impact.
-                        Using computer vision and machine learning algorithms, the team has developed models for weed destruction that detect and classify weeds, enabling targeted extermination and reducing the use of herbicides.
-                        In addition, the team focuses on developing models for biomass estimation. These models help farmers to accurately determine the amount of biomass that their crops are producing, which is a crucial factor in making informed decisions about fertilizer and water application. With this knowledge, farmers can achieve better crop yields and save on costs, all while minimizing their environmental impact."
+        bodyContent="The Applied AI sub-team is dedicated to creating advanced machine learning models that address a variety of AgroBot's tasks. This includes detecting maize and weeds, segmenting grape clusters, and implementing machine vision in the Robot Operating System (ROS). By exploring the intersections between AI research and emerging Agri-Tech, the team continually pushes the boundaries of agricultural innovation. Their work ensures that AgroBot can efficiently and accurately perform its functions in diverse agricultural settings."
       />
     </section>
   );
