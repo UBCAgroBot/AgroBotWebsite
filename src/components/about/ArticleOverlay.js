@@ -11,13 +11,13 @@ function Comp2023() {
         <>
             <h1 className="font-bold text-[42px] mb-6">UBC Agrobot takes home gold!</h1>
             <div className="text-[16px] my-6 flex">
-                <img className="bg-sky-400 w-[40px] h-[40px] rounded-full mr-2" />
+                <img alt="" className="bg-sky-400 w-[40px] h-[40px] rounded-full mr-2" />
                 <div>
                     <p>By: Arman Drismir</p>
                     <p><CiClock2 className="inline" /> 5 minute read · Updated 7:10PM PST, Mon Jul 15, 2024</p>
                 </div>
             </div>
-            <img src={TeamAgroBot} width="750" />
+            <img alt="article" src={TeamAgroBot} width="750" />
             <p className="mt-12 text-[20px] leading-7 w-[750px]">
                 <strong>Vancouver (AgroBot) - </strong>
                 UBC Agrobot, a student engineering club at the University of British Columbia,
@@ -43,13 +43,13 @@ function ChasisPrototype() {
         <>
             <h1 className="font-bold text-[42px] mb-6">Chassis Prototype</h1>
             <div className="text-[16px] my-6 flex">
-                <img className="bg-sky-400 w-[40px] h-[40px] rounded-full mr-2" />
+                <img alt="" className="bg-sky-400 w-[40px] h-[40px] rounded-full mr-2" />
                 <div>
                     <p>By: Arman Drismir</p>
                     <p><CiClock2 className="inline" /> 5 minute read · Updated 7:10PM PST, Mon Jul 15, 2024</p>
                 </div>
             </div>
-            <img src={AgroBotBlueBg} width="750" />
+            <img alt="article" src={AgroBotBlueBg} width="750" />
             <p className="mt-12 text-[20px] leading-7 w-[750px]">
                 <strong>Vancouver (AgroBot) - </strong>
                 UBC Agrobot, a student engineering club at the University of British Columbia,
@@ -76,13 +76,13 @@ function AgroPonicsLaunch() {
         <>
             <h1 className="font-bold text-[42px] mb-6">AgroPonics Launches!</h1>
             <div className="text-[16px] my-6 flex">
-                <img className="bg-sky-400 w-[40px] h-[40px] rounded-full mr-2" />
+                <img alt="" className="bg-sky-400 w-[40px] h-[40px] rounded-full mr-2" />
                 <div>
                     <p>By: Arman Drismir</p>
                     <p><CiClock2 className="inline" /> 5 minute read · Updated 7:10PM PST, Mon Jul 15, 2024</p>
                 </div>
             </div>
-            <img src={StudentsWorking} width="750" />
+            <img alt="article" src={StudentsWorking} width="750" />
             <p className="mt-12 text-[20px] leading-7 w-[750px]">
                 <strong>Vancouver (AgroBot) - </strong>
                 UBC Agrobot, a student engineering club at the University of British Columbia,
@@ -109,13 +109,13 @@ function AgroPickerLaunch() {
         <>
             <h1 className="font-bold text-[42px] mb-6">Introducing AgroPicker!</h1>
             <div className="text-[16px] my-6 flex">
-                <img className="bg-sky-400 w-[40px] h-[40px] rounded-full mr-2" />
+                <img alt="" className="bg-sky-400 w-[40px] h-[40px] rounded-full mr-2" />
                 <div>
                     <p>By: Arman Drismir</p>
                     <p><CiClock2 className="inline" /> 5 minute read · Updated 7:10PM PST, Mon Jul 15, 2024</p>
                 </div>
             </div>
-            <img src={AgroPickerBlueBg} width="750" />
+            <img alt="article" src={AgroPickerBlueBg} width="750" />
             <p className="mt-12 text-[20px] leading-7 w-[750px]">
                 <strong>Vancouver (AgroBot) - </strong>
                 UBC Agrobot, a student engineering club at the University of British Columbia,
