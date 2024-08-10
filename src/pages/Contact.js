@@ -9,12 +9,12 @@ function ContactUs() {
   }, [])
 
 	return (
-		<div className="bg-[#CDFF70] pt-32 pb-64">
-			<div className="w-full h-[1250px] flex justify-between">
-				<div className="w-[60%]">
+		<div className="bg-[#CDFF70] mt-mobile-standard lg:mt-standard lg:pb-64">
+			<div className="lg:w-full lg:h-[1250px] flex justify-between">
+				<div className="w-full lg:w-[60%]">
 					<MailForm />
 				</div>
-				<div className='w-[40%]'>
+				<div className='hidden lg:block w-[40%]'>
 					<Map />
 				</div>
 			</div>
