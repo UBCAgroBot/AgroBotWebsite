@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/AgroBotWebsite/static/css/main.7714d5b1.css",
-    "main.js": "/AgroBotWebsite/static/js/main.34258ef8.js",
+    "main.css": "/AgroBotWebsite/static/css/main.5db83f91.css",
+    "main.js": "/AgroBotWebsite/static/js/main.2046b374.js",
     "static/js/954.2a2b80b8.chunk.js": "/AgroBotWebsite/static/js/954.2a2b80b8.chunk.js",
     "static/js/163.5d42728d.chunk.js": "/AgroBotWebsite/static/js/163.5d42728d.chunk.js",
     "static/media/HomeAutomation.gif": "/AgroBotWebsite/static/media/HomeAutomation.565b88f250854589c68c.gif",
@@ -65,13 +65,13 @@
     "static/media/goldStar.svg": "/AgroBotWebsite/static/media/goldStar.6a194ac0a92dc0b75fc58241ffdb373f.svg",
     "static/media/bronzeStar.svg": "/AgroBotWebsite/static/media/bronzeStar.cba4978f9fa30e552bea433e9994bb11.svg",
     "index.html": "/AgroBotWebsite/index.html",
-    "main.7714d5b1.css.map": "/AgroBotWebsite/static/css/main.7714d5b1.css.map",
-    "main.34258ef8.js.map": "/AgroBotWebsite/static/js/main.34258ef8.js.map",
+    "main.5db83f91.css.map": "/AgroBotWebsite/static/css/main.5db83f91.css.map",
+    "main.2046b374.js.map": "/AgroBotWebsite/static/js/main.2046b374.js.map",
     "954.2a2b80b8.chunk.js.map": "/AgroBotWebsite/static/js/954.2a2b80b8.chunk.js.map",
     "163.5d42728d.chunk.js.map": "/AgroBotWebsite/static/js/163.5d42728d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7714d5b1.css",
-    "static/js/main.34258ef8.js"
+    "static/css/main.5db83f91.css",
+    "static/js/main.2046b374.js"
   ]
 }
