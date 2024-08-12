@@ -1,8 +1,7 @@
-import React from "react";
-import { AgroponicsPage } from "./components/projects";
+import React from "react"; import { AgroponicsPage } from "./components/projects";
 import { Navbar, AgrobotsPage } from "./components";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import { Home, Sponsorship, Recruitment, Contact, About } from "./pages";
+import { Home, Sponsorship, Recruitment, Contact, About} from "./pages";
 
 import { Footer } from "./components/common";
 

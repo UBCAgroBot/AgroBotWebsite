@@ -9,7 +9,6 @@ import { gsap }from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { useGSAP } from "@gsap/react";
-import { calculateNewValue } from "@testing-library/user-event/dist/utils";
 import { useMediaQuery } from "react-responsive";
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
@@ -58,7 +57,7 @@ const Subteams = () => {
     { x: xPos[8], y: yPos[8] },
   ];
 
-  if (window.innerWidth < 800) {
+  if (window.innerWidth < 500) {
   model = "c"
   }
 

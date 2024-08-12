@@ -1,8 +1,20 @@
 import LeftBlock from "../utils/LeftBlock";
+import { useEffect } from "react";
 
 const Electrical = () => {
+  useEffect(() => {
+    const handleResize = () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--dynamic-height', `${vh * 50} px`);
+    };
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   return (
-    <section id="electrical-section" className="flex  w-[100lvw] h-[75lvh]">
+    <section id="electrical-section" className="flex  w-[100lvw]">
       <LeftBlock
         title="electrical"
         titleContent="Electrical"

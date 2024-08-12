@@ -1,8 +1,21 @@
 import RightBlock from "../utils/RightBlock";
+import { useEffect } from "react";
 
 const Chassis = () => {
+  useEffect(() => {
+    const handleResize = () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--dynamic-height', `${vh * 50} px`);
+    };
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
-    <section id="chassis-section" className="flex  w-[100lvw] h-[75lvh]">
+    <section id="chassis-section" className="flex  w-[100lvw]">
       <RightBlock
         title={"chassis"}
         titleContent={"Chassis/Powertrain"}

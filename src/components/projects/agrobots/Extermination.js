@@ -1,10 +1,22 @@
 import RightBlock from "../utils/RightBlock";
+import { useEffect } from "react";
 
 const Extermination = () => {
+  useEffect(() => {
+    const handleResize = () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--dynamic-height', `${vh * 50} px`);
+    };
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   return (
     <section
       id="extermination-section"
-      className="flex  w-[100lvw] h-[75lvh] z-[999]"
+      className="flex  w-[100lvw] z-[999]"
     >
       <RightBlock
         title={"extermination"}
