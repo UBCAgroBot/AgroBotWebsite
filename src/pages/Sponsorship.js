@@ -35,32 +35,22 @@ const Sponsorship = () => {
 		{ image: chbe, alt: 'chbe' },
 		{ image: lfs, alt: 'lfs' },
 		{ image: gage, alt: 'gage' },
-		{ image: UBCArtsNyah, alt: 'UBCArts'}
 	];
-
-	var settings = {
-		dots: false,
-		infinite: true,
-		slidesToShow: 4,
-		speed: 4000 * items.length,
-		autoplaySpeed: 0,
-		slidesToScroll: items.length,
-		autoplay: true,
-		cssEase: 'linear',
-		rtl: true,
-	};
 
 	return (
 		<>
 			<div className="w-mobile-content mt-mobile-standard lg:mt-standard lg:w-content mx-auto">
 				<div className="min-h-screen pb-24">
-					<h1 className="text-mobile-header lg:text-header font-bold">Sponsor <br />UBC Agrobot</h1>
-					<p className="text-mobile-body lg:text-body font-medium w-[100%] pt-5">Sponsors are the lifeblood of UBC Agrobot. If you would like to help us build the future of farming send us an email at <a href="mailto:ubcagrobot@gmail.com"><u>agrobot@gmail.com</u></a>. For  detailed information about sponsorship you can read our <u>sponsorship package</u>.</p>
+					<h1 className="text-mobile-header lg:text-header font-bold">Sponsor UBC Agrobot</h1>
+					<p className="text-mobile-body lg:text-body font-medium w-[100%] pt-5">Sponsors are the lifeline of our UBC Agrobot Engineering Team. To help us build the future of agriculture, partner with our team to share ideas, or mentor our members, send us an email at <a href="mailto:ubcagrobot@gmail.com"><u>agrobot@gmail.com</u></a>.
+					<br />
+					<br />
+					For more information about sponsorship, please read our detailed <u>sponsorship package</u>.</p>
 					<h2 className="text-mobile-body lg:text-body font-bold pt-16">Sponsorship tiers</h2>
 					<div className="flex-col lg:flex-row flex justify-between pt-12">
-						<SponsorTier title="Seedling" emoji="🌱" price="$100+" bullets={["logo on website", "logo on marketing"]} />
-						<SponsorTier title="Sapling" emoji="🪴" price="$500+" bullets={["logo on website", "logo on marketing"]} />
-						<SponsorTier title="Bonsai" emoji="🌳" price="$1000+" bullets={["logo on website", "logo on marketing"]} />
+						<SponsorTier title="Seedling" emoji="🌱" price="$100+" bullets={["logo on our website", "logo on AgroBot marketing / social media"]} />
+						<SponsorTier title="Blossoming" emoji="🪴" price="$500+" bullets={["logo on our website", "logo on AgroBot marketing / social media", "logo on Team Merch", "Workspace Tour"]} />
+						<SponsorTier title="Full Bloom" emoji="🌳" price="$1000+" bullets={["logo on our website", "logo on AgroBot marketing / social media", "logo on Team Merch", "Workspace Tour", "Company logo on robot"]} />
 					</div>
 				</div>
 			</div>

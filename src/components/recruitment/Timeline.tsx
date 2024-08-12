@@ -24,8 +24,8 @@ function Timeline() {
 
     const today = new Date()
     const curr_year = today.getFullYear()
-    const start_day = new Date(curr_year, 8, 25)
-    const end_day = new Date(curr_year, 9, 21)
+    const start_day = new Date(curr_year, 6, 25)
+    const end_day = new Date(curr_year, 8, 21)
 
     if (today > end_day || today < start_day) {
         return (
@@ -42,13 +42,20 @@ function Timeline() {
      * @returns {string} - The day with the indicators. 1 -> '1st', 2 -> '2nd'
      */
     function AddIndicator(day) {
-        switch (day) {
+
+        if (day === 11) { return '11th'}
+        if (day === 12) { return '12th'}
+        if (day === 13) { return '13th'}
+
+        const last_digit = day % 10;
+        
+        switch (last_digit) {
             case 1:
-                return '1st';
+                return `${day}st`;
             case 2:
-                return '2nd';
+                return `${day}nd`;
             case 3:
-                return '3rd';
+                return `${day}rd`;
             default:
                 return `${day}th`;
         }
@@ -89,7 +96,7 @@ function Timeline() {
     return (
         <>
 
-            <p className="text-[32px] font-medium pt-8">Applications are open until {monthNamesLong[end_day.getMonth()]} {AddIndicator(end_day.getDate())}! Before you apply you should read our recruitment package. When you are ready you can fill out the application form.</p>
+            <p className="text-mobile-body lg:text-body font-medium pt-8">Applications are open until {monthNamesLong[end_day.getMonth()]} {AddIndicator(end_day.getDate())}!</p>
             {largeScreen ?
                 <>
                     <div className="w-[1000px] h-[375px] relative text-white font-medium text-[32px] my-8">
@@ -128,7 +135,9 @@ function Timeline() {
                     <p className="w-[80%] mx-auto text-center text-mobile-body">more days to apply</p>
                 </div>
             }
-
+            <p className="text-mobile-body lg:text-body font-medium py-12">
+                Before you dive in, check out our recruitment package. It contains essential information about our teams, projects, and what we're looking for in new members. Once you're ready, fill out the application form and take the first step towards an inspiring and impactful experience with UBC Agrobot!
+            </p>
             <div className="flex flex-col lg:flex-row justify-around text-[#3199FF] mb-16 lg:mb-32">
                 <a href="#" className="bg-black p-4 lg:px-8 my-2 lg:my-0 text-center rounded-[23px] lg:rounded-[46px] text-[28px] lg:text-body">
                     Recruitment Package

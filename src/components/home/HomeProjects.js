@@ -12,9 +12,10 @@ const AgrobotMod =  <Agrobotmd />
 const AgroponicMod =  <AgroponicView /> 
 const AgropickerMod =  <AgropickerView /> 
 
-function Project({ ProjectName, background, ModelComponent, MobileImg }) {
+function Project({ ProjectName, Text, background, ModelComponent, MobileImg }) {
 	const containerRef = useRef(null);
-	const isMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+	// const isMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+	const isMobile = true;
 
 	function useFadeIn(containerRef) {
 		const [isVisible, setIsVisible] = useState(false);
@@ -46,19 +47,16 @@ function Project({ ProjectName, background, ModelComponent, MobileImg }) {
 	return (
 		<div
 			ref={containerRef}
-			className="w-full h-[250vh] flex px-[10%] items-start justify-between"
+			className="w-full h-[250vh] flex px-[5%] items-start justify-between"
 			style={background}
 		>
 			<animated.div
 				style={useFadeIn(containerRef)}
-				className="w-[40%] sticky top-[25vh]"
+				className="w-[47.5%] sticky top-[20vh]"
 			>
 				<div className="w-full h-full bg-glass rounded-[46px] p-8 shadow-sm">
-					<h2 className="text-[48px] font-bold mb-4">{ProjectName}</h2>
-					<p className="text-[24px]">The University of British Columbia (UBC) is a public research
-              university with campuses near Vancouver and Okanagan in British
-              Columbia, Canada. Established in 1908.
-			  </p>
+					<h2 className="text-mobile-header lg:text-header font-bold mb-4">{ProjectName}</h2>
+					<p className="text-mobile-body">{Text}</p>
 			  <button className="px-4 py-2 mt-4 bg-[#2E1B0F] font-medium text-[24px] rounded-full text-white">Learn More</button>
 				</div>
 			</animated.div>
@@ -77,9 +75,41 @@ function Project({ ProjectName, background, ModelComponent, MobileImg }) {
 }
 
 function HomeProjects() {
+	const projects = [
+		{
+			ProjectName: "AgroBot",
+			Text: "An autonomous robot utilizing AI and machine learning for precise intra-row weeding and data collection. It identifies and eliminates weeds without harming crops, reducing the need for chemical pesticides. Additionally, the robot collects data on crop health to help farmers make better, more informed decisions.",
+			ModelComponent: AgrobotMod,
+			MobileImg: AgrobotModel2D,
+		},
+		{
+			ProjectName: "AgroPonics",
+			Text: "An NFT (Nutrient Film Technique) hydroponic system focused on data collection, environmental control, and automation to optimize the nutrients and growing conditions of staple foods. Through a series of meticulously designed experiments, it aims to discover the most efficient environmental settings for growing a variety of crops.",
+			ModelComponent: AgroponicMod,
+			MobileImg: AgroponicModel2D,
+			background: { background: "linear-gradient(to bottom, #CDFF70, #78BE20)" },
+		},
+		{
+			ProjectName: "AgroPicker",
+			Text: "An autonomous robotic arm capable of detecting fruits, assessing their ripeness, and harvesting them efficiently. The robotic arm will be attached to a mobile robot intended for on-field navigation. This system aims to improve the efficiency and accuracy of fruit harvesting, reduce labor costs, and minimize fruit damage. ",
+			ModelComponent: AgropickerMod,
+			MobileImg: AgroArm2DModel,
+			background: { background: "#78BE20" },
+		},
+	]
+
 	return (
 		<div className="bg-[#CDFF70]">
-			<Project ProjectName="AgroBot" MobileImg={AgrobotModel2D} ModelComponent={AgrobotMod} />
+			{projects.map((proj) => (
+				<Project 
+					ProjectName={proj.ProjectName}
+					Text={proj.Text}
+					ModelComponent={proj.ModelComponent}
+					MobileImg={proj.MobileImg}
+					background={proj.background}
+				/>
+			))}
+			{/* <Project ProjectName="AgroBot" MobileImg={AgrobotModel2D} ModelComponent={AgrobotMod} />
 			<Project
 				ProjectName="AgroPonics "
 				ModelComponent={AgroponicMod}
@@ -93,7 +123,7 @@ function HomeProjects() {
 				ModelComponent={AgropickerMod}
 				background={{ background: "#78BE20" }}
 				MobileImg={AgroArm2DModel}
-			/>
+			/> */}
 		</div>
 	);
 }
