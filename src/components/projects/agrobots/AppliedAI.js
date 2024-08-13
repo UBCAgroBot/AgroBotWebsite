@@ -2,21 +2,11 @@ import { useEffect } from "react";
 import LeftBlock from "../utils/LeftBlock";
 
 const AppliedAi = () => {
-  useEffect(() => {
-    const handleResize = () => {
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--dynamic-height', `${vh * 75} px`);
-    };
-    handleResize();
 
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
 
   return (
-    <section id="ai-section" className="flex w-[100lvw] mt-[0%]">
+    <section id="ai-section" className="flex w-[100lvw] ">
       <LeftBlock
         title="ai"
         titleContent="Applied Ai"

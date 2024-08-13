@@ -1,7 +1,6 @@
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -11,7 +10,7 @@ const LeftBlock = ({ title, titleContent, bodyContent }) => {
   const titleBody = title + "-body";
   const titleTag = "#" + titleHeader;
   const bodyTag = "#" + titleBody;
-  const isMobile = useMediaQuery({ query: "( max-width: 500px)" });
+  const isMobile = useMediaQuery({ query: "( max-width: 800px)" });
 
   useGSAP(() => {
     const timeline = gsap.timeline({

@@ -2,14 +2,12 @@ import LeftBlock from "../utils/LeftBlock";
 
 const Automation = () => {
   return (
-    <section id="automation-section" className="flex  w-[100lvw] h-[75lvh]">
+    <section id="automation-section" className="flex  w-[100lvw] h-[75lvh] mt-20">
       <LeftBlock
         title="automation"
         titleContent="Automation"
         bodyContent="
-                        Applied AI is looking to change the way we farm and is paving the way for a sustainable future. Leveraging cutting edge research in artificial intelligence and machine learning to develop practical solutions to optimize crop yield, minimize costs, and reduce environmental impact.
-                        Using computer vision and machine learning algorithms, the team has developed models for weed destruction that detect and classify weeds, enabling targeted extermination and reducing the use of herbicides.
-                        In addition, the team focuses on developing models for biomass estimation. These models help farmers to accurately determine the amount of biomass that their crops are producing, which is a crucial factor in making informed decisions about fertilizer and water application. With this knowledge, farmers can achieve better crop yields and save on costs, all while minimizing their environmental impact."
+The automation sub-team is an Internet of Things (IoT) project that focuses on designing and implementing autonomous farming, real-time monitoring, auto-regulated environments, and remote updates for hydroponic systems. The team’s goal is to use resources in agriculture (land, water, fertilizers, manpower) more efficiently to help improve our environment. Modern irrigation practices are exacerbating water scarcity, drying up entire water systems, and causing extensive land clearance for agriculture. To address these challenges, we leverage a wide variety of technologies to collect and communicate data from hydroponic systems, enabling us to simulate and optimize different preferred growing environments."
       />
     </section>
   );

@@ -2,14 +2,12 @@ import LeftBlock from "../utils/LeftBlock";
 
 const Structure = () => {
   return (
-    <section id="structure-section" className="flex  w-[100lvw] h-[75lvh]">
+    <section id="structure-section" className="flex  w-[100lvw] h-[75lvh] mt-20 mb-20">
       <LeftBlock
         title="structure"
         titleContent="Structure"
         bodyContent="
-                        Applied AI is looking to change the way we farm and is paving the way for a sustainable future. Leveraging cutting edge research in artificial intelligence and machine learning to develop practical solutions to optimize crop yield, minimize costs, and reduce environmental impact.
-                        Using computer vision and machine learning algorithms, the team has developed models for weed destruction that detect and classify weeds, enabling targeted extermination and reducing the use of herbicides.
-                        In addition, the team focuses on developing models for biomass estimation. These models help farmers to accurately determine the amount of biomass that their crops are producing, which is a crucial factor in making informed decisions about fertilizer and water application. With this knowledge, farmers can achieve better crop yields and save on costs, all while minimizing their environmental impact."
+            The Structure sub-team integrates the needs of the Automation and Plants sub-teams to create optimal environments for crop growth. Currently, the team is renovating an old 16-foot trailer by adding insulation, heating, electrical systems, a rainwater collection system, and structural reinforcement to support a controlled environment for hydroponic systems. The work is diverse and evolves with the project’s needs, presenting new and unexpected challenges. This hands-on team addresses multi-scale problems through collaborative and innovative solutions."
       />
     </section>
   );

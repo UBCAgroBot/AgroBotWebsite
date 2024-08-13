@@ -13,7 +13,7 @@ gsap.registerPlugin(MotionPathPlugin);
 const AgrobotMain = () => {
   const [headerBottom, setHeaderBottom] = useState(0);
   const isLaptop = useMediaQuery({
-    query: "(min-width: 500px)",
+    query: "(min-width: 1200px)",
   });
 
 
@@ -151,8 +151,17 @@ const AgrobotMain = () => {
             className="w-full h-full flex items-center flex-col"
             style={{ position: "absolute", top: `${headerBottom}px` }}
           >
+            <img
+              src={AgrobotModel2D}
+              style={{
+                height: '80%',
+                width: '70%',
+                marginTop: '50px',
+                marginBottom: '50px'
+              }}
+            ></img>
             <div className="flex flex-col items-center w-full h-full ">
-              <div style={{ position: "absolute", top: "500px" }}>
+              <div >
                 <h1
                   id="main-header"
                   className="text-[5rem] text-center opacity-1 font-bold text-white"
@@ -161,7 +170,7 @@ const AgrobotMain = () => {
                 </h1>
                 <p
                   id="main-body"
-                  className="w-[40vpw] mt-5 opacity-1 text-center mx-5 font-bold text-white"
+                  className="w-[40vpw] mt-5 mb-5 opacity-1 text-center mx-5 font-bold text-white"
                 >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
                   placerat, dolor eget tincidunt interdum, sapien lacus egestas
@@ -183,10 +192,6 @@ const AgrobotMain = () => {
                   risus, vel mollis est
                 </p>
               </div>
-              <img
-                src={AgrobotModel2D}
-                style={{ position: "absolute", top: "100px" }}
-              ></img>
             </div>
           </div>
         )

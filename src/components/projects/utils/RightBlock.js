@@ -10,7 +10,7 @@ const RightBlock = ({ title, titleContent, bodyContent }) => {
   const titleBody = title + "-body";
   const titleTag = "#" + titleHeader;
   const bodyTag = "#" + titleBody;
-  const isMobile = useMediaQuery({ query: "( max-width: 500px)" });
+  const isMobile = useMediaQuery({ query: "( max-width: 800px)" });
 
 
   useGSAP(() => {
@@ -61,7 +61,7 @@ const RightBlock = ({ title, titleContent, bodyContent }) => {
         {!isMobile && (
           <>
             <div id={titleHeader} className="flex items-end justify-end w-full mt-[5%] ml-5">
-            <div className="w-[90%]"></div>
+              <div className="w-[90%]"></div>
               <div className="w-[100%] max-w-[80%] items-center justify-center flex">
                 <h1 className="px-[4rem] font-bold bg-glass 
                  text-[3rem] rounded-3xl text-center">
@@ -70,13 +70,13 @@ const RightBlock = ({ title, titleContent, bodyContent }) => {
               </div>
             </div>
             <div className="flex">
-            <div className="w-[50%]"></div>
-            <div
-              id={titleBody}
-              className="bg-glass mt-[2rem] border-2 min-w-[20%] max-w-[50%] flex items-end justify-end border-black rounded-3xl ml-5 opacity-0"
-            >
-              <p className="text-[1.2rem] m-[20px]">{bodyContent}</p>
-            </div>
+              <div className="w-[50%]"></div>
+              <div
+                id={titleBody}
+                className="bg-glass mt-[2rem] border-2 min-w-[20%] max-w-[50%] flex items-end justify-end border-black rounded-3xl ml-5 opacity-0"
+              >
+                <p className="text-[1.2rem] m-[20px]">{bodyContent}</p>
+              </div>
             </div>
           </>
         )}
@@ -84,7 +84,7 @@ const RightBlock = ({ title, titleContent, bodyContent }) => {
           <div className="flex flex-col w-[90lvw] h-[40lvh] z-[5] items-center justify-center mt-[40%] mb-[70%]">
             <div className="flex flex-col items-center justify-center ">
               <div id={titleHeader} className="justify-center items-center flex">
-                <h1 className="w-auto px-[1rem] bg-glass font-bold text-[3rem] text-center rounded-3xl">
+                <h1 className="w-auto px-[1rem] bg-glass font-bold text-[2.5rem] text-center rounded-3xl">
                   {titleContent}
                 </h1>
               </div>

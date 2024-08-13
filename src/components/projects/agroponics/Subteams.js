@@ -4,21 +4,22 @@ import Plants from "./Plants";
 import Structure from "./Structure";
 
 const Subteams = () => {
-    return (
-    <section className="bg-black"
+  return (
+    <section
+      className="bg-black z-[-20] flex flex-col"
+
       style={{
         backgroundImage: `url(${AgroponicsFarm})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
-        maxWidth: "100vw",
-        minWidth: "100vw",
+        overflow: 'hidden',
       }}>
-      <Automation/>
-      <Plants/>
-      <Structure/>
-      </section>
-       );
-  };
-  
-  export default Subteams; 
+      <Automation />
+      <Plants />
+      <Structure />
+    </section>
+  );
+};
+
+export default Subteams; 

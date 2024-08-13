@@ -8,7 +8,7 @@ const ModelViewer = ({ groupRef, gsapType, cameraRef, setRotation }) => {
   return (
     <View id={gsapType} className="w-full h-full">
       <ambientLight intensity={1} />
-      <PerspectiveCamera makeDefault position={[3, 3, 3]} ref={cameraRef} />
+      <PerspectiveCamera makeDefault position={[2, 2.5, 5]} ref={cameraRef} />
       <Lights />
       <OrbitControls
         makeDefault

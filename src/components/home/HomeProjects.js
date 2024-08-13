@@ -8,9 +8,9 @@ import AgropickerView from "../projects/agropicker/AgropickerView";
 import { AgrobotModel2D, AgroArm2DModel, AgroponicModel2D } from "../../assets";
 import { useMediaQuery } from "react-responsive";
 
-const AgrobotMod =  <Agrobotmd /> 
-const AgroponicMod =  <AgroponicView /> 
-const AgropickerMod =  <AgropickerView /> 
+const AgrobotMod = <Agrobotmd />
+const AgroponicMod = <AgroponicView />
+const AgropickerMod = <AgropickerView />
 
 function Project({ ProjectName, background, ModelComponent, MobileImg }) {
 	const containerRef = useRef(null);
@@ -56,21 +56,21 @@ function Project({ ProjectName, background, ModelComponent, MobileImg }) {
 				<div className="w-full h-full bg-glass rounded-[46px] p-8 shadow-sm">
 					<h2 className="text-[48px] font-bold mb-4">{ProjectName}</h2>
 					<p className="text-[24px]">The University of British Columbia (UBC) is a public research
-              university with campuses near Vancouver and Okanagan in British
-              Columbia, Canada. Established in 1908.
-			  </p>
-			  <button className="px-4 py-2 mt-4 bg-[#2E1B0F] font-medium text-[24px] rounded-full text-white">Learn More</button>
+						university with campuses near Vancouver and Okanagan in British
+						Columbia, Canada. Established in 1908.
+					</p>
+					<button className="px-4 py-2 mt-4 bg-[#2E1B0F] font-medium text-[24px] rounded-full text-white">Learn More</button>
 				</div>
 			</animated.div>
 			{!isMobile &&
-			<div className="w-[47.5%] h-[50vh] bg-[#2E1B0F] relative top-[100vh] rounded-lg">
-				{ModelComponent}
-			</div>
+				<div className="w-[50%] h-[55vh] bg-[#2E1B0F] relative top-[100vh] rounded-lg">
+					{ModelComponent}
+				</div>
 			}
-			{isMobile && 
-			<div className="w-[47.5%] h-[50vh] bg-[#2E1B0F] relative top-[100vh] rounded-lg">
-				<img src={MobileImg}></img>
-			</div>	
+			{isMobile &&
+				<div className="w-[47.5%] h-[50vh] bg-[#2E1B0F] relative top-[100vh] rounded-lg">
+					<img src={MobileImg}></img>
+				</div>
 			}
 		</div>
 	);

@@ -4,23 +4,25 @@ import Subteams from "./agrobots/Subteams";
 import React, { useEffect } from "react";
 
 const AgrobotsPage = () => {
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <main
       style={{
+        flex: '1',
         backgroundImage: `url(${AgrobotBackground})`,
         backgroundSize: "auto",
-        backgroundRepeat: "repeat",
+        backgroundRepeat: "repeat-y",
+        overflow: 'hidden',
         maxWidth: "100vw",
-        overflowX: "hidden",
-        overflowY: "hidden",
       }}
     >
       <AgrobotMain />
       <Subteams />
-    </main>
+    </main >
   );
 };
 
