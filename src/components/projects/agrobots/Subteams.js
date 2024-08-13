@@ -35,15 +35,13 @@ const Subteams = () => {
   };
 
   useEffect(() => {
-    // Recalculate positions on resize
     window.addEventListener('resize', updatePathDimensions);
 
-    // Cleanup event listener on unmount
     return () => window.removeEventListener('resize', updatePathDimensions);
   }, []);
 
   useEffect(() => {
-    let model = "#DAgrobot";
+    let model = "c";
 
     if (window.innerWidth < 500) {
       model = "c";
@@ -97,7 +95,7 @@ const Subteams = () => {
         <img
           id="DAgrobot"
           className="absolute size-[15rem] z-[1]"
-          src={AgrobotModel2D}
+          //src={AgrobotModel2D}
           alt="img"
         />
       )}
