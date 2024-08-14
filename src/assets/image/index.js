@@ -57,7 +57,6 @@ import EmailSideIcon from "./EmailSideIcon.png";
 import SocialSideIcon from "./SocialSideIcon.png";
 import LocationSideIcon from "./LocationSideIcon.png";
 import AgroponicsS2 from "./AgroponicsS2.png";
-import UBCArtsNyah from "./UBCArts-Nyah.jpeg"
 
 import SponsorIcon from "./SponsorIcon.png";
 import WorkingWithWires from "./WorkingWithWires.png";
@@ -67,6 +66,7 @@ import temp_circuitry from "./temp_circuitry.png";
 import temp_maintenance from "./temp_maintenance.png";
 import agrobotChassisTemp from "./agrobotChassisTemp.jpeg";
 import agrobotFarmInto from "./Farm.jpeg";
+import BP1Team from './BP1Team.webp'
 
 export {
   AGROBOT_ICON,
@@ -135,6 +135,6 @@ export {
   temp_circuitry,
   temp_maintenance,
   agrobotChassisTemp,
-  UBCArtsNyah,
+  BP1Team,
 };
 

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { UBCArtsNyah } from "../../assets";
 
 function Card({ name, title, quote, image }) {
 	return (
