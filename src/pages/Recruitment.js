@@ -48,7 +48,7 @@ function Recruitment() {
     overlayId: "extermination",
     bg: "#1F5200",
     emoji: "🧪",
-    title: "Electrical",
+    title: "Extermination",
     description: "The Extermination sub-team designs precision extermination mechanisms, like sprayer nozzles and the extermination arm, focusing on eco-friendly weed management and crop protection.",
   }
 
@@ -103,7 +103,7 @@ function Recruitment() {
   const finance = {
     overlayId: "finance",
     bg: "#91D0F2",
-    emoji: "📝",
+    emoji: "🏦",
     title: "Finance",
     description: "The Finance sub-team manages our financial resources, ensures budgetary compliance, and secures funding to support our projects and operations.",
   }

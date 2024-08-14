@@ -167,18 +167,9 @@ function ArticleOverlay({ deactivateFn, articleName })
             case 'Comp2023':
                 setContent(<Comp2023 />)
                 break;
-            case 'ChasisPrototype':
-                setContent(<ChasisPrototype />)
-                break;
-            case 'AgroPonicsLaunch':
-                setContent(<AgroPonicsLaunch />)
-                break;
-            case 'AgroPickerLaunch':
-                setContent(<AgroPickerLaunch />)
-                break;
             default:
                 console.log("Article not found. Defaulting to Comp 2023")
-                setContent(<Comp2023 />)
+                setContent(<>I didnt catch the article I was supposed to show 😵</>)
         }
 
         document.body.style.overflow = 'hidden';
@@ -202,7 +193,7 @@ function ArticleOverlay({ deactivateFn, articleName })
         <div
             onClick={CheckClick} 
             id="outer-overlay"
-            className="opacity-0 fixed top-0 left-0 max-h-screen w-screen bg-[#000000b4] z-50 overflow-y-auto" 
+            className="opacity-0 fixed top-0 left-0 h-screen w-screen bg-[#000000b4] z-50 overflow-y-auto" 
             >
             <div className="box-content w-[750px] bg-white mx-auto my-12 rounded-[46px] p-24 px-32">
                 {Content}
