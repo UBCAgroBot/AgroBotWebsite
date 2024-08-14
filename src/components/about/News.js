@@ -1,8 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import TeamAgroBot from '../../assets/image/AgroBotWithTeamOnGrass.jpg'
-import AgroBotBlueBg from '../../assets/image/AgroBotBlueBg.png'
-import StudentsWorking from '../../assets/image/studentsWorking.jpg'
-import AgroPickerBlueBg from '../../assets/image/AgroPickerBluBg.png'
+import { BP1Team } from '../../assets';
 import { FaChevronRight } from "react-icons/fa";
 import { ArticleOverlay } from "./ArticleOverlay"
 
@@ -99,10 +96,7 @@ function News() {
                 </div>
 
                 <div ref={NewsContainerRef} className="w-full flex flex-col lg:flex-row overflow-x-hidden">
-                    <NewsCard activateFn={ActivateArticle} overlayName="Comp2023"         bgImage={TeamAgroBot}      title="2023 Competition" ref={NewsCardRef}/>
-                    <NewsCard activateFn={ActivateArticle} overlayName="ChasisPrototype"  bgImage={AgroBotBlueBg}    title="Chasis Prototype" />
-                    <NewsCard activateFn={ActivateArticle} overlayName="AgroPonicsLaunch" bgImage={StudentsWorking}  title="AgroPonics Launch" />
-                    <NewsCard activateFn={ActivateArticle} overlayName="AgroPickerLaunch" bgImage={AgroPickerBlueBg} title="AgroPickerLaunch" />
+                    <NewsCard activateFn={ActivateArticle} overlayName="Comp2023"         bgImage={BP1Team}      title="2023 Competition" ref={NewsCardRef}/>
                 </div>
 
                 <div className="h-full transition-opacity duration-300 ease-in-out cursor-pointer p-2"

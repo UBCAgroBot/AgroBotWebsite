@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { ieee, fcc, ece, chbe, lfs, gage, UBCArtsNyah } from "../assets";
+import { ieee, fcc, ece, chbe, lfs, gage } from "../assets";
 import { FaArrowRight } from "react-icons/fa6";
 
 function SponsorTier({ title, emoji, price, bullets }) {

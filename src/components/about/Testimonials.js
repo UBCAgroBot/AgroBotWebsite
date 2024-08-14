@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { UBCArtsNyah } from "../../assets";
 
 function Card({ name, title, quote, image }) {
 	return (
@@ -26,7 +25,7 @@ function Testimonials() {
 	const [showMore, setShowMore] = useState(false)
 
 	const row_one = [
-		{ name: "Arman Drismir", title: "Web Developer", quote: "Have been working with CSS for over ten years and Tailwind just makes my life easier. It is still CSS and you use flex grid etc but just quicker to write and maintain. You should give it a try", image: UBCArtsNyah },
+		{ name: "Arman Drismir", title: "Web Developer", quote: "Have been working with CSS for over ten years and Tailwind just makes my life easier. It is still CSS and you use flex grid etc but just quicker to write and maintain. You should give it a try", },
 		{ name: "Ishaan Datta", title: "ML Engineer", quote: "Just a heads up I won't be able to make the meeting today since I'm studying for my final"},
 		{ name: "Arman Drismir", title: "Web Developer", quote: "Have been working with CSS for over ten years and Tailwind just makes my life easier. It is still CSS and you use flex grid etc but just quicker to write and maintain. You should give it a try"},
 		{ name: "Ishaan Datta", title: "ML Engineer", quote: "Just a heads up I won't be able to make the meeting today since I'm studying for my final"},
