@@ -1,6 +1,4 @@
 import { useEffect } from "react";
-import AgroponicsMain from "./agroponics/AgroponicsMain";
-import Subteams from "./agroponics/Subteams";
 
 const Agroponic = () => {
   useEffect(() => {
@@ -9,12 +7,9 @@ const Agroponic = () => {
   return (
     <main
       style={{
-        overflowX: "hidden",
-        overflowY: "hidden"
+        overflow: "hidden",
       }}
     >
-      <AgroponicsMain />
-      <Subteams />
     </main>
   );
 };

@@ -1,15 +1,15 @@
 import { Loader, OrbitControls, PerspectiveCamera, View } from "@react-three/drei";
-import AgrobotModel from "./AgrobotModel";
 import Lights from "./Lights";
 import * as THREE from 'three';
 import { Suspense } from "react";
 
-const ModelViewer = ({ groupRef, gsapType, cameraRef, setRotation }) => {
+const ModelViewer = ({ groupRef, gsapType, cameraRef, setRotation, model, cameraPosition, vectorPosition, groupPosition }) => {
+    const x = vectorPosition[0], y = vectorPosition[1], z = vectorPosition[2]
 
     return (
         <View id={gsapType} className="opacity-0 w-full h-full">
             <ambientLight intensity={1} />
-            <PerspectiveCamera makeDefault position={[1, 1, 4]} ref={cameraRef} />
+            <PerspectiveCamera makeDefault position={cameraPosition} ref={cameraRef} />
             <Lights />
             <OrbitControls
                 makeDefault
@@ -17,14 +17,12 @@ const ModelViewer = ({ groupRef, gsapType, cameraRef, setRotation }) => {
                 enableZoom={false}
                 enablePan={false}
                 rotateSpeed={0.3}
-                target={new THREE.Vector3(0, -0.1, 0)}
+                target={new THREE.Vector3(x, y, z)}
                 onEnd={() => setRotation(cameraRef.current.getAzimuthalAngle())}
             />
-            <group ref={groupRef} position={[0, 0, 0]}>
-                <Suspense fallback="AgrobotModel" >
-                    <AgrobotModel
-                        scale={[1.8, 1.8, 1.8]}
-                    />
+            <group ref={groupRef} position={groupPosition}>
+                <Suspense fallback="model" >
+                    {model}
                 </Suspense>
             </group>
         </View>

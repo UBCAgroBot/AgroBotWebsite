@@ -4,7 +4,6 @@ import path from "../../../assets/models/AgrobotSketch.glb";
 
 const AgrobotModel = (props) => {
   const { nodes, materials } = useGLTF(path);
-  useGLTF.preload(path);
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -344,6 +343,6 @@ const AgrobotModel = (props) => {
   );
 };
 
+useGLTF.preload(path)
 
 export default AgrobotModel;
-

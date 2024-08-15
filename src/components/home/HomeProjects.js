@@ -2,15 +2,9 @@ import React from "react";
 import { useSpring, animated } from "react-spring";
 import { useState, useEffect, useRef } from "react";
 import { FaChevronRight } from "react-icons/fa";
-import { Agrobotmd } from "../projects/utils/Agrobotmd";
-import AgroponicView from "../projects/agroponics/AgroponicView";
-import AgropickerView from "../projects/agropicker/AgropickerView";
+import { AgrobotModelView, AgroponicModelView, AgroPickerModelView } from "../models";
 import { AgrobotModel2D, AgroArm2DModel, AgroponicModel2D } from "../../assets";
 import { useMediaQuery } from "react-responsive";
-
-const AgrobotMod = <Agrobotmd />
-const AgroponicMod = <AgroponicView />
-const AgropickerMod = <AgropickerView />
 
 function Project({ ProjectName, background, ModelComponent, MobileImg }) {
 	const containerRef = useRef(null);
@@ -79,20 +73,42 @@ function Project({ ProjectName, background, ModelComponent, MobileImg }) {
 function HomeProjects() {
 	return (
 		<div className="bg-[#CDFF70]">
-			<Project ProjectName="AgroBot" MobileImg={AgrobotModel2D} ModelComponent={AgrobotMod} />
+			<Project
+				ProjectName="AgroBot"
+				MobileImg={AgrobotModel2D}
+				ModelComponent={<AgrobotModelView
+					id={"agrobotModelView"}
+					gsapType={"agrobotModelGsap"}
+					scale={[2, 2, 2]}
+					cameraPosition={[0, 0, 1]}
+					groupPosition={[0, 0, 0]}
+					vectorPosition={[0, 0, 0]} />}
+			/>
 			<Project
 				ProjectName="AgroPonics "
-				ModelComponent={AgroponicMod}
 				MobileImg={AgroponicModel2D}
 				background={{
 					background: "linear-gradient(to bottom, #CDFF70, #78BE20)",
 				}}
+				ModelComponent={<AgroponicModelView
+					id={"agroponicModelView"}
+					gsapType={"agroponicModelGsap"}
+					scale={[1, 1, 1]}
+					cameraPosition={[0, 0, 1]}
+					groupPosition={[0, 0, 0]}
+					vectorPosition={[0, 0, 0]} />}
 			/>
 			<Project
 				ProjectName="AgroPicker "
-				ModelComponent={AgropickerMod}
 				background={{ background: "#78BE20" }}
 				MobileImg={AgroArm2DModel}
+				ModelComponent={<AgroPickerModelView
+					id={"agroPickerModelView"}
+					gsapType={"agroPickerModelGsap"}
+					scale={[1, 1, 1]}
+					cameraPosition={[2, 2, 3]}
+					groupPosition={[0, 0, 0]}
+					vectorPosition={[0, 0, 0]} />}
 			/>
 		</div>
 	);

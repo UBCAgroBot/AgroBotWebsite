@@ -2,7 +2,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 import path from "../../../assets/models/agroarm-transformed.glb"
 
-const Agropicker = (props) => {
+const AgroPickerModel = (props) => {
   const { nodes, materials } = useGLTF(path)
   return (
     <group {...props} dispose={null}>
@@ -13,4 +13,4 @@ const Agropicker = (props) => {
 
 useGLTF.preload(path)
 
-export default Agropicker;
+export default AgroPickerModel;

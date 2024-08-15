@@ -2,10 +2,10 @@ import React from "react";
 import { useGLTF } from "@react-three/drei";
 import path from "../../../assets/models/AgroponicsSketch.glb";
 
-export function AgroponicModel(props) {
+const AgroponicModel = (props) => {
   const { nodes, materials } = useGLTF(path);
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} >
       <mesh
         geometry={nodes["Dirt-1_-_Part"].geometry}
         material={materials["leather 2d"]}
@@ -100,7 +100,7 @@ export function AgroponicModel(props) {
         args={[nodes.Mesh_110.geometry, materials.PaletteMaterial003, 60]}
         instanceMatrix={nodes.Mesh_110.instanceMatrix}
       />
-    </group>
+    </group >
   );
 }
 

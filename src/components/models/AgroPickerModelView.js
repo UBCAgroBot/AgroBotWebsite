@@ -1,28 +1,32 @@
 import { useState, useRef } from "react";
-import ModelViewer from "./ModelViewer";
 import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
 import { Preload, View } from "@react-three/drei";
+import ModelViewer from "./utils/ModelView";
+import AgroPickerModel from "./meshAndMaterials/AgropickerModel"
 
 
-const AgroponicView = ({ gsapType }) => {
+const AgroPickerModelView = ({ id, gsapType, scale, cameraPosition, groupPosition, vectorPosition }) => {
   const cameraRef = useRef();
   const modelRef = useRef(new THREE.Group());
   const [rotation, setRotation] = useState(0);
 
   return (
     <div
-      id="main-model-container"
-      className="absolute w-full h-full z-10 md:h-[90vh] overflow-hidden"
+      id={id}
+      className="h-full w-full"
     >
-      <ModelViewer
+      < ModelViewer
         groupRef={modelRef}
         gsapType={gsapType}
         cameraRef={cameraRef}
         setRotation={setRotation}
+        model={<AgroPickerModel scale={scale} />}
+        cameraPosition={cameraPosition}
+        groupPosition={groupPosition}
+        vectorPosition={vectorPosition}
       />
       <Canvas
-        id="model"
         frameloop="always"
         className="w-full h-full"
         style={{
@@ -38,8 +42,8 @@ const AgroponicView = ({ gsapType }) => {
         <View.Port />
         <Preload all />
       </Canvas>
-    </div>
+    </div >
   )
 }
 
-export default AgroponicView;
+export default AgroPickerModelView;
