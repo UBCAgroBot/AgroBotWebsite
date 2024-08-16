@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import AgrobotMain from "../components/projects/agrobots/AgrobotMain";
+import AgrobotSubteams from "../components/projects/agrobots/AgrobotSubteams";
 
 const Agrobot = () => {
 
@@ -12,6 +14,8 @@ const Agrobot = () => {
         overflow: 'hidden',
       }}
     >
+      <AgrobotMain />
+      <AgrobotSubteams />
     </main >
   );
 };

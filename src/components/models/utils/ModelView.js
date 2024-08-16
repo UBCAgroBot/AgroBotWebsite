@@ -7,7 +7,7 @@ const ModelViewer = ({ groupRef, gsapType, cameraRef, setRotation, model, camera
     const x = vectorPosition[0], y = vectorPosition[1], z = vectorPosition[2]
 
     return (
-        <View id={gsapType} className="opacity-0 w-full h-full">
+        <View id={gsapType} className="w-full h-full">
             <ambientLight intensity={1} />
             <PerspectiveCamera makeDefault position={cameraPosition} ref={cameraRef} />
             <Lights />
