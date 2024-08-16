@@ -19,7 +19,7 @@ module.exports = {
         'header': '48px',
         'body': '32px',
         'mobile-header': '40px',
-        'mobile-body': '24px'
+        'mobile-body': '20px'
       },
       fontFamily: {
         'RobotoMono': ['Roboto Mono', 'monospace'],
