@@ -52,6 +52,7 @@ const AgrobotMain = () => {
     //        y: () => {
     //          return destDiv.top - modelDiv.getBoundingClientRect().top
     //        },
+    //
     gsap.timeline({
       scrollTrigger: {
         trigger: model,
