@@ -103,7 +103,7 @@ function Recruitment() {
   const finance = {
     overlayId: "finance",
     bg: "#91D0F2",
-    emoji: "📝",
+    emoji: "🏦",
     title: "Finance",
     description: "The Finance sub-team manages our financial resources, ensures budgetary compliance, and secures funding to support our projects and operations.",
   }

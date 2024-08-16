@@ -36,7 +36,7 @@ const projects = [
 	},
 ]
 
-function Project({ ProjectName, Text, background, ModelComponent, MobileImg, isMobile }) {
+function Project({ ProjectName, Text, background, ModelComponent, }) {
 	const containerRef = useRef(null);
 
 	function useFadeIn(containerRef) {
@@ -82,18 +82,16 @@ function Project({ ProjectName, Text, background, ModelComponent, MobileImg, isM
 					<button className="px-4 py-2 mt-4 bg-[#2E1B0F] font-medium text-[24px] rounded-full text-white">Learn More</button>
 				</div>
 			</animated.div>
-			{!isMobile &&
-				<div className="w-[47.5%] h-[50vh] bg-[#2e1b0f1f] relative top-[100vh] rounded-full">
-					{ModelComponent}
-				</div>
-			}
+			<div className="w-[47.5%] h-[50vh] bg-[#2e1b0f1f] relative top-[100vh] rounded-full">
+				{ModelComponent}
+			</div>
 		</div>
 	);
 }
 
 function HomeProjects() {
 
-	const isMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+	const isMobile = useMediaQuery({ query: '(max-width: 1024px)' })
 
 	if (!isMobile) {
 		return (

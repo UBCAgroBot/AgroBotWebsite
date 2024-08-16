@@ -154,7 +154,7 @@ function OurMission() {
 	return (
 		<div className="mx-auto w-[280px] lg:w-full lg:px-24 my-24 bg-[#CDFF70] lg:flex lg:justify-center lg:items-center">
 			<div className="w-full">
-				<h1 className="mb-4 font-semibold text-[30px] lg:text-body text-[#2E1B0F]">
+				<h1 className="mb-4 font-semibold text-body lg:text-body text-[#2E1B0F]">
 					Reduced Environmental Impact. <br />Increased Productivity and Yield. <br />Better Economic Results.
 				</h1>
 				<p className="text-[20px] text-[#2e1b0f]">
