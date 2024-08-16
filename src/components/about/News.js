@@ -96,7 +96,7 @@ function News() {
                 </div>
 
                 <div ref={NewsContainerRef} className="w-full flex flex-col lg:flex-row overflow-x-hidden">
-                    <NewsCard activateFn={ActivateArticle} overlayName="Comp2023"         bgImage={BP1Team}      title="2023 Competition" ref={NewsCardRef}/>
+                    <NewsCard activateFn={ActivateArticle} overlayName="SowingTheFields" bgImage={BP1Team} title="Sowing The Fields" ref={NewsCardRef}/>
                 </div>
 
                 <div className="h-full transition-opacity duration-300 ease-in-out cursor-pointer p-2"

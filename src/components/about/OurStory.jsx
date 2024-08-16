@@ -16,7 +16,7 @@ function OurStory() {
 
 				</p>
 			</div>
-			<div className="hidden lg:block w-[40%] h-[800px] absolute right-0 top-32 bg-cover bg-left-top" style={{ backgroundImage: `url(${forest})` }}></div>
+			<div className="hidden lg:block w-[40%] h-[800px] absolute right-0 top-32 bg-cover bg-left-top"></div>
 		</div>
 	)
 }
