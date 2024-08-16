@@ -4,7 +4,7 @@ import { useSpring, animated } from "react-spring";
 const blurPadding = 6; // Blurred items go over their width so we cant make them flush or else the blur will be abruptly cut off
 
 const height = 340;
-const width = 520;
+const width = 480;
 
 const cardWidth = 400;
 const cardHeight = 250;
@@ -152,16 +152,16 @@ function RectangleAnimation() {
 
 function OurMission() {
 	return (
-		<div className="mx-auto w-[1000px] h-[100vh] bg-[#CDFF70] flex justify-center items-center">
-			<div className="w-[70%]">
-				<h1 className="mb-4 font-semibold text-body text-[#2E1B0F]">
-					Reduced Environmental Impact. Increased Productivity and Yield. Better Economic Results.
+		<div className="mx-auto w-[280px] lg:w-full lg:px-24 my-24 bg-[#CDFF70] lg:flex lg:justify-center lg:items-center">
+			<div className="w-full">
+				<h1 className="mb-4 font-semibold text-body lg:text-body text-[#2E1B0F]">
+					Reduced Environmental Impact. <br />Increased Productivity and Yield. <br />Better Economic Results.
 				</h1>
-				<p className="text-[16px] font-medium text-[#2e1b0fa7]">
+				<p className="text-[20px] text-[#2e1b0f]">
 				These three pillars of sustainability, identified by the USDA, are essential for the future of agriculture. By integrating precision techniques, cutting-edge technology, and sustainable practices, farmers have seen significant improvements in their operations, paving the way for a promising future. At UBC Agrobot, we are dedicated to adding our contribution to this global effort, working to enhance agritech for a more sustainable and prosperous agricultural industry. Through our innovative projects and collaborative efforts, we aim to make agriculture better for everyone.
 				</p>
 			</div>
-			<div className="ml-[10%] flex justify-center items-center">
+			<div className="hidden ml-24 lg:flex justify-center items-center">
 				<RectangleAnimation />
 			</div>
 		</div>
