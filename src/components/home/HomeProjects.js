@@ -83,13 +83,8 @@ function Project({ ProjectName, Text, background, ModelComponent, MobileImg, isM
 				</div>
 			</animated.div>
 			{!isMobile &&
-				<div className="w-[47.5%] h-[50vh] bg-[#2E1B0F] relative top-[100vh] rounded-lg">
+				<div className="w-[47.5%] h-[50vh] bg-[#2e1b0f1f] relative top-[100vh] rounded-full">
 					{ModelComponent}
-				</div>
-			}
-			{isMobile &&
-				<div className="w-[47.5%] h-[50vh] bg-[#2E1B0F] relative top-[100vh] rounded-lg">
-					<img src={MobileImg}></img>
 				</div>
 			}
 		</div>
