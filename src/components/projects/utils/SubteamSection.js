@@ -1,15 +1,13 @@
-const SubteamSection = ({ leftChild, rightChild }) => {
+const SubteamSection = ({ id, leftChild, rightChild }) => {
   return (
-    <section className="max-w-[1000px] w-[calc(100% - 2rem)] my-1rem">
-      <div className="grid gap-[1.5rem]">
-        <div className="w-full h-full">
-          {leftChild}
-        </div>
-        <div className="w-full h-full">
-          {rightChild}
-        </div>
+    <div id={id} className="w-full m-10 flex flex-col lg:flex-row gap-6">
+      <div className="w-full h-full">
+        {leftChild}
       </div>
-    </section>
+      <div className="w-full h-full">
+        {rightChild}
+      </div>
+    </div>
   );
 }
 
