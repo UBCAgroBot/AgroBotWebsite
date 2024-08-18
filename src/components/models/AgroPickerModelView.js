@@ -9,8 +9,9 @@ import AgroPickerModel from "./meshAndMaterials/AgropickerModel"
 const AgroPickerModelView = ({ id, gsapType, scale, cameraPosition, groupPosition, vectorPosition }) => {
   const cameraRef = useRef();
   const modelRef = useRef(new THREE.Group());
-  const [rotation, setRotation] = useState(0);
+  const [rotation, setRotation] = useState(2.43);
 
+  console.log(rotation)
   return (
     <div
       id={id}

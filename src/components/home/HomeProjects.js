@@ -6,9 +6,29 @@ import { AgrobotModelView, AgroponicModelView, AgroPickerModelView } from "../mo
 import { AgrobotModel2D, AgroArm2DModel, AgroponicModel2D } from "../../assets";
 import { useMediaQuery } from "react-responsive";
 
-const AgrobotMod = <Agrobotmd />
-const AgroponicMod = <AgroponicView />
-const AgropickerMod = <AgropickerView />
+const AgrobotMod = <AgrobotModelView
+	id={"agrobotModelView"}
+	gsapType={"agrobotModelGsap"}
+	scale={[1, 1, 1]}
+	cameraPosition={[0.5, 1, 1]}
+	groupPosition={[0, 0, 0]}
+	vectorPosition={[0, 0.3, 0]} />
+
+const AgroponicMod = <AgroponicModelView
+	id={"agroponicModelView"}
+	gsapType={"agroponicModelGsap"}
+	scale={[1, 1, 1]}
+	cameraPosition={[0.5, 1, 1.6]}
+	groupPosition={[0, 0, 0]}
+	vectorPosition={[0, 0, 0]} />
+
+const AgropickerMod = <AgroPickerModelView
+	id={"agroPickerModelView"}
+	gsapType={"agroPickerModelGsap"}
+	scale={[3, 3, 3]}
+	cameraPosition={[2, 1, -3.5]}
+	groupPosition={[0, 0, 0]}
+	vectorPosition={[0.5, 0.8, 0]} />
 
 const projects = [
 	{
