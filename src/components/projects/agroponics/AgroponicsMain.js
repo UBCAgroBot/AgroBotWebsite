@@ -1,167 +1,99 @@
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import AgroponicView from "./AgroponicView";
-import { useMediaQuery } from "react-responsive";
-import { AgroponicModel2D } from "../../../assets";
-
-gsap.registerPlugin(ScrollTrigger);
+import { AgroponicModelView } from "../../models";
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useLayoutEffect } from "react";
 
 const AgroponicsMain = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 1200px)' })
-  const height = window.innerHeight / 4;
+  gsap.registerPlugin(ScrollTrigger)
+  const modelContainer = "mainAgroponicModel";
+  const modelContainerId = "#" + modelContainer;
+  const modelRender = "mainAgroPonicGsap";
+  const modelRenderId = "#" + modelRender;
+  const modelDestContainer = "agroponicDestContaienr";
+  const modelDestContainerId = "#" + modelDestContainer;
+  const agroponicMainheader = "agroponicMainheader";
+  const agroponicmainheaderId = "#" + agroponicMainheader;
 
-  useGSAP(() => {
-    const model = "#view";
+  useLayoutEffect(() => {
+    const mm = gsap.matchMedia();
 
-    gsap.to("#sunrise-overlay2", {
-      delay: 1,
-      duration: 1,
-      opacity: 0,
-      zIndex: -1,
-      onComplete: () => {
-        gsap.set("#sunrise-overlay2", { zIndex: -1 })
-      }
-    });
+    mm.add("(min-width: 1024px)", () => {
+      const dest = document.getElementById(modelDestContainer);
+      const destDiv = dest.getBoundingClientRect();
+      const modelDivStartingPosition = window.innerWidth / 2;
+      const destDivCenter = (destDiv.left + destDiv.right) / 2;
 
-    gsap.to("#agroponicmain-section", {
-      delay: 1,
-      duration: 1,
-    });
+      ScrollTrigger.defaults({
+        immediateRender: false,
+        ease: 'power1.inOut',
+        scrub: true,
+        pinSpacer: false,
+        ease: 'none',
+      });
 
-    const timeline = gsap
-      .timeline({
+      gsap.from(modelContainerId, {
+        delay: 2,
+        duration: 1,
+        opacity: 0
+      });
+
+      gsap.timeline({
         scrollTrigger: {
-          trigger: model,
-          start: "top top+=30.5%",
+          trigger: modelRenderId,
+          start: "center center",
+          endTrigger: modelDestContainerId,
+          end: "center center",
           markers: false,
-          end: height,
-          scrub: 2,
-          pinType: "transform",
           pin: true,
+          invalidateOnRefresh: true,
+          pinSpacer: false,
+          ease: "none"
+        }
+      }).to(modelRenderId, {
+        x: () => {
+          return destDivCenter - modelDivStartingPosition;
         },
       })
+    });
 
-      .set(model, {
-        translate: "10% 1%",
-        scale: 1.2,
-      })
-
-      .to(model, {
-        delay: 1,
-        ease: "power1.out",
-      })
-
-      .to(model, {
-        translate: "-28% 9%",
-        duration: 0.5,
-      })
-
-      .from("#main-header", {
-        opacity: 0,
-        yPercent: 100,
-        duration: 0.5,
-        delay: 0.01,
-      })
-
-      .from("#main-body", {
-        opacity: 0,
-        YPercent: 100,
-        duration: 0.5,
-        delay: 0.01,
-      });
+    return () => {
+      mm.revert();
+    };
   }, []);
 
   return (
-    <section id="agroponicmain-section" className="h-[150vh] bg-black">
-      {isMobile && <img
-        src={AgroponicModel2D}
-        style={{ position: "absolute", top: "200px" }}>
-      </img>}
-      {!isMobile && <AgroponicView gsapType={"view"} />}
-      <div
-        id="sunrise-overlay2"
-        className="bg-black z-10 opacity-[100%] w-full h-full absolute"
-      ></div>
+    <section
+      className="h-auto w-full bg-black flex flex-col gap-[2rem] justify-start pt-10 overflow-hidden"
+    >
+      <div className="w-full h-[75vh] pt-8 opacity-1">
+        <AgroponicModelView
+          id={modelContainer}
+          gsapType={modelRender}
+          scale={[1, 1, 1]}
+          cameraPosition={[0.5, 1, 2]}
+          groupPosition={[0, 0, 0]}
+          vectorPosition={[0, 0, 0]}
+        />
+      </div>
 
-      {!isMobile &&
-        <><div
-          className=" absolute h-full w-full flex-center flex-col"
-          style={{ top: "50%", transform: "translateY(-50%)" }}
-        ></div><div className="flex flex-col items-center w-full h-full ">
-            <div style={{ position: "absolute", top: "500px", right: "50px" }}>
-              <h1
-                id="main-header"
-                className="text-[7rem] opacity-1 font-bold text-white"
-              >
-                Agroponics
-              </h1>
-              <p
-                id="main-body"
-                className="w-[42vw] ml-5 mt-5 text-[15rem], opacity-1 font-bold text-white"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                placerat, dolor eget tincidunt interdum, sapien lacus egestas
-                libero, vitae tincidunt nisi dolor et purus. Sed ac velit sit amet
-                quam convallis vestibulum a nec nisl. Vestibulum non nisl lectus.
-                Proin nec scelerisque mauris. Quisque euismod orci ut ipsum
-                convallis, sed sodales erat dapibus. Integer eget orci augue.
-                Suspendisse eget mauris vel ex eleifend sagittis. Morbi at nunc
-                nulla. Vivamus vel suscipit nunc. Proin vel cursus nisi. Phasellus
-                bibendum efficitur justo, sed volutpat purus efficitur in. Cras sit
-                amet semper lacus, eget lacinia nunc. Suspendisse vitae eros
-                sollicitudin, dictum libero sit amet, ultricies elit. Ut et
-                tincidunt urna. Cras nec nibh sit amet tortor interdum convallis.
-                Donec id risus at lacus ultricies commodo. Nulla facilisi. Nam vitae
-                felis in magna sodales mollis in a elit. Ut bibendum sagittis leo, a
-                finibus magna tristique id. Aliquam posuere lectus non fermentum
-                viverra. Nulla facilisi. Morbi et nulla sed leo ultrices pharetra
-                nec at arcu. Duis vel hendrerit risus, vel mollis est
-              </p>
-            </div>
-          </div></>
-      }
+      <div className="w-full flex flex-col lg:flex-row ">
+        <div id={modelDestContainer} className="w-full h-full ">
 
-      {isMobile &&
-        <>
-          <div
-            className=" absolute h-full w-full flex-center flex-col"
-          ></div><div className="flex flex-col items-center w-full h-full ">
-            <div style={{ position: "absolute", top: "500px" }}>
-              <h1
-                id="main-header"
-                className="text-[3.5rem] text-center opacity-1 m-[10px] font-bold text-white"
-              >
-                Agroponics
-              </h1>
-              <p
-                id="main-body"
-                className="w-[40vpw] mx-7 mt-5  text-center opacity-1 font-bold text-white"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                placerat, dolor eget tincidunt interdum, sapien lacus egestas
-                libero, vitae tincidunt nisi dolor et purus. Sed ac velit sit amet
-                quam convallis vestibulum a nec nisl. Vestibulum non nisl lectus.
-                Proin nec scelerisque mauris. Quisque euismod orci ut ipsum
-                convallis, sed sodales erat dapibus. Integer eget orci augue.
-                Suspendisse eget mauris vel ex eleifend sagittis. Morbi at nunc
-                nulla. Vivamus vel suscipit nunc. Proin vel cursus nisi. Phasellus
-                bibendum efficitur justo, sed volutpat purus efficitur in. Cras sit
-                amet semper lacus, eget lacinia nunc. Suspendisse vitae eros
-                sollicitudin, dictum libero sit amet, ultricies elit. Ut et
-                tincidunt urna. Cras nec nibh sit amet tortor interdum convallis.
-                Donec id risus at lacus ultricies commodo. Nulla facilisi. Nam vitae
-                felis in magna sodales mollis in a elit. Ut bibendum sagittis leo, a
-                finibus magna tristique id. Aliquam posuere lectus non fermentum
-                viverra. Nulla facilisi. Morbi et nulla sed leo ultrices pharetra
-                nec at arcu. Duis vel hendrerit risus, vel mollis est
-              </p>
-            </div>
+        </div>
+        <div className="w-full h-full">
+          <div className="justify-center mx-5">
+            <h2 id={agroponicMainheader} className="text-white text-center text-[42px] lg:text-[7rem] font-bold mb-2">AgroPonics</h2>
+            <p className="text-white text-center text-[18px] lg:text-[1.25rem]">
+              An NFT (Nutrient Film Technique) hydroponic system focused on data collection, environmental control, and automation to optimize the nutrients and growing conditions of staple foods. Through a series of meticulously designed experiments, it aims to discover the most efficient environmental settings for growing a variety of crops.
+            </p>
+            <p className="text-white text-center font-bold text-[18px] lg:text-[1.25rem] mt-10 mb-20">
+              AgroPonics is a product of collaboration between three different sub-teams, each playing a pivotal role in its development and performance:
+            </p>
           </div>
-        </>}
-
+        </div>
+      </div>
     </section>
   );
-};
+}
 
 export default AgroponicsMain;

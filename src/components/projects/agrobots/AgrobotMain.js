@@ -1,212 +1,98 @@
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { useState, useRef, useEffect } from "react";
-import { Agrobotmd } from "../utils/Agrobotmd"; 
-import ModelViewer from "./ModelView";
-import { Canvas } from "@react-three/fiber";
-import * as THREE from "three";
-import { Preload, View } from "@react-three/drei";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
-import { useMediaQuery } from "react-responsive";
-import { AgrobotModel2D } from "../../../assets";
+import { AgrobotModelView } from "../../models";
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useLayoutEffect } from "react";
 
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(MotionPathPlugin);
 
 const AgrobotMain = () => {
-  const [width, setWidth] = useState(window.innerWidth);
-  const isMobile = width >= 800;
-  const cameraRef = useRef();
-  const modelRef = useRef(new THREE.Group());
-  const [rotation, setRotation] = useState(0);
-  const [headerBottom, setHeaderBottom] = useState(0);
-  const isLaptop = useMediaQuery({
-    query: '(min-width: 1224px)'
-  })
+  gsap.registerPlugin(ScrollTrigger)
+  const modelContainer = "mainAgrobotModel";
+  const modelContainerId = "#" + modelContainer;
+  const modelRender = "mainAgroGsap";
+  const modelRenderId = "#" + modelRender;
+  const modelDestContainer = "agrobotDestContaienr";
+  const modelDestContainerId = "#" + modelDestContainer;
 
-  function handleResize() {
-    setWidth(window.innerWidth);
-  }
+  useLayoutEffect(() => {
+    const mm = gsap.matchMedia();
 
-  useEffect(() => {
-    window.addEventListener('resize', handleResize());
-    return () => {
-      window.removeEventListener('resize', handleResize())
-    }
-  });
+    mm.add("(min-width: 1024px)", () => {
+      const dest = document.getElementById(modelDestContainer);
+      const destDiv = dest.getBoundingClientRect();
+      const modelDivStartingPosition = window.innerWidth / 2;
+      const destDivCenter = (destDiv.left + destDiv.right) / 2;
 
-  useEffect(() => {
-    const header = document.getElementById("tag");
-    if (header) {
-      const rect = header.getBoundingClientRect();
-      setHeaderBottom(rect.bottom);
-    }
-  }, []);
-
-  const height = window.innerHeight / 3;
-
-  useGSAP(() => {
-    const model = "#view";
-
-    gsap.to("#sunrise-overlay", {
-      delay: 2,
-      duration: 1,
-      opacity: 0,
-      zIndex: 0,
-    });
-
-    gsap.to("#agrobotmain-section", {
-      delay: 2,
-      duration: 1,
-    });
-
-    const timeline = gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: model,
-          start: "top top+=36.5%",
-          markers: false,
-          end: height,
-          scrub: 2,
-          pinType: "transform",
-          pin: true,
-        },
-      })
-
-      .set(model, {
-        translate: "0% 10%",
-        scale: 1.7,
-      })
-
-      .to(model, {
-        delay: 1,
-        ease: "power1.out",
-      })
-
-      .to(model, {
-        translate: "-25% 15%",
-        duration: 0.5,
-      })
-
-      .from("#main-header", {
-        opacity: 0,
-        yPercent: 100,
-        duration: 0.5,
-        delay: 0.01,
-      })
-
-      .from("#main-body", {
-        opacity: 0,
-        YPercent: 100,
-        duration: 0.5,
-        delay: 0.01,
+      ScrollTrigger.defaults({
+        immediateRender: false,
+        ease: 'power1.inOut',
+        scrub: true,
+        pinSpacer: false,
+        ease: 'none',
       });
+
+      gsap.from(modelContainerId, {
+        delay: 2,
+        duration: 1,
+        opacity: 0
+      });
+
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: modelRenderId,
+          start: "center center",
+          endTrigger: modelDestContainerId,
+          end: "center center",
+          markers: false,
+          pin: true,
+          invalidateOnRefresh: true,
+          pinSpacer: false,
+          ease: "none"
+        }
+      }).to(modelRenderId, {
+        x: () => {
+          return destDivCenter - modelDivStartingPosition;
+        },
+      });
+    });
+
+    return () => {
+      mm.revert();
+    };
   }, []);
 
   return (
     <section
-      id="agrobotmain-section"
-      className="relative w-full h-[150lvh] bg-black"
-      style={{
-        backgroundSize: "cover",
-      }}
+      className="w-full bg-black flex flex-col gap-[2rem] justify-start pt-10 overflow-hidden"
     >
-      <div
-        id="sunrise-overlay"
-        className="bg-black z-10 opacity-[100%] w-full h-full absolute"
-      ></div>
-      <div
-        className=" absolute h-full w-full flex-center flex-col"
-        style={{ top: "50%", transform: "translateY(-50%)" }}
-      ></div>
+      <div className="w-full h-[75vh] pt-8 opacity-1">
+        <AgrobotModelView
+          id={modelContainer}
+          gsapType={modelRender}
+          scale={[1, 1, 1]}
+          cameraPosition={[0.75, 1, 1.25]}
+          groupPosition={[0, 0, 0]}
+          vectorPosition={[0, 0.25, 0]}
+        />
+      </div>
 
-    {isLaptop &&
-      <div
-        className="w-full h-full flex items-center flex-col"
-        style={{ position: "absolute", top: `${headerBottom}px` }}
-      >
-        <div className="flex flex-col items-center w-full h-full ">
-          <div style={{ position: "absolute", top: "500px", right: "50px" }}>
-            <h1
-              id="main-header"
-              className="text-[10rem] opacity-1 font-bold text-white"
-            >
-              Agrobot
-            </h1>
-            <p
-              id="main-body"
-              className="w-[42vw] ml-5 mt-5 text-[15rem], opacity-1 font-bold text-white"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-              placerat, dolor eget tincidunt interdum, sapien lacus egestas
-              libero, vitae tincidunt nisi dolor et purus. Sed ac velit sit amet
-              quam convallis vestibulum a nec nisl. Vestibulum non nisl lectus.
-              Proin nec scelerisque mauris. Quisque euismod orci ut ipsum
-              convallis, sed sodales erat dapibus. Integer eget orci augue.
-              Suspendisse eget mauris vel ex eleifend sagittis. Morbi at nunc
-              nulla. Vivamus vel suscipit nunc. Proin vel cursus nisi. Phasellus
-              bibendum efficitur justo, sed volutpat purus efficitur in. Cras
-              sit amet semper lacus, eget lacinia nunc. Suspendisse vitae eros
-              sollicitudin, dictum libero sit amet, ultricies elit. Ut et
-              tincidunt urna. Cras nec nibh sit amet tortor interdum convallis.
-              Donec id risus at lacus ultricies commodo. Nulla facilisi. Nam
-              vitae felis in magna sodales mollis in a elit. Ut bibendum
-              sagittis leo, a finibus magna tristique id. Aliquam posuere lectus
-              non fermentum viverra. Nulla facilisi. Morbi et nulla sed leo
-              ultrices pharetra nec at arcu. Duis vel hendrerit risus, vel
-              mollis est
+      <div className="w-full flex flex-col lg:flex-row ">
+        <div id={modelDestContainer} className="w-full h-full ">
+
+        </div>
+        <div className="w-full h-full">
+          <div className="justify-center mx-5">
+            <h2 className="text-white text-center text-[42px] lg:text-[7rem] font-bold mb-2">AgroBot</h2>
+            <p className="text-white text-center text-[18px] lg:text-[1.25rem]">
+              An autonomous robot utilizing AI and machine learning for precise intra-row weeding and data collection. It identifies and eliminates weeds without harming crops, reducing the need for chemical pesticides. Additionally, the robot collects data on crop health to help farmers make better, more informed decisions.
             </p>
-          </div> 
-        <Agrobotmd /> 
+            <p className="text-white text-center font-bold text-[18px] lg:text-[1.25rem] mt-10 mb-20">
+              AgroBot is a product of collaboration between five different sub-teams, each playing a pivotal role in its development and performance:
+            </p>
+          </div>
         </div>
       </div>
-}
-  {!isLaptop &&
-      <div
-        className="w-full h-full flex items-center flex-col"
-        style={{ position: "absolute", top: `${headerBottom}px` }}
-      >
-        <div className="flex flex-col items-center w-full h-full ">
-          <div style={{ position: "absolute", top: "500px" }}>
-            <h1
-              id="main-header"
-              className="text-[5rem] text-center opacity-1 font-bold text-white"
-            >
-              Agrobot
-            </h1>
-            <p
-              id="main-body"
-              className="w-[40vpw] mt-5 opacity-1 text-center mx-5 font-bold text-white"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-              placerat, dolor eget tincidunt interdum, sapien lacus egestas
-              libero, vitae tincidunt nisi dolor et purus. Sed ac velit sit amet
-              quam convallis vestibulum a nec nisl. Vestibulum non nisl lectus.
-              Proin nec scelerisque mauris. Quisque euismod orci ut ipsum
-              convallis, sed sodales erat dapibus. Integer eget orci augue.
-              Suspendisse eget mauris vel ex eleifend sagittis. Morbi at nunc
-              nulla. Vivamus vel suscipit nunc. Proin vel cursus nisi. Phasellus
-              bibendum efficitur justo, sed volutpat purus efficitur in. Cras
-              sit amet semper lacus, eget lacinia nunc. Suspendisse vitae eros
-              sollicitudin, dictum libero sit amet, ultricies elit. Ut et
-              tincidunt urna. Cras nec nibh sit amet tortor interdum convallis.
-              Donec id risus at lacus ultricies commodo. Nulla facilisi. Nam
-              vitae felis in magna sodales mollis in a elit. Ut bibendum
-              sagittis leo, a finibus magna tristique id. Aliquam posuere lectus
-              non fermentum viverra. Nulla facilisi. Morbi et nulla sed leo
-              ultrices pharetra nec at arcu. Duis vel hendrerit risus, vel
-              mollis est
-            </p>
-          </div> 
-          <img src={AgrobotModel2D}
-          style={{position: "absolute", top: "100px"}}
-          ></img>
-        </div>
-      </div>
-}
     </section>
   );
-};
+}
 
 export default AgrobotMain;

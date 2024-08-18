@@ -1,8 +1,9 @@
 import Home from "./Home";
-import Projects from "./Projects";
+import Agrobot from "./Agrobot"
+import Agroponics from "./Agroponics";
 import Sponsorship from "./Sponsorship";
 import Recruitment from "./Recruitment";
 import Contact from "./Contact";
 import About from "./About";
 
-export { Home, Projects, Sponsorship, Recruitment, Contact, About };
+export { Home, Agrobot, Agroponics, Sponsorship, Recruitment, Contact, About };
