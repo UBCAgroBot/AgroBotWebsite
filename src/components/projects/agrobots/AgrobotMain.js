@@ -1,8 +1,9 @@
 import { AgrobotModelView } from "../../models";
 import gsap from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect } from "react";
-
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useMediaQuery } from "react-responsive";
+import { AgrobotModel2D } from "../../../assets";
 
 const AgrobotMain = () => {
   gsap.registerPlugin(ScrollTrigger)
@@ -12,19 +13,20 @@ const AgrobotMain = () => {
   const modelRenderId = "#" + modelRender;
   const modelDestContainer = "agrobotDestContaienr";
   const modelDestContainerId = "#" + modelDestContainer;
+  const isMobile = useMediaQuery({ query: "( max-width: 640px)" });
 
   useLayoutEffect(() => {
     const mm = gsap.matchMedia();
+    const dest = document.getElementById(modelDestContainer);
+    const destDiv = dest.getBoundingClientRect();
+    const modelDivStartinPosition = window.innerWidth / 2;
+    const destDivCenter = (destDiv.left + destDiv.right) / 2;
 
     mm.add("(min-width: 1024px)", () => {
-      const dest = document.getElementById(modelDestContainer);
-      const destDiv = dest.getBoundingClientRect();
-      const modelDivStartingPosition = window.innerWidth / 2;
-      const destDivCenter = (destDiv.left + destDiv.right) / 2;
 
       ScrollTrigger.defaults({
         immediateRender: false,
-        ease: 'power1.inOut',
+        ease: 'power1.inOut1',
         scrub: true,
         pinSpacer: false,
         ease: 'none',
@@ -48,11 +50,11 @@ const AgrobotMain = () => {
           pinSpacer: false,
           ease: "none"
         }
-      }).to(modelRenderId, {
-        x: () => {
-          return destDivCenter - modelDivStartingPosition;
-        },
-      });
+      })
+        .to(modelRenderId, {
+          x: () => destDivCenter - modelDivStartinPosition,
+        });
+
     });
 
     return () => {
@@ -62,20 +64,25 @@ const AgrobotMain = () => {
 
   return (
     <section
-      className="w-full bg-black flex flex-col gap-[2rem] justify-start pt-10 overflow-hidden"
+      className="lg:h-[175vh] w-full bg-black flex flex-col gap-[2rem] justify-start pt-10 overflow-hidden"
     >
-      <div className="w-full h-[75vh] pt-8 opacity-1">
-        <AgrobotModelView
-          id={modelContainer}
-          gsapType={modelRender}
-          scale={[1, 1, 1]}
-          cameraPosition={[0.75, 1, 1.25]}
-          groupPosition={[0, 0, 0]}
-          vectorPosition={[0, 0.25, 0]}
-        />
+      <div className="w-full h-[50vh] lg:h-[100vh] pt-8 opacity-1">
+        {!isMobile ?
+          <AgrobotModelView
+            id={modelContainer}
+            gsapType={modelRender}
+            scale={[1, 1, 1]}
+            cameraPosition={[0.75, 1, 1.25]}
+            groupPosition={[0, 0, 0]}
+            vectorPosition={[0, 0.25, 0]}
+          /> :
+          <img
+            src={AgrobotModel2D}
+          ></img>
+        }
       </div>
 
-      <div className="w-full flex flex-col lg:flex-row ">
+      <div className="w-full lg:h-[75vh] flex flex-col lg:flex-row ">
         <div id={modelDestContainer} className="w-full h-full ">
 
         </div>

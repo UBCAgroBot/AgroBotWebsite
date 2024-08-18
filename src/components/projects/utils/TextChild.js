@@ -8,7 +8,7 @@ const TextChild = ({ id, header, body }) => {
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: divId,
-        markers: true,
+        markers: false,
         start: "top center",
         end: "center center",
       },
