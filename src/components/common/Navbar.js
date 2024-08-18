@@ -28,7 +28,7 @@ const Navbar = () => {
 			<nav className='w-[96%] mx-auto h-full flex items-center justify-between px-2 pr-6 bg-glass hover:bg-white duration-300 ease-in-out shadow-glass backdrop-blur-glass text-[#2E1B0F] rounded-full'>
 				<div className="h-full font-bold cursor-pointer flex items-center">
 					<Link to="/"><img className="h-11 mr-3" src={AGROBOT_ICON} alt="UBC AGROBOT" /></Link>
-					<Link to="/" className="font-bold text-[26px]">UBC AGROBOT</Link>
+					<Link to="/" className="font-bold text-[22px] lg:text-[26px]">UBC AGROBOT</Link>
 				</div>
 
 				<ul className="list-none hidden lg:flex items-center gap-8">

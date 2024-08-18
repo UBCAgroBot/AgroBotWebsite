@@ -12,11 +12,11 @@ function HomeBanner() {
         <div className="h-[100vh] w-full bg-[#91D0F2] flex flex-col-reverse md:flex-row justify-center items-center relative z-[0] pt-16">
             <div className='absolute w-full h-full bg-center bg-no-repeat z-[1] opacity-[0.5]'></div>
             <div className="md:w-[50%] flex flex-col items-center justify-center z-[2]">
-                <h1 className="h-[220px] md:h-[300px] text-[38px] md:text-[48px] text-[#3A3A3A] font-bold roboto-custom text-center uppercase">
+                <h1 className="h-[220px] md:h-[300px] text-body lg:text-header text-[#3A3A3A] font-bold roboto-custom text-center uppercase">
                     
                     {c.titleText[0]} <br />
                     <div className="relative">
-                        <div className="text-[#78BE20] bg-white rounded-[30px] w-[400px] shadow-xl">
+                        <div className="text-[#78BE20] bg-white rounded-[30px] w-[260px] lg:w-[400px] shadow-xl">
                             <TypingEffect messages={c.titleText[1]} start_index={randomIndex} /><br />
                         </div>
                         {/* top left */}
@@ -30,7 +30,7 @@ function HomeBanner() {
                     </div>
                     {c.titleText[2]} <br />
                     <div className="relative">
-                        <div className="text-[#78BE20] bg-white rounded-[30px] w-[400px] shadow-xl">
+                        <div className="text-[#78BE20] bg-white rounded-[30px] w-[260px] lg:w-[400px] shadow-xl">
                             <TypingEffect messages={c.titleText[3]} start_index={randomIndex} /><br />
                         </div>
                     {/* bottom left */}

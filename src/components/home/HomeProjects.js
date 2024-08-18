@@ -6,9 +6,36 @@ import { AgrobotModelView, AgroponicModelView, AgroPickerModelView } from "../mo
 import { AgrobotModel2D, AgroArm2DModel, AgroponicModel2D } from "../../assets";
 import { useMediaQuery } from "react-responsive";
 
-function Project({ ProjectName, background, ModelComponent, MobileImg }) {
+const AgrobotMod = <Agrobotmd />
+const AgroponicMod = <AgroponicView />
+const AgropickerMod = <AgropickerView />
+
+const projects = [
+	{
+		ProjectName: "AgroBot",
+		Text: "An autonomous robot utilizing AI and machine learning for precise intra-row weeding and data collection. It identifies and eliminates weeds without harming crops, reducing the need for chemical pesticides. Additionally, the robot collects data on crop health to help farmers make better, more informed decisions.",
+		ModelComponent: AgrobotMod,
+		MobileImg: AgrobotModel2D,
+		background: { background: "#cdff70" },
+	},
+	{
+		ProjectName: "AgroPonics",
+		Text: "An NFT (Nutrient Film Technique) hydroponic system focused on data collection, environmental control, and automation to optimize the nutrients and growing conditions of staple foods. Through a series of meticulously designed experiments, it aims to discover the most efficient environmental settings for growing a variety of crops.",
+		ModelComponent: AgroponicMod,
+		MobileImg: AgroponicModel2D,
+		background: { background: "#cdff70" },
+	},
+	{
+		ProjectName: "AgroPicker",
+		Text: "An autonomous robotic arm capable of detecting fruits, assessing their ripeness, and harvesting them efficiently. The robotic arm will be attached to a mobile robot intended for on-field navigation. This system aims to improve the efficiency and accuracy of fruit harvesting, reduce labor costs, and minimize fruit damage. ",
+		ModelComponent: AgropickerMod,
+		MobileImg: AgroArm2DModel,
+		background: { background: "#cdff70" },
+	},
+]
+
+function Project({ ProjectName, Text, background, ModelComponent, }) {
 	const containerRef = useRef(null);
-	const isMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
 	function useFadeIn(containerRef) {
 		const [isVisible, setIsVisible] = useState(false);
@@ -40,78 +67,58 @@ function Project({ ProjectName, background, ModelComponent, MobileImg }) {
 	return (
 		<div
 			ref={containerRef}
-			className="w-full h-[250vh] flex px-[10%] items-start justify-between"
+			className="w-full h-[250vh] flex px-[5%] items-start justify-between"
 			style={background}
 		>
 			<animated.div
 				style={useFadeIn(containerRef)}
-				className="w-[40%] sticky top-[25vh]"
+				className="w-[47.5%] sticky top-[20vh]"
 			>
-				<div className="w-full h-full bg-glass rounded-[46px] p-8 shadow-sm">
-					<h2 className="text-[48px] font-bold mb-4">{ProjectName}</h2>
-					<p className="text-[24px]">The University of British Columbia (UBC) is a public research
-						university with campuses near Vancouver and Okanagan in British
-						Columbia, Canada. Established in 1908.
-					</p>
+				<div className="w-full h-full rounded-[46px] p-8">
+					<h2 className="text-mobile-header lg:text-header font-bold mb-4">{ProjectName}</h2>
+					<p className="text-mobile-body">{Text}</p>
 					<button className="px-4 py-2 mt-4 bg-[#2E1B0F] font-medium text-[24px] rounded-full text-white">Learn More</button>
 				</div>
 			</animated.div>
-			{!isMobile &&
-				<div className="w-[50%] h-[55vh] bg-[#2E1B0F] relative top-[100vh] rounded-lg">
-					{ModelComponent}
-				</div>
-			}
-			{isMobile &&
-				<div className="w-[47.5%] h-[50vh] bg-[#2E1B0F] relative top-[100vh] rounded-lg">
-					<img src={MobileImg}></img>
-				</div>
-			}
+			<div className="w-[47.5%] h-[50vh] bg-[#2e1b0f1f] relative top-[100vh] rounded-full">
+				{ModelComponent}
+			</div>
 		</div>
 	);
 }
 
 function HomeProjects() {
-	return (
-		<div className="bg-[#CDFF70]">
-			<Project
-				ProjectName="AgroBot"
-				MobileImg={AgrobotModel2D}
-				ModelComponent={<AgrobotModelView
-					id={"agrobotModelView"}
-					gsapType={"agrobotModelGsap"}
-					scale={[2, 2, 2]}
-					cameraPosition={[0, 0, 1]}
-					groupPosition={[0, 0, 0]}
-					vectorPosition={[0, 0, 0]} />}
-			/>
-			<Project
-				ProjectName="AgroPonics "
-				MobileImg={AgroponicModel2D}
-				background={{
-					background: "linear-gradient(to bottom, #CDFF70, #78BE20)",
-				}}
-				ModelComponent={<AgroponicModelView
-					id={"agroponicModelView"}
-					gsapType={"agroponicModelGsap"}
-					scale={[1, 1, 1]}
-					cameraPosition={[0, 0, 1]}
-					groupPosition={[0, 0, 0]}
-					vectorPosition={[0, 0, 0]} />}
-			/>
-			<Project
-				ProjectName="AgroPicker "
-				background={{ background: "#78BE20" }}
-				MobileImg={AgroArm2DModel}
-				ModelComponent={<AgroPickerModelView
-					id={"agroPickerModelView"}
-					gsapType={"agroPickerModelGsap"}
-					scale={[1, 1, 1]}
-					cameraPosition={[2, 2, 3]}
-					groupPosition={[0, 0, 0]}
-					vectorPosition={[0, 0, 0]} />}
-			/>
-		</div>
-	);
+
+	const isMobile = useMediaQuery({ query: '(max-width: 1024px)' })
+
+	if (!isMobile) {
+		return (
+			<>
+				{projects.map((proj) => (
+					<Project
+						ProjectName={proj.ProjectName}
+						Text={proj.Text}
+						ModelComponent={proj.ModelComponent}
+						MobileImg={proj.MobileImg}
+						background={proj.background}
+					/>
+				))}
+			</>
+		);
+	}
+	else {
+		return (
+			<>
+				{projects.map((proj, index) => (
+					<div key={index} className="w-[280px] mx-auto my-16">
+						<h2 className="font-semibold text-mobile-header">{proj.ProjectName}</h2>
+						<p className="text-mobile-body mb-8">{proj.Text}</p>
+						<img src={proj.MobileImg} className="w-[280px]" />
+					</div>
+				))}
+			</>
+		)
+	}
 }
 
 export default HomeProjects;

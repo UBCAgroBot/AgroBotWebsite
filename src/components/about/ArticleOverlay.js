@@ -1,214 +1,141 @@
 import React, { useEffect, useState } from "react";
-import TeamAgroBot from '../../assets/image/AgroBotWithTeamOnGrass.jpg'
-import AgroBotBlueBg from '../../assets/image/AgroBotBlueBg.png'
-import StudentsWorking from '../../assets/image/studentsWorking.jpg'
-import AgroPickerBlueBg from '../../assets/image/AgroPickerBluBg.png'
+import { BP1Team } from '../../assets';
 import { CiClock2 } from "react-icons/ci";
 const d3 = require('d3-ease');
 
-function Comp2023() {
-    return (
-        <>
-            <h1 className="font-bold text-[42px] mb-6">UBC Agrobot takes home gold!</h1>
-            <div className="text-[16px] my-6 flex">
-                <img className="bg-sky-400 w-[40px] h-[40px] rounded-full mr-2" />
-                <div>
-                    <p>By: Arman Drismir</p>
-                    <p><CiClock2 className="inline" /> 5 minute read · Updated 7:10PM PST, Mon Jul 15, 2024</p>
-                </div>
-            </div>
-            <img src={TeamAgroBot} width="750" />
-            <p className="mt-12 text-[20px] leading-7 w-[750px]">
-                <strong>Vancouver (AgroBot) - </strong>
-                UBC Agrobot, a student engineering club at the University of British Columbia,
-                recently achieved a significant milestone by winning a gold medal for their
-                <br /><br />
-                innovative agricultural robot. The team's creation, an autonomous fertilizing
-                machine, showcased advanced capabilities in precision agriculture. By utilizing
-                sensors, GPS technology, and machine learning algorithms, the robot can navigate
-                fields independently, identify individual plants, and apply fertilizer with
-                <br /><br />
-                remarkable accuracy. This achievement not only demonstrates the club's technical
-                prowess but also highlights the potential for automation to revolutionize farming
-                <br /><br />
-                <strong className="leading-[2em] block">Biden won’t speculate on future of 2024 race</strong>
-                practices, potentially increasing crop yields while reducing resource waste and
-                environmental impact.</p>
-        </>
-    )
+function SowingTheFields() {
+	return (
+		<>
+			<h1 className="font-bold text-[42px] mb-6">Sowing The Fields</h1>
+			<div className="text-[16px] my-6 flex">
+				<img alt="" className="bg-sky-400 w-[40px] h-[40px] rounded-full mr-2" />
+				<div>
+					<p>By: Arman Drismir</p>
+					<p><CiClock2 className="inline" /> 5 minute read · Updated 7:10PM PST, Mon Jul 15, 2024</p>
+				</div>
+			</div>
+			<img alt="article" src={BP1Team} width="750" />
+			<p className="mt-12 text-[20px] leading-7 w-[750px]">
+				Welcome reader to the UBC Agrobot blog! Here we hope to periodically
+				showcase what we’re doing to bring innovation to agriculture, so keep up
+				with us for future updates.
+			</p>
+			<p className="mt-6 text-[20px] leading-7 w-[750px]">
+				Today’s post truly marks the
+				beginning of beginnings as the first
+				prototype of our flagship Agrobot
+				has just completed construction. The
+				team has worked many hours over
+				the summer to bore, turn, cut, and
+				assemble every part of the chassis
+				and powertrains to spec. It’s been a
+				long journey that started all the way
+				back in the fall of last year. All the
+				component sourcing, all the machine
+				design calculations, and all the CAD
+				work has finally accumulated to this.
+				It wasn’t without struggle of course. The logistics of working in the off-term
+				reared its pesky head from time to time, and don’t get me started on
+				tracking down order packages. But seeing the Agrobot leap off the screen
+				and onto the EDC table was a great moment of pride to the whole team, and
+				a totem to their dedication and perseverance.
+			</p>
+			<p className="mt-6 text-[20px] leading-7 w-[750px]">
+				A personal highlight for me was
+				working on our wheel’s power
+				transmission system. To allow for
+				complete and agile control, each
+				wheel is driven and steered
+				individually. This lets the Agrobot
+				swerve, strafe, and crabwalk
+				through the fields to get into optimal
+				position for spraying. To keep the
+				motors safe from dirt, mud, and
+				impact, we’ve elevated each of them
+				off the ground and connected them
+				through systems of chains,
+				sprockets, and shafts to deliver
+				power to the wheels. This was the
+				first time personally working with
+				chains and sprockets away from my bike at home - designing and building it
+				was totally worth the grease-stained afternoons. Anything for smooth
+				operation.
+			</p>
+			<p className="mt-6 text-[20px] leading-7 w-[750px]">
+				And it all worked! At least as far as preliminary testing has gone. With the
+				help of the navigation team’s software, we’ve driven the Agrobot around the
+				floor of the EDC multiple times. Sighs of relief quickly turned into sounds of
+				elation. And the robot’s got power to boot. At full juice, it’ll no doubt handle
+				dirt fields, even light mud if the rain starts to shower down. Did I mention the
+				chassis is designed to be waterproof? I suppose that’s a blog article for
+				another time, especially with the weather this summer. -- Ryan
+			</p>
+		</>
+	)
 }
 
-function ChasisPrototype() {
-    return (
-        <>
-            <h1 className="font-bold text-[42px] mb-6">Chassis Prototype</h1>
-            <div className="text-[16px] my-6 flex">
-                <img className="bg-sky-400 w-[40px] h-[40px] rounded-full mr-2" />
-                <div>
-                    <p>By: Arman Drismir</p>
-                    <p><CiClock2 className="inline" /> 5 minute read · Updated 7:10PM PST, Mon Jul 15, 2024</p>
-                </div>
-            </div>
-            <img src={AgroBotBlueBg} width="750" />
-            <p className="mt-12 text-[20px] leading-7 w-[750px]">
-                <strong>Vancouver (AgroBot) - </strong>
-                UBC Agrobot, a student engineering club at the University of British Columbia,
-                recently achieved a significant milestone by winning a gold medal for their
-                <br /><br />
-                innovative agricultural robot. The team's creation, an autonomous fertilizing
-                machine, showcased advanced capabilities in precision agriculture. By utilizing
-                sensors, GPS technology, and machine learning algorithms, the robot can navigate
-                fields independently, identify individual plants, and apply fertilizer with
-                <br /><br />
-                remarkable accuracy. This achievement not only demonstrates the club's technical
-                prowess but also highlights the potential for automation to revolutionize farming
-                <br /><br />
-                <strong className="leading-[2em] block">Biden won’t speculate on future of 2024 race</strong>
-                practices, potentially increasing crop yields while reducing resource waste and
-                environmental impact.
-            </p>
-        </>
-    )
-}
+function ArticleOverlay({ deactivateFn, articleName }) {
+	const [Content, setContent] = useState(<></>);
 
-function AgroPonicsLaunch() {
-    return (
-        <>
-            <h1 className="font-bold text-[42px] mb-6">AgroPonics Launches!</h1>
-            <div className="text-[16px] my-6 flex">
-                <img className="bg-sky-400 w-[40px] h-[40px] rounded-full mr-2" />
-                <div>
-                    <p>By: Arman Drismir</p>
-                    <p><CiClock2 className="inline" /> 5 minute read · Updated 7:10PM PST, Mon Jul 15, 2024</p>
-                </div>
-            </div>
-            <img src={StudentsWorking} width="750" />
-            <p className="mt-12 text-[20px] leading-7 w-[750px]">
-                <strong>Vancouver (AgroBot) - </strong>
-                UBC Agrobot, a student engineering club at the University of British Columbia,
-                recently achieved a significant milestone by winning a gold medal for their
-                <br /><br />
-                innovative agricultural robot. The team's creation, an autonomous fertilizing
-                machine, showcased advanced capabilities in precision agriculture. By utilizing
-                sensors, GPS technology, and machine learning algorithms, the robot can navigate
-                fields independently, identify individual plants, and apply fertilizer with
-                <br /><br />
-                remarkable accuracy. This achievement not only demonstrates the club's technical
-                prowess but also highlights the potential for automation to revolutionize farming
-                <br /><br />
-                <strong className="leading-[2em] block">Biden won’t speculate on future of 2024 race</strong>
-                practices, potentially increasing crop yields while reducing resource waste and
-                environmental impact.
-            </p>
-        </>
-    )
-}
+	async function easeIn() {
+		for (let i = 0; i <= 1; i += 0.01) {
+			const easedVal = d3.easeCubic(i)
+			document.getElementById('outer-overlay').style.opacity = i;
+			await new Promise(resolve => setTimeout(resolve, 1));
+		}
+		document.getElementById('outer-overlay').style.opacity = 1;
+	}
 
-function AgroPickerLaunch() {
-    return (
-        <>
-            <h1 className="font-bold text-[42px] mb-6">Introducing AgroPicker!</h1>
-            <div className="text-[16px] my-6 flex">
-                <img className="bg-sky-400 w-[40px] h-[40px] rounded-full mr-2" />
-                <div>
-                    <p>By: Arman Drismir</p>
-                    <p><CiClock2 className="inline" /> 5 minute read · Updated 7:10PM PST, Mon Jul 15, 2024</p>
-                </div>
-            </div>
-            <img src={AgroPickerBlueBg} width="750" />
-            <p className="mt-12 text-[20px] leading-7 w-[750px]">
-                <strong>Vancouver (AgroBot) - </strong>
-                UBC Agrobot, a student engineering club at the University of British Columbia,
-                recently achieved a significant milestone by winning a gold medal for their
-                <br /><br />
-                innovative agricultural robot. The team's creation, an autonomous fertilizing
-                machine, showcased advanced capabilities in precision agriculture. By utilizing
-                sensors, GPS technology, and machine learning algorithms, the robot can navigate
-                fields independently, identify individual plants, and apply fertilizer with
-                <br /><br />
-                remarkable accuracy. This achievement not only demonstrates the club's technical
-                prowess but also highlights the potential for automation to revolutionize farming
-                <br /><br />
-                <strong className="leading-[2em] block">Biden won’t speculate on future of 2024 race</strong>
-                practices, potentially increasing crop yields while reducing resource waste and
-                environmental impact.
-            </p>
-        </>
-    )
-}
+	async function easeOut() {
+		for (let i = 1; i >= 0; i -= 0.01) {
+			const easedVal = d3.easeCubic(i);
+			document.getElementById('outer-overlay').style.opacity = easedVal;
+			await new Promise(resolve => setTimeout(resolve, 1));
+		}
+		document.getElementById('outer-overlay').style.opacity = 0;
+		deactivateFn();
+	}
 
-function ArticleOverlay({ deactivateFn, articleName })
-{
-    const [Content, setContent] = useState(<Comp2023 />);
+	// Disable scrolling on the body element when component mounts
+	useEffect(() => {
 
-    async function easeIn() {
-        for (let i = 0; i <= 1; i+=0.01) {
-            const easedVal = d3.easeCubic(i)
-            document.getElementById('outer-overlay').style.opacity = i;
-            await new Promise(resolve => setTimeout(resolve, 1));
-        }
-        document.getElementById('outer-overlay').style.opacity = 1;
-    }
+		switch (articleName) {
+			case 'SowingTheFields':
+				setContent(<SowingTheFields />)
+				break;
+			default:
+				console.log("Article not found. Defaulting to Comp 2023")
+				setContent(<>I didnt catch the article I was supposed to show 😵</>)
+		}
 
-    async function easeOut() {
-        for (let i = 1; i >= 0; i -= 0.01) {
-            const easedVal = d3.easeCubic(i);
-            document.getElementById('outer-overlay').style.opacity = easedVal;
-            await new Promise(resolve => setTimeout(resolve, 1));
-        }
-        document.getElementById('outer-overlay').style.opacity = 0;
-        deactivateFn();
-    }
+		document.body.style.overflow = 'hidden';
 
-    // Disable scrolling on the body element when component mounts
-    useEffect(() => {
+		easeIn()
 
-        switch (articleName) {
-            case 'Comp2023':
-                setContent(<Comp2023 />)
-                break;
-            case 'ChasisPrototype':
-                setContent(<ChasisPrototype />)
-                break;
-            case 'AgroPonicsLaunch':
-                setContent(<AgroPonicsLaunch />)
-                break;
-            case 'AgroPickerLaunch':
-                setContent(<AgroPickerLaunch />)
-                break;
-            default:
-                console.log("Article not found. Defaulting to Comp 2023")
-                setContent(<Comp2023 />)
-        }
+		return () => {
+			document.body.style.overflow = 'visible'; // Re-enable scrolling when component unmounts
+		};
+	}, []);
 
-        document.body.style.overflow = 'hidden';
+	// If the click happened on the overlay we close the article.
+	// If the click happened on the article we do nothing.
+	function CheckClick(event) {
+		if (event.target.id === 'outer-overlay') {
+			easeOut()
+		}
+	}
 
-        easeIn()
-
-        return () => {
-            document.body.style.overflow = 'visible'; // Re-enable scrolling when component unmounts
-        };
-    }, []);
-
-    // If the click happened on the overlay we close the article.
-    // If the click happened on the article we do nothing.
-    function CheckClick(event) {
-        if (event.target.id === 'outer-overlay') {
-            easeOut()
-        }
-    }
-
-    return (
-        <div
-            onClick={CheckClick} 
-            id="outer-overlay"
-            className="opacity-0 fixed top-0 left-0 max-h-screen w-screen bg-[#000000b4] z-50 overflow-y-auto" 
-            >
-            <div className="box-content w-[750px] bg-white mx-auto my-12 rounded-[46px] p-24 px-32">
-                {Content}
-            </div>
-        </div>
-    )
+	return (
+		<div
+			onClick={CheckClick}
+			id="outer-overlay"
+			className="opacity-0 fixed top-0 left-0 h-screen w-screen bg-[#000000b4] z-50 overflow-y-auto"
+		>
+			<div className="box-content w-[750px] bg-white mx-auto my-12 rounded-[46px] p-24 px-32">
+				{Content}
+			</div>
+		</div>
+	)
 }
 
 export { ArticleOverlay }
