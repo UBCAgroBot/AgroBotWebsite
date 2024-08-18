@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { AGROBOT_ICON } from "../../assets";
+import { Link } from 'react-router-dom';
 import { FaFacebook, FaEnvelope, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
@@ -7,12 +8,12 @@ function Footer() {
         <footer className="w-full px-[5%] py-8 bg-[#2E1B0F] flex flex-col justify-between items-center">
             <div className="w-full my-4 lg:bg-[#46372c] rounded-2xl">
                 <ul className="text-[#78BE20] font-bold text-[24px] flex flex-col lg:flex-row justify-between items-center text-center">
-                    <li className="bg-[#46372c] p-2 my-2 w-[180px] rounded-xl"><a href="/">Home</a></li>
-                    <li className="bg-[#46372c] p-2 my-2 w-[180px] rounded-xl"><a href="/projects">Projects</a></li>
-                    <li className="bg-[#46372c] p-2 my-2 w-[180px] rounded-xl"><a href="/sponsorship">Sponsorship</a></li>
-                    <li className="bg-[#46372c] p-2 my-2 w-[180px] rounded-xl"><a href="/recruitment">Recruitment</a></li>
-                    <li className="bg-[#46372c] p-2 my-2 w-[180px] rounded-xl"><a href="/contact">Contact</a></li>
-                    <li className="bg-[#46372c] p-2 my-2 w-[180px] rounded-xl"><a href="/about">About</a></li>
+                    <li className="bg-[#46372c] p-2 my-2 w-[180px] rounded-xl"><Link to="/">Home</Link></li>
+                    <li className="bg-[#46372c] p-2 my-2 w-[180px] rounded-xl"><Link to="/agrobot">Projects</Link></li>
+                    <li className="bg-[#46372c] p-2 my-2 w-[180px] rounded-xl"><Link to="/sponsorship">Sponsorship</Link></li>
+                    <li className="bg-[#46372c] p-2 my-2 w-[180px] rounded-xl"><Link to="/recruitment">Recruitment</Link></li>
+                    <li className="bg-[#46372c] p-2 my-2 w-[180px] rounded-xl"><Link to="/contact">Contact</Link></li>
+                    <li className="bg-[#46372c] p-2 my-2 w-[180px] rounded-xl"><Link to="/about">About</Link></li>
                 </ul>
             </div>
             <div className="w-full flex flex-col-reverse lg:flex-row items-center justify-center lg:justify-between">
