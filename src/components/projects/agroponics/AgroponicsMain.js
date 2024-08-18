@@ -68,7 +68,7 @@ const AgroponicsMain = () => {
       className="lg:h-[175vh] w-full bg-black flex flex-col gap-[2rem] justify-start pt-10 overflow-hidden"
     >
       <div className="w-full h-[50vh] lg:h-[100vh] pt-8 opacity-1">
-        {isMobile ?
+        {!isMobile ?
           <AgroponicModelView
             id={modelContainer}
             gsapType={modelRender}
