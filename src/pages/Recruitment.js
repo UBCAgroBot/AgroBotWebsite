@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Timeline } from '../components/recruitment/Timeline.tsx'
 import { SubteamOverlay } from "../components/recruitment/SubteamOverlay";
-import { useLocation } from 'react-router-dom';
 
 function SubteamBox({ emoji, title, description, bg, overlayId, setOverlayId }) {
 	useEffect(() => {
@@ -20,27 +19,6 @@ function SubteamBox({ emoji, title, description, bg, overlayId, setOverlayId }) 
 }
 
 function Recruitment() {
-
-	const location = useLocation();
-
-	const scrollToHashElement = () => {
-		if (location.hash === '#join-us') {
-		  const element = document.getElementById('join-us');
-			if (element) {
-				const elementPosition = element.getBoundingClientRect().top;
-				const offsetPosition = elementPosition + window.scrollY - 76;
-	
-				window.scrollTo({
-					top: offsetPosition,
-					behavior: 'smooth',
-				});
-			}
-		}
-	};
-
-	useEffect(() => {
-		scrollToHashElement();
-	}, [location]);
 
 	const applied_ai = {
 		overlayId: "applied_ai",
@@ -154,10 +132,6 @@ function Recruitment() {
 		{
 			"name": "AgroPonics Team",
 			"subteams": [automation, plants, structure]
-		},
-		{
-			"name": "AgroPicker Team",
-			"subteams": []
 		},
 		{
 			"name": "Administration Team",

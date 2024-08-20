@@ -70,7 +70,7 @@ function Project({ ProjectName, Text, background, ModelComponent, href }) {
 				const containerTop = containerRef.current.getBoundingClientRect().top;
 				const containerBottom =
 					containerRef.current.getBoundingClientRect().bottom;
-				
+
 				// First number is how many pixels from the top of the screen this 
 				// component should be before appearing
 				// Second number is how many pixels from the bottom of the screen
@@ -106,7 +106,7 @@ function Project({ ProjectName, Text, background, ModelComponent, href }) {
 					<h2 className="text-mobile-header lg:text-header font-bold mb-4">{ProjectName}</h2>
 					<p className="text-mobile-body">{Text}</p>
 					<div className="mt-4">
-						<Link to={href} className="px-4 py-2 bg-[#2E1B0F] font-medium text-[24px] rounded-full text-white">Learn More</Link>
+						<Link to={href} className="px-4 py-2 bg-[#2E1B0F] font-medium text-[24px] rounded-full text-white">{href === "#" ? "Coming soon" : "Learn More"}</Link>
 					</div>
 				</div>
 			</animated.div>
@@ -146,6 +146,9 @@ function HomeProjects() {
 						<h2 className="font-semibold text-mobile-header">{proj.ProjectName}</h2>
 						<p className="text-mobile-body mb-8">{proj.Text}</p>
 						<img src={proj.MobileImg} className="w-[280px]" />
+						<div className="mt-8 mb-12 flex justify-center items-center">
+							<Link to={proj.href} className="bg-[#2E1B0F] text-white p-2 px-12 rounded-full" >{proj.href === "#" ? "Coming soon" : "Learn More"}</Link>
+						</div>
 					</div>
 				))}
 			</>

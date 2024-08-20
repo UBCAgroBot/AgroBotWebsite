@@ -4,16 +4,12 @@ function Card({ name, title, quote, image }) {
 	return (
 		<li className="bg-glass p-5 rounded-[42px] drop-shadow-2xl shadow-lg">
 			<figcaption className="flex">
-				<div 
-						className="rounded-full w-[80px] h-[80px] bg-[#91D0F2] bg-center bg-cover"
-						style={{backgroundImage: `url(${image})`}}
-				/>
 				<div className="ml-4">
-					<div className="text-[36px] text-[#2E1B0F] font-bold">{name}</div>
-					<div className="text-[24px] text-[#2e1b0fb4] font-bold">{title}</div>
+					<div className="text-[24px] lg:text-[36px] text-[#2E1B0F] font-bold">{name}</div>
+					<div className="text-[16px] lg:text-[24px] text-[#2e1b0fb4] font-bold">{title}</div>
 				</div>
 			</figcaption>
-			<p className="p-4 text-[24px]">
+			<p className="p-4 text-[16px] lg:text-[24px]">
 				{quote}
 			</p>
 		</li>

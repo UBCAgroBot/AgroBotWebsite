@@ -95,7 +95,6 @@ function MailForm() {
 						<div className="flex flex-col items-center justify-center font-bold mr-8"><div className="bg-[#2E1B0F] rounded-xl px-2 lg:p-0 mb-2 flex justify-center items-center w-12 lg:w-24 h-12 lg:h-24"><LuMail      size='64' color="#CDFF70" /></div></div>
 						<div className="flex flex-col items-center justify-center font-bold mr-8"><div className="bg-[#2E1B0F] rounded-xl p-2 mb-2 flex justify-center items-center w-12 lg:w-24 h-12 lg:h-24"><FaInstagram size='64' color="#CDFF70" /></div></div>
 						<div className="flex flex-col items-center justify-center font-bold mr-8"><div className="bg-[#2E1B0F] rounded-xl p-2 mb-2 flex justify-center items-center w-12 lg:w-24 h-12 lg:h-24"><FaLinkedin  size='64' color="#CDFF70" /></div></div>
-						<div className="flex flex-col items-center justify-center font-bold mr-8"><div className="bg-[#2E1B0F] rounded-xl p-2 mb-2 flex justify-center items-center w-12 lg:w-24 h-12 lg:h-24"><FaFacebook  size='64' color="#CDFF70" /></div></div>
 					</div>
 				</div>
 			</div>

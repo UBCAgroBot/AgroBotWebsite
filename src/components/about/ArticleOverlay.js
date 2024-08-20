@@ -10,17 +10,17 @@ function SowingTheFields() {
 			<div className="text-[16px] my-6 flex">
 				<img alt="" className="bg-sky-400 w-[40px] h-[40px] rounded-full mr-2" />
 				<div>
-					<p>By: Arman Drismir</p>
-					<p><CiClock2 className="inline" /> 5 minute read · Updated 7:10PM PST, Mon Jul 15, 2024</p>
+					<p>By: Ryan Chang</p>
+					<p><CiClock2 className="inline" /> 5 minute read · Updated 7:00PM PST, Mon Aug 19, 2024</p>
 				</div>
 			</div>
 			<img alt="article" src={BP1Team} width="750" />
-			<p className="mt-12 text-[20px] leading-7 w-[750px]">
+			<p className="mt-12 text-[20px] leading-7 w-full">
 				Welcome reader to the UBC Agrobot blog! Here we hope to periodically
 				showcase what we’re doing to bring innovation to agriculture, so keep up
 				with us for future updates.
 			</p>
-			<p className="mt-6 text-[20px] leading-7 w-[750px]">
+			<p className="mt-6 text-[20px] leading-7 w-full">
 				Today’s post truly marks the
 				beginning of beginnings as the first
 				prototype of our flagship Agrobot
@@ -40,7 +40,7 @@ function SowingTheFields() {
 				and onto the EDC table was a great moment of pride to the whole team, and
 				a totem to their dedication and perseverance.
 			</p>
-			<p className="mt-6 text-[20px] leading-7 w-[750px]">
+			<p className="mt-6 text-[20px] leading-7 w-full">
 				A personal highlight for me was
 				working on our wheel’s power
 				transmission system. To allow for
@@ -61,7 +61,7 @@ function SowingTheFields() {
 				was totally worth the grease-stained afternoons. Anything for smooth
 				operation.
 			</p>
-			<p className="mt-6 text-[20px] leading-7 w-[750px]">
+			<p className="mt-6 text-[20px] leading-7 w-full">
 				And it all worked! At least as far as preliminary testing has gone. With the
 				help of the navigation team’s software, we’ve driven the Agrobot around the
 				floor of the EDC multiple times. Sighs of relief quickly turned into sounds of
@@ -131,7 +131,7 @@ function ArticleOverlay({ deactivateFn, articleName }) {
 			id="outer-overlay"
 			className="opacity-0 fixed top-0 left-0 h-screen w-screen bg-[#000000b4] z-50 overflow-y-auto"
 		>
-			<div className="box-content w-[750px] bg-white mx-auto my-12 rounded-[46px] p-24 px-32">
+			<div className="box-content w-[250px] lg:w-[750px] bg-white mx-auto my-12 rounded-[46px] p-5 lg:p-24 lg:px-32">
 				{Content}
 			</div>
 		</div>

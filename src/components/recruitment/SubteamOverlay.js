@@ -324,10 +324,10 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
 
 	return (
 		<div onClick={CheckClick} id="outer-overlay" className="opacity-0 fixed top-0 left-0 h-screen w-screen bg-[#000000b4] z-50 overflow-y-auto transition-opacity duration-500 ease-in-out">
-			<div className="box-content text-[28px] w-[750px] bg-[#1E120A] text-white mx-auto my-12 rounded-[46px] p-24 px-32">
-				<div className="text-[20px]">
+			<div className="box-content text-mobile-body w-[250px] lg:text-[28px] lg:w-[750px] bg-[#1E120A] text-white mx-auto my-12 rounded-[46px] p-5 lg:p-24 lg:px-32">
+				<div className="text-[16px] lg:text-[20px]">
 					<div className="flex items-center justify-center">
-						<h1 className="font-medium text-[96px]">{content.title}</h1>
+						<h1 className="font-medium mb-4 lg:mb-0 text-[26px] lg:text-[96px]">{content.title}</h1>
 					</div>
 					<p className="">
 						{content.description}

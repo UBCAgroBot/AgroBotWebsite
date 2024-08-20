@@ -6,8 +6,8 @@ import { ArticleOverlay } from "./ArticleOverlay"
 const NewsCard = React.forwardRef((({ activateFn, bgImage, title, overlayName }, ref) => {
     return (
         <div ref={ref} onClick={() => activateFn(overlayName)} className="flex flex-col mb-8 lg:mb-0 lg:mx-4 w-full lg:w-[30%] overflow-hidden shrink-0 cursor-pointer">
-            <div className="h-[300px] rounded-lg">
-                <img src={bgImage} alt='news card' className="h-full w-full object-cover rounded-lg" />
+            <div className="h-[300px]">
+                <img src={bgImage} alt='news card' className="h-full w-full object-cover" />
             </div>
             <h2 className='m-2 text-center lg:text-left text-mobile-body font-medium'>{title}<FaChevronRight size='20px' className="inline ml-1" /></h2>
         </div>

@@ -46,9 +46,9 @@ const Sponsorship = () => {
 						</p>
 					<h2 className="text-mobile-body lg:text-body font-bold pt-16">Sponsorship tiers</h2>
 					<div className="flex-col lg:flex-row flex justify-between pt-12">
-						<SponsorTier title="Seedling" emoji="🌱" price="$100+" bullets={["logo on our website", "logo on AgroBot marketing / social media"]} />
-						<SponsorTier title="Blossoming" emoji="🪴" price="$500+" bullets={["logo on our website", "logo on AgroBot marketing / social media", "logo on Team Merch", "Workspace Tour"]} />
-						<SponsorTier title="Full Bloom" emoji="🌳" price="$1000+" bullets={["logo on our website", "logo on AgroBot marketing / social media", "logo on Team Merch", "Workspace Tour", "Company logo on robot"]} />
+						<SponsorTier title="Seedling" emoji="🌱" price="$100+" bullets={["Logo on our website", "Logo on AgroBot marketing / social media"]} />
+						<SponsorTier title="Blossoming" emoji="🪴" price="$500+" bullets={["Logo on our website", "Logo on AgroBot marketing / social media", "Logo on Team Merch", "Workspace Tour"]} />
+						<SponsorTier title="Full Bloom" emoji="🌳" price="$1000+" bullets={["Logo on our website", "Logo on AgroBot marketing / social media", "Logo on Team Merch", "Workspace Tour", "Company logo on robot"]} />
 					</div>
 				</div>
 			</div>
@@ -64,8 +64,8 @@ const Sponsorship = () => {
 				))}
 			</div>
 			<div className="mx-auto w-[280px] lg:w-[750px] bg-[#2E1B0F] rounded-[46px] flex flex-col justify-center items-center my-24 p-8">
-				<p className=" text-white text-mobile-body lg:text-body font-medium text-center pb-2 lg:pb-6">We would love to have you join the team!</p>
-				<a href="mailto:ubcagrobot@gmail.com" className="text-center font-bold cursor-pointer text-mobile-header lg:text-header text-[#78be20]">Sponsor us <FaArrowRight className="inline" color="#78be20" /></a>
+				<p className=" text-white text-[18px] lg:text-body font-medium text-center pb-2 lg:pb-6">We would love to have you join the team!</p>
+				<a href="mailto:ubcagrobot@gmail.com" className="text-center font-bold cursor-pointer text-[30px] lg:text-header text-[#78be20]">Sponsor us <FaArrowRight className="inline" color="#78be20" /></a>
 			</div>
 		</>
 	);
