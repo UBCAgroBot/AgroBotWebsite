@@ -5,6 +5,7 @@ import { Preload, View } from "@react-three/drei";
 import ModelViewer from "./utils/ModelView";
 import AgrobotModel from "./meshAndMaterials/AgrobotModel";
 
+// TODO: add the loader as fallback
 const AgrobotModelView = ({ id, gsapType, scale, cameraPosition, groupPosition, vectorPosition }) => {
   const cameraRef = useRef();
   const modelRef = useRef(new THREE.Group());

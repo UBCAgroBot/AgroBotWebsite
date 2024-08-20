@@ -1,6 +1,7 @@
 import { AgrobotModelView } from "../../models";
+import { useGSAP } from "@gsap/react";
 import gsap from 'gsap';
-import { useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useMediaQuery } from "react-responsive";
 import { AgrobotModel2D } from "../../../assets";
@@ -13,6 +14,8 @@ const AgrobotMain = () => {
   const modelRenderId = "#" + modelRender;
   const modelDestContainer = "agrobotDestContaienr";
   const modelDestContainerId = "#" + modelDestContainer;
+  const textDiv = "agrobotMainText";
+  const textDivId = "#" + textDiv;
   const isMobile = useMediaQuery({ query: "( max-width: 640px)" });
 
   useLayoutEffect(() => {
@@ -62,6 +65,28 @@ const AgrobotMain = () => {
     };
   }, []);
 
+  useGSAP(() => {
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: textDivId,
+        markers: false,
+        start: "top bottom",
+        end: "center center",
+      },
+    });
+
+    timeline.fromTo(textDivId, {
+      opacity: 0,
+    },
+      {
+        y: "1rem",
+        opacity: 1,
+        duration: 1,
+        ease: "power1.out",
+      },
+    );
+  }, []);
+
   return (
     <section
       className="lg:h-[175vh] w-full bg-black flex flex-col gap-[2rem] justify-start pt-10 overflow-hidden"
@@ -87,7 +112,7 @@ const AgrobotMain = () => {
 
         </div>
         <div className="w-full h-full">
-          <div className="justify-center mx-5">
+          <div id={textDiv} className="justify-center mx-5">
             <h2 className="text-white text-center text-[42px] lg:text-[7rem] font-bold mb-2">AgroBot</h2>
             <p className="text-white text-center text-[18px] lg:text-[1.25rem]">
               An autonomous robot utilizing AI and machine learning for precise intra-row weeding and data collection. It identifies and eliminates weeds without harming crops, reducing the need for chemical pesticides. Additionally, the robot collects data on crop health to help farmers make better, more informed decisions.

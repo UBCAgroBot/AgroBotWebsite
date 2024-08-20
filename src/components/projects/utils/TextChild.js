@@ -9,7 +9,7 @@ const TextChild = ({ id, header, body }) => {
       scrollTrigger: {
         trigger: divId,
         markers: false,
-        start: "top center",
+        start: "top bottom",
         end: "center center",
       },
     });
@@ -32,7 +32,7 @@ const TextChild = ({ id, header, body }) => {
       classname="w-full h-full"
     >
       <div className="bg-glass opacity-100 p-5 rounded-3xl">
-        <h2 className="text-[40px] lg:text-[48px] font-bold text-center">
+        <h2 className="font-bold text-center" style={{ fontSize: 'clamp(24px, 6vw, 48px)' }}>
           {header}
         </h2>
 

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import AgrobotMain from "../components/projects/agrobots/AgrobotMain";
-import AgrobotSubteams from "../components/projects/agrobots/AgrobotSubteams";
+import { AgrobotMain, AgrobotSubteams } from "../components/projects";
 
 const Agrobot = () => {
 

@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import path from "../../../assets/models/AgrobotSketch.glb";
+import { useFrame } from "@react-three/fiber";
 
 const AgrobotModel = (props) => {
   const { nodes, materials } = useGLTF(path);
+  const ref = useRef();
+
+  useFrame(() => {
+    ref.current.rotation.y += 0.0005;
+    ref.current.rotation.x += 0.00;
+  })
+
   return (
-    <group {...props} dispose={null}>
+    <group {...props} ref={ref} dispose={null}>
       <mesh
         geometry={
           nodes["(MODIFIED_TO_196MM)_4558T62_Architectural_6063_Aluminum_H-B"]

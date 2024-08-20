@@ -29,7 +29,7 @@ const AgropickerMod = <AgroPickerModelView
 	scale={[3, 3, 3]}
 	cameraPosition={[2, 1, -3.5]}
 	groupPosition={[0, 0, 0]}
-	vectorPosition={[0.5, 0.8, 0]} />
+	vectorPosition={[0.2, 0.8, 0]} />
 
 const projects = [
 	{
@@ -54,7 +54,6 @@ const projects = [
 		ModelComponent: AgropickerMod,
 		MobileImg: AgroArm2DModel,
 		background: { background: "#cdff70" },
-		href: "#",
 	},
 ]
 
@@ -109,11 +108,11 @@ function Project({ ProjectName, Text, background, ModelComponent, href }) {
 						<Link to={href} className="px-4 py-2 bg-[#2E1B0F] font-medium text-[24px] rounded-full text-white">{href === "#" ? "Coming soon" : "Learn More"}</Link>
 					</div>
 				</div>
-			</animated.div>
+			</animated.div >
 			<div className="w-[47.5%] h-[50vh] bg-[#2e1b0f1f] relative top-[100vh] rounded-full">
 				{ModelComponent}
 			</div>
-		</div>
+		</div >
 	);
 }
 

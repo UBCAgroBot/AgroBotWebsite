@@ -22,6 +22,7 @@ const Navbar = () => {
 			setIsSubMenuOpen(!isSubMenuOpen);
 	}
 
+	// TODO: Why does the navbar expand and contract the rest of the page when you go up and down
 	return (
 		<header className='w-full h-14 top-4 z-40 fixed text-[22px]'>
 
