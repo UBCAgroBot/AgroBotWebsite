@@ -161,7 +161,7 @@ function OurMission() {
 
 At UBC Agrobot, we are dedicated to advancing agritech by integrating precision techniques, cutting-edge technology, and sustainable practices. Our innovative projects and collaborative efforts aim to make agriculture more sustainable and prosperous for everyone.				</p>
 			</div>
-			<div className="hidden ml-24 lg:flex justify-center items-center">
+			<div className="hidden ml-32 lg:flex justify-center items-center">
 				<RectangleAnimation />
 			</div>
 		</div>
