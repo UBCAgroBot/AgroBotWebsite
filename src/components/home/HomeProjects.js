@@ -54,7 +54,6 @@ const projects = [
 		ModelComponent: AgropickerMod,
 		MobileImg: AgroArm2DModel,
 		background: { background: "#cdff70" },
-		href: "#",
 	},
 ]
 
@@ -70,7 +69,7 @@ function Project({ ProjectName, Text, background, ModelComponent, href }) {
 				const containerTop = containerRef.current.getBoundingClientRect().top;
 				const containerBottom =
 					containerRef.current.getBoundingClientRect().bottom;
-				
+
 				// First number is how many pixels from the top of the screen this 
 				// component should be before appearing
 				// Second number is how many pixels from the bottom of the screen
