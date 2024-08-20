@@ -42,8 +42,8 @@ const Sponsorship = () => {
 			<div className="w-mobile-content mt-mobile-standard lg:mt-standard lg:w-content mx-auto">
 				<div className="min-h-screen pb-24">
 					<h1 className="text-mobile-header lg:text-header font-bold">Sponsor UBC Agrobot</h1>
-					<p className="text-mobile-body lg:text-body font-medium w-[100%] pt-5">Sponsors are the lifeline of our UBC Agrobot Engineering Team. To help us build the future of agriculture, partner with our team to share ideas, or mentor our members, send us an email at <a href="mailto:ubcagrobot@gmail.com"><u>agrobot@gmail.com</u></a>.
-						For more information about sponsorship, please read our detailed <u>sponsorship package</u>.</p>
+					<p className="text-mobile-body lg:text-body font-medium w-[100%] pt-5">Sponsors are the lifeline of our UBC Agrobot Engineering Team. To help us build the future of agriculture, partner with our team to share ideas, or mentor our members, send us an email at <a href="mailto:ubcagrobot@gmail.com"><u>ubcagrobot@gmail.com</u></a>.
+						</p>
 					<h2 className="text-mobile-body lg:text-body font-bold pt-16">Sponsorship tiers</h2>
 					<div className="flex-col lg:flex-row flex justify-between pt-12">
 						<SponsorTier title="Seedling" emoji="🌱" price="$100+" bullets={["logo on our website", "logo on AgroBot marketing / social media"]} />
@@ -63,8 +63,8 @@ const Sponsorship = () => {
 					</div>
 				))}
 			</div>
-			<div className="mx-auto w-[280px] lg:w-[600px] bg-[#2E1B0F] rounded-[46px] flex flex-col justify-center items-center my-24 p-8">
-				<p className=" text-white text-mobile-body lg:text-body font-medium text-center pb-2 lg:pb-6">We would love to have you!</p>
+			<div className="mx-auto w-[280px] lg:w-[750px] bg-[#2E1B0F] rounded-[46px] flex flex-col justify-center items-center my-24 p-8">
+				<p className=" text-white text-mobile-body lg:text-body font-medium text-center pb-2 lg:pb-6">We would love to have you join the team!</p>
 				<a href="mailto:ubcagrobot@gmail.com" className="text-center font-bold cursor-pointer text-mobile-header lg:text-header text-[#78be20]">Sponsor us <FaArrowRight className="inline" color="#78be20" /></a>
 			</div>
 		</>
