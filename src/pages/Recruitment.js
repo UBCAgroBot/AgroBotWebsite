@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Timeline } from '../components/recruitment/Timeline.tsx'
 import { SubteamOverlay } from "../components/recruitment/SubteamOverlay";
+import { useLocation } from "react-router-dom";
 
 function SubteamBox({ emoji, title, description, bg, overlayId, setOverlayId }) {
 	useEffect(() => {
@@ -19,6 +20,17 @@ function SubteamBox({ emoji, title, description, bg, overlayId, setOverlayId }) 
 }
 
 function Recruitment() {
+
+	const location = useLocation();
+
+	useEffect(() => {
+	  if (location.hash) {
+		const element = document.getElementById(location.hash.substring(1));
+		if (element) {
+		  element.scrollIntoView({ behavior: "smooth" });
+		}
+	  }
+	}, [location]);
 
 	const applied_ai = {
 		overlayId: "applied_ai",
