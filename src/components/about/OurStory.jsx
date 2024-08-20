@@ -3,7 +3,7 @@ import React from "react";
 function OurStory() {
 
 	return (
-		<div className="w-[300px] pt-32 lg:pt-48 lg:w-[1000px] mx-auto bg-[#CDFF70] text-[20px] lg:text-[24px] relative">
+		<div className="w-[280px] pt-32 lg:pt-48 lg:w-[1000px] mx-auto bg-[#CDFF70] text-[20px] lg:text-[24px] relative">
 			<div className='lg:w-[100%]'>
 				<h3 className="text-mobile-header lg:text-header font-bold pt-8 pb-4">Our Story</h3>
 				<p className="">

@@ -8,7 +8,6 @@ function SowingTheFields() {
 		<>
 			<h1 className="font-bold text-[42px] mb-6">Sowing The Fields</h1>
 			<div className="text-[16px] my-6 flex">
-				<img alt="" className="bg-sky-400 w-[40px] h-[40px] rounded-full mr-2" />
 				<div>
 					<p>By: Ryan Chang</p>
 					<p><CiClock2 className="inline" /> 5 minute read · Updated 7:00PM PST, Mon Aug 19, 2024</p>
