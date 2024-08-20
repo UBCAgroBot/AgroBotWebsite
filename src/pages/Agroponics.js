@@ -1,6 +1,5 @@
-import { useEffect } from "react";
-import AgroponicSubteams from "../components/projects/agroponics/AgroponicSubteams";
-import AgroponicsMain from "../components/projects/agroponics/AgroponicsMain";
+import React, { useEffect } from "react";
+import { AgroponicsMain, AgroponicSubteams } from "../components/projects";
 
 const Agroponics = () => {
   useEffect(() => {

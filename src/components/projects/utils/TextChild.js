@@ -9,7 +9,7 @@ const TextChild = ({ id, header, body }) => {
       scrollTrigger: {
         trigger: divId,
         markers: false,
-        start: "top center",
+        start: "top bottom",
         end: "center center",
       },
     });

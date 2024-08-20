@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect } from "react";
 import { AgroponicModel2D } from "../../../assets";
 import { useMediaQuery } from "react-responsive";
+import { useGSAP } from "@gsap/react";
 
 const AgroponicsMain = () => {
   gsap.registerPlugin(ScrollTrigger)
@@ -13,7 +14,8 @@ const AgroponicsMain = () => {
   const modelRenderId = "#" + modelRender;
   const modelDestContainer = "agroponicDestContaienr";
   const modelDestContainerId = "#" + modelDestContainer;
-  const agroponicMainheader = "agroponicMainheader";
+  const textDiv = "agroponicMainText";
+  const textDivId = "#" + textDiv;
   const isMobile = useMediaQuery({ query: "( max-width: 640px)" });
 
   useLayoutEffect(() => {
@@ -63,6 +65,28 @@ const AgroponicsMain = () => {
     };
   }, []);
 
+  useGSAP(() => {
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: textDivId,
+        markers: false,
+        start: "top bottom",
+        end: "center center",
+      },
+    });
+
+    timeline.fromTo(textDivId, {
+      opacity: 0,
+    },
+      {
+        y: "1rem",
+        opacity: 1,
+        duration: 1,
+        ease: "power1.out",
+      },
+    );
+  }, []);
+
   return (
     <section
       className="lg:h-[175vh] w-full bg-black flex flex-col gap-[2rem] justify-start pt-10 overflow-hidden"
@@ -90,8 +114,8 @@ const AgroponicsMain = () => {
 
         </div>
         <div className="w-full h-full">
-          <div className="justify-center mx-5">
-            <h2 id={agroponicMainheader} className="text-white text-center text-[42px] lg:text-[7rem] font-bold mb-2">AgroPonics</h2>
+          <div id={textDiv} className="justify-center mx-5">
+            <h2 className="text-white text-center text-[42px] lg:text-[7rem] font-bold mb-2">AgroPonics</h2>
             <p className="text-white text-center text-[18px] lg:text-[1.25rem]">
               An NFT (Nutrient Film Technique) hydroponic system focused on data collection, environmental control, and automation to optimize the nutrients and growing conditions of staple foods. Through a series of meticulously designed experiments, it aims to discover the most efficient environmental settings for growing a variety of crops.
             </p>
