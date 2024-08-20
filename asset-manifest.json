@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/AgroBotWebsite/static/css/main.84d31504.css",
-    "main.js": "/AgroBotWebsite/static/js/main.5f246c96.js",
+    "main.js": "/AgroBotWebsite/static/js/main.8a2ac991.js",
     "static/js/954.2a2b80b8.chunk.js": "/AgroBotWebsite/static/js/954.2a2b80b8.chunk.js",
     "static/js/163.5d42728d.chunk.js": "/AgroBotWebsite/static/js/163.5d42728d.chunk.js",
     "static/media/HomeAutomation.gif": "/AgroBotWebsite/static/media/HomeAutomation.565b88f250854589c68c.gif",
@@ -14,7 +14,6 @@
     "static/media/AgroBotWithTeamOnGrass.jpg": "/AgroBotWebsite/static/media/AgroBotWithTeamOnGrass.880ea103407daf88828b.jpg",
     "static/media/TeamPhoto.jpg": "/AgroBotWebsite/static/media/TeamPhoto.50b5d432fa58fa663a51.jpg",
     "static/media/AgroponicsSketch.glb": "/AgroBotWebsite/static/media/AgroponicsSketch.4ce746208fe91842608b.glb",
-    "static/media/AgrobotModel2D.jpg": "/AgroBotWebsite/static/media/AgrobotModel2D.47058ea65a1c7cc8537b.jpg",
     "static/media/FarmPath.jpeg": "/AgroBotWebsite/static/media/FarmPath.a595d3a1c975246bb58c.jpeg",
     "static/media/AgroponicsRiver.jpeg": "/AgroBotWebsite/static/media/AgroponicsRiver.79d29b33721c01af9da8.jpeg",
     "static/media/agroarm-transformed.glb": "/AgroBotWebsite/static/media/agroarm-transformed.a2e4d924010c5e4ecbd7.glb",
@@ -33,15 +32,16 @@
     "static/media/concentric_octogons.png": "/AgroBotWebsite/static/media/concentric_octogons.eb67faf11955b8a45fd6.png",
     "static/media/shake.png": "/AgroBotWebsite/static/media/shake.e72b0ad06b29311b90d7.png",
     "static/media/LocationSideIcon.png": "/AgroBotWebsite/static/media/LocationSideIcon.8644dc602decf2b4d978.png",
+    "static/media/AgrobotModel2D.jpg": "/AgroBotWebsite/static/media/AgrobotModel2D.c76ddef50fdd66121c00.jpg",
     "static/media/EmailSideIcon.png": "/AgroBotWebsite/static/media/EmailSideIcon.03f39f26f6ff4c2e785c.png",
     "static/media/GroupWork.png": "/AgroBotWebsite/static/media/GroupWork.a49bd64b7603086c8a54.png",
     "static/media/SocialSideIcon.png": "/AgroBotWebsite/static/media/SocialSideIcon.c896ae19209f2d07df85.png",
     "static/media/Recruitment.png": "/AgroBotWebsite/static/media/Recruitment.2a127749a177f98a11f1.png",
     "static/media/agrobotChassisTemp.jpeg": "/AgroBotWebsite/static/media/agrobotChassisTemp.fbd7b0b667c25f25e573.jpeg",
-    "static/media/AgroponicModel2D.png": "/AgroBotWebsite/static/media/AgroponicModel2D.2c5989fdf429ee53ed1d.png",
     "static/media/AgroponicsS2.png": "/AgroBotWebsite/static/media/AgroponicsS2.3683032179fce0ed8cf8.png",
-    "static/media/Agroarm2DModel.png": "/AgroBotWebsite/static/media/Agroarm2DModel.90f082aefb28743bdf6a.png",
+    "static/media/AgroponicModel2D.png": "/AgroBotWebsite/static/media/AgroponicModel2D.d322da944502b9c95ae3.png",
     "static/media/AgroPonicsTitleImg.png": "/AgroBotWebsite/static/media/AgroPonicsTitleImg.9b3f2123d98256b0409e.png",
+    "static/media/Agroarm2DModel.png": "/AgroBotWebsite/static/media/Agroarm2DModel.09be94acdb45d0c680b8.png",
     "static/media/AgroBotBannerImg.png": "/AgroBotWebsite/static/media/AgroBotBannerImg.1fd5d15d1c9218e90be6.png",
     "static/media/temp_maintenance.png": "/AgroBotWebsite/static/media/temp_maintenance.a7b34110a91ee035b802.png",
     "static/media/HomeFullyAutonomous.png": "/AgroBotWebsite/static/media/HomeFullyAutonomous.f30c56d120b67feaf9d0.png",
@@ -64,12 +64,12 @@
     "static/media/bronzeStar.svg": "/AgroBotWebsite/static/media/bronzeStar.cba4978f9fa30e552bea433e9994bb11.svg",
     "index.html": "/AgroBotWebsite/index.html",
     "main.84d31504.css.map": "/AgroBotWebsite/static/css/main.84d31504.css.map",
-    "main.5f246c96.js.map": "/AgroBotWebsite/static/js/main.5f246c96.js.map",
+    "main.8a2ac991.js.map": "/AgroBotWebsite/static/js/main.8a2ac991.js.map",
     "954.2a2b80b8.chunk.js.map": "/AgroBotWebsite/static/js/954.2a2b80b8.chunk.js.map",
     "163.5d42728d.chunk.js.map": "/AgroBotWebsite/static/js/163.5d42728d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.84d31504.css",
-    "static/js/main.5f246c96.js"
+    "static/js/main.8a2ac991.js"
   ]
 }
