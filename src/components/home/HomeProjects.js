@@ -5,6 +5,7 @@ import { FaChevronRight } from "react-icons/fa";
 import { AgrobotModelView, AgroponicModelView, AgroPickerModelView } from "../models";
 import { AgrobotModel2D, AgroArm2DModel, AgroponicModel2D } from "../../assets";
 import { useMediaQuery } from "react-responsive";
+import { Link } from 'react-router-dom';
 
 const AgrobotMod = <AgrobotModelView
 	id={"agrobotModelView"}
@@ -37,6 +38,7 @@ const projects = [
 		ModelComponent: AgrobotMod,
 		MobileImg: AgrobotModel2D,
 		background: { background: "#cdff70" },
+		href: "/agrobot",
 	},
 	{
 		ProjectName: "AgroPonics",
@@ -44,6 +46,7 @@ const projects = [
 		ModelComponent: AgroponicMod,
 		MobileImg: AgroponicModel2D,
 		background: { background: "#cdff70" },
+		href: "/agroponics",
 	},
 	{
 		ProjectName: "AgroPicker",
@@ -51,10 +54,11 @@ const projects = [
 		ModelComponent: AgropickerMod,
 		MobileImg: AgroArm2DModel,
 		background: { background: "#cdff70" },
+		href: "#",
 	},
 ]
 
-function Project({ ProjectName, Text, background, ModelComponent, }) {
+function Project({ ProjectName, Text, background, ModelComponent, href }) {
 	const containerRef = useRef(null);
 
 	function useFadeIn(containerRef) {
@@ -66,8 +70,12 @@ function Project({ ProjectName, Text, background, ModelComponent, }) {
 				const containerTop = containerRef.current.getBoundingClientRect().top;
 				const containerBottom =
 					containerRef.current.getBoundingClientRect().bottom;
-
-				if (containerTop < 200 && containerBottom > height + 200) {
+				
+				// First number is how many pixels from the top of the screen this 
+				// component should be before appearing
+				// Second number is how many pixels from the bottom of the screen
+				// this component should be before dissapearing
+				if (containerTop < 400 && containerBottom > height + -250) {
 					setIsVisible(true);
 				} else {
 					setIsVisible(false);
@@ -97,7 +105,9 @@ function Project({ ProjectName, Text, background, ModelComponent, }) {
 				<div className="w-full h-full rounded-[46px] p-8">
 					<h2 className="text-mobile-header lg:text-header font-bold mb-4">{ProjectName}</h2>
 					<p className="text-mobile-body">{Text}</p>
-					<button className="px-4 py-2 mt-4 bg-[#2E1B0F] font-medium text-[24px] rounded-full text-white">Learn More</button>
+					<div className="mt-4">
+						<Link to={href} className="px-4 py-2 bg-[#2E1B0F] font-medium text-[24px] rounded-full text-white">Learn More</Link>
+					</div>
 				</div>
 			</animated.div>
 			<div className="w-[47.5%] h-[50vh] bg-[#2e1b0f1f] relative top-[100vh] rounded-full">
@@ -114,13 +124,15 @@ function HomeProjects() {
 	if (!isMobile) {
 		return (
 			<>
-				{projects.map((proj) => (
+				{projects.map((proj, index) => (
 					<Project
 						ProjectName={proj.ProjectName}
 						Text={proj.Text}
 						ModelComponent={proj.ModelComponent}
 						MobileImg={proj.MobileImg}
 						background={proj.background}
+						href={proj.href}
+						key={index}
 					/>
 				))}
 			</>
