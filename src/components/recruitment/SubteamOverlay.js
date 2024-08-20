@@ -329,11 +329,6 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
 					<div className="flex items-center justify-center">
 						<h1 className="font-medium text-[96px]">{content.title}</h1>
 					</div>
-					<ul className="text-[18px] text-[#BBBBBB] font-medium my-8">
-						{content.metadata.map((data, index) => (
-							<li>{data}</li>
-						))}
-					</ul>
 					<p className="">
 						{content.description}
 					</p>

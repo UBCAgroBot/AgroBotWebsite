@@ -5,7 +5,7 @@ function OurStory() {
 
 	return (
 		<div className="w-[300px] pt-32 lg:pt-48 lg:w-full lg:pl-32 lg:min-h-[948px] mx-auto bg-[#CDFF70] text-mobile-body lg:text-body relative">
-			<div className='lg:w-[50%]'>
+			<div className='lg:w-[60%]'>
 				<h3 className="text-mobile-header lg:text-header font-bold pb-8">Our Story</h3>
 				<p className="">
 					Our journey began in 2017 as a skunk works project within another design team, driven by a passion for innovation in agriculture.
