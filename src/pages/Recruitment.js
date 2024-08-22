@@ -4,9 +4,6 @@ import { SubteamOverlay } from "../components/recruitment/SubteamOverlay";
 import { useLocation } from "react-router-dom";
 
 function SubteamBox({ emoji, title, description, bg, overlayId, setOverlayId }) {
-	useEffect(() => {
-		window.scrollTo(0, 0)
-	}, [])
 	return (
 		<div className="w-[300px] mb-4 lg:w-[312px] bg-[#2E1B0F] rounded-[46px] flex flex-col items-center py-[10px] text-white">
 			<div className="w-[286px] h-[250px] rounded-[46px] flex justify-center items-center" style={{ background: bg }}>
@@ -20,6 +17,10 @@ function SubteamBox({ emoji, title, description, bg, overlayId, setOverlayId }) 
 }
 
 function Recruitment() {
+
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [])
 
 	const location = useLocation();
 

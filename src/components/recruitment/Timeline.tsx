@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { IconContext } from "react-icons";
 import { TbTriangleInvertedFilled } from "react-icons/tb";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import DownArrow from "./DownArrow.png";
 
 function Timeline() {
     const [largeScreen, setLargeScreen] = useState(false);
@@ -38,10 +37,10 @@ function Timeline() {
 
     /**
      * Using the day, returns a string with the 'ordinal indicators' appended
-     * @param {int} day - The day you want to format
-     * @returns {string} - The day with the indicators. 1 -> '1st', 2 -> '2nd'
+     * @param day - The day you want to format
+     * @returns - The day with the indicators. 1 -> '1st', 2 -> '2nd'
      */
-    function AddIndicator(day) {
+    function AddIndicator(day:number) {
 
         if (day === 11) { return '11th'}
         if (day === 12) { return '12th'}
@@ -60,6 +59,7 @@ function Timeline() {
                 return `${day}th`;
         }
     }
+
     /**
      * Takes two dates and returns a px offset for the timeline.
      * @param {Date} start_day - Beginning of recruitment
@@ -143,7 +143,7 @@ function Timeline() {
                     Recruitment Package
                     <FaExternalLinkAlt className="inline ml-2 mb-2" />
                 </a>
-                <a href="#" className="bg-black p-4 lg:px-8 my-2 lg:my-0 text-center rounded-[23px] lg:rounded-[46px] text-[28px] lg:text-body">
+                <a href="https://forms.gle/1xvmDm1rFjiyZ1GU9" target="_blank" className="bg-black p-4 lg:px-8 my-2 lg:my-0 text-center rounded-[23px] lg:rounded-[46px] text-[28px] lg:text-body">
                     Application Form
                     <FaExternalLinkAlt className="inline ml-2 mb-2" />
                 </a>
