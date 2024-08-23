@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { createClient } from '@supabase/supabase-js'
 import { IoSend } from "react-icons/io5";
-import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaInstagram } from "react-icons/fa";
 import { LuMail } from "react-icons/lu";
 
 const supabaseUrl = 'https://rpsuamzzbfswevkexntj.supabase.co'
@@ -11,28 +11,37 @@ if (!supabaseKey) console.warn("WARNING: No supabase key found. Requests will no
 
 
 function MailForm() {
-	const [name, setName] = useState("");
+	const [firstName, setFirstName] = useState("");
+	const [lastName, setLastName] = useState("");
 	const [email, setEmail] = useState("");
-	const [subject, setSubject] = useState("");
+	const [phone, setPhone] = useState("");
 	const [message, setMessage] = useState("");
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
-		const { data, error } = await supabase
-			.from('messages')
-			.insert([
-				{ name: name, email: email, subject: subject, message: message },
-			])
-			.select();
+		try {
+			if (!supabase) { throw Error(); }
 
-		if (error) {
-			console.error('Error: ', error);
-		} else {
-			setName("");
-			setEmail("");
-			setSubject("");
-			setMessage("");
+			const { data, error } = await supabase
+				.from('messages')
+				.insert([
+					{ firstName, lastName, email, phone, message, },
+				])
+				.select();
+
+			if (error) {
+				console.error('Error: ', error);
+				throw Error();
+			} else {
+				setFirstName("");
+				setLastName("");
+				setPhone("");
+				setMessage("");
+			}
+	
+		} catch (error) {
+			alert("Error sending message 🙀, sending an email is a good alternative");
 		}
 	};
 
@@ -50,8 +59,8 @@ function MailForm() {
 									type="text"
 									placeholder="first"
 									className="my-2 text-[32px] w-full bg-[#CDFF70] rounded-[24px] border-[4px] border-[#2E1B0F]"
-									value={name}
-									onChange={(e) => setName(e.target.value)}
+									value={firstName}
+									onChange={(e) => setFirstName(e.target.value)}
 								/>
 							</div>
 							<div className="w-[49%]">
@@ -60,6 +69,7 @@ function MailForm() {
 									type="text"
 									placeholder="last"
 									className="my-2 text-[32px] w-full bg-[#CDFF70] rounded-[24px] border-[4px] border-[#2E1B0F]"
+									onChange={(e) => setLastName(e.target.value)}
 								/>
 							</div>
 						</div>
@@ -76,6 +86,7 @@ function MailForm() {
 							type="tel"
 							placeholder="Phone number"
 							className="my-2 text-[32px] bg-[#CDFF70] rounded-[24px] border-[4px] border-[#2E1B0F]"
+							onChange={(e) => setPhone(e.target.value)}
 						/>
 						<label>Message</label>
 						<textarea
@@ -92,9 +103,9 @@ function MailForm() {
 				<div className="w-[75%] pt-12">
 					<h3 className="text-[#2E1B0F] font-semibold text-mobile-header lg:text-header">Or via social media</h3>
 					<div className="flex flex-row flex-wrap justify-around mx-auto my-12">
-						<div className="flex flex-col items-center justify-center font-bold mr-8"><div className="bg-[#2E1B0F] rounded-xl px-2 lg:p-0 mb-2 flex justify-center items-center w-12 lg:w-24 h-12 lg:h-24"><LuMail      size='64' color="#CDFF70" /></div></div>
-						<div className="flex flex-col items-center justify-center font-bold mr-8"><div className="bg-[#2E1B0F] rounded-xl p-2 mb-2 flex justify-center items-center w-12 lg:w-24 h-12 lg:h-24"><FaInstagram size='64' color="#CDFF70" /></div></div>
-						<div className="flex flex-col items-center justify-center font-bold mr-8"><div className="bg-[#2E1B0F] rounded-xl p-2 mb-2 flex justify-center items-center w-12 lg:w-24 h-12 lg:h-24"><FaLinkedin  size='64' color="#CDFF70" /></div></div>
+						<a href="mailto:ubcagrobot@gmail.com"><div className="flex flex-col items-center justify-center font-bold mr-8"><div className="bg-[#2E1B0F] rounded-xl px-2 lg:p-0 mb-2 flex justify-center items-center w-12 lg:w-24 h-12 lg:h-24"><LuMail      size='64' color="#CDFF70" /></div></div></a>
+						<a href="https://instagram.com/ubcagrobot" target="_blank"><div className="flex flex-col items-center justify-center font-bold mr-8"><div className="bg-[#2E1B0F] rounded-xl p-2 mb-2 flex justify-center items-center w-12 lg:w-24 h-12 lg:h-24"><FaInstagram size='64' color="#CDFF70" /></div></div></a>
+						<a href="https://www.linkedin.com/company/ubc-agrobot/" target="_blank"><div className="flex flex-col items-center justify-center font-bold mr-8"><div className="bg-[#2E1B0F] rounded-xl p-2 mb-2 flex justify-center items-center w-12 lg:w-24 h-12 lg:h-24"><FaLinkedin  size='64' color="#CDFF70" /></div></div></a>
 					</div>
 				</div>
 			</div>

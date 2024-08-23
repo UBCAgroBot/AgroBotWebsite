@@ -1,6 +1,5 @@
 import React from "react";
 import DF from '../../assets/image/daniel-faziojpg.jpg'
-import MW from '../../assets/image/markus-winkler.jpg'
 import GC from '../../assets/image/gaetano-cessati.jpg'
 
 function OurStory() {
@@ -8,7 +7,7 @@ function OurStory() {
 	return (
 		<div className="flex mt-32 lg:mt-48 items-stretch max-w-full overflow-x-hidden">
  			<div className="hidden lg:block flex-grow relative">
- 				<img src={GC} className="absolute top-[-0px] right-12 h-96 object-cover" />
+ 				<img src={GC} alt="green pasture" className="absolute top-[-0px] right-12 h-96 object-cover" />
 			</div>
 			<div className="w-[280px] lg:w-[1000px] mx-auto bg-[#CDFF70] text-[20px] lg:text-[24px] relative">
 				<div className='lg:w-[100%]'>
