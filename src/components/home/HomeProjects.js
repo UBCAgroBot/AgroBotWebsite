@@ -74,7 +74,7 @@ function Project({ ProjectName, Text, background, ModelComponent, href }) {
 				// component should be before appearing
 				// Second number is how many pixels from the bottom of the screen
 				// this component should be before dissapearing
-				if (containerTop < 400 && containerBottom > height + -250) {
+				if (containerTop < 400 && containerBottom > height -0) {
 					setIsVisible(true);
 				} else {
 					setIsVisible(false);
@@ -94,7 +94,7 @@ function Project({ ProjectName, Text, background, ModelComponent, href }) {
 	return (
 		<div
 			ref={containerRef}
-			className="w-full h-[250vh] flex px-[5%] items-start justify-between"
+			className="w-full h-[150vh] flex px-[5%] items-start justify-between"
 			style={background}
 		>
 			<animated.div
@@ -109,7 +109,7 @@ function Project({ ProjectName, Text, background, ModelComponent, href }) {
 					</div>
 				</div>
 			</animated.div >
-			<div className="w-[47.5%] h-[50vh] bg-[#2e1b0f1f] relative top-[100vh] rounded-full">
+			<div className="w-[47.5%] h-[50vh] bg-[#2e1b0f1f] relative top-[50vh] rounded-full">
 				{ModelComponent}
 			</div>
 		</div >
