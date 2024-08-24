@@ -96,52 +96,52 @@ function RectangleAnimation() {
 			}}
 		>
 			<animated.div
-				className="absolute w-[400px] h-[250px] bg-[#1F5200] rounded-md flex flex-col justify-center items-center"
+				className="absolute flex h-[250px] w-[400px] flex-col items-center justify-center rounded-md bg-[#1F5200]"
 				style={{
 					transform: "translate(-50%, -50%)",
 					...blueCard,
 				}}
 			>
-				<h2 className="font-bold text-white text-5xl pb-2">$30.5 million</h2>
+				<h2 className="pb-2 text-5xl font-bold text-white">$30.5 million</h2>
 				<p className="w-[70%] text-center">
 					is the expected agricultural robotics market size by 2032. 
 				</p>
 			</animated.div>
 
 			<animated.div
-				className="absolute w-[400px] h-[250px] bg-[#2E1B0F] rounded-md flex flex-col justify-center items-center"
+				className="absolute flex h-[250px] w-[400px] flex-col items-center justify-center rounded-md bg-[#2E1B0F]"
 				style={{
 					transform: "translate(-50%, -50%)",
 					...redCard,
 				}}
 			>
-				<h2 className="font-bold text-white text-5xl pb-2">30 million</h2>
+				<h2 className="pb-2 text-5xl font-bold text-white">30 million</h2>
 				<p className="w-[70%] text-center">
 					pounds of herbicide were reduced in 2021 through precision agriculture, in addition to 2 million acres of cropland and 100 million gallons of fossil fuel.
 				</p>
 			</animated.div>
 
 			<animated.div
-				className="absolute w-[400px] h-[250px] bg-[#1F5200] rounded-md flex flex-col justify-center items-center"
+				className="absolute flex h-[250px] w-[400px] flex-col items-center justify-center rounded-md bg-[#1F5200]"
 				style={{
 					transform: "translate(-50%, -50%)",
 					...greenCard,
 				}}
 			>
-				<h2 className="font-bold text-white text-5xl pb-2">90%</h2>
+				<h2 className="pb-2 text-5xl font-bold text-white">90%</h2>
 				<p className="w-[70%] text-center">
 					of the water used in traditional soil farming can be saved through hydroponic systems.
 				</p>
 			</animated.div>
 
 			<animated.div
-				className="absolute w-[400px] h-[250px] bg-[#2E1B0F] rounded-md flex flex-col justify-center items-center"
+				className="absolute flex h-[250px] w-[400px] flex-col items-center justify-center rounded-md bg-[#2E1B0F]"
 				style={{
 					transform: "translate(-50%, -50%)",
 					...brownCard,
 				}}
 			>
-				<h2 className="font-bold text-white text-5xl pb-2">30%</h2>
+				<h2 className="pb-2 text-5xl font-bold text-white">30%</h2>
 				<p className="w-[70%] text-center">
 					reduction in pesticide use as a result of artificial intelligence applications in pest control.
 				</p>
@@ -152,16 +152,16 @@ function RectangleAnimation() {
 
 function OurMission() {
 	return (
-		<div className="mx-auto w-[280px] lg:w-full lg:px-24 my-24 bg-[#CDFF70] lg:flex lg:justify-center lg:items-center">
+		<div className="mx-auto my-24 w-[280px] bg-[#CDFF70] lg:flex lg:w-full lg:items-center lg:justify-center lg:px-24">
 			<div className="w-full">
-				<h1 className="mb-4 font-semibold text-[20px] lg:text-body text-[#2E1B0F]">
+				<h1 className="mb-4 text-[20px] font-semibold text-[#2E1B0F] lg:text-body">
 					Reduced Environmental Impact. <br />Increased Productivity and Yield. <br />Better Economic Results.
 				</h1>
 				<p className="text-[20px] text-[#2e1b0f]">
 
 At UBC Agrobot, we are dedicated to advancing agritech by integrating precision techniques, cutting-edge technology, and sustainable practices. Our innovative projects and collaborative efforts aim to make agriculture more sustainable and prosperous for everyone.				</p>
 			</div>
-			<div className="hidden ml-32 lg:flex justify-center items-center">
+			<div className="ml-32 hidden items-center justify-center lg:flex">
 				<RectangleAnimation />
 			</div>
 		</div>

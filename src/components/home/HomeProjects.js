@@ -2,10 +2,11 @@ import React from "react";
 import { useSpring, animated } from "react-spring";
 import { useState, useEffect, useRef } from "react";
 import { FaChevronRight } from "react-icons/fa";
-import { AgrobotModelView, AgroponicModelView, AgroPickerModelView } from "../models";
-import { AgrobotModel2D, AgroArm2DModel, AgroponicModel2D } from "../../assets";
 import { useMediaQuery } from "react-responsive";
 import { Link } from 'react-router-dom';
+
+import { AgrobotModelView, AgroponicModelView, AgroPickerModelView } from "../models";
+import { AgrobotModel2D, AgroArm2DModel, AgroponicModel2D } from "../../assets";
 
 const AgrobotMod = <AgrobotModelView
 	id={"agrobotModelView"}
@@ -94,22 +95,22 @@ function Project({ ProjectName, Text, background, ModelComponent, href }) {
 	return (
 		<div
 			ref={containerRef}
-			className="w-full h-[150vh] flex px-[5%] items-start justify-between"
+			className="flex h-[150vh] w-full items-start justify-between px-[5%]"
 			style={background}
 		>
 			<animated.div
 				style={useFadeIn(containerRef)}
-				className="w-[47.5%] sticky top-[20vh]"
+				className="sticky top-[20vh] w-[47.5%]"
 			>
-				<div className="w-full h-full rounded-[46px] p-8">
-					<h2 className="text-mobile-header lg:text-header font-bold mb-4">{ProjectName}</h2>
+				<div className="h-full w-full rounded-[46px] p-8">
+					<h2 className="mb-4 text-mobile-header font-bold lg:text-header">{ProjectName}</h2>
 					<p className="text-mobile-body">{Text}</p>
 					<div className="mt-4">
-						<Link to={href} className="px-4 py-2 bg-[#2E1B0F] font-medium text-[24px] rounded-full text-white">{href === "#" ? "Coming soon" : "Learn More"}</Link>
+						<Link to={href} className="rounded-full bg-[#2E1B0F] px-4 py-2 text-[24px] font-medium text-white">{href === "#" ? "Coming soon" : "Learn More"}</Link>
 					</div>
 				</div>
 			</animated.div >
-			<div className="w-[47.5%] h-[50vh] bg-[#2e1b0f1f] relative top-[50vh] rounded-full">
+			<div className="relative top-[50vh] h-[50vh] w-[47.5%] rounded-full bg-[#2e1b0f1f]">
 				{ModelComponent}
 			</div>
 		</div >
@@ -141,12 +142,12 @@ function HomeProjects() {
 		return (
 			<>
 				{projects.map((proj, index) => (
-					<div key={index} className="w-[280px] mx-auto my-16">
-						<h2 className="font-semibold text-mobile-header">{proj.ProjectName}</h2>
-						<p className="text-mobile-body mb-8">{proj.Text}</p>
+					<div key={index} className="mx-auto my-16 w-[280px]">
+						<h2 className="text-mobile-header font-semibold">{proj.ProjectName}</h2>
+						<p className="mb-8 text-mobile-body">{proj.Text}</p>
 						<img src={proj.MobileImg} className="w-[280px]" />
-						<div className="mt-8 mb-12 flex justify-center items-center">
-							<Link to={proj.href} className="bg-[#2E1B0F] text-white p-2 px-12 rounded-full" >{proj.href === "#" ? "Coming soon" : "Learn More"}</Link>
+						<div className="mb-12 mt-8 flex items-center justify-center">
+							<Link to={proj.href} className="rounded-full bg-[#2E1B0F] p-2 px-12 text-white" >{proj.href === "#" ? "Coming soon" : "Learn More"}</Link>
 						</div>
 					</div>
 				))}

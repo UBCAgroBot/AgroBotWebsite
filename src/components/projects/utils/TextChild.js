@@ -29,14 +29,14 @@ const TextChild = ({ id, header, body }) => {
   return (
     <div
       id={id}
-      classname="w-full h-full"
+      className="h-full w-full"
     >
-      <div className="bg-glass opacity-100 p-5 rounded-3xl">
-        <h2 className="font-bold text-center" style={{ fontSize: 'clamp(24px, 6vw, 48px)' }}>
+      <div className="rounded-3xl p-5 opacity-100 bg-glass">
+        <h2 className="text-center font-bold" style={{ fontSize: 'clamp(24px, 6vw, 48px)' }}>
           {header}
         </h2>
 
-        <p className="text-[18px] lg:text-[22px] text-center">
+        <p className="text-center text-[18px] lg:text-[22px]">
           {body}
         </p>
       </div>

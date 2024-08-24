@@ -7,7 +7,7 @@ function MeetTheTeam() {
   }, [])
 
     return (
-        <div className="bg-[#F8F7F1] w-screen">
+        <div className="w-screen bg-[#F8F7F1]">
             <TitleBanner fromColor="#12200B" toColor="#4C5934" imageSrc={AgroBotTitleImg}>Meet the team</TitleBanner>
         </div>
     );

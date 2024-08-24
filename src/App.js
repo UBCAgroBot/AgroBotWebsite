@@ -1,8 +1,8 @@
 import React from "react";
-import { Navbar } from "./components";
 import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import { Home, Sponsorship, Agrobot, Agroponics, Recruitment, Contact, About } from "./pages";
 
+import { Navbar } from "./components";
+import { Home, Sponsorship, Agrobot, Agroponics, Recruitment, Contact, About } from "./pages";
 import { Footer } from "./components/common";
 
 function App() {

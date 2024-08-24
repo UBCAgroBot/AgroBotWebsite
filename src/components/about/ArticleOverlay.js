@@ -1,25 +1,27 @@
 import React, { useEffect, useState } from "react";
-import { BP1Team } from '../../assets';
 import { CiClock2 } from "react-icons/ci";
+
+import { BP1Team } from '../../assets';
+
 const d3 = require('d3-ease');
 
 function SowingTheFields() {
 	return (
 		<>
-			<h1 className="font-bold text-[42px] mb-6">Sowing The Fields</h1>
-			<div className="text-[16px] my-6 flex">
+			<h1 className="mb-6 text-[42px] font-bold">Sowing The Fields</h1>
+			<div className="my-6 flex text-[16px]">
 				<div>
 					<p>By: Ryan Chang</p>
 					<p><CiClock2 className="inline" /> 5 minute read · Updated 7:00PM PST, Mon Aug 19, 2024</p>
 				</div>
 			</div>
 			<img alt="article" src={BP1Team} width="750" />
-			<p className="mt-12 text-[20px] leading-7 w-full">
+			<p className="mt-12 w-full text-[20px] leading-7">
 				Welcome reader to the UBC Agrobot blog! Here we hope to periodically
 				showcase what we’re doing to bring innovation to agriculture, so keep up
 				with us for future updates.
 			</p>
-			<p className="mt-6 text-[20px] leading-7 w-full">
+			<p className="mt-6 w-full text-[20px] leading-7">
 				Today’s post truly marks the
 				beginning of beginnings as the first
 				prototype of our flagship Agrobot
@@ -39,7 +41,7 @@ function SowingTheFields() {
 				and onto the EDC table was a great moment of pride to the whole team, and
 				a totem to their dedication and perseverance.
 			</p>
-			<p className="mt-6 text-[20px] leading-7 w-full">
+			<p className="mt-6 w-full text-[20px] leading-7">
 				A personal highlight for me was
 				working on our wheel’s power
 				transmission system. To allow for
@@ -60,7 +62,7 @@ function SowingTheFields() {
 				was totally worth the grease-stained afternoons. Anything for smooth
 				operation.
 			</p>
-			<p className="mt-6 text-[20px] leading-7 w-full">
+			<p className="mt-6 w-full text-[20px] leading-7">
 				And it all worked! At least as far as preliminary testing has gone. With the
 				help of the navigation team’s software, we’ve driven the Agrobot around the
 				floor of the EDC multiple times. Sighs of relief quickly turned into sounds of
@@ -128,9 +130,9 @@ function ArticleOverlay({ deactivateFn, articleName }) {
 		<div
 			onClick={CheckClick}
 			id="outer-overlay"
-			className="opacity-0 fixed top-0 left-0 h-screen w-screen bg-[#000000b4] z-50 overflow-y-auto"
+			className="fixed left-0 top-0 z-50 h-screen w-screen overflow-y-auto bg-[#000000b4] opacity-0"
 		>
-			<div className="box-content w-[250px] lg:w-[750px] bg-white mx-auto my-12 rounded-[46px] p-5 lg:p-24 lg:px-32">
+			<div className="mx-auto my-12 box-content w-[250px] rounded-[46px] bg-white p-5 lg:w-[750px] lg:p-24 lg:px-32">
 				{Content}
 			</div>
 		</div>

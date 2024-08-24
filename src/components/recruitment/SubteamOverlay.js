@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
-import TeamAgroBot from '../../assets/image/AgroBotWithTeamOnGrass.jpg'
 import { CiClock2 } from "react-icons/ci";
+
+import TeamAgroBot from '../../assets/image/AgroBotWithTeamOnGrass.jpg'
+
 const d3 = require('d3-ease');
 
 function SubteamOverlay({ setOverlayId, overlayId }) {
@@ -323,33 +325,33 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
 	}
 
 	return (
-		<div onClick={CheckClick} id="outer-overlay" className="opacity-0 fixed top-0 left-0 h-screen w-screen bg-[#000000b4] z-50 overflow-y-auto transition-opacity duration-500 ease-in-out">
-			<div className="box-content text-mobile-body w-[250px] lg:text-[28px] lg:w-[750px] bg-[#1E120A] text-white mx-auto my-12 rounded-[46px] p-5 lg:p-24 lg:px-32">
+		<div onClick={CheckClick} id="outer-overlay" className="fixed left-0 top-0 z-50 h-screen w-screen overflow-y-auto bg-[#000000b4] opacity-0 transition-opacity duration-500 ease-in-out">
+			<div className="mx-auto my-12 box-content w-[250px] rounded-[46px] bg-[#1E120A] p-5 text-mobile-body text-white lg:w-[750px] lg:p-24 lg:px-32 lg:text-[28px]">
 				<div className="text-[16px] lg:text-[20px]">
 					<div className="flex items-center justify-center">
-						<h1 className="font-medium mb-4 lg:mb-0 text-[26px] lg:text-[96px]">{content.title}</h1>
+						<h1 className="mb-4 text-[26px] font-medium lg:mb-0 lg:text-[96px]">{content.title}</h1>
 					</div>
 					<p className="">
 						{content.description}
 					</p>
-					<h3 className="font-semibold py-4 mt-6">Responsibilities:</h3>
-					<ul className="list-disc ml-12 leading-9">
+					<h3 className="mt-6 py-4 font-semibold">Responsibilities:</h3>
+					<ul className="ml-12 list-disc leading-9">
 						{content.responsibilities.map((val, index) => (
 							<li key={index}>{val}</li>
 						))}
 					</ul>
 					{content.technologies.length > 0 && (
 						<>
-							<h3 className="font-semibold py-4 mt-6">Technologies & Tools:</h3>
-							<ul className="list-disc ml-12 leading-9">
+							<h3 className="mt-6 py-4 font-semibold">Technologies & Tools:</h3>
+							<ul className="ml-12 list-disc leading-9">
 								{content.technologies.map((val, index) => (
 									<li key={index}>{val}</li>
 								))}
 							</ul>
 						</>
 					)}
-					<h3 className="font-semibold py-4 mt-6">What You Will Learn:</h3>
-					<ul className="list-disc ml-12 leading-9">
+					<h3 className="mt-6 py-4 font-semibold">What You Will Learn:</h3>
+					<ul className="ml-12 list-disc leading-9">
 						{content.what_you_will_learn.map((val, index) => (
 							<li key={index}><strong>{val.bold}</strong>{val.text}</li>
 						))}

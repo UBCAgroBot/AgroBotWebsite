@@ -20,14 +20,14 @@ function NotificationBanner(props) {
       className={`${showing ? '' : 'hidden'} w-[90%] mx-auto ${subtle ? 'text-grey shadow border-b-2' : 'text-white'} rounded-lg p-8 flex flex-col justify-center items-center` + " " + additionalClasses}
       style={bannerStyle}
     >
-      <div className="w-[100%] flex justify-between">
+      <div className="flex w-[100%] justify-between">
         <div></div>
         <p className="text-lg font-bold leading-6">{titleText}</p>
         {dismissable ? <button onClick={handleDismiss}>
         <IoCloseOutline size={20} />
         </button> : <div></div>}
       </div>
-      <p className="text-md leading-5 mt-6">{descriptionText}</p>
+      <p className="text-md mt-6 leading-5">{descriptionText}</p>
     </div>
   );
 }

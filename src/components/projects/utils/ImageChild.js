@@ -1,6 +1,6 @@
 const ImageChild = () => {
   return (
-    <div classname="w-full h-full">
+    <div className="h-full w-full">
       <img src="" alt="" />
     </div>
 

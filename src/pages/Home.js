@@ -1,5 +1,6 @@
-import { HomeBanner, OurMission, HomeProjects } from '../components';
 import React, { useEffect } from "react"
+
+import { HomeBanner, OurMission, HomeProjects } from '../components';
 
 function Home() {
   useEffect(() => {

@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 
 function Card({ name, title, quote, image }) {
 	return (
-		<li className="bg-glass p-5 rounded-[42px] drop-shadow-2xl shadow-lg">
+		<li className="rounded-[42px] p-5 shadow-lg drop-shadow-2xl bg-glass">
 			<figcaption className="flex">
 				<div className="ml-4">
-					<div className="text-[24px] lg:text-[36px] text-[#2E1B0F] font-bold">{name}</div>
-					<div className="text-[16px] lg:text-[24px] text-[#2e1b0fb4] font-bold">{title}</div>
+					<div className="text-[24px] font-bold text-[#2E1B0F] lg:text-[36px]">{name}</div>
+					<div className="text-[16px] font-bold text-[#2e1b0fb4] lg:text-[24px]">{title}</div>
 				</div>
 			</figcaption>
 			<p className="p-4 text-[16px] lg:text-[24px]">
@@ -38,22 +38,22 @@ function Testimonials() {
 	]
 
 	return (
-		<div className="p-4 bg-[#CDFF70] text-[#2E1B0F] relative mt-24">
-			<h1 className=" text-[48px] font-bold text-center mt-8 mb-4">
+		<div className="relative mt-24 bg-[#CDFF70] p-4 text-[#2E1B0F]">
+			<h1 className=" mb-4 mt-8 text-center text-[48px] font-bold">
 				Testimonials
 			</h1>
-			<div className={`grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 overflow-hidden ${showMore ? '' : 'max-h-[33rem]'} ${showMore ? 'pb-[72px]' : ''}`}>
-				<ul className="space-y-4 my-8">
+			<div className={`grid grid-cols-1 gap-2 overflow-hidden sm:grid-cols-2 lg:grid-cols-3 ${showMore ? '' : 'max-h-[33rem]'} ${showMore ? 'pb-[72px]' : ''}`}>
+				<ul className="my-8 space-y-4">
 					{row_one.map((testimonial, index) => (
 						<Card key={index} name={testimonial.name} title={testimonial.title} quote={testimonial.quote} image={testimonial.image} />
 					))}
 				</ul>
-				<ul className="space-y-4 my-8 hidden sm:block">
+				<ul className="my-8 hidden space-y-4 sm:block">
 					{row_two.map((testimonial, index) => (
 						<Card key={index} name={testimonial.name} title={testimonial.title} quote={testimonial.quote} image={testimonial.image} />
 					))}
 				</ul>
-				<ul className="space-y-4 my-8 hidden lg:block">
+				<ul className="my-8 hidden space-y-4 lg:block">
 					{row_three.map((testimonial, index) => (
 						<Card key={index} name={testimonial.name} title={testimonial.title} quote={testimonial.quote} image={testimonial.image} />
 					))}
@@ -62,11 +62,11 @@ function Testimonials() {
 			{showMore ? 
 				null
 				:
-				<div className="bg-gradient-to-b from-[#CDFF7000] to-[#CDFF70] absolute left-0 bottom-0 w-full h-[22rem]" /> 
+				<div className="absolute bottom-0 left-0 h-[22rem] w-full bg-gradient-to-b from-[#CDFF7000] to-[#CDFF70]" /> 
 			}
 			<button
 				onClick={() => setShowMore(!showMore)}
-				className="text-mobile-body lg:text-body bg-glass shadow-lg font-bold px-4 p-2 lg:p-4 lg:px-7 rounded-full absolute bottom-8 left-1/2 transform -translate-x-1/2"
+				className="absolute bottom-8 left-1/2 -translate-x-1/2 transform rounded-full p-2 px-4 text-mobile-body font-bold shadow-lg bg-glass lg:p-4 lg:px-7 lg:text-body"
 				>
 				{showMore ? 'Show Less' : 'Show More'}
 			</button>

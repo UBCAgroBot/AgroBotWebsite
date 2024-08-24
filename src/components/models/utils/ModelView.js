@@ -1,13 +1,14 @@
 import { Loader, OrbitControls, PerspectiveCamera, View } from "@react-three/drei";
-import Lights from "./Lights";
 import * as THREE from 'three';
 import { Suspense } from "react";
+
+import Lights from "./Lights";
 
 const ModelViewer = ({ groupRef, gsapType, cameraRef, setRotation, model, cameraPosition, vectorPosition, groupPosition }) => {
     const x = vectorPosition[0], y = vectorPosition[1], z = vectorPosition[2]
 
     return (
-        <View id={gsapType} className="w-full h-full">
+        <View id={gsapType} className="h-full w-full">
             <ambientLight intensity={1} />
             <PerspectiveCamera makeDefault position={cameraPosition} ref={cameraRef} />
             <Lights />

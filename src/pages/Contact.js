@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
-import { MailForm, Map } from '../components';
 import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 import { LuMail } from "react-icons/lu";
+
+import { MailForm, Map } from '../components';
 
 function ContactUs() {
   useEffect(() => {
@@ -9,12 +10,12 @@ function ContactUs() {
   }, [])
 
 	return (
-		<div className="bg-[#CDFF70] mt-mobile-standard lg:mt-standard lg:pb-64">
-			<div className="lg:w-full lg:h-[1250px] flex justify-between">
+		<div className="mt-mobile-standard bg-[#CDFF70] lg:mt-standard lg:pb-64">
+			<div className="flex justify-between lg:h-[1250px] lg:w-full">
 				<div className="w-full lg:w-[60%]">
 					<MailForm />
 				</div>
-				<div className='hidden lg:block w-[40%]'>
+				<div className='hidden w-[40%] lg:block'>
 					<Map />
 				</div>
 			</div>

@@ -1,7 +1,9 @@
 import React from "react";
-import TierBanner from "./tierBanner";
+
 import { GreenHouse, BronzeStar, SilverStar, GoldStar, DiamondStar } from '../../assets';
 import { SponsorLevels } from "../../constant";
+
+import TierBanner from "./tierBanner";
 
 function SponsorshipS3() {
     const tallestTierBannerHeight = Math.max(
@@ -13,7 +15,7 @@ function SponsorshipS3() {
 
     return (
         <div style={{ backgroundImage: `url(${GreenHouse})` }} className="w-full bg-cover bg-center">
-            <div className="p-[7.5%] flex flex-col lg:flex-row justify-between items-stretch bg-[#00000080]">
+            <div className="flex flex-col items-stretch justify-between bg-[#00000080] p-[7.5%] lg:flex-row">
                 <TierBanner tierElements={SponsorLevels.find(level => level.name === 'Bronze')} starImg={BronzeStar} tierColor="#CD7F32" style={{ height: tallestTierBannerHeight }} />
                 <TierBanner tierElements={SponsorLevels.find(level => level.name === 'Silver')} starImg={SilverStar} tierColor="#707070" style={{ height: tallestTierBannerHeight }} />
                 <TierBanner tierElements={SponsorLevels.find(level => level.name === 'Gold')} starImg={GoldStar} tierColor="#FFD700" style={{ height: tallestTierBannerHeight }} />

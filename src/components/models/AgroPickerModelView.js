@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
 import { Preload, View } from "@react-three/drei";
+
 import ModelViewer from "./utils/ModelView";
 import AgroPickerModel from "./meshAndMaterials/AgropickerModel"
 
@@ -29,7 +30,7 @@ const AgroPickerModelView = ({ id, gsapType, scale, cameraPosition, groupPositio
       />
       <Canvas
         frameloop="always"
-        className="w-full h-full"
+        className="h-full w-full"
         style={{
           position: "fixed",
           top: 0,

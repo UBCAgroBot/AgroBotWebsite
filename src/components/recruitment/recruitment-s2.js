@@ -1,4 +1,6 @@
 import React from "react";
+import { HiArrowSmRight } from "react-icons/hi";
+
 import {
   INFOCARD_1_TEXT,
   INFOCARD_2_TEXT,
@@ -8,13 +10,12 @@ import {
   LEARN_MORE_LINK_TEXT
 } from "../../constant/recruitment";
 import { ConcentricOctagons, TeamDiscussion } from "../../assets";
-import { HiArrowSmRight } from "react-icons/hi";
 
 const RecruitmentS2 = () => {
   return (
-    <div className="mt-12 text-center mx-auto p-6">
+    <div className="mx-auto mt-12 p-6 text-center">
       <div
-        className="grid md:grid-cols-2 grid-rows-2 md:grid-rows-1 gap-4"
+        className="grid grid-rows-2 gap-4 md:grid-cols-2 md:grid-rows-1"
         style={{
           backgroundImage: `url(${ConcentricOctagons})`,
           backgroundRepeat: "no-repeat",
@@ -22,16 +23,16 @@ const RecruitmentS2 = () => {
           // backgroundSize: '80%',
         }}
       >
-        <div class="row md:col">
-          <h1 className="text-4xl mb-[2%] text-[#3A3A3A] text-left md:ml-24 ml-12">
+        <div className="row md:col">
+          <h1 className="mb-[2%] ml-12 text-left text-4xl text-[#3A3A3A] md:ml-24">
             Who we are
           </h1>
           <ExpandedInfoCard
             descriptionText={WHO_WE_ARE_TEXT}
           ></ExpandedInfoCard>
         </div>
-        <div class="row md:col">
-          <h1 className="text-4xl mb-[2%] text-[#3A3A3A] text-left md:ml-24 ml-12">
+        <div className="row md:col">
+          <h1 className="mb-[2%] ml-12 text-left text-4xl text-[#3A3A3A] md:ml-24">
             Whom we're looking for
           </h1>
           <InfoCard descriptionText={INFOCARD_1_TEXT}></InfoCard>
@@ -54,10 +55,10 @@ function InfoCard(props) {
   const { titleText, descriptionText } = props;
   return (
     <div
-      className="rounded-lg mx-auto bg-white border border-black p-6 my-7 max-w-[500px] shadow-lg hover:shadow-xl transition-shadow duration-2000"
+      className="duration-2000 mx-auto my-7 max-w-[500px] rounded-lg border border-black bg-white p-6 shadow-lg transition-shadow hover:shadow-xl"
       style={shadowStyle}
     >
-      <h2 className="text-xl font-bold mb-2">{titleText}</h2>
+      <h2 className="mb-2 text-xl font-bold">{titleText}</h2>
       <p>{descriptionText}</p>
     </div>
   );
@@ -67,15 +68,15 @@ function ExpandedInfoCard(props) {
   const { titleText, descriptionText, linkText, image } = props;
   return (
     <div
-      className="rounded-lg mx-auto border bg-gray-700 my-5 max-w-[500px] transition-shadow duration-2000"
+      className="duration-2000 mx-auto my-5 max-w-[500px] rounded-lg border bg-gray-700 transition-shadow"
       style={shadowStyle}
     >
-      <div class="p-4">
-        <h2 className="text-xl font-bold mb-2 text-white-500">{titleText}</h2>
-        <p className="text-white mb-3">{descriptionText}</p>
+      <div className="p-4">
+        <h2 className="text-white-500 mb-2 text-xl font-bold">{titleText}</h2>
+        <p className="mb-3 text-white">{descriptionText}</p>
         <a
           href={LEARN_MORE_LINK}
-          className="flex items-center text-center mx-auto justify-center text-lime-600 font-bold underline"
+          className="mx-auto flex items-center justify-center text-center font-bold text-lime-600 underline"
         >
           {LEARN_MORE_LINK_TEXT} <HiArrowSmRight></HiArrowSmRight>
         </a>

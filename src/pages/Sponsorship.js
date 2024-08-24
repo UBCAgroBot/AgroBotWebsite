@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from "react";
+import { FaArrowRight } from "react-icons/fa6";
 
 import { ieee, fcc, ece, chbe, lfs, gage } from "../assets";
-import { FaArrowRight } from "react-icons/fa6";
 
 function SponsorTier({ title, emoji, price, bullets }) {
 	useEffect(() => {
 		window.scrollTo(0, 0)
 	}, [])
 	return (
-		<div className="mb-4 lg:mb-0 w-[312px] bg-[#2E1B0F] rounded-[46px] flex flex-col items-center pt-4 pb-6">
-			<div className="w-[286px] h-[128px] lg:h-[250px] bg-[#1F5200] rounded-[46px] flex justify-center items-center">
+		<div className="mb-4 flex w-[312px] flex-col items-center rounded-[46px] bg-[#2E1B0F] pb-6 pt-4 lg:mb-0">
+			<div className="flex h-[128px] w-[286px] items-center justify-center rounded-[46px] bg-[#1F5200] lg:h-[250px]">
 				<p className="text-[64px] lg:text-[128px]">{emoji}</p>
 			</div>
-			<h3 className="font-medium text-[32px] text-[#78BE20] py-4">{price}</h3>
-			<h3 className="font-medium text-[32px] text-white">{title}</h3>
-			<ul className="text-white text-[24px] py-4 w-[70%] list-disc">
+			<h3 className="py-4 text-[32px] font-medium text-[#78BE20]">{price}</h3>
+			<h3 className="text-[32px] font-medium text-white">{title}</h3>
+			<ul className="w-[70%] list-disc py-4 text-[24px] text-white">
 				{bullets.map((val, index) => (
 					<li key={index}>{val}</li>
 				))
@@ -39,33 +39,33 @@ const Sponsorship = () => {
 
 	return (
 		<>
-			<div className="w-mobile-content mt-mobile-standard lg:mt-standard lg:w-content mx-auto">
+			<div className="mx-auto mt-mobile-standard w-mobile-content lg:mt-standard lg:w-content">
 				<div className="min-h-screen pb-24">
-					<h1 className="text-mobile-header lg:text-header font-bold">Sponsor UBC Agrobot</h1>
-					<p className="text-mobile-body lg:text-body font-medium w-[100%] pt-5">Sponsors are the lifeline of our UBC Agrobot Engineering Team. To help us build the future of agriculture, partner with our team to share ideas, or mentor our members, send us an email at <a href="mailto:ubcagrobot@gmail.com"><u>ubcagrobot@gmail.com</u></a>.
+					<h1 className="text-mobile-header font-bold lg:text-header">Sponsor UBC Agrobot</h1>
+					<p className="w-[100%] pt-5 text-mobile-body font-medium lg:text-body">Sponsors are the lifeline of our UBC Agrobot Engineering Team. To help us build the future of agriculture, partner with our team to share ideas, or mentor our members, send us an email at <a href="mailto:ubcagrobot@gmail.com"><u>ubcagrobot@gmail.com</u></a>.
 						</p>
-					<h2 className="text-mobile-body lg:text-body font-bold pt-16">Sponsorship tiers</h2>
-					<div className="flex-col lg:flex-row flex justify-between pt-12">
+					<h2 className="pt-16 text-mobile-body font-bold lg:text-body">Sponsorship tiers</h2>
+					<div className="flex flex-col justify-between pt-12 lg:flex-row">
 						<SponsorTier title="Seedling" emoji="🌱" price="$100+" bullets={["Logo on our website", "Logo on AgroBot marketing / social media"]} />
 						<SponsorTier title="Blossoming" emoji="🪴" price="$500+" bullets={["Logo on our website", "Logo on AgroBot marketing / social media", "Logo on Team Merch", "Workspace Tour"]} />
 						<SponsorTier title="Full Bloom" emoji="🌳" price="$1000+" bullets={["Logo on our website", "Logo on AgroBot marketing / social media", "Logo on Team Merch", "Workspace Tour", "Company logo on robot"]} />
 					</div>
 				</div>
 			</div>
-			<div className='bg-glass w-full md:w-full overflow-hidden flex after:content[""] after:dark:from-brand-dark after:from-background after:bg-gradient-to-l after:right-0 after:top-0 after:bottom-0 after:w-20 after:z-10 after:absolute before:content[""] before:dark:from-brand-dark before:from-background before:bg-gradient-to-r before:left-0 before:top-0 before:bottom-0 before:w-20 before:z-10 before:absolute'>
+			<div className='after:content[""] after:dark:from-brand-dark after:from-background before:content[""] before:dark:from-brand-dark before:from-background flex w-full overflow-hidden bg-glass before:absolute before:bottom-0 before:left-0 before:top-0 before:z-10 before:w-20 before:bg-gradient-to-r after:absolute after:bottom-0 after:right-0 after:top-0 after:z-10 after:w-20 after:bg-gradient-to-l md:w-full'>
 				{[...Array(2)].map((arr, i) => (
-					<div key={i} className='flex flex-nowrap animate-slide'>
+					<div key={i} className='animate-slide flex flex-nowrap'>
 						{items.map((item, i) => (
-							<div key={item.alt} className='relative w-[175px] m-5 shrink-0 flex items-center'>
-								<img src={item.image} alt={item.alt} className="object-contain max-w-none w-[100px] filter" />
+							<div key={item.alt} className='relative m-5 flex w-[175px] shrink-0 items-center'>
+								<img src={item.image} alt={item.alt} className="w-[100px] max-w-none object-contain filter" />
 							</div>
 						))}
 					</div>
 				))}
 			</div>
-			<div className="mx-auto w-[280px] lg:w-[750px] bg-[#2E1B0F] rounded-[46px] flex flex-col justify-center items-center my-24 p-8">
-				<p className=" text-white text-[18px] lg:text-body font-medium text-center pb-2 lg:pb-6">We would love to have you join the team!</p>
-				<a href="mailto:ubcagrobot@gmail.com" className="text-center font-bold cursor-pointer text-[30px] lg:text-header text-[#78be20]">Sponsor us <FaArrowRight className="inline" color="#78be20" /></a>
+			<div className="mx-auto my-24 flex w-[280px] flex-col items-center justify-center rounded-[46px] bg-[#2E1B0F] p-8 lg:w-[750px]">
+				<p className=" pb-2 text-center text-[18px] font-medium text-white lg:pb-6 lg:text-body">We would love to have you join the team!</p>
+				<a href="mailto:ubcagrobot@gmail.com" className="cursor-pointer text-center text-[30px] font-bold text-[#78be20] lg:text-header">Sponsor us <FaArrowRight className="inline" color="#78be20" /></a>
 			</div>
 		</>
 	);

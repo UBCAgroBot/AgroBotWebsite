@@ -2,7 +2,7 @@ import React from "react";
 
 function Divider() {
     return (
-        <div class="mx-auto my-20 px-10 max-w-[400px] h-0.5 flex-grow bg-lime-500"></div>
+        <div className="mx-auto my-20 h-0.5 max-w-[400px] flex-grow bg-lime-500 px-10"></div>
     );
 };
 

@@ -1,14 +1,15 @@
+import { AgroponicsFarm } from "../../../assets";
+
 import Automation from "./subteams/Automation";
 import Plants from "./subteams/Plants";
 import Structure from "./subteams/Structure";
-import { AgroponicsFarm } from "../../../assets";
 
 const AgroponicSubteams = () => {
 
   return (
     <section
       id="agroponic"
-      className="bg-black flex flex-col overflow-hidden "
+      className="flex flex-col overflow-hidden bg-black "
       style={{
         backgroundImage: `url(${AgroponicsFarm})`,
         backgroundSize: "cover",

@@ -1,10 +1,10 @@
 const SubteamSection = ({ id, leftChild, rightChild }) => {
   return (
-    <div id={id} className="w-full m-10 flex flex-col lg:flex-row gap-6">
-      <div className="w-full h-full">
+    <div id={id} className="m-10 flex w-full flex-col gap-6 lg:flex-row">
+      <div className="h-full w-full">
         {leftChild}
       </div>
-      <div className="w-full h-full">
+      <div className="h-full w-full">
         {rightChild}
       </div>
     </div>

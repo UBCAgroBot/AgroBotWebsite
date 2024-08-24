@@ -1,15 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { BP1Team } from '../../assets';
 import { FaChevronRight } from "react-icons/fa";
+
+import { BP1Team } from '../../assets';
+
 import { ArticleOverlay } from "./ArticleOverlay"
 
 const NewsCard = React.forwardRef((({ activateFn, bgImage, title, overlayName }, ref) => {
     return (
-        <div ref={ref} onClick={() => activateFn(overlayName)} className="flex flex-col mb-8 lg:mb-0 lg:mx-4 w-full lg:w-[30%] overflow-hidden shrink-0 cursor-pointer">
+        <div ref={ref} onClick={() => activateFn(overlayName)} className="mb-8 flex w-full shrink-0 cursor-pointer flex-col overflow-hidden lg:mx-4 lg:mb-0 lg:w-[30%]">
             <div className="h-[300px]">
                 <img src={bgImage} alt='news card' className="h-full w-full object-cover" />
             </div>
-            <h2 className='m-2 text-center lg:text-left text-mobile-body font-medium'>{title}<FaChevronRight size='20px' className="inline ml-1" /></h2>
+            <h2 className='m-2 text-center text-mobile-body font-medium lg:text-left'>{title}<FaChevronRight size='20px' className="ml-1 inline" /></h2>
         </div>
     )
 }))
@@ -82,24 +84,24 @@ function News() {
     }
 
     return (
-        <div className="w-[300px] mx-auto lg:w-[100vw] bg-[#CDFF70] my-16">
+        <div className="mx-auto my-16 w-[300px] bg-[#CDFF70] lg:w-[100vw]">
             {showOverlay ? <ArticleOverlay deactivateFn={DeactivateArticle} articleName={overlayKey} /> : null}
-			<h1 className="text-[#2E1B0F] text-mobile-header lg:text-header font-bold text-center my-8">
+			<h1 className="my-8 text-center text-mobile-header font-bold text-[#2E1B0F] lg:text-header">
 				AgroBot News
 			</h1>
-            <div className="w-full flex flex-col lg:flex-row items-center">
-                <div className="h-full transition-opacity duration-300 ease-in-out cursor-pointer p-2"
+            <div className="flex w-full flex-col items-center lg:flex-row">
+                <div className="h-full cursor-pointer p-2 transition-opacity duration-300 ease-in-out"
                     style={{ opacity: leftArrowOpacity }}
                     onClick={() => { setLeftCardIndex(leftCardIndex - 1) }}
                 >
                     <FaChevronRight size='64px' style={{ transform: 'rotate(180deg)' }} />
                 </div>
 
-                <div ref={NewsContainerRef} className="w-full flex flex-col lg:flex-row overflow-x-hidden">
+                <div ref={NewsContainerRef} className="flex w-full flex-col overflow-x-hidden lg:flex-row">
                     <NewsCard activateFn={ActivateArticle} overlayName="SowingTheFields" bgImage={BP1Team} title="Sowing The Fields" ref={NewsCardRef}/>
                 </div>
 
-                <div className="h-full transition-opacity duration-300 ease-in-out cursor-pointer p-2"
+                <div className="h-full cursor-pointer p-2 transition-opacity duration-300 ease-in-out"
                     style={{ opacity: rightArrowOpacity, }}
                     onClick={() => { setLeftCardIndex(leftCardIndex + 1) }}
                 >

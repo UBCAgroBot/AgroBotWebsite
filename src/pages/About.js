@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+
 import WhoWeAre from '../components/about/WhoWeAre'
 import OurStory from '../components/about/OurStory'
 import News from '../components/about/News'

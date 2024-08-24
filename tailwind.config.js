@@ -1,7 +1,8 @@
-/** @type {import('tailwindcss').Config} */
-const plugin = require('tailwindcss/plugin');
+import plugin from 'tailwindcss/plugin';
+import tailwindcssFilters from 'tailwindcss-filters';
+import formsPlugin from '@tailwindcss/forms';
 
-module.exports = {
+export default {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
@@ -9,7 +10,7 @@ module.exports = {
     extend: {
       margin: {
         'standard': '192px',
-        'mobile-standard': '192px'
+        'mobile-standard': '192px',
       },
       width: {
         'content': '1000px',
@@ -19,7 +20,7 @@ module.exports = {
         'header': '48px',
         'body': '32px',
         'mobile-header': '40px',
-        'mobile-body': '20px'
+        'mobile-body': '20px',
       },
       fontFamily: {
         'RobotoMono': ['Roboto Mono', 'monospace'],
@@ -27,7 +28,7 @@ module.exports = {
         'Roboto': ['Roboto', 'sans-serif'],
       },
       placeholderColor: {
-        'custom-green': '#78BE20', // Example custom color
+        'custom-green': '#78BE20', 
       },
       filter: {
         'figma-shadow': 'drop-shadow(0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.5))',
@@ -40,8 +41,8 @@ module.exports = {
     },
   },
   plugins: [
-    require('tailwindcss-filters'),
-    plugin(function ({ addUtilities }) {
+    tailwindcssFilters,
+    plugin(({ addUtilities }) => {
       addUtilities({
         '.bg-glass': {
           background: 'rgba(255, 255, 255, 0.81)',
@@ -59,15 +60,14 @@ module.exports = {
         },
       }, ['responsive', 'hover']);
     }),
-    require('@tailwindcss/forms'),
-    function ({ addUtilities }) {
+    formsPlugin,
+    plugin(({ addUtilities }) => {
       const newUtilities = {
         '.placeholder-custom-green::placeholder': {
           color: '#78BE20',
         },
-      }
-      addUtilities(newUtilities, ['responsive', 'hover', 'focus'])
-    }
+      };
+      addUtilities(newUtilities, ['responsive', 'hover', 'focus']);
+    }),
   ],
-
-}
+};

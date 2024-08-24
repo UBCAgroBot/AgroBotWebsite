@@ -8,10 +8,10 @@ function TitleBanner(props) {
     };
 
     return (
-        <div className="w-full flex flex-col justify-center items-center mt-[4vh] md:mt-[10vh] mb-[4vh] md:mb-[10vh]">
-            <div style={bannerStyle} className="w-[90%] md:w-[80%] h-[20vh] flex items-center justify-center rounded-[14px]">
-                <h1 className="text-white text-2xl md:text-5xl font-bold uppercase z-50">{children}</h1>
-                <img src={imageSrc} alt={imageAltText || "Title Image"} className="h-[75px] sm:h-[150px] md:h-[120%] z-40" />
+        <div className="mb-[4vh] mt-[4vh] flex w-full flex-col items-center justify-center md:mb-[10vh] md:mt-[10vh]">
+            <div style={bannerStyle} className="flex h-[20vh] w-[90%] items-center justify-center rounded-[14px] md:w-[80%]">
+                <h1 className="z-50 text-2xl font-bold uppercase text-white md:text-5xl">{children}</h1>
+                <img src={imageSrc} alt={imageAltText || "Title Image"} className="z-40 h-[75px] sm:h-[150px] md:h-[120%]" />
             </div>
         </div>
     );

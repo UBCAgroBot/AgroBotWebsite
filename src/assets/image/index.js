@@ -57,10 +57,8 @@ import EmailSideIcon from "./EmailSideIcon.png";
 import SocialSideIcon from "./SocialSideIcon.png";
 import LocationSideIcon from "./LocationSideIcon.png";
 import AgroponicsS2 from "./AgroponicsS2.png";
-
 import SponsorIcon from "./SponsorIcon.png";
 import WorkingWithWires from "./WorkingWithWires.png";
-
 import temp_robot_blueprint from "./temp_robot_blueprint.png";
 import temp_circuitry from "./temp_circuitry.png";
 import temp_maintenance from "./temp_maintenance.png";

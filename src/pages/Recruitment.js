@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 import { Timeline } from '../components/recruitment/Timeline.tsx'
 import { SubteamOverlay } from "../components/recruitment/SubteamOverlay";
-import { useLocation } from "react-router-dom";
 
 function SubteamBox({ emoji, title, description, bg, overlayId, setOverlayId }) {
 	return (
-		<div className="w-[300px] mb-4 lg:w-[312px] bg-[#2E1B0F] rounded-[46px] flex flex-col items-center py-[10px] text-white">
-			<div className="w-[286px] h-[250px] rounded-[46px] flex justify-center items-center" style={{ background: bg }}>
+		<div className="mb-4 flex w-[300px] flex-col items-center rounded-[46px] bg-[#2E1B0F] py-[10px] text-white lg:w-[312px]">
+			<div className="flex h-[250px] w-[286px] items-center justify-center rounded-[46px]" style={{ background: bg }}>
 				<p className="text-[128px]">{emoji}</p>
 			</div>
-			<h1 className="text-[32px] w-full px-6 font-medium pt-4">{title}</h1>
-			<p className="text-[16px] w-full px-6 pt-4">{description}</p>
-			<button onClick={() => setOverlayId(overlayId)} className="text-[20px] mt-8 my-4 p-2 px-6 font-semibold rounded-full bg-glass text-[#2E1B0F]">Learn more +</button>
+			<h1 className="w-full px-6 pt-4 text-[32px] font-medium">{title}</h1>
+			<p className="w-full px-6 pt-4 text-[16px]">{description}</p>
+			<button onClick={() => setOverlayId(overlayId)} className="my-4 mt-8 rounded-full p-2 px-6 text-[20px] font-semibold text-[#2E1B0F] bg-glass">Learn more +</button>
 		</div>
 	)
 }
@@ -156,19 +157,19 @@ function Recruitment() {
 	const [overlayId, setOverlayId] = useState(null);
 
 	return (
-		<div className="mt-standard pb-32 w-[300px] lg:w-[1000px] mx-auto">
+		<div className="mx-auto mt-standard w-[300px] pb-32 lg:w-[1000px]">
 			{overlayId ?
 				<SubteamOverlay setOverlayId={setOverlayId} overlayId={overlayId} />
 				:
 				null
 			}
-			<h1 className="text-mobile-header lg:text-header font-bold">Join the Future of <br />Sustainable Agriculture!</h1>
+			<h1 className="text-mobile-header font-bold lg:text-header">Join the Future of <br />Sustainable Agriculture!</h1>
 			<Timeline />
 			<div id="join-us">
 				{teams.map((team, index) => (
 					<div key={index}>
-						<h2 className="text-mobile-header lg:text-header text-center lg:text-left font-semibold my-12 mt-20">{team.name}</h2>
-						<div className="flex flex-col lg:flex-row flex-wrap">
+						<h2 className="my-12 mt-20 text-center text-mobile-header font-semibold lg:text-left lg:text-header">{team.name}</h2>
+						<div className="flex flex-col flex-wrap lg:flex-row">
 							{team.subteams.map((subteam, index) => (
 								<div key={index} className="mx-[10px]">
 									<SubteamBox

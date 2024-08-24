@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { HiOutlineMenu } from "react-icons/hi";
 import { Link } from 'react-router-dom';
 import { FaChevronDown } from 'react-icons/fa';
+
 import { navLinks } from "../../constant";
 import { AGROBOT_ICON } from "../../assets";
 
@@ -24,15 +25,15 @@ const Navbar = () => {
 
 	// TODO: Why does the navbar expand and contract the rest of the page when you go up and down
 	return (
-		<header className='w-full h-14 top-4 z-40 fixed text-[22px]'>
+		<header className='fixed top-4 z-40 h-14 w-full text-[22px]'>
 
-			<nav className='z-[100] w-[96%] mx-auto h-full flex items-center justify-between px-2 pr-6 bg-glass hover:bg-white duration-300 ease-in-out shadow-glass backdrop-blur-glass text-[#2E1B0F] rounded-full'>
-				<div className="h-full font-bold cursor-pointer flex items-center">
-					<Link to="/"><img className="h-11 mr-3" src={AGROBOT_ICON} alt="UBC AGROBOT" /></Link>
-					<Link to="/" className="font-bold text-[22px] lg:text-[26px]">UBC AGROBOT</Link>
+			<nav className='z-[100] mx-auto flex h-full w-[96%] items-center justify-between rounded-full px-2 pr-6 text-[#2E1B0F] duration-300 ease-in-out bg-glass shadow-glass backdrop-blur-glass hover:bg-white'>
+				<div className="flex h-full cursor-pointer items-center font-bold">
+					<Link to="/"><img className="mr-3 h-11" src={AGROBOT_ICON} alt="UBC AGROBOT" /></Link>
+					<Link to="/" className="text-[22px] font-bold lg:text-[26px]">UBC AGROBOT</Link>
 				</div>
 
-				<ul className="list-none hidden lg:flex items-center gap-8">
+				<ul className="hidden list-none items-center gap-8 lg:flex">
 					{navLinks.map((e) => (
 						<li
 							key={e.id}
@@ -40,14 +41,14 @@ const Navbar = () => {
 							onMouseEnter={() => toggleProjectsMenu(e.dropdown)}
 							onMouseLeave={() => toggleProjectsMenu(e.dropdown)}
 						>
-							<Link to={e.link} className={`transition-all duration-200 flex items-center ${location.pathname === e.link ? 'font-bold' : ''}`}>
+							<Link to={e.link} className={`flex items-center transition-all duration-200 ${location.pathname === e.link ? 'font-bold' : ''}`}>
 								{e.id} {e.dropdown && <FaChevronDown size='16px' style={{ margin: '3px 0 0 4px' }} />}
 							</Link>
 							{e.dropdown && isSubMenuOpen && (
-								<ul className="absolute left-[-32px] px-[32px] pb-[16px] bg-white rounded-2xl pt-1" style={{ transition: `all ${dropdown_hover_timing}ms` }} >
+								<ul className="absolute left-[-32px] rounded-2xl bg-white px-[32px] pb-[16px] pt-1" style={{ transition: `all ${dropdown_hover_timing}ms` }} >
 									{e.dropdown.map((item) => (
 										<li key={item.id} className="">
-											<Link to={item.link} className="block py-1 px-0">
+											<Link to={item.link} className="block px-0 py-1">
 												{item.id}
 											</Link>
 										</li>
@@ -61,7 +62,7 @@ const Navbar = () => {
 				{/* menu button for small devices */}
 				<button
 					onClick={toggleMobileMenu}
-					className="lg:hidden text-black text-3xl "
+					className="text-3xl text-black lg:hidden "
 				>
 					<HiOutlineMenu />
 				</button>
@@ -69,14 +70,14 @@ const Navbar = () => {
 
 			{/* nav items for small devices */}
 			{isMenuOpen && (
-				<div className="bg-[#cdff70] z-[-5] fixed top-0 left-0 w-full h-[101vh]">
-					<ul className="lg:hidden w-[96%] mx-auto mt-20  my-1 p-3 text-center font-medium underline">
+				<div className="fixed left-0 top-0 z-[-5] h-[101vh] w-full bg-[#cdff70]">
+					<ul className="mx-auto my-1 mt-20 w-[96%]  p-3 text-center font-medium underline lg:hidden">
 						{navLinks.map((value, index) => (
 							<>
 								{value.dropdown ?
 									<>
 										{value.dropdown.map((item) => (
-											<li key={item.id} className=" rounded-full my-1 p-3">
+											<li key={item.id} className=" my-1 rounded-full p-3">
 												<Link to={item.link} onClick={toggleMobileMenu}>
 													{item.id}
 												</Link>
@@ -84,7 +85,7 @@ const Navbar = () => {
 										))}
 									</>
 									:
-									<li key={index.id} className="rounded-full my-1 p-3">
+									<li key={index.id} className="my-1 rounded-full p-3">
 										<Link to={value.link} onClick={toggleMobileMenu}>
 											{value.id}
 										</Link>

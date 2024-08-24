@@ -1,7 +1,8 @@
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
-import path from "../../../assets/models/agroarm-transformed.glb"
 import { useFrame } from '@react-three/fiber'
+
+import path from "../../../assets/models/agroarm-transformed.glb"
 
 const AgroPickerModel = (props) => {
   const { nodes, materials } = useGLTF(path)

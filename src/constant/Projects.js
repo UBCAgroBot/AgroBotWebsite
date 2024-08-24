@@ -1,6 +1,7 @@
 import { BsGraphUp } from "react-icons/bs";
 import { RiSettingsFill } from "react-icons/ri";
 import { MdOutlineSettingsInputHdmi } from "react-icons/md";
+
 import { HomeAutomation, HomeDataCollection, HomeModularChassis, HomeTargetedAction, HomeChemicalBalancing, HomeFullyAutonomous, HomeNutrientCycling } from '../assets';
 
 

@@ -1,9 +1,10 @@
-import { AgrobotModelView } from "../../models";
 import { useGSAP } from "@gsap/react";
 import gsap from 'gsap';
 import { useEffect, useLayoutEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useMediaQuery } from "react-responsive";
+
+import { AgrobotModelView } from "../../models";
 import { AgrobotModel2D } from "../../../assets";
 
 const AgrobotMain = () => {
@@ -89,9 +90,9 @@ const AgrobotMain = () => {
 
   return (
     <section
-      className="lg:h-[175vh] w-full bg-black flex flex-col gap-[2rem] justify-start pt-10 overflow-hidden"
+      className="flex w-full flex-col justify-start gap-[2rem] overflow-hidden bg-black pt-10 lg:h-[175vh]"
     >
-      <div className="w-full h-[50vh] lg:h-[100vh] pt-8 opacity-1">
+      <div className="opacity-1 h-[50vh] w-full pt-8 lg:h-[100vh]">
         {!isMobile ?
           <AgrobotModelView
             id={modelContainer}
@@ -107,17 +108,17 @@ const AgrobotMain = () => {
         }
       </div>
 
-      <div className="w-full lg:h-[75vh] flex flex-col lg:flex-row ">
-        <div id={modelDestContainer} className="w-full h-full ">
+      <div className="flex w-full flex-col lg:h-[75vh] lg:flex-row ">
+        <div id={modelDestContainer} className="h-full w-full ">
 
         </div>
-        <div className="w-full h-full">
-          <div id={textDiv} className="justify-center mx-5">
-            <h2 className="text-white text-center text-[42px] lg:text-[7rem] font-bold mb-2">AgroBot</h2>
-            <p className="text-white text-center text-[18px] lg:text-[1.25rem]">
+        <div className="h-full w-full">
+          <div id={textDiv} className="mx-5 justify-center">
+            <h2 className="mb-2 text-center text-[42px] font-bold text-white lg:text-[7rem]">AgroBot</h2>
+            <p className="text-center text-[18px] text-white lg:text-[1.25rem]">
               An autonomous robot utilizing AI and machine learning for precise intra-row weeding and data collection. It identifies and eliminates weeds without harming crops, reducing the need for chemical pesticides. Additionally, the robot collects data on crop health to help farmers make better, more informed decisions.
             </p>
-            <p className="text-white text-center font-bold text-[18px] lg:text-[1.25rem] mt-10 mb-20">
+            <p className="mb-20 mt-10 text-center text-[18px] font-bold text-white lg:text-[1.25rem]">
               AgroBot is a product of collaboration between five different sub-teams, each playing a pivotal role in its development and performance:
             </p>
           </div>

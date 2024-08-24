@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { fcc, apsc, chbe, ece, egbc, gage, ieee, lfs, proto, solidworks, verdi, } from '../../assets';
-
 import { headers } from '../../constant/sponsorFooter';
 import { SectionHeader } from '../common';
 
@@ -10,13 +9,13 @@ function SponsorSection(props) {
 
     return (
         <div className="my-6">
-            <div className='w-full flex items-center justify-center'>
-                <h2 className="text-lg text-bold px-4 bg-[#F8F7F1] z-20">{children}</h2>
+            <div className='flex w-full items-center justify-center'>
+                <h2 className="text-bold z-20 bg-[#F8F7F1] px-4 text-lg">{children}</h2>
             </div>
-            <div className='flex items-center justify-center mt-[-0.9rem] mb-[0.9rem]'>
-                <div className='w-[75%] h-[2px] bg-black z-10'></div>
+            <div className='mb-[0.9rem] mt-[-0.9rem] flex items-center justify-center'>
+                <div className='z-10 h-[2px] w-[75%] bg-black'></div>
             </div>
-            <div className="flex justify-evenly items-center flex-wrap">
+            <div className="flex flex-wrap items-center justify-evenly">
                 {images.map((image, index) => (
                     <img className='m-4' key={index} src={image} alt={`Sponsor ${index}`} />
                 ))}
@@ -27,8 +26,8 @@ function SponsorSection(props) {
 
 function OurSponsor() {
     return (
-        <div className='w-full my-[10vh]'>
-            <div className="w-[80%] mx-auto pt-[10vh]">
+        <div className='my-[10vh] w-full'>
+            <div className="mx-auto w-[80%] pt-[10vh]">
                 <SectionHeader>{headers[0]}</SectionHeader>
                 <SponsorSection images={[apsc, fcc, ece]}>{headers[1]}</SponsorSection>
                 <SponsorSection images={[chbe, lfs, ieee, gage]}>{headers[2]}</SponsorSection>

@@ -1,5 +1,4 @@
 import React from "react";
-import { timelineData } from "../../constant/recruitment";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
@@ -9,11 +8,13 @@ import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
+import { timelineData } from "../../constant/recruitment";
+
 const RecruitmentS3 = () => {
   return (
-    <div className="mt-12 text-center mx-auto p-6">
-      <div class="col">
-        <h1 className="text-4xl mb-[2%] text-[#3A3A3A] text-left md:ml-24 ml-12">
+    <div className="mx-auto mt-12 p-6 text-center">
+      <div className="col">
+        <h1 className="mb-[2%] ml-12 text-left text-4xl text-[#3A3A3A] md:ml-24">
           Recruitment Timeline
         </h1>
         <RecruitmentTimeline></RecruitmentTimeline>
@@ -51,7 +52,7 @@ function RecruitmentTimeline() {
 
           <TimelineSeparator>
             <TimelineDot className="p-0">
-              <div className="h-6 w-6 bg-green-500 rounded-full"></div>
+              <div className="h-6 w-6 rounded-full bg-green-500"></div>
             </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
@@ -63,7 +64,7 @@ function RecruitmentTimeline() {
               }`}
             >
               <div
-                className={`mt-3 w-0 h-0 
+                className={`mt-3 h-0 w-0 
   border-t-[8px] border-t-transparent
   ${
     index % 2 != 0 || isMobile
@@ -72,9 +73,9 @@ function RecruitmentTimeline() {
   }
   border-b-[8px] border-b-transparent`}
               ></div>
-              <div class="bg-green-500 rounded w-full">
+              <div className="w-full rounded bg-green-500">
                 <div
-                  className={`bg-white rounded p-5 shadow-lg ${
+                  className={`rounded bg-white p-5 shadow-lg ${
                     index % 2 != 0 || isMobile ? "ml-[3px]" : "mr-[3px]"
                   }`}
                 >
