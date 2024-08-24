@@ -1,7 +1,7 @@
 {
   "name": "agrobotwebsite",
   "version": "1.0.0",
-  "homepage": "https://ubcagrobot.github.io/AgroBotWebsite/",
+  "homepage": "/",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.1.0",

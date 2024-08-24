@@ -139,7 +139,7 @@ function Timeline() {
                 Before you dive in, check out our recruitment package. It contains essential information about our teams, projects, and what we're looking for in new members. Once you're ready, fill out the application form and take the first step towards an inspiring and impactful experience with UBC Agrobot!
             </p>
             <div className="flex flex-col lg:flex-row justify-around text-[#3199FF] mb-16 lg:mb-32">
-                <a href="AgroBotWebsite/RecruitmentPoster.pdf" target="_blank" className="bg-black p-4 lg:px-8 my-2 lg:my-0 text-center rounded-[23px] lg:rounded-[46px] text-[28px] lg:text-body">
+                <a href="/RecruitmentPoster.pdf" target="_blank" className="bg-black p-4 lg:px-8 my-2 lg:my-0 text-center rounded-[23px] lg:rounded-[46px] text-[28px] lg:text-body">
                     Recruitment Package
                     <FaExternalLinkAlt className="inline ml-2 mb-2" />
                 </a>
