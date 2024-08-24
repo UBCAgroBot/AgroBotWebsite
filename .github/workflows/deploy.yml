@@ -26,7 +26,10 @@ jobs:
     
     - name: Install Dependencies
       run: pnpm install
-    
+      
+    - name: Prebuild
+      run: pnpm build
+      
     - name: Deploy
       run: |
         git config --global user.name $user_name
