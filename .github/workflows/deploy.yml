@@ -20,19 +20,17 @@ jobs:
       uses: actions/setup-node@v4.0.3
       with:
         node-version: '20'
-          
-    - name: Install pnpm
-      run: npm install -g pnpm
-    
+        cache: 'npm'
+        
     - name: Install Dependencies
-      run: pnpm install
+      run: npm install
       
     - name: Deploy
       run: |
         git config --global user.name $user_name
         git config --global user.email $user_email
         git remote set-url origin https://${github_token}@github.com/${repository}
-        pnpm run deploy
+        npm run deploy
       env:
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
