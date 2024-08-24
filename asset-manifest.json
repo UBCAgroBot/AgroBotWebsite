@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/AgroBotWebsite/static/css/main.876d8874.css",
-    "main.js": "/AgroBotWebsite/static/js/main.3911f2af.js",
-    "static/js/954.2a2b80b8.chunk.js": "/AgroBotWebsite/static/js/954.2a2b80b8.chunk.js",
-    "static/js/163.5d42728d.chunk.js": "/AgroBotWebsite/static/js/163.5d42728d.chunk.js",
+    "main.css": "/AgroBotWebsite/static/css/main.e3c7e2b7.css",
+    "main.js": "/AgroBotWebsite/static/js/main.2eddea6a.js",
+    "static/js/270.8a77c58a.chunk.js": "/AgroBotWebsite/static/js/270.8a77c58a.chunk.js",
+    "static/js/367.5a6a5f4c.chunk.js": "/AgroBotWebsite/static/js/367.5a6a5f4c.chunk.js",
     "static/media/HomeAutomation.gif": "/AgroBotWebsite/static/media/HomeAutomation.565b88f250854589c68c.gif",
     "static/media/gaetano-cessati.jpg": "/AgroBotWebsite/static/media/gaetano-cessati.ce82d10ea49fa33336fe.jpg",
     "static/media/AgrobotSketch.glb": "/AgroBotWebsite/static/media/AgrobotSketch.2193b50ef43a4becf241.glb",
@@ -65,13 +65,13 @@
     "static/media/goldStar.svg": "/AgroBotWebsite/static/media/goldStar.6a194ac0a92dc0b75fc58241ffdb373f.svg",
     "static/media/bronzeStar.svg": "/AgroBotWebsite/static/media/bronzeStar.cba4978f9fa30e552bea433e9994bb11.svg",
     "index.html": "/AgroBotWebsite/index.html",
-    "main.876d8874.css.map": "/AgroBotWebsite/static/css/main.876d8874.css.map",
-    "main.3911f2af.js.map": "/AgroBotWebsite/static/js/main.3911f2af.js.map",
-    "954.2a2b80b8.chunk.js.map": "/AgroBotWebsite/static/js/954.2a2b80b8.chunk.js.map",
-    "163.5d42728d.chunk.js.map": "/AgroBotWebsite/static/js/163.5d42728d.chunk.js.map"
+    "main.e3c7e2b7.css.map": "/AgroBotWebsite/static/css/main.e3c7e2b7.css.map",
+    "main.2eddea6a.js.map": "/AgroBotWebsite/static/js/main.2eddea6a.js.map",
+    "270.8a77c58a.chunk.js.map": "/AgroBotWebsite/static/js/270.8a77c58a.chunk.js.map",
+    "367.5a6a5f4c.chunk.js.map": "/AgroBotWebsite/static/js/367.5a6a5f4c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.876d8874.css",
-    "static/js/main.3911f2af.js"
+    "static/css/main.e3c7e2b7.css",
+    "static/js/main.2eddea6a.js"
   ]
 }
