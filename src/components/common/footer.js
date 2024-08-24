@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import { AGROBOT_ICON } from "../../assets";
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaEnvelope, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
     return (
@@ -23,8 +23,8 @@ function Footer() {
                     <h1 className="text-[24px] text-[#78BE20] text-left font-bold ml-2">UBC<br/>AGROBOT</h1>
                 </div>
                 <div className="my-4 flex lg:mt-auto">
-                    <a href="https://www.instagram.com/ubcagrobot/"><FaInstagram className=" p-1 text-[#88BE22]" size={52} /></a>
-                    <a href="https://www.linkedin.com/company/ubc-agrobot/mycompany/"><FaLinkedin className=" p-1 text-[#88BE22]" size={52} /></a>
+                    <a target="_blank" href="https://www.instagram.com/ubcagrobot/"><FaInstagram className=" p-1 text-[#88BE22]" size={52} /></a>
+                    <a target="_blank" href="https://www.linkedin.com/company/ubc-agrobot/mycompany/"><FaLinkedin className=" p-1 text-[#88BE22]" size={52} /></a>
                     <a href="mailto:ubcagrobot@gmail.com"><FaEnvelope className="p-1 text-[#88BE22]" size={52} /></a>
                 </div>
             </div>

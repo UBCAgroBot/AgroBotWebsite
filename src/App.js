@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar } from "./components";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { Home, Sponsorship, Agrobot, Agroponics, Recruitment, Contact, About } from "./pages";
 
 import { Footer } from "./components/common";
@@ -17,6 +17,7 @@ function App() {
 				<Route path="/recruitment" element={<Recruitment />} />
 				<Route path="/contact" element={<Contact />} />
 				<Route path="/about" element={<About />} />
+				<Route path="/join-us" element={<Navigate to="/recruitment#join-us" replace />} />
 			</Routes>
 			<Footer />
 		</Router>
