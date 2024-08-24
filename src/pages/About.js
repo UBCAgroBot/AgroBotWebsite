@@ -10,6 +10,7 @@ function AboutUs() {
   }, [])
     return (
         <div className="bg-[#CDFF70]">
+        	<p>Test lol</p>
             <OurStory />
             <Testimonials />
             <WhoWeAre />
