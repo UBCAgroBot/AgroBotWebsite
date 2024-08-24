@@ -1,7 +1,5 @@
 # AgroBot Website
 
-To deploy: `npm run deploy`
-
 Website will be deployed here:
 https://ubcagrobot.github.io/AgroBotWebsite/
 
