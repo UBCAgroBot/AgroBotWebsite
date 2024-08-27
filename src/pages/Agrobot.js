@@ -14,7 +14,6 @@ const Agrobot = () => {
       }}
     >
       <AgrobotMain />
-      <p>test</p>
       <AgrobotSubteams />
     </main >
   );
