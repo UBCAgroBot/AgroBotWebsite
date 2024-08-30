@@ -42,7 +42,7 @@ const projects = [
 	},
 	{
 		ProjectName: "AgroPonics",
-		Text: "An NFT (Nutrient Film Technique) hydroponic system focused on data collection, environmental control, and automation to optimize the nutrients and growing conditions of staple foods. Through a series of meticulously designed experiments, it aims to discover the most efficient environmental settings for growing a variety of crops.",
+		Text: "The Agroponics team designs autonomous hydroponic systems through multidisciplinary collaboration. It integrates IoT for automation, structural design for optimized environments, and experimental research on growth of staple foods. The aim is to enhance agricultural efficiency by reducing resource use and improving crop production in a controlled, sustainable setting.",
 		ModelComponent: AgroponicMod,
 		MobileImg: AgroponicModel2D,
 		background: { background: "#cdff70" },
@@ -74,7 +74,7 @@ function Project({ ProjectName, Text, background, ModelComponent, href }) {
 				// component should be before appearing
 				// Second number is how many pixels from the bottom of the screen
 				// this component should be before dissapearing
-				if (containerTop < 400 && containerBottom > height -0) {
+				if (containerTop < 400 && containerBottom > height - 0) {
 					setIsVisible(true);
 				} else {
 					setIsVisible(false);

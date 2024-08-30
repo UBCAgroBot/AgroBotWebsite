@@ -117,7 +117,7 @@ const AgroponicsMain = () => {
           <div id={textDiv} className="justify-center mx-5">
             <h2 className="text-white text-center text-[42px] lg:text-[7rem] font-bold mb-2">AgroPonics</h2>
             <p className="text-white text-center text-[18px] lg:text-[1.25rem]">
-              An NFT (Nutrient Film Technique) hydroponic system focused on data collection, environmental control, and automation to optimize the nutrients and growing conditions of staple foods. Through a series of meticulously designed experiments, it aims to discover the most efficient environmental settings for growing a variety of crops.
+              The Agroponics team designs autonomous hydroponic systems through multidisciplinary collaboration. It integrates IoT for automation, structural design for optimized environments, and experimental research on growth of staple foods. The aim is to enhance agricultural efficiency by reducing resource use and improving crop production in a controlled, sustainable setting.
             </p>
             <p className="text-white text-center font-bold text-[18px] lg:text-[1.25rem] mt-10 mb-20">
               AgroPonics is a product of collaboration between three different sub-teams, each playing a pivotal role in its development and performance:
