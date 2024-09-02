@@ -89,9 +89,9 @@ const AgroponicsMain = () => {
 
   return (
     <section
-      className="lg:h-[175vh] w-full bg-black flex flex-col gap-[2rem] justify-start pt-10 overflow-hidden"
+      className="h-[160vh] lg:h-[178vh] w-full bg-black flex flex-col gap-[2rem] justify-start pt-10 overflow-hidden"
     >
-      <div className="w-full h-[50vh] lg:h-[100vh] pt-8 opacity-1">
+      <div className="w-full h-[60vh] lg:h-[100vh] pt-8 opacity-1">
         {!isMobile ?
           <AgroponicModelView
             id={modelContainer}
@@ -109,7 +109,7 @@ const AgroponicsMain = () => {
         }
       </div>
 
-      <div className="w-full lg:h-[75vh] flex flex-col lg:flex-row ">
+      <div className="w-full h-[60vh] lg:h-[75vh] flex flex-col lg:flex-row ">
         <div id={modelDestContainer} className="w-full h-full ">
 
         </div>
@@ -117,9 +117,14 @@ const AgroponicsMain = () => {
           <div id={textDiv} className="justify-center mx-5">
             <h2 className="text-white text-center text-[42px] lg:text-[7rem] font-bold mb-2">AgroPonics</h2>
             <p className="text-white text-center text-[18px] lg:text-[1.25rem]">
-              The Agroponics team designs autonomous hydroponic systems through multidisciplinary collaboration. It integrates IoT for automation, structural design for optimized environments, and experimental research on growth of staple foods. The aim is to enhance agricultural efficiency by reducing resource use and improving crop production in a controlled, sustainable setting.
+              The Agroponics team designs autonomous hydroponic systems through multidisciplinary collaboration. It integrates IoT for automation, structural design for optimized environments, and experimental research on growth of staple foods. The aim is to enhance agricultural efficiency by reducing resource use and improving crop production in a controlled, sustainable setting. If you would like to see some of what we have been working on, see our blog website here!
             </p>
-            <p className="text-white text-center font-bold text-[18px] lg:text-[1.25rem] mt-10 mb-20">
+            <div className="flex justify-center mt-2">
+              <a href="https://ubcagroponics.com/" className="rounded-3xl bg-[#208B21] p-3 font-bold justify-center">
+                <span className="text-white font-Roboto">Agroponics Website!</span>
+              </a>
+            </div>
+            <p className="text-white text-center font-bold text-[18px] lg:text-[1.25rem] mt-5 mb-25">
               AgroPonics is a product of collaboration between three different sub-teams, each playing a pivotal role in its development and performance:
             </p>
           </div>
