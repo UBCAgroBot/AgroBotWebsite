@@ -89,7 +89,7 @@ const AgroponicsMain = () => {
 
   return (
     <section
-      className="h-[160vh] lg:h-[178vh] w-full bg-black flex flex-col gap-[2rem] justify-start pt-10 overflow-hidden"
+      className="lg:h-[190vh] w-full bg-black flex flex-col gap-[2rem] justify-start pt-10 overflow-hidden"
     >
       <div className="w-full h-[60vh] lg:h-[100vh] pt-8 opacity-1">
         {!isMobile ?
