@@ -89,7 +89,7 @@ const AgroponicsMain = () => {
 
   return (
     <section
-      className="lg:h-[175vh] w-full bg-black flex flex-col gap-[2rem] justify-start pt-10 overflow-hidden"
+      className="lg:h-[190vh] w-full bg-black flex flex-col gap-[2rem] justify-start pt-10 overflow-hidden"
     >
       <div className="w-full h-[50vh] lg:h-[100vh] pt-8 opacity-1">
         {!isMobile ?
@@ -117,9 +117,14 @@ const AgroponicsMain = () => {
           <div id={textDiv} className="justify-center mx-5">
             <h2 className="text-white text-center text-[42px] lg:text-[7rem] font-bold mb-2">AgroPonics</h2>
             <p className="text-white text-center text-[18px] lg:text-[1.25rem]">
-              The Agroponics team designs autonomous hydroponic systems through multidisciplinary collaboration. It integrates IoT for automation, structural design for optimized environments, and experimental research on growth of staple foods. The aim is to enhance agricultural efficiency by reducing resource use and improving crop production in a controlled, sustainable setting.
+              The Agroponics team designs autonomous hydroponic systems through multidisciplinary collaboration. It integrates IoT for automation, structural design for optimized environments, and experimental research on growth of staple foods. The aim is to enhance agricultural efficiency by reducing resource use and improving crop production in a controlled, sustainable setting. If you would like to see some of what we have been working on, see our website here!
             </p>
-            <p className="text-white text-center font-bold text-[18px] lg:text-[1.25rem] mt-10 mb-20">
+            <div className="w-full flex justify-center mt-4">
+              <a target="_blank" href="https://ubcagroponics.com/" className="bg-[#1e8b23] text-white font-semibold p-4 px-6 rounded-full font-bold">
+                AgroPonics Website!
+              </a>
+            </div>
+            <p className="text-white text-center font-bold text-[18px] lg:text-[1.25rem] mt-4 mb-20">
               AgroPonics is a product of collaboration between three different sub-teams, each playing a pivotal role in its development and performance:
             </p>
           </div>
