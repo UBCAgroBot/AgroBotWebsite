@@ -29,7 +29,7 @@ const TextChild = ({ id, header, body }) => {
   return (
     <div
       id={id}
-      classname="w-full h-full"
+      classname="w-full h-full z-20"
     >
       <div className="bg-glass opacity-100 p-5 rounded-3xl">
         <h2 className="font-bold text-center" style={{ fontSize: 'clamp(24px, 6vw, 48px)' }}>

@@ -1,5 +1,6 @@
 import AgroponicsFarm from "./AgroponicsRiver.jpeg"
 import agrobotFarm from "./Farm.jpeg";
+import AgrobotMoving from "./Agrobot-Moving.png"
 import AgrobotBackground from "./AgrobotsBackground.jpeg"
 import AgrobotHero from "./AgrobotHero.jpeg"
 import FarmPath from "./FarmPath.jpeg";
@@ -71,6 +72,7 @@ import BP1Team from './BP1Team.webp'
 export {
   AGROBOT_ICON,
   AgrobotModel2D,
+  AgrobotMoving,
   AgroponicsFarm,
   AgrobotHero,
   AgroArm2DModel,
