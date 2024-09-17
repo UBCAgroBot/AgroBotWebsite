@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
-import { Preload, View } from "@react-three/drei";
+import { Preload, useGLTF, View } from "@react-three/drei";
 import ModelViewer from "./utils/ModelView";
 import AgrobotModel from "./meshAndMaterials/AgrobotModel";
 

@@ -36,7 +36,7 @@ const AgrobotMain = () => {
       });
 
       gsap.from(modelContainerId, {
-        delay: 2,
+        delay: 1.25,
         duration: 1,
         opacity: 0
       });
