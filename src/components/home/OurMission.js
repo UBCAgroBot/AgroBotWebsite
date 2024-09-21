@@ -83,7 +83,7 @@ function RectangleAnimation() {
 	}
 
 	useEffect(() => {
-		const intervalId = setInterval(UpdatePositions, 8000);
+		const intervalId = setInterval(UpdatePositions, 4000);
 		return () => clearInterval(intervalId);
 	}, []);
 
