@@ -78,7 +78,7 @@ function ArticleOverlay({ deactivateFn, articleName }) {
 
 	async function easeIn() {
 		for (let i = 0; i <= 1; i += 0.01) {
-			const easedVal = d3.easeCubic(i)
+			// const easedVal = d3.easeCubic(i) // I found this to not look as good
 			document.getElementById('outer-overlay').style.opacity = i;
 			await new Promise(resolve => setTimeout(resolve, 1));
 		}
