@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import TeamAgroBot from '../../assets/image/AgroBotWithTeamOnGrass.jpg'
-import { CiClock2 } from "react-icons/ci";
 const d3 = require('d3-ease');
 
 function SubteamOverlay({ setOverlayId, overlayId }) {
