@@ -5,7 +5,7 @@ function AgrobotSubteams() {
   return (
     <section
       id="farm"
-      className="flex flex-col"
+      className="bg-[#cdff70] flex flex-col"
     >
       <ProjectSubteam
         title = "Applied AI"

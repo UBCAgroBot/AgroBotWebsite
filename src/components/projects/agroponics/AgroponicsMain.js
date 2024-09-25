@@ -91,7 +91,23 @@ const AgroponicsMain = () => {
     <section
       className="lg:h-[190vh] w-full bg-black flex flex-col gap-[2rem] justify-start pt-10"
     >
-      
+      <div className="w-full h-[60vh] lg:h-[100vh] pt-8 opacity-1">
+        {!isMobile ?
+          <AgroponicModelView
+            id={modelContainer}
+            gsapType={modelRender}
+            scale={[1, 1, 1]}
+            cameraPosition={[0.5, 1, 2]}
+            groupPosition={[0, 0, 0]}
+            vectorPosition={[0, 0, 0]}
+          />
+          :
+          <img
+            src={AgroponicModel2D}
+          >
+          </img>
+        }
+      </div>
       <div className="w-full h-[60vh] lg:h-[75vh] flex flex-col lg:flex-row ">
         <div id={modelDestContainer} className="w-full h-full ">
 
