@@ -26,12 +26,6 @@ module.exports = {
         'Inter': ['Inter', 'sans-serif'],
         'Roboto': ['Roboto', 'sans-serif'],
       },
-      placeholderColor: {
-        'custom-green': '#78BE20', // Example custom color
-      },
-      filter: {
-        'figma-shadow': 'drop-shadow(0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.5))',
-      },
     },
   },
   variants: {
@@ -40,7 +34,6 @@ module.exports = {
     },
   },
   plugins: [
-    require('tailwindcss-filters'),
     plugin(function ({ addUtilities }) {
       addUtilities({
         '.bg-glass': {
