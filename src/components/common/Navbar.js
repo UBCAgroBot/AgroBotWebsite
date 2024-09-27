@@ -3,8 +3,39 @@ import { useLocation } from 'react-router-dom';
 import { HiOutlineMenu } from "react-icons/hi";
 import { Link } from 'react-router-dom';
 import { FaChevronDown } from 'react-icons/fa';
-import { navLinks } from "../../constant";
 import { AGROBOT_ICON } from "../../assets";
+
+const navLinks = [
+    {
+        id : "Home",
+        link : "/"
+    },
+    {
+        id : "Projects",
+        dropdown: [
+            { id: "Agrobot", link: "/agrobot" },
+            { id: "Agroponics", link: "/agroponics" },
+        ]
+    },
+    {
+        id : "Sponsorship",
+        link : "/sponsorship"
+    },
+    {
+        id : "Recruitment",
+        link : "/recruitment"
+    },
+    {
+        id : "Contact",
+        link : "/contact"
+    },
+    {
+        id : "About",
+        link : "/about"
+    },
+    
+    
+]
 
 const Navbar = () => {
 	const [isMenuOpen, setMobileMenu] = useState(false);

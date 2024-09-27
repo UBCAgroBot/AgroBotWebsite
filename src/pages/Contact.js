@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import { MailForm, Map } from '../components';
-import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
-import { LuMail } from "react-icons/lu";
 
 function ContactUs() {
   useEffect(() => {

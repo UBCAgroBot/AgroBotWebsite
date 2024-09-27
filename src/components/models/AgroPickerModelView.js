@@ -11,7 +11,6 @@ const AgroPickerModelView = ({ id, gsapType, scale, cameraPosition, groupPositio
   const modelRef = useRef(new THREE.Group());
   const [rotation, setRotation] = useState(2.43);
 
-  console.log(rotation)
   return (
     <div
       id={id}
