@@ -24,6 +24,8 @@ export default [
       "react/display-name": "off",
       "react/no-unescaped-entities": "off",
       "react/jsx-no-undef": "off",
+      "no-mixed-spaces-and-tabs": "off",
+      "no-extra-semi": "off",
 
       // You can disable or modify other rules here as needed
     },
