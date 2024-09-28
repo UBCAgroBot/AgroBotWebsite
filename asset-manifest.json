@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9464ad77.css",
-    "main.js": "/static/js/main.ea87d9c4.js",
+    "main.css": "/static/css/main.e37433ad.css",
+    "main.js": "/static/js/main.2a5d5552.js",
     "static/js/952.23f0ad21.chunk.js": "/static/js/952.23f0ad21.chunk.js",
     "static/js/453.0070a61d.chunk.js": "/static/js/453.0070a61d.chunk.js",
     "static/media/gaetano-cessati.jpg": "/static/media/gaetano-cessati.ce82d10ea49fa33336fe.jpg",
@@ -28,13 +28,13 @@
     "static/media/UBC_AGROBOTS.png": "/static/media/UBC_AGROBOTS.0f1c4f06e91da4789378.png",
     "static/media/solidworks.png": "/static/media/solidworks.c569fa7fc51dcdf39d2a.png",
     "index.html": "/index.html",
-    "main.9464ad77.css.map": "/static/css/main.9464ad77.css.map",
-    "main.ea87d9c4.js.map": "/static/js/main.ea87d9c4.js.map",
+    "main.e37433ad.css.map": "/static/css/main.e37433ad.css.map",
+    "main.2a5d5552.js.map": "/static/js/main.2a5d5552.js.map",
     "952.23f0ad21.chunk.js.map": "/static/js/952.23f0ad21.chunk.js.map",
     "453.0070a61d.chunk.js.map": "/static/js/453.0070a61d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9464ad77.css",
-    "static/js/main.ea87d9c4.js"
+    "static/css/main.e37433ad.css",
+    "static/js/main.2a5d5552.js"
   ]
 }
