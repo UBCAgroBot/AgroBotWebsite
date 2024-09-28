@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.e37433ad.css",
-    "main.js": "/static/js/main.2a5d5552.js",
+    "main.css": "/static/css/main.0a1e10d5.css",
+    "main.js": "/static/js/main.9b6ae0ae.js",
     "static/js/952.23f0ad21.chunk.js": "/static/js/952.23f0ad21.chunk.js",
     "static/js/453.0070a61d.chunk.js": "/static/js/453.0070a61d.chunk.js",
     "static/media/gaetano-cessati.jpg": "/static/media/gaetano-cessati.ce82d10ea49fa33336fe.jpg",
     "static/media/AgrobotSketch.glb": "/static/media/AgrobotSketch.2193b50ef43a4becf241.glb",
+    "static/media/AppliedAIBoundingBoxes.png": "/static/media/AppliedAIBoundingBoxes.5058497b44fc33f1cf06.png",
     "static/media/cameron-witney.jpg": "/static/media/cameron-witney.25d648edc5d568a6d7d0.jpg",
     "static/media/ryan-searle.jpg": "/static/media/ryan-searle.b350cffa4b09309fee28.jpg",
     "static/media/daniel-faziojpg.jpg": "/static/media/daniel-faziojpg.0ad4d549f8ffd6cf2d84.jpg",
@@ -28,13 +29,13 @@
     "static/media/UBC_AGROBOTS.png": "/static/media/UBC_AGROBOTS.0f1c4f06e91da4789378.png",
     "static/media/solidworks.png": "/static/media/solidworks.c569fa7fc51dcdf39d2a.png",
     "index.html": "/index.html",
-    "main.e37433ad.css.map": "/static/css/main.e37433ad.css.map",
-    "main.2a5d5552.js.map": "/static/js/main.2a5d5552.js.map",
+    "main.0a1e10d5.css.map": "/static/css/main.0a1e10d5.css.map",
+    "main.9b6ae0ae.js.map": "/static/js/main.9b6ae0ae.js.map",
     "952.23f0ad21.chunk.js.map": "/static/js/952.23f0ad21.chunk.js.map",
     "453.0070a61d.chunk.js.map": "/static/js/453.0070a61d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e37433ad.css",
-    "static/js/main.2a5d5552.js"
+    "static/css/main.0a1e10d5.css",
+    "static/js/main.9b6ae0ae.js"
   ]
 }
