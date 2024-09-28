@@ -123,7 +123,7 @@ const AgroponicsMain = () => {
             <p className="text-white text-center font-bold text-[18px] lg:text-[1.25rem] mt-5 mb-25">
               AgroPonics is a product of collaboration between three different sub-teams, each playing a pivotal role in its development and performance. They have their own website you can check out here:
             </p>
-            <a href="https://ubcagroponics.com/" target="_blank" className="rounded-3xl bg-white p-3 mt-3 font-bold justify-center text-black">
+            <a href="https://ubcagroponics.com/" target="_blank" className="rounded-3xl bg-white p-3 mt-3 font-bold justify-center text-black" rel="noreferrer">
               <span className="font-Roboto">Agroponics Website!</span>
             </a>
           </div>
