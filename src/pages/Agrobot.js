@@ -8,11 +8,7 @@ const Agrobot = () => {
   }, []);
 
   return (
-    <main
-      style={{
-        overflow: 'hidden',
-      }}
-    >
+    <main className="relative">
       <AgrobotMain />
       <AgrobotSubteams />
     </main >

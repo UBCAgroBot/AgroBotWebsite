@@ -89,7 +89,7 @@ const AgrobotMain = () => {
 
   return (
     <section
-      className="lg:h-[175vh] w-full bg-black flex flex-col gap-[2rem] justify-start pt-10 overflow-hidden"
+      className="lg:h-[175vh] w-full bg-black flex flex-col gap-[2rem] justify-start pt-10"
     >
       <div className="w-full h-[50vh] lg:h-[100vh] pt-8 opacity-1">
         {!isMobile ?
@@ -106,7 +106,6 @@ const AgrobotMain = () => {
           ></img>
         }
       </div>
-
       <div className="w-full lg:h-[75vh] flex flex-col lg:flex-row ">
         <div id={modelDestContainer} className="w-full h-full ">
 

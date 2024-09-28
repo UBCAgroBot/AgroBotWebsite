@@ -1,102 +1,37 @@
-import AppliedAi from "./subteams/AppliedAI";
-import Chassis from "./subteams/Chassis";
-import Electrical from "./subteams/Electrical";
-import Extermination from "./subteams/Extermination";
-import Navigation from "./subteams/Navigation";
-import FarmPath from "../../../assets/image/FarmPath.jpeg"
-import { AgrobotMoving } from "../../../assets";
-import { useState, useEffect } from "react";
-import gsap from "gsap";
-import { useMediaQuery } from "react-responsive";
-import { useGSAP } from "@gsap/react";
-import { MotionPathPlugin } from "gsap/all";
+import ProjectSubteam from "../ProjectSubteam.tsx";
 
-gsap.registerPlugin(MotionPathPlugin)
-
-function calculateViewportWidth() {
-  const width = 0.92 * window.innerWidth;
-  const xRatio = [0.7, 0.67, 0.3, 0.60, 0.23, 0.5, 0.48, 0.45, 0.35];
-  return xRatio.map(ratio => width * ratio);
-}
-
-function calculateViewportHeight() {
-  const height = 3.2 * window.innerHeight;
-  const yRatio = [0, 0.12, 0.28, 0.4, 0.5, 0.7, 0.82, 0.85, 0.96];
-  return yRatio.map(ratio => height * ratio);
-}
-
-const AgrobotSubteams = () => {
-
-  const [xPos, setXPos] = useState(calculateViewportWidth());
-  const [yPos, setYPos] = useState(calculateViewportHeight());
-  const isMobile = useMediaQuery({ query: '(max-width: 1200px)' });
-
-  const updatePathDimensions = () => {
-    setXPos(calculateViewportWidth());
-    setYPos(calculateViewportHeight());
-  };
-
-  useEffect(() => {
-    window.addEventListener('resize', updatePathDimensions);
-
-    return () => window.removeEventListener('resize', updatePathDimensions);
-  }, []);
-
-  useGSAP(() => {
-    let model = "#DAgrobot";
-
-    gsap.set(model, {
-      x: xPos[0],
-      y: yPos[0],
-      transformOrigin: "50% 50%",
-    });
-
-    const timeline = gsap.timeline({
-      scrollTrigger: {
-        scrub: 2,
-        trigger: model,
-        start: "top top",
-        end: () =>
-          "+=" + document.querySelector("#farm").getBoundingClientRect().height,
-        markers: false,
-      },
-    });
-
-    timeline.to(model, {
-      immediateRender: true,
-      motionPath: {
-        path: xPos.map((x, i) => ({ x, y: yPos[i] })),
-        align: "self",
-        autoRotate: 250,
-        alignOrigin: [0.5, 0.5],
-      },
-    });
-  }, [xPos, yPos]);
+function AgrobotSubteams() {
 
   return (
     <section
       id="farm"
-      className="bg-black z-[-20] flex flex-col overflow-hidden "
-      style={{
-        backgroundImage: `url(${FarmPath})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "calc(50% + 5%) center",
-        maxWidth: "100vw",
-        minWidth: "100vw",
-      }}
+      className="bg-[#cdff70] flex flex-col"
     >
-    <img
-          id="DAgrobot"
-          className="absolute h-[200px] w-[250px] z-[1]"
-          src={AgrobotMoving}
-          alt=""
-        />
-      <AppliedAi />
-      <Chassis />
-      <Electrical />
-      <Extermination />
-      <Navigation />
+      <ProjectSubteam
+        title = "Applied AI"
+        text="The Applied AI sub-team is dedicated to creating advanced machine learning models that address a variety of AgroBot's tasks. This includes detecting maize and weeds, segmenting grape clusters, and implementing machine vision in the Robot Operating System (ROS). By exploring the intersections between AI research and emerging Agri-Tech, the team continually pushes the boundaries of agricultural innovation. Their work ensures that AgroBot can efficiently and accurately perform its functions in diverse agricultural settings."
+        text_pos="left"
+      />
+      <ProjectSubteam
+        title = "Chassis/PowerTrain"
+        text="The Chassis/Powertrain sub-team is responsible for the comprehensive design and manufacturing of AgroBot’s chassis and powertrain. This entails overseeing AgroBot’s movement capabilities, aesthetic design, and the seamless integration of its internal components. The team meticulously selects appropriate motors and power transmission systems, conducts finite element analysis to ensure stress tolerance and safety, and develops detailed design solutions. Additionally, they are tasked with assembling components from all other sub-teams onto AgroBot’s main body, ensuring a cohesive and functional final product."
+        text_pos="right"
+      />
+      <ProjectSubteam
+        title="Electrical"
+        text="The Electrical Team is crucial to AgroBot’s success, focusing on the design, specification, assembly, and manufacturing of the robot’s power electronics. They develop detailed electrical schematics and layouts, select and procure high-quality components, and integrate technologies for efficient power management. The team ensures reliable operations through the precise assembly and integration of these power systems, complemented by rigorous testing under various conditions and advanced quality control measures to detect and resolve any issues. Their meticulous approach ensures that AgroBot’s electrical systems are robust, reliable, and support its autonomous operations effectively."
+        text_pos="left"
+      />
+      <ProjectSubteam
+        title="Extermination"
+        text="The Extermination sub-team tackles multidisciplinary design challenges to create precision extermination mechanisms. They focus on minimizing environmental impact while safeguarding crops from damage. The team designs sprayer nozzles and delivery systems, implements control algorithms based on real-time sensor data, and ensures compatibility with various herbicides. They also develop mechanical systems for effective weed removal and design autonomous systems for targeted extermination. Their efforts are crucial in enhancing AgroBot's weed management capabilities, improving crop yields, and reducing labor and chemical usage."
+        text_pos="right"
+      />
+      <ProjectSubteam
+        title="Navigation & Embedded Systems"
+        text="The Navigation & Embedded Systems sub-team is responsible for developing sophisticated systems that guide AgroBot through crop fields autonomously. By integrating a range of sensors such as depth cameras, LiDAR, GPS, and IMU, the team ensures that AgroBot can plan and execute precise paths, avoiding crop damage and optimizing field traversal. The team's innovative designs and implementations are crucial for achieving fully autonomous operation, making efficient and careful navigation through diverse agricultural environments possible."
+        text_pos="left"
+      />
     </section>
   )
 
