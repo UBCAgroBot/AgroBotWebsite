@@ -23,8 +23,8 @@ function Footer() {
                     <h1 className="text-[24px] text-[#78BE20] text-left font-bold ml-2">UBC<br/>AGROBOT</h1>
                 </div>
                 <div className="my-4 flex lg:mt-auto">
-                    <a target="_blank" href="https://www.instagram.com/ubcagrobot/"><FaInstagram className=" p-1 text-[#88BE22]" size={52} /></a>
-                    <a target="_blank" href="https://www.linkedin.com/company/ubc-agrobot/mycompany/"><FaLinkedin className=" p-1 text-[#88BE22]" size={52} /></a>
+                    <a target="_blank" href="https://www.instagram.com/ubcagrobot/" rel="noreferrer"><FaInstagram className=" p-1 text-[#88BE22]" size={52} /></a>
+                    <a target="_blank" href="https://www.linkedin.com/company/ubc-agrobot/mycompany/" rel="noreferrer"><FaLinkedin className=" p-1 text-[#88BE22]" size={52} /></a>
                     <a href="mailto:ubcagrobot@gmail.com"><FaEnvelope className="p-1 text-[#88BE22]" size={52} /></a>
                 </div>
             </div>

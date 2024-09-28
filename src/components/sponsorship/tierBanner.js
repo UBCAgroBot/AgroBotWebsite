@@ -21,7 +21,7 @@ function TierBanner({ tierElements, starImg, tierColor }) {
                     ))}
                 </ul>
             </div>
-            <a href="https://donate.support.ubc.ca/page/20924/donate/1?transaction.dirgift=AgroBot%20G2551" target="_blank" className="p-4 m-4 border-2 rounded-[14px] border-[#8cbc24] text-[#8cbc24] font-bold">Sponsor Us</a>
+            <a href="https://donate.support.ubc.ca/page/20924/donate/1?transaction.dirgift=AgroBot%20G2551" target="_blank" className="p-4 m-4 border-2 rounded-[14px] border-[#8cbc24] text-[#8cbc24] font-bold" rel="noreferrer">Sponsor Us</a>
         </div>
     );
 }

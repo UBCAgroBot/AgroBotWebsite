@@ -104,8 +104,8 @@ function MailForm() {
 					<h3 className="text-[#2E1B0F] font-semibold text-mobile-header lg:text-header">Or via social media</h3>
 					<div className="flex flex-row flex-wrap justify-around mx-auto my-12">
 						<a href="mailto:ubcagrobot@gmail.com"><div className="flex flex-col items-center justify-center font-bold mr-8"><div className="bg-[#2E1B0F] rounded-xl px-2 lg:p-0 mb-2 flex justify-center items-center w-12 lg:w-24 h-12 lg:h-24"><LuMail      size='64' color="#CDFF70" /></div></div></a>
-						<a href="https://instagram.com/ubcagrobot" target="_blank"><div className="flex flex-col items-center justify-center font-bold mr-8"><div className="bg-[#2E1B0F] rounded-xl p-2 mb-2 flex justify-center items-center w-12 lg:w-24 h-12 lg:h-24"><FaInstagram size='64' color="#CDFF70" /></div></div></a>
-						<a href="https://www.linkedin.com/company/ubc-agrobot/" target="_blank"><div className="flex flex-col items-center justify-center font-bold mr-8"><div className="bg-[#2E1B0F] rounded-xl p-2 mb-2 flex justify-center items-center w-12 lg:w-24 h-12 lg:h-24"><FaLinkedin  size='64' color="#CDFF70" /></div></div></a>
+						<a href="https://instagram.com/ubcagrobot" target="_blank" rel="noreferrer"><div className="flex flex-col items-center justify-center font-bold mr-8"><div className="bg-[#2E1B0F] rounded-xl p-2 mb-2 flex justify-center items-center w-12 lg:w-24 h-12 lg:h-24"><FaInstagram size='64' color="#CDFF70" /></div></div></a>
+						<a href="https://www.linkedin.com/company/ubc-agrobot/" target="_blank" rel="noreferrer"><div className="flex flex-col items-center justify-center font-bold mr-8"><div className="bg-[#2E1B0F] rounded-xl p-2 mb-2 flex justify-center items-center w-12 lg:w-24 h-12 lg:h-24"><FaLinkedin  size='64' color="#CDFF70" /></div></div></a>
 					</div>
 				</div>
 			</div>
