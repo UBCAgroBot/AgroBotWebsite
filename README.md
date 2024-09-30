@@ -2,8 +2,7 @@
 
 This is the Agrobot team website. The website was developed with React, Tailwind CSS, ThreeJS, and GSAP. 
 
-Website will be deployed here:
-https://ubcagrobot.github.io/AgroBotWebsite/
+Website will be deployed [here](https://ubcagrobot.github.io/AgroBotWebsite/)
 
 # Prerequisites
 - `NodeJS` 20+
