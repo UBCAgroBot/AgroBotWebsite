@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { AgroponicsMain, AgroponicSubteams } from "../components/projects";
+import React, { useEffect } from 'react'
+import { AgroponicsMain, AgroponicSubteams } from '../components/projects'
 
 const Agroponics = () => {
   useEffect(() => {
@@ -8,13 +8,13 @@ const Agroponics = () => {
   return (
     <main
       style={{
-        overflow: "hidden",
+        overflow: 'hidden',
       }}
     >
       <AgroponicsMain />
       <AgroponicSubteams />
     </main>
-  );
-};
+  )
+}
 
-export default Agroponics;
+export default Agroponics

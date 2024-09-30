@@ -42,7 +42,9 @@
     "deploy": "gh-pages -d build",
     "build": "CI=false react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "npx eslint .",
+    "pretty": "npx prettier --write ."
   },
   "eslintConfig": {
     "extends": [
@@ -66,9 +68,12 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@eslint/js": "^8.0.0",
     "eslint": "^8.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.37.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "globals": "^15.9.0",
+    "prettier": "^3.3.3",
     "tailwindcss": "^3.4.1"
   },
   "description": "To run locally: `npm run start`",

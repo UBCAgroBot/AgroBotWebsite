@@ -3,8 +3,7 @@ const ImageChild = () => {
     <div classname="w-full h-full">
       <img src="" alt="" />
     </div>
-
-  );
+  )
 }
 
-export default ImageChild;
+export default ImageChild
