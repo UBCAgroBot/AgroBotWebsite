@@ -3,6 +3,7 @@ import AppliedAIBoundingBoxes from "../../../assets/image/AppliedAIBoundingBoxes
 import ChassisModel from "../../../assets/image/ChassisModel.png"
 import ElectricalDiagram from "../../../assets/image/ElectricalDiagram.png"
 import NavigationTeamPhoto from "../../../assets/image/NavigationTeamPhoto.jpg"
+import ExterminationTeamPhoto from "../../../assets/image/ExterminationTeamPhoto.png"
 
 function AgrobotSubteams() {
 
@@ -36,7 +37,7 @@ function AgrobotSubteams() {
         title="Extermination"
         text="The Extermination sub-team tackles multidisciplinary design challenges to create precision extermination mechanisms. They focus on minimizing environmental impact while safeguarding crops from damage. The team designs sprayer nozzles and delivery systems, implements control algorithms based on real-time sensor data, and ensures compatibility with various herbicides. They also develop mechanical systems for effective weed removal and design autonomous systems for targeted extermination. Their efforts are crucial in enhancing AgroBot's weed management capabilities, improving crop yields, and reducing labor and chemical usage."
         text_pos="right"
-        // img = {} 
+        img = {ExterminationTeamPhoto} 
         fill = {true}
       />
       <ProjectSubteam

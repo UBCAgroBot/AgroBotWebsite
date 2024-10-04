@@ -95,7 +95,6 @@ function Timeline() {
 
     return (
         <>
-
             <p className="text-mobile-body lg:text-body font-medium pt-8">Applications are open until {monthNamesLong[end_day.getMonth()]} {AddIndicator(end_day.getDate())}!</p>
             {largeScreen ?
                 <>
