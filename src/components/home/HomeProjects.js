@@ -1,7 +1,6 @@
 import React from 'react'
 import { useSpring, animated } from 'react-spring'
 import { useState, useEffect, useRef } from 'react'
-import { FaChevronRight } from 'react-icons/fa'
 import {
   AgrobotModelView,
   AgroponicModelView,
@@ -70,7 +69,7 @@ const projects = [
   },
 ]
 
-function Project({ ProjectName, Text, background, ModelComponent, href }) {
+function Project({ ProjectName, Text, background, ModelComponent, MobileImg, href }) {
   const containerRef = useRef(null)
 
   function useFadeIn(containerRef) {
@@ -130,7 +129,7 @@ function Project({ ProjectName, Text, background, ModelComponent, href }) {
         </div>
       </animated.div>
       <div className="w-[47.5%] h-[50vh] bg-[#2e1b0f1f] relative top-[50vh] rounded-full">
-        {ModelComponent}
+        <img src={MobileImg} />
       </div>
     </div>
   )
