@@ -4,9 +4,16 @@ type ProjectSubteamArgs = {
   title: string
   text: string
   text_pos: 'left' | 'right'
-  img: Blob
+  img: string
+  fill: boolean
 }
-function ProjectSubteam({ title, text, text_pos, img }: ProjectSubteamArgs) {
+function ProjectSubteam({
+  title,
+  text,
+  text_pos,
+  img,
+  fill,
+}: ProjectSubteamArgs) {
   return (
     <div
       className={`w-full px-[10%] py-[124px] flex flex-col lg:flex-row items-start justify-between ${text_pos === 'right' ? 'flex-col lg:flex-row-reverse' : ''}`}
@@ -18,7 +25,14 @@ function ProjectSubteam({ title, text, text_pos, img }: ProjectSubteamArgs) {
         <p className="text-mobile-body">{text}</p>
       </div>
       <div className="w-full lg:w-[40%] h-[300px] bg-red-400 mt-[4em] relative">
-        <img src={img} className="absolute inset-0 w-full h-full object-fill" />
+        {fill ? (
+          <img src={img} className="absolute inset-0 w-full h-full object-" />
+        ) : (
+          <img
+            src={img}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        )}
       </div>
     </div>
   )
