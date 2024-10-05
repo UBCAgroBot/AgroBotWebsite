@@ -1,5 +1,9 @@
 import ProjectSubteam from '../ProjectSubteam.tsx'
 import AppliedAIBoundingBoxes from '../../../assets/image/AppliedAIBoundingBoxes.png'
+import ChassisModel from "../../../assets/image/ChassisModel.png"
+import ElectricalDiagram from "../../../assets/image/ElectricalDiagram.png"
+import NavigationTeamPhoto from "../../../assets/image/NavigationTeamPhoto.jpg"
+import ExterminationTeamPhoto from "../../../assets/image/ExterminationTeamPhoto.png"
 
 function AgrobotSubteams() {
   return (
