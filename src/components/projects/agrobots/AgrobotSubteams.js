@@ -1,26 +1,18 @@
-import ProjectSubteam from "../ProjectSubteam.tsx";
-import AppliedAIBoundingBoxes from "../../../assets/image/AppliedAIBoundingBoxes.png"
-import ChassisModel from "../../../assets/image/ChassisModel.png"
-import ElectricalDiagram from "../../../assets/image/ElectricalDiagram.png"
-import NavigationTeamPhoto from "../../../assets/image/NavigationTeamPhoto.jpg"
-import ExterminationTeamPhoto from "../../../assets/image/ExterminationTeamPhoto.png"
+import ProjectSubteam from '../ProjectSubteam.tsx'
+import AppliedAIBoundingBoxes from '../../../assets/image/AppliedAIBoundingBoxes.png'
 
 function AgrobotSubteams() {
-
   return (
-    <section
-      id="farm"
-      className="bg-[#cdff70] flex flex-col"
-    >
+    <section id="farm" className="bg-[#cdff70] flex flex-col">
       <ProjectSubteam
-        title = "Applied AI"
+        title="Applied AI"
         text="The Applied AI sub-team is dedicated to creating advanced machine learning models that address a variety of AgroBot's tasks. This includes detecting maize and weeds, segmenting grape clusters, and implementing machine vision in the Robot Operating System (ROS). By exploring the intersections between AI research and emerging Agri-Tech, the team continually pushes the boundaries of agricultural innovation. Their work ensures that AgroBot can efficiently and accurately perform its functions in diverse agricultural settings."
         text_pos="left"
         img = {AppliedAIBoundingBoxes}
         fill = {true}
       />
       <ProjectSubteam
-        title = "Chassis/PowerTrain"
+        title="Chassis/PowerTrain"
         text="The Chassis/Powertrain sub-team is responsible for the comprehensive design and manufacturing of AgroBot’s chassis and powertrain. This entails overseeing AgroBot’s movement capabilities, aesthetic design, and the seamless integration of its internal components. The team meticulously selects appropriate motors and power transmission systems, conducts finite element analysis to ensure stress tolerance and safety, and develops detailed design solutions. Additionally, they are tasked with assembling components from all other sub-teams onto AgroBot’s main body, ensuring a cohesive and functional final product."
         text_pos="right"
         img = {ChassisModel}
@@ -49,7 +41,6 @@ function AgrobotSubteams() {
       />
     </section>
   )
-
 }
 
-export default AgrobotSubteams;
+export default AgrobotSubteams

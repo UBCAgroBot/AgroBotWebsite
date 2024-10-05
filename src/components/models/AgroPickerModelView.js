@@ -1,22 +1,25 @@
-import { useState, useRef } from "react";
-import { Canvas } from "@react-three/fiber";
-import * as THREE from "three";
-import { Preload, View } from "@react-three/drei";
-import ModelViewer from "./utils/ModelView";
-import AgroPickerModel from "./meshAndMaterials/AgropickerModel"
+import { useState, useRef } from 'react'
+import { Canvas } from '@react-three/fiber'
+import * as THREE from 'three'
+import { Preload, View } from '@react-three/drei'
+import ModelViewer from './utils/ModelView'
+import AgroPickerModel from './meshAndMaterials/AgropickerModel'
 
-
-const AgroPickerModelView = ({ id, gsapType, scale, cameraPosition, groupPosition, vectorPosition }) => {
-  const cameraRef = useRef();
-  const modelRef = useRef(new THREE.Group());
-  const [rotation, setRotation] = useState(2.43);
+const AgroPickerModelView = ({
+  id,
+  gsapType,
+  scale,
+  cameraPosition,
+  groupPosition,
+  vectorPosition,
+}) => {
+  const cameraRef = useRef()
+  const modelRef = useRef(new THREE.Group())
+  const [rotation, setRotation] = useState(2.43)
 
   return (
-    <div
-      id={id}
-      className="h-full w-full"
-    >
-      < ModelViewer
+    <div id={id} className="h-full w-full">
+      <ModelViewer
         groupRef={modelRef}
         gsapType={gsapType}
         cameraRef={cameraRef}
@@ -30,20 +33,20 @@ const AgroPickerModelView = ({ id, gsapType, scale, cameraPosition, groupPositio
         frameloop="always"
         className="w-full h-full"
         style={{
-          position: "fixed",
+          position: 'fixed',
           top: 0,
           bottom: 0,
           left: 0,
           right: 0,
-          overflow: "hidden",
+          overflow: 'hidden',
         }}
-        eventSource={document.getElementById("root")}
+        eventSource={document.getElementById('root')}
       >
         <View.Port />
         <Preload all />
       </Canvas>
-    </div >
+    </div>
   )
 }
 
-export default AgroPickerModelView;
+export default AgroPickerModelView

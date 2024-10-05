@@ -21,7 +21,7 @@ import {
   HomeFarm,
   LOGO,
   BP1Team,
-} from "./image";
+} from './image'
 
 export {
   AgroponicModel2D,
@@ -46,5 +46,4 @@ export {
   HomeFarm,
   LOGO,
   BP1Team,
-};
-
+}

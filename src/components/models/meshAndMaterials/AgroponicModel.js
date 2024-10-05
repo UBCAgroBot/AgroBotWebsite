@@ -1,27 +1,27 @@
-import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
-import path from "../../../assets/models/AgroponicsSketch.glb";
-import { useFrame } from "@react-three/fiber";
+import React, { useRef } from 'react'
+import { useGLTF } from '@react-three/drei'
+import path from '../../../assets/models/AgroponicsSketch.glb'
+import { useFrame } from '@react-three/fiber'
 
 const AgroponicModel = (props) => {
-  const { nodes, materials } = useGLTF(path);
-  const ref = useRef();
+  const { nodes, materials } = useGLTF(path)
+  const ref = useRef()
 
   useFrame(() => {
-    ref.current.rotation.y += 0.0005;
-    ref.current.rotation.x += 0.00;
+    ref.current.rotation.y += 0.0005
+    ref.current.rotation.x += 0.0
   })
 
   return (
-    <group {...props} dispose={null} ref={ref} >
+    <group {...props} dispose={null} ref={ref}>
       <mesh
-        geometry={nodes["Dirt-1_-_Part"].geometry}
-        material={materials["leather 2d"]}
+        geometry={nodes['Dirt-1_-_Part'].geometry}
+        material={materials['leather 2d']}
         position={[0, 0.127, 0]}
       />
       <mesh
-        geometry={nodes["Pipe-1_-_Part"].geometry}
-        material={materials["pw-mt11000"]}
+        geometry={nodes['Pipe-1_-_Part'].geometry}
+        material={materials['pw-mt11000']}
         position={[0, 0.127, 0]}
       />
       <instancedMesh
@@ -93,7 +93,7 @@ const AgroponicModel = (props) => {
         instanceMatrix={nodes.Mesh_2.instanceMatrix}
       />
       <instancedMesh
-        args={[nodes.Mesh_3.geometry, materials["leather 2d-2"], 5]}
+        args={[nodes.Mesh_3.geometry, materials['leather 2d-2'], 5]}
         instanceMatrix={nodes.Mesh_3.instanceMatrix}
       />
       <instancedMesh
@@ -108,10 +108,10 @@ const AgroponicModel = (props) => {
         args={[nodes.Mesh_110.geometry, materials.PaletteMaterial003, 60]}
         instanceMatrix={nodes.Mesh_110.instanceMatrix}
       />
-    </group >
-  );
+    </group>
+  )
 }
 
-useGLTF.preload(path);
+useGLTF.preload(path)
 
-export default AgroponicModel;
+export default AgroponicModel

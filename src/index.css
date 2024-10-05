@@ -3,50 +3,49 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
 @layer components {
-	.animate-slide {
-		animation: 15s slide linear infinite;
-		;
-	}
+  .animate-slide {
+    animation: 15s slide linear infinite;
+  }
 }
 
 * {
-	padding: 0;
-	margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-	line-height: 1.15;
-	font-family: "Inter", sans-serif;
-	background-color: #cdff70;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  line-height: 1.15;
+  font-family: 'Inter', sans-serif;
+  background-color: #cdff70;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /*
  * This is copied from Atheeb's landingpage/index.css
  *
  */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
-	.animate-slide {
-		animation: 15s slide linear infinite;
-	}
+  .animate-slide {
+    animation: 15s slide linear infinite;
+  }
 
-	@keyframes slide {
-		from {
-			transform: translateX(0);
-		}
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
 
-		to {
-			transform: translateX(-100%);
-		}
-	}
+    to {
+      transform: translateX(-100%);
+    }
+  }
 }

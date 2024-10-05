@@ -1,9 +1,5 @@
-import HomeBanner from "./HomeBanner";
-import OurMission from './OurMission';
-import HomeProjects from "./HomeProjects";
+import HomeBanner from './HomeBanner'
+import OurMission from './OurMission'
+import HomeProjects from './HomeProjects'
 
-export {
-    HomeBanner,
-    OurMission,
-    HomeProjects,
-}
+export { HomeBanner, OurMission, HomeProjects }

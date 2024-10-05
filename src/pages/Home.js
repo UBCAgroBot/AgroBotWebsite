@@ -1,19 +1,19 @@
-import { HomeBanner, OurMission, HomeProjects } from '../components';
-import React, { useEffect } from "react"
+import { HomeBanner, OurMission, HomeProjects } from '../components'
+import React, { useEffect } from 'react'
 
 function Home() {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
-    return (
-        <>
-            <HomeBanner></HomeBanner>
+  return (
+    <>
+      <HomeBanner></HomeBanner>
 
-            <OurMission></OurMission>
-            
-            <HomeProjects></HomeProjects>
-        </>
-    );
-};
+      <OurMission></OurMission>
 
-export default Home;
+      <HomeProjects></HomeProjects>
+    </>
+  )
+}
+
+export default Home
