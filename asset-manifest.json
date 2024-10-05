@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0a1e10d5.css",
-    "main.js": "/static/js/main.1a4275b2.js",
+    "main.css": "/static/css/main.770c2751.css",
+    "main.js": "/static/js/main.a67515dc.js",
     "static/js/952.23f0ad21.chunk.js": "/static/js/952.23f0ad21.chunk.js",
     "static/js/453.0070a61d.chunk.js": "/static/js/453.0070a61d.chunk.js",
     "static/media/gaetano-cessati.jpg": "/static/media/gaetano-cessati.ce82d10ea49fa33336fe.jpg",
@@ -9,13 +9,17 @@
     "static/media/AppliedAIBoundingBoxes.png": "/static/media/AppliedAIBoundingBoxes.5058497b44fc33f1cf06.png",
     "static/media/cameron-witney.jpg": "/static/media/cameron-witney.25d648edc5d568a6d7d0.jpg",
     "static/media/ryan-searle.jpg": "/static/media/ryan-searle.b350cffa4b09309fee28.jpg",
+    "static/media/NavigationTeamPhoto.jpg": "/static/media/NavigationTeamPhoto.74fbb04f735c19dec5f6.jpg",
     "static/media/daniel-faziojpg.jpg": "/static/media/daniel-faziojpg.0ad4d549f8ffd6cf2d84.jpg",
+    "static/media/ChassisModel.png": "/static/media/ChassisModel.7d1e9bc5f842b1ac63c4.png",
     "static/media/homeFarm.png": "/static/media/homeFarm.41c19da3bf248434568b.png",
     "static/media/AgroponicsSketch.glb": "/static/media/AgroponicsSketch.4ce746208fe91842608b.glb",
     "static/media/FarmPath.jpeg": "/static/media/FarmPath.a595d3a1c975246bb58c.jpeg",
     "static/media/AgroponicsRiver.jpeg": "/static/media/AgroponicsRiver.79d29b33721c01af9da8.jpeg",
     "static/media/agroarm-transformed.glb": "/static/media/agroarm-transformed.a2e4d924010c5e4ecbd7.glb",
     "static/media/BP1Team.webp": "/static/media/BP1Team.ae671013d2aaa8910744.webp",
+    "static/media/ElectricalDiagram.png": "/static/media/ElectricalDiagram.315e48b32da5391660e3.png",
+    "static/media/ExterminationTeamPhoto.png": "/static/media/ExterminationTeamPhoto.834495053476b0862c81.png",
     "static/media/Agrobot-Moving.png": "/static/media/Agrobot-Moving.df86b4f572250b0ff2ef.png",
     "static/media/AgrobotModel2D.jpg": "/static/media/AgrobotModel2D.c76ddef50fdd66121c00.jpg",
     "static/media/AgroponicModel2D.png": "/static/media/AgroponicModel2D.d322da944502b9c95ae3.png",
@@ -29,13 +33,13 @@
     "static/media/UBC_AGROBOTS.png": "/static/media/UBC_AGROBOTS.0f1c4f06e91da4789378.png",
     "static/media/solidworks.png": "/static/media/solidworks.c569fa7fc51dcdf39d2a.png",
     "index.html": "/index.html",
-    "main.0a1e10d5.css.map": "/static/css/main.0a1e10d5.css.map",
-    "main.1a4275b2.js.map": "/static/js/main.1a4275b2.js.map",
+    "main.770c2751.css.map": "/static/css/main.770c2751.css.map",
+    "main.a67515dc.js.map": "/static/js/main.a67515dc.js.map",
     "952.23f0ad21.chunk.js.map": "/static/js/952.23f0ad21.chunk.js.map",
     "453.0070a61d.chunk.js.map": "/static/js/453.0070a61d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a1e10d5.css",
-    "static/js/main.1a4275b2.js"
+    "static/css/main.770c2751.css",
+    "static/js/main.a67515dc.js"
   ]
 }
