@@ -12,32 +12,27 @@ function MailForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    if (!firstName || !lastName || !email || !message) {
+      alert("Please fill out missing info")
+      return;
+    }
 
     try {
-
-      const response = await fetch("https://twilight-wildflower-fcec.ubcagrobot.workers.dev/", {
+      await fetch("https://twilight-wildflower-fcec.ubcagrobot.workers.dev/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: {
+        body: JSON.stringify({
           "firstName": firstName,
           "lastName": lastName,
           "phoneNumber": phone,
           "email": email,
           "body": message
-        }
+        })
       })
 
-      if (!response.ok) {
-        throw Error()
-      } else {
-        setFirstName('')
-        setLastName('')
-        setPhone('')
-        setMessage('')
-      }
     } catch (error) {
-      alert('Error sending message 🙀, sending an email is a good alternative')
     }
+    window.location.reload();
   }
 
   return (
