@@ -1,16 +1,7 @@
 import React, { useState } from 'react'
-import { createClient } from '@supabase/supabase-js'
 import { IoSend } from 'react-icons/io5'
 import { FaLinkedin, FaInstagram } from 'react-icons/fa'
 import { LuMail } from 'react-icons/lu'
-
-const supabaseUrl = 'https://rpsuamzzbfswevkexntj.supabase.co'
-const supabaseKey = process.env.REACT_APP_SUPABASE_KEY
-const supabase = supabaseKey ? createClient(supabaseUrl, supabaseKey) : null
-if (!supabaseKey)
-  console.warn(
-    'WARNING: No supabase key found. Requests will not be sent to backend'
-  )
 
 function MailForm() {
   const [firstName, setFirstName] = useState('')
@@ -23,17 +14,20 @@ function MailForm() {
     e.preventDefault()
 
     try {
-      if (!supabase) {
-        throw Error()
-      }
 
-      const { data, error } = await supabase
-        .from('messages')
-        .insert([{ firstName, lastName, email, phone, message }])
-        .select()
+      const response = await fetch("https://twilight-wildflower-fcec.ubcagrobot.workers.dev/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: {
+          "firstName": firstName,
+          "lastName": lastName,
+          "phoneNumber": phone,
+          "email": email,
+          "body": message
+        }
+      })
 
-      if (error) {
-        console.error('Error: ', error)
+      if (!response.ok) {
         throw Error()
       } else {
         setFirstName('')
