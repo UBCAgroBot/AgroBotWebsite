@@ -7,14 +7,14 @@ Website will be deployed [here](https://ubcagrobot.github.io/AgroBotWebsite/)
 # Prerequisites
 
 - `NodeJS` 20+
-- `npm` or `pnpm`
+- `pnpm`
 
 # Installation
 
 To setup the project make sure that you have `npm` installed. To get started, you can do the following commands to run the website after cloning it
 
-1. `npm install` to install dependencies
-2. `npm run start` to deploy website on local machine
+1. `pnpm install` to install dependencies
+2. `pnpm run start` to deploy website on local machine
 
 After this the website should be deployed on `http://localhost:3000` where you can view the website
 
@@ -22,9 +22,9 @@ After this the website should be deployed on `http://localhost:3000` where you c
 
 Once the environment is setup you can use some of the following tools to make working on the project easier
 
-1. `npm run build` to compile to website
-2. `npm run lint` to lint the project
-3. `npm run pretty` to use prettier to format the website
+1. `pnpm run build` to compile to website
+2. `pnpm run lint` to lint the project
+3. `pnpm run pretty` to use prettier to format the website
 
 # Contributing
 
