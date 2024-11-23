@@ -1,7 +1,7 @@
 import ProjectSubteam from '../ProjectSubteam.tsx'
-import AgroponicsAutomation from "../../../assets/image/AgroponicsAutomation.png"
-import AgroponicsPlants from "../../../assets/image/AgroponicsPlants.jpeg"
-import AgroponicsStorage from "../../../assets/image/AgroponicsStorage.jpeg"
+import AgroponicsAutomation from '../../../assets/image/AgroponicsAutomation.png'
+import AgroponicsPlants from '../../../assets/image/AgroponicsPlants.jpeg'
+import AgroponicsStorage from '../../../assets/image/AgroponicsStorage.jpeg'
 
 const AgroponicSubteams = () => {
   return (

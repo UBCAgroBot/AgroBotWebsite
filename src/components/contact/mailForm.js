@@ -13,26 +13,24 @@ function MailForm() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (!firstName || !lastName || !email || !message) {
-      alert("Please fill out missing info")
-      return;
+      alert('Please fill out missing info')
+      return
     }
 
     try {
-      await fetch("https://twilight-wildflower-fcec.ubcagrobot.workers.dev/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      await fetch('https://twilight-wildflower-fcec.ubcagrobot.workers.dev/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          "firstName": firstName,
-          "lastName": lastName,
-          "phoneNumber": phone,
-          "email": email,
-          "body": message
-        })
+          firstName: firstName,
+          lastName: lastName,
+          phoneNumber: phone,
+          email: email,
+          body: message,
+        }),
       })
-
-    } catch (error) {
-    }
-    window.location.reload();
+    } catch (error) {}
+    window.location.reload()
   }
 
   return (

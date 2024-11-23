@@ -69,7 +69,14 @@ const projects = [
   },
 ]
 
-function Project({ ProjectName, Text, background, ModelComponent, MobileImg, href }) {
+function Project({
+  ProjectName,
+  Text,
+  background,
+  ModelComponent,
+  MobileImg,
+  href,
+}) {
   const containerRef = useRef(null)
 
   function useFadeIn(containerRef) {
