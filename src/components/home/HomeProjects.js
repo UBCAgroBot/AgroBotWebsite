@@ -66,6 +66,7 @@ const projects = [
     ModelComponent: AgropickerMod,
     MobileImg: AgroArm2DModel,
     background: { background: '#cdff70' },
+    href: '/#',
   },
 ]
 
