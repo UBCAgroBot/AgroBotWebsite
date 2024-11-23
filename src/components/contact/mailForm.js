@@ -29,8 +29,10 @@ function MailForm() {
           body: message,
         }),
       })
-    } catch (error) {}
-    window.location.reload()
+    } catch (error) {
+      console.log(error)
+    }
+    alert('Message sent!')
   }
 
   return (
