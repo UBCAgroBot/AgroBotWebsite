@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 function Card({ name, title, quote, image }) {
   return (
-    <li className="bg-glass p-5 rounded-[42px] min-w-128">
+    <li className="bg-glass p-5 rounded-[42px] min-w-128 list-none">
       <figcaption className="flex">
         <div className="ml-4">
           <div className="text-[19px] lg:text-[31px] text-[#2E1B0F] font-bold">{name}</div>
@@ -39,7 +39,7 @@ function Testimonials() {
         Testimonials
       </h1>
 
-      <div className="p-4 bg-[#CDFF70] text-[#2E1B0F] relative mt-24">
+      <div className="p-4 bg-[#CDFF70] text-[#2E1B0F] relative mt-5">
         <div className="overflow-x-auto whitespace-nowrap scrollbar-hide text-wrap">
           <div className="flex space-x-4 px-4">
             {row_one.map((testimonial, index) => (

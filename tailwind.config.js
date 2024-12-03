@@ -33,7 +33,7 @@ module.exports = {
         'figma-shadow': 'drop-shadow(0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.5))',
       },
       minWidth: {
-        '128': '30rem',
+        '128': '31rem',
       }
     },
   },
