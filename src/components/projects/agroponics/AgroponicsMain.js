@@ -90,7 +90,7 @@ const AgroponicsMain = () => {
 
   return (
     <section className="lg:h-[190vh] w-full bg-black flex flex-col gap-[2rem] justify-start pt-10">
-      <div className="w-full h-[60vh] lg:h-[100vh] pt-8 opacity-1">
+      <div className="w-full h-[40vh] lg:h-[100vh] pt-8 opacity-1">
         {!isMobile ? (
           <AgroponicModelView
             id={modelContainer}
@@ -101,7 +101,7 @@ const AgroponicsMain = () => {
             vectorPosition={[0, 0, 0]}
           />
         ) : (
-          <img src={AgroponicModel2D}></img>
+          <img src={AgroponicModel2D} className="mt-10 mb-[-200px]"></img>
         )}
       </div>
       <div className="w-full h-[60vh] lg:h-[75vh] flex flex-col lg:flex-row ">
@@ -111,15 +111,13 @@ const AgroponicsMain = () => {
             <h2 className="text-white text-center text-[42px] lg:text-[7rem] font-bold mb-2">
               AgroPonics
             </h2>
-            <p className="text-white text-center text-[18px] lg:text-[1.25rem]">
+            <p className="text-white text-center text-[18px] lg:text-[1.25rem] mb-20">
               The Agroponics team designs autonomous hydroponic systems through
               multidisciplinary collaboration. It integrates IoT for automation,
               structural design for optimized environments, and experimental
               research on growth of staple foods. The aim is to enhance
               agricultural efficiency by reducing resource use and improving
-              crop production in a controlled, sustainable setting. If you would
-              like to see some of what we have been working on, see our blog
-              website here!
+              crop production in a controlled, sustainable setting.
             </p>
             <div className="flex justify-center mt-2"></div>
             {/* TODO: Place the featured image here */}

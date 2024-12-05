@@ -66,7 +66,7 @@ const projects = [
     ModelComponent: AgropickerMod,
     MobileImg: AgroArm2DModel,
     background: { background: '#cdff70' },
-    href: '/#',
+    href: '#',
   },
 ]
 
@@ -119,7 +119,7 @@ function Project({
     >
       <animated.div
         style={useFadeIn(containerRef)}
-        className="w-[47.5%] sticky top-[20vh]"
+        className="w-[47.5%] sticky top-[20vh] "
       >
         <div className="w-full h-full rounded-[46px] p-8">
           <h2 className="text-mobile-header lg:text-header font-bold mb-4">
@@ -136,7 +136,7 @@ function Project({
           </div>
         </div>
       </animated.div>
-      <div className="w-[47.5%] h-[50vh] bg-[#2e1b0f1f] relative top-[50vh] rounded-full">
+      <div className="w-[47.5%] h-[50vh] bg-[#2e1b0f1f] relative top-[50vh] rounded-full items-center align-middle flex">
         <img src={MobileImg} />
       </div>
     </div>
