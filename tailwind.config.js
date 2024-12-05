@@ -34,6 +34,9 @@ module.exports = {
       },
       minWidth: {
         '128': '31rem',
+      },
+      minHeight: {
+        '128': '62rem',
       }
     },
   },

@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 
 function Card({ name, title, quote, image }) {
   return (
-    <li className="bg-glass p-5 rounded-[42px] min-w-128 list-none">
+    <li className="bg-glass p-5 rounded-[42px] min-w-72 md:min-w-128 list-none">
       <figcaption className="flex">
         <div className="ml-4">
-          <div className="text-[19px] lg:text-[31px] text-[#2E1B0F] font-bold">{name}</div>
-          <div className="text-[11px] lg:text-[19px] text-[#2e1b0fb4] font-bold">{title}</div>
+          <div className="text-[21px] lg:text-[31px] text-[#2E1B0F] font-bold">{name}</div>
+          <div className="text-[13px] lg:text-[19px] text-[#2e1b0fb4] font-bold">{title}</div>
         </div>
       </figcaption>
-      <p className="p-4 text-[11px] lg:text-[19px]">
+      <p className="p-4 text-[13px] lg:text-[19px]">
         {quote}
       </p>
     </li>
