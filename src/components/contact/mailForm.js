@@ -51,7 +51,7 @@ function MailForm() {
                 <label>First name</label>
                 <input
                   type="text"
-                  placeholder="first"
+                  placeholder="First"
                   className="my-2 text-[32px] w-full bg-[#CDFF70] rounded-[24px] border-[4px] border-[#2E1B0F]"
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
@@ -61,7 +61,7 @@ function MailForm() {
                 <label>Last name</label>
                 <input
                   type="text"
-                  placeholder="last"
+                  placeholder="Last"
                   className="my-2 text-[32px] w-full bg-[#CDFF70] rounded-[24px] border-[4px] border-[#2E1B0F]"
                   onChange={(e) => setLastName(e.target.value)}
                 />
@@ -78,7 +78,7 @@ function MailForm() {
             <label>Phone</label>
             <input
               type="tel"
-              placeholder="Phone number"
+              placeholder="Phone Number"
               className="my-2 text-[32px] bg-[#CDFF70] rounded-[24px] border-[4px] border-[#2E1B0F]"
               onChange={(e) => setPhone(e.target.value)}
             />
@@ -94,7 +94,7 @@ function MailForm() {
               type="submit"
             >
               <p className="font-bold">
-                Send message <IoSend className="inline pb-[2px]" />
+                Send Message <IoSend className="inline pb-[2px]" />
               </p>
             </button>
           </form>

@@ -12,7 +12,7 @@ function ContactUs() {
         <div className="w-full lg:w-[60%]">
           <MailForm />
         </div>
-        <div className="hidden lg:block w-[40%]">
+        <div className="hidden lg:block w-[40%] mr-5">
           <Map />
         </div>
       </div>
