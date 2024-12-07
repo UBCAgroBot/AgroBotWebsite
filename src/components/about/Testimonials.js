@@ -2,24 +2,24 @@ import React, { useState } from 'react'
 
 function Card({ name, title, quote, image }) {
   return (
-    <li className="bg-glass p-5 rounded-[42px] drop-shadow-2xl shadow-lg">
+    <li className="bg-glass p-5 rounded-[42px] min-w-72 md:min-w-128 list-none">
       <figcaption className="flex">
         <div className="ml-4">
-          <div className="text-[24px] lg:text-[36px] text-[#2E1B0F] font-bold">
+          <div className="text-[21px] lg:text-[31px] text-[#2E1B0F] font-bold">
             {name}
           </div>
-          <div className="text-[16px] lg:text-[24px] text-[#2e1b0fb4] font-bold">
+          <div className="text-[13px] lg:text-[19px] text-[#2e1b0fb4] font-bold">
             {title}
           </div>
         </div>
       </figcaption>
-      <p className="p-4 text-[16px] lg:text-[24px]">{quote}</p>
+      <p className="p-4 text-[13px] lg:text-[19px]">{quote}</p>
     </li>
   )
 }
 
 function Testimonials() {
-  const [showMore, setShowMore] = useState(false)
+  // const [showMore, setShowMore] = useState(false)
 
   const row_one = [
     {
@@ -41,9 +41,6 @@ function Testimonials() {
       quote:
         ' For me, a memorable moment at Agrobot came from assembling our first chain/sprocket power transmission system. Other than my bicycle, it was the first time I handled components and systems like these outside of coursework. Though nerve-wracking at first, it was fulfilling to assemble the system and have everything fit into place perfectly, and seeing all the components spin for the first time live was a feeling like no idea.',
     },
-  ]
-
-  const row_two = [
     {
       name: 'Cihan Alperen Bosnali',
       title: 'Navigation Team Lead',
@@ -56,9 +53,6 @@ function Testimonials() {
       quote:
         'Currently, we are designing a fully modular agricultural robot extermination mechanism, aiming for 3D printing feasibility. This system leverages AI to detect harmful weeds, significantly reducing herbicide usage and minimizing toxic emissions. A fun fact about me is I grow 20 different varieties of vegetables and fruits in my backyard, and I love turning them into delicious homemade jams!',
     },
-  ]
-
-  const row_three = [
     {
       name: 'Husan Aulakh',
       title: 'Applied AI Lead',
@@ -78,52 +72,21 @@ function Testimonials() {
       <h1 className=" text-[48px] font-bold text-center mt-8 mb-4">
         Testimonials
       </h1>
-      <div
-        className={`grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 overflow-hidden ${showMore ? '' : 'max-h-[33rem]'} ${showMore ? 'pb-[72px]' : ''}`}
-      >
-        <ul className="space-y-4 my-8">
-          {row_one.map((testimonial, index) => (
-            <Card
-              key={index}
-              name={testimonial.name}
-              title={testimonial.title}
-              quote={testimonial.quote}
-              image={testimonial.image}
-            />
-          ))}
-        </ul>
-        <ul className="space-y-4 my-8 hidden sm:block">
-          {row_two.map((testimonial, index) => (
-            <Card
-              key={index}
-              name={testimonial.name}
-              title={testimonial.title}
-              quote={testimonial.quote}
-              image={testimonial.image}
-            />
-          ))}
-        </ul>
-        <ul className="space-y-4 my-8 hidden lg:block">
-          {row_three.map((testimonial, index) => (
-            <Card
-              key={index}
-              name={testimonial.name}
-              title={testimonial.title}
-              quote={testimonial.quote}
-              image={testimonial.image}
-            />
-          ))}
-        </ul>
+
+      <div className="p-4 bg-[#CDFF70] text-[#2E1B0F] relative mt-5">
+        <div className="overflow-x-auto whitespace-nowrap scrollbar-hide text-wrap">
+          <div className="flex space-x-4 px-4">
+            {row_one.map((testimonial, index) => (
+              <Card
+                name={testimonial.name}
+                title={testimonial.title}
+                quote={testimonial.quote}
+                // image={testimonial.image}
+              />
+            ))}
+          </div>
+        </div>
       </div>
-      {showMore ? null : (
-        <div className="bg-gradient-to-b from-[#CDFF7000] to-[#CDFF70] absolute left-0 bottom-0 w-full h-[22rem]" />
-      )}
-      <button
-        onClick={() => setShowMore(!showMore)}
-        className="text-mobile-body lg:text-body bg-glass shadow-lg font-bold px-4 p-2 lg:p-4 lg:px-7 rounded-full absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        {showMore ? 'Show Less' : 'Show More'}
-      </button>
     </div>
   )
 }
