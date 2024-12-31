@@ -22,10 +22,10 @@ function Timeline() {
   }, [])
 
   const today = new Date()
-  const curr_year = today.getFullYear()
-  const start_day = new Date(curr_year, 7, 20)
-  const end_day = new Date(curr_year, 8, 21)
+  const start_day = new Date(2025, 0, 5)
+  const end_day = new Date(2025, 0, 22)
 
+  console.log(start_day);
   if (today > end_day || today < start_day) {
     return (
       <p className="text-[32px] font-medium pt-8">
@@ -218,7 +218,7 @@ function Timeline() {
           <FaExternalLinkAlt className="inline ml-2 mb-2" />
         </a>
         <a
-          href="https://forms.gle/1xvmDm1rFjiyZ1GU9"
+          href="https://forms.gle/AZ1zmjXTX1YiZdxh8"
           target="_blank"
           className="bg-black p-4 lg:px-8 my-2 lg:my-0 text-center rounded-[23px] lg:rounded-[46px] text-[28px] lg:text-body"
         >
