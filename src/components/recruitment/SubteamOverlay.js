@@ -163,34 +163,28 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
         title: 'Navigation & Embedded Systems',
         metadata: ['Team Lead: Arman Drismir', 'Size: ~10 people'],
         description:
-          'The Navigation & Embedded Systems sub-team designs cutting-edge autonomous systems, integrating sensors like LiDAR, GPS, and IMU, to guide AgroBot safely through crop fields.',
+          'This term Navigation needs to make Agrobot self drive. To do this we are developing reactive navigation and SLAM algorithms as well as reinforcement learning models. We are also using Gazebo and Issac sim to measure our algorithms performance.',
         responsibilities: [
-          'Designing software and algorithms for navigation systems',
-          'Researching new techniques to solve localization, mapping, and path planning challenges',
-          'Contributing to the physical build and testing of the Agrobot’s control systems',
+          'Research and test a broad range of autonomous algorithms to find out what works well for Agrobot',
         ],
-        technologies: ['C++, Git, GitHub, Depth Camera, LiDAR, GPS'],
+        technologies: ['Python, ROS, Gazebo, Issac sim, Algorithm design, Reinforcement learning'],
         what_you_will_learn: [
           {
-            bold: 'Software & Algorithms: ',
-            text: 'Design and implement software and algorithms for autonomous navigation systems',
+            bold: 'Reactive navigation: ',
+            text: 'Deploy algorithms that can navigate a robot without any explicit knowledge of positioning',
           },
           {
-            bold: 'Research Techniques: ',
-            text: 'Explore and apply new techniques for localization, mapping, and path planning',
+            bold: 'SLAM: ',
+            text: 'Deploy navigation algorithms that build a map of Agrobot\'s surroundings and localize Agrobot within that map',
           },
           {
-            bold: 'System Integration: ',
-            text: 'Contribute to the physical build and testing of AgroBot’s control systems',
+            bold: 'Robot sims',
+            text: 'Learn how to debug and test navigation algorithms inside a simulator'
           },
           {
-            bold: 'Sensor Integration: ',
-            text: 'Utilize sensors like depth cameras, LiDAR, and GPS for precise navigation',
-          },
-          {
-            bold: 'Technology Proficiency: ',
-            text: 'Gain proficiency in tools such as C++, Git, and GitHub for development and version control.',
-          },
+            bold: 'Reinforcement Learning',
+            text: 'Deploy RL models that navigate Agrobot and compare them to SLAM and reactive techniques'
+          }
         ],
       }
       break
