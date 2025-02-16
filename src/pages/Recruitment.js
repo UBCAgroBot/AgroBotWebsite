@@ -12,7 +12,7 @@ function SubteamBox({
   setOverlayId,
 }) {
   return (
-    <div className="w-[300px] mb-4 lg:w-[312px] bg-[#2E1B0F] rounded-[46px] flex flex-col items-center py-[10px] text-white">
+    <div className="w-[300px] mb-4 lg:w-[312px] bg-[#2E1B0F] rounded-[46px] flex flex-col items-center py-[10px] text-white h-full">
       <div
         className="w-[286px] h-[250px] rounded-[46px] flex justify-center items-center"
         style={{ background: bg }}
@@ -20,7 +20,7 @@ function SubteamBox({
         <p className="text-[128px]">{emoji}</p>
       </div>
       <h1 className="text-[32px] w-full px-6 font-medium pt-4">{title}</h1>
-      <p className="text-[16px] w-full px-6 pt-4">{description}</p>
+      <p className="text-[16px] w-full px-6 pt-4 flex-grow">{description}</p>
       <button
         onClick={() => setOverlayId(overlayId)}
         className="text-[20px] mt-8 my-4 p-2 px-6 font-semibold rounded-full bg-glass text-[#2E1B0F]"
@@ -212,7 +212,7 @@ function Recruitment() {
             </h2>
             <div className="flex flex-col lg:flex-row flex-wrap">
               {team.subteams.map((subteam, index) => (
-                <div key={index} className="mx-[10px]">
+                <div key={index} className="mt-[30px] mx-[10px]">
                   <SubteamBox
                     setOverlayId={setOverlayId}
                     overlayId={subteam.overlayId}
