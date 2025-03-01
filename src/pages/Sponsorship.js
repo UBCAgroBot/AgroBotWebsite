@@ -12,7 +12,7 @@ function SponsorTier({ title, emoji, price, bullets }) {
       <div className="w-[286px] h-[128px] lg:h-[250px] bg-[#1F5200] rounded-[46px] flex justify-center items-center">
         <p className="text-[64px] lg:text-[128px]">{emoji}</p>
       </div>
-      <h3 className="font-medium text-[32px] text-[#78BE20] py-4">{price}</h3>
+      {/* <h3 className="font-medium text-[32px] text-[#78BE20] py-4">{price}</h3> */}
       <h3 className="font-medium text-[32px] text-white">{title}</h3>
       <ul className="text-white text-[24px] py-4 w-[70%] list-disc">
         {bullets.map((val, index) => (
