@@ -171,7 +171,11 @@ function HomeProjects() {
               {proj.ProjectName}
             </h2>
             <p className="text-mobile-body mb-8">{proj.Text}</p>
-            <img src={proj.MobileImg} className="w-[280px]" alt={`3D model of ${proj.ProjectName}`}/>
+            <img
+              src={proj.MobileImg}
+              className="w-[280px]"
+              alt={`3D model of ${proj.ProjectName}`}
+            />
             <div className="mt-8 mb-12 flex justify-center items-center">
               <Link
                 to={proj.href}
