@@ -10,6 +10,8 @@ function SubteamBox({
   bg,
   overlayId,
   setOverlayId,
+  
+
 }) {
   return (
     <div className="w-[300px] mb-4 lg:w-[312px] bg-[#2E1B0F] rounded-[46px] flex flex-col items-center py-[10px] text-white h-full">
@@ -24,12 +26,18 @@ function SubteamBox({
       <button
         onClick={() => setOverlayId(overlayId)}
         className="text-[20px] mt-8 my-4 p-2 px-6 font-semibold rounded-full bg-glass text-[#2E1B0F]"
+        
       >
         Learn more +
+
       </button>
+
     </div>
   )
 }
+
+
+
 
 function Recruitment() {
   useEffect(() => {
