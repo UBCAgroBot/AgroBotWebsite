@@ -25,7 +25,7 @@ function Timeline() {
   const start_day = new Date(2025, 0, 5)
   const end_day = new Date(2025, 0, 22)
 
-  console.log(start_day);
+  console.log(start_day)
   if (today > end_day || today < start_day) {
     return (
       <p className="text-[32px] font-medium pt-8">

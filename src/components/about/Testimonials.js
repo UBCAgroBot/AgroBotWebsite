@@ -78,6 +78,7 @@ function Testimonials() {
           <div className="flex space-x-4 px-4">
             {row_one.map((testimonial, index) => (
               <Card
+                key={index}
                 name={testimonial.name}
                 title={testimonial.title}
                 quote={testimonial.quote}

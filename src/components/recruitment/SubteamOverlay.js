@@ -167,7 +167,9 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
         responsibilities: [
           'Research and test a broad range of autonomous algorithms to find out what works well for Agrobot',
         ],
-        technologies: ['Python, ROS, Gazebo, Issac sim, Algorithm design, Reinforcement learning'],
+        technologies: [
+          'Python, ROS, Gazebo, Issac sim, Algorithm design, Reinforcement learning',
+        ],
         what_you_will_learn: [
           {
             bold: 'Reactive navigation: ',
@@ -175,16 +177,16 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
           },
           {
             bold: 'SLAM: ',
-            text: 'Deploy navigation algorithms that build a map of Agrobot\'s surroundings and localize Agrobot within that map',
+            text: "Deploy navigation algorithms that build a map of Agrobot's surroundings and localize Agrobot within that map",
           },
           {
             bold: 'Robot sims',
-            text: 'Learn how to debug and test navigation algorithms inside a simulator'
+            text: 'Learn how to debug and test navigation algorithms inside a simulator',
           },
           {
             bold: 'Reinforcement Learning',
-            text: 'Deploy RL models that navigate Agrobot and compare them to SLAM and reactive techniques'
-          }
+            text: 'Deploy RL models that navigate Agrobot and compare them to SLAM and reactive techniques',
+          },
         ],
       }
       break

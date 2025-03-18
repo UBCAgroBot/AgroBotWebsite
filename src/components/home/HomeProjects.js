@@ -137,7 +137,7 @@ function Project({
         </div>
       </animated.div>
       <div className="w-[47.5%] h-[50vh] bg-[#2e1b0f1f] relative top-[50vh] rounded-full items-center align-middle flex">
-        <img src={MobileImg} />
+        <img src={MobileImg} alt={`3D model of ${ProjectName}`} />
       </div>
     </div>
   )
@@ -171,7 +171,11 @@ function HomeProjects() {
               {proj.ProjectName}
             </h2>
             <p className="text-mobile-body mb-8">{proj.Text}</p>
-            <img src={proj.MobileImg} className="w-[280px]" />
+            <img
+              src={proj.MobileImg}
+              className="w-[280px]"
+              alt={`3D model of ${proj.ProjectName}`}
+            />
             <div className="mt-8 mb-12 flex justify-center items-center">
               <Link
                 to={proj.href}
