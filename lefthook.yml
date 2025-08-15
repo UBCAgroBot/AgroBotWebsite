@@ -1,0 +1,17 @@
+pre-commit:
+  parallel: true
+  commands:
+    lint:
+      glob: '*.{js,jsx,ts,tsx,vue,json,css,scss,md}'
+      run: pnpm run lint
+      stage_fixed: true
+
+    pretty:
+      glob: '*.{js,jsx,ts,tsx,vue,json,css,scss,md}'
+      run: pnpm run pretty
+      stage_fixed: true
+# pre-push:
+#   commands:
+#     lint-check:
+#       run: pnpm run lint
+#       fail_text: "Linting failed. Please fix the issues before pushing."
