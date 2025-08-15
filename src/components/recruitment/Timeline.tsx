@@ -29,8 +29,15 @@ function Timeline() {
   if (today > end_day || today < start_day) {
     return (
       <p className="text-[32px] font-medium pt-8">
-        We are not taking applications currently. If you are still interested
-        you can email us at{' '}
+        Applications for the team are now officially open! Apply using the
+        following{' '}
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfTsSp2DBLQ9jJ0jRU6AFzYBqIYsVRzayUlXa3zDIgrEtlQJQ/viewform?usp=header"
+          className="underline"
+        >
+          Google Forms Link.
+        </a>{' '}
+        Questions? Send us an email at{' '}
         <a href="mailto:ubcagrobot@gmail.com" className="underline">
           ubcagrobot@gmail.com
         </a>
