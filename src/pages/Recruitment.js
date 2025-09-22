@@ -74,22 +74,31 @@ function Recruitment() {
       'The Electrical Team ensures AgroBot’s success by carefully designing, assembling, and integrating power systems with rigorous testing and quality control.',
   }
 
+  const system_architecture = {
+    overlayId: 'system_architecture',
+    bg: '#91D0F2',
+    emoji: '🛜',
+    title: 'System Architecture',
+    description:
+      'The System Architecture sub-team integrates various components and optimizes deployment infrastructure for production, focusing on robust design and efficient communication between systems.',
+  }
+
   const extermination = {
     overlayId: 'extermination',
     bg: '#1F5200',
     emoji: '🌱',
     title: 'Extermination',
     description:
-      'The Extermination sub-team designs precision extermination mechanisms, like sprayer nozzles and the extermination arm, focusing on eco-friendly weed management and crop protection.',
+      'The Extermination sub-team tackles multidisciplinary design challenges to create precision extermination mechanisms. They focus on minimizing environmental impact while safeguarding crops from damage. The team designs mechatronic systems, implementing control algorithms based on real-time sensor data to ensure effective weed elimination. Extermination’s efforts are crucial in enabling AgroBot’s weed management capabilities, improving crop yields, and reducing labor and chemical usage.',
   }
 
   const navigation_embedded_systems = {
     overlayId: 'navigation_embedded_systems',
     bg: '#91D0F2',
     emoji: '🧭',
-    title: 'Navigation and Embedded Systems',
+    title: 'Navigation',
     description:
-      'The Navigation & Embedded Systems sub-team designs cutting-edge autonomous systems integrating sensors like LiDAR, GPS, and IMU, to guide AgroBot safely through crop fields.',
+      'The Navigation sub-team designs cutting-edge autonomous systems integrating sensors like LiDAR, GPS, and IMU, to guide AgroBot safely through crop fields.',
   }
 
   const automation = {
@@ -171,6 +180,7 @@ function Recruitment() {
         applied_ai,
         chassis_powertrain,
         electrical,
+        system_architecture,
         extermination,
         navigation_embedded_systems,
       ],

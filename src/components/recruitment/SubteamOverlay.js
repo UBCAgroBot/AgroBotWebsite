@@ -8,7 +8,6 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
     case 'applied_ai':
       content = {
         title: 'Applied AI',
-        metadata: ['Team Lead: Arman Drismir', 'Size: ~10 people'],
         description:
           "The Applied AI sub-team pioneers ML models and AI to develop innovative solutions for AgroBot's tasks, from plant identification to advanced machine vision.",
         responsibilities: [
@@ -47,7 +46,6 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
     case 'chassis_powertrain':
       content = {
         title: 'Chassis / Powertrain',
-        metadata: ['Team Lead: Arman Drismir', 'Size: ~10 people'],
         description:
           "The Chassis/Powertrain sub-team designs and manufactures AgroBot's chassis and powertrain, ensuring efficient mobility and smooth integration of components.",
         responsibilities: [
@@ -82,10 +80,48 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
         ],
       }
       break
+    case 'system_architecture':
+      content = {
+        title: 'System Architecture',
+        description:
+          "The System Architecture sub-team develops scalable infrastructure and optimized pipelines, transforming prototypes into production-grade systems with real-time performance.",
+        responsibilities: [
+          'Designing and optimizing system-wide architecture for performance and scalability',
+          'Developing GPU-accelerated pipelines and backend systems for real-time robotics applications',
+          'Building CI/CD and DevOps infrastructure for automated testing, deployment, and monitoring',
+          'Containerizing and self-hosting services for reproducible and efficient development',
+          'Implementing communication layers with ROS2 and GStreamer for seamless subsystem integration',
+        ],
+        technologies: [
+          'Python, C++, ROS2, GStreamer, CUDA, TensorRT, Docker, GitHub Actions, Prometheus',
+        ],
+        what_you_will_learn: [
+          {
+            bold: 'High-Performance Computing: ',
+            text: 'Accelerate ML models and robotics pipelines with CUDA, TensorRT, and GPU memory optimization',
+          },
+          {
+            bold: 'DevOps & Deployment: ',
+            text: 'Gain hands-on experience with CI/CD, Docker, and automated infrastructure for real-time robotics',
+          },
+          {
+            bold: 'System Integration: ',
+            text: 'Implement ROS2-based communication and GStreamer pipelines to connect subsystems seamlessly',
+          },
+          {
+            bold: 'Backend Optimization: ',
+            text: 'Streamline pipelines and improve reliability with performance-focused backend development',
+          },
+          {
+            bold: 'Scalable Infrastructure: ',
+            text: 'Design reproducible, production-grade systems that support innovation across the team',
+          },
+        ],
+      }
+      break
     case 'electrical':
       content = {
         title: 'Electrical',
-        metadata: ['Team Lead: Arman Drismir', 'Size: ~10 people'],
         description:
           'The Electrical Team ensures AgroBot’s success by carefully designing, assembling, and integrating power systems with rigorous testing and quality control.',
         responsibilities: [
@@ -125,54 +161,66 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
     case 'extermination':
       content = {
         title: 'Extermination',
-        metadata: ['Team Lead: Arman Drismir', 'Size: ~10 people'],
         description:
-          'The Extermination sub-team designs precision extermination mechanisms, like sprayer nozzles and the extermination arm, focusing on eco-friendly weed management and crop protection.',
+          'The Extermination sub-team designs, builds, and programs precision weed elimination systems that focus on eco-friendly weed management and crop protection. Our active projects include a system for the targeted deployment of herbicide and a laser weeding system based on a 2 axis gantry to burn weeds with a high powered laser. Our project is very self contained and all encompassing, thus requiring members from various engineering disciplines.',
         responsibilities: [
-          'Designing mechanical extermination system',
-          'Ascertaining pump requirements and developing pump circuits',
-          'Integrating crop detection models for accurate extermination methods',
+          'Designing mechanical, electrical, and software elements of the extermination system',
+          'Prototyping and Iterating on designs',
+          'Integrating Extermination Systems with Agrobot’s other subteams, notably the Applied AI, Mechanical, and Electrical subteams',
         ],
-        technologies: ['SolidWorks, Arduino, EasyEDA'],
+        technologies: [
+          'SolidWorks, Altium, Kicad',
+          '3D Printing, Machining, Mechanical Assembly, Sheet metal fabrication',
+          'Arduino, ESP32, Oscilloscope, Multimeter, Soldering Iron, Breadboard'
+        ],
         what_you_will_learn: [
           {
             bold: 'Mechanical Design: ',
             text: 'Master the design of precision extermination systems using SolidWorks',
           },
           {
-            bold: 'Pump Development: ',
-            text: 'Learn to ascertain pump requirements and develop pump circuits',
+            bold: 'Electrical Design: ',
+            text: 'Gain hands-on experience designing and assembling a full electronic system, designing and validating PCBs and prototyping board circuits',
+          },
+          {
+            bold: 'Software Design: ',
+            text: 'Write C/C++ code to develop firmware to create precise motion control. Work with communication protocols such as UART and I2C, and help design data flow pipelines',
+          },
+          {
+            bold: 'Team Work: ',
+            text: 'Learn to work closely and effectively with peers in a fun and engaging engineering environment',
           },
           {
             bold: 'Integration & Control: ',
-            text: 'Integrate crop detection models and implement control algorithms for accurate extermination methods',
+            text: 'Integrate data from crop detection models and implement control algorithms for accurate extermination methods',
           },
           {
-            bold: 'Environmental Impact: ',
+            bold: 'Mitigate Environmental Impact: ',
             text: 'Understand methods to minimize environmental impact while enhancing weed management',
           },
           {
-            bold: 'Technology Proficiency: ',
-            text: 'Gain experience with tools such as Arduino and EasyEDA for system development and integration',
+            bold: 'Utilize Engineering Technology: ',
+            text: 'Gain experience with tools such as Arduino and Altium or Kicad for firmware/electrical development and SolidWorks for mechanical design',
           },
         ],
+        note:
+          'Members are not required to be fluent in all technologies and fields described. Having a strong focus in one aspect of the system is useful and sought after. Members are also welcome to dabble in all aspects of the system (MECH,ELEC, & Software). ',
       }
       break
     case 'navigation_embedded_systems':
       content = {
         title: 'Navigation & Embedded Systems',
-        metadata: ['Team Lead: Arman Drismir', 'Size: ~10 people'],
         description:
           'This term Navigation needs to make Agrobot self drive. To do this we are developing reactive navigation and SLAM algorithms as well as reinforcement learning models. We are also using Gazebo and Issac sim to measure our algorithms performance.',
         responsibilities: [
           'Research and test a broad range of autonomous algorithms to find out what works well for Agrobot',
         ],
         technologies: [
-          'Python, ROS, Gazebo, Issac sim, Algorithm design, Reinforcement learning',
+          'Python, C++, ROS, Isaac Sim, Algorithmic design, Sensor Fusion, Reinforcement learning',
         ],
         what_you_will_learn: [
           {
-            bold: 'Reactive navigation: ',
+            bold: 'Reactive Navigation: ',
             text: 'Deploy algorithms that can navigate a robot without any explicit knowledge of positioning',
           },
           {
@@ -180,11 +228,11 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
             text: "Deploy navigation algorithms that build a map of Agrobot's surroundings and localize Agrobot within that map",
           },
           {
-            bold: 'Robot sims',
+            bold: 'Robot Simulations: ',
             text: 'Learn how to debug and test navigation algorithms inside a simulator',
           },
           {
-            bold: 'Reinforcement Learning',
+            bold: 'Reinforcement Learning: ',
             text: 'Deploy RL models that navigate Agrobot and compare them to SLAM and reactive techniques',
           },
         ],
@@ -193,7 +241,6 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
     case 'automation':
       content = {
         title: 'Automation',
-        metadata: ['Team Lead: Arman Drismir', 'Size: ~10 people'],
         description:
           'The Automation sub-team is responsible for researching and implementing the sensing and control systems that monitor the growing environment of hydroponic systems.',
         responsibilities: [
@@ -230,7 +277,6 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
     case 'plants':
       content = {
         title: 'Plants',
-        metadata: ['Team Lead: Arman Drismir', 'Size: ~10 people'],
         description:
           'The Plants subteam manages the logistics and design of hydroponic systems, with a strong emphasis on research. Members utilize their creativity to design experiments and develop innovative methods for growing nutritionally relevant crops without soil or sunlight.',
         responsibilities: [
@@ -262,7 +308,6 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
     case 'structure':
       content = {
         title: 'Structure',
-        metadata: ['Team Lead: Arman Drismir', 'Size: ~10 people'],
         description:
           'The Structure sub-team designs and builds optimal growing environments by renovating and equipping spaces for hydroponic systems.',
         responsibilities: [
@@ -295,7 +340,6 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
     case 'agricultural_research':
       content = {
         title: 'Agricultural Research',
-        metadata: ['Team Lead: Arman Drismir', 'Size: ~10 people'],
         description:
           'The Agricultural Research sub-team provides critical agricultural knowledge and conducts research to support the development of AgroBot, AgroPonics, and AgroPicker, ensuring our projects are informed by the latest advancements in the field.',
         responsibilities: [
@@ -332,32 +376,38 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
     case 'web_development':
       content = {
         title: 'Web Development',
-        metadata: ['Team Lead: Arman Drismir', 'Size: ~10 people'],
         description:
-          'The Web Development sub-team develops and maintains our website and internal tools to boost team productivity and ensure our online presence is engaging and up-to-date.',
+          "The Web Development sub-team builds and maintains AgroBot’s digital platforms, from the public-facing website to internal tools, dashboards, and self-hosted services.",
         responsibilities: [
-          'Designing and developing the organization’s website.',
-          'Creating internal tools to enhance team productivity.',
-          'Maintaining and updating website content to reflect current projects and initiatives.',
-          'Collaborating with other sub-teams to integrate their work into our online platform.',
+          'Revamping the main AgroBot website with modern UI/UX, frontend frameworks, and backend systems',
+          'Designing and deploying an internal documentation platform with authentication, databases, and RBAC',
+          'Developing and maintaining self-hosted infrastructure for websites, tools, and services',
+          'Building metric dashboards with Grafana and Prometheus to monitor system performance',
+          'Integrating IoT devices and compute clusters into the team’s web and data platforms',
         ],
-        technologies: ['React, GSAP, ThreeJS, JavaScript, Figma'],
+        technologies: [
+          'React, Astro, TypeScript, Figma, Docker, PostgreSQL, Supabase, Grafana, Prometheus, Raspberry Pi',
+        ],
         what_you_will_learn: [
           {
-            bold: 'Web Design: ',
-            text: 'Utilize tools like Figma and other web development frameworks to create visually appealing and functional web pages.',
+            bold: 'Full-Stack Development: ',
+            text: 'Work with modern frontend frameworks, backend systems, and databases to build scalable web platforms.',
           },
           {
-            bold: 'Tool Development: ',
-            text: 'Develop internal tools to improve team productivity and workflow.',
+            bold: 'UI/UX Design: ',
+            text: 'Use tools like Figma to design engaging, user-friendly interfaces for public and internal applications.',
           },
           {
-            bold: 'Content Management: ',
-            text: 'Update and manage website content to ensure it is current and relevant.',
+            bold: 'Self-Hosting & Infrastructure: ',
+            text: 'Deploy and maintain services using Docker and custom hosting setups for reliability and control.',
           },
           {
-            bold: 'Collaboration: ',
-            text: 'Work closely with other teams to ensure accurate and effective online representation of projects.',
+            bold: 'Platform Engineering: ',
+            text: 'Build secure documentation platforms with authentication, role-based access control, and integrated workflows.',
+          },
+          {
+            bold: 'IoT & Data Visualization: ',
+            text: 'Connect Raspberry Pis and compute clusters to monitoring stacks with Grafana and Prometheus for real-time insights.',
           },
         ],
       }
@@ -365,7 +415,6 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
     case 'finance':
       content = {
         title: 'Finance',
-        metadata: ['Team Lead: Arman Drismir', 'Size: ~10 people'],
         description:
           'The Finance sub-team manages our financial resources, ensures budgetary compliance, and secures funding to support our projects and operations.',
         responsibilities: [
@@ -402,7 +451,6 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
     case 'marketing':
       content = {
         title: 'Marketing',
-        metadata: ['Team Lead: Arman Drismir', 'Size: ~10 people'],
         description:
           'The Marketing sub-team manages UBC Agrobot’s public image and online presence, creates engaging content, and promotes our projects and initiatives to the public.',
         responsibilities: [
@@ -440,7 +488,6 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
     case 'outreach':
       content = {
         title: 'Outreach',
-        metadata: ['Team Lead: Arman Drismir', 'Size: ~10 people'],
         description:
           'The Outreach sub-team manages all of UBC Agrobot’s corporate relations with relevant organizations, whether it be for partnerships, sponsorships, or other collaborations.',
         responsibilities: [
