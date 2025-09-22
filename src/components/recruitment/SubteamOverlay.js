@@ -84,7 +84,7 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
       content = {
         title: 'System Architecture',
         description:
-          "The System Architecture sub-team develops scalable infrastructure and optimized pipelines, transforming prototypes into production-grade systems with real-time performance.",
+          'The System Architecture sub-team develops scalable infrastructure and optimized pipelines, transforming prototypes into production-grade systems with real-time performance.',
         responsibilities: [
           'Designing and optimizing system-wide architecture for performance and scalability',
           'Developing GPU-accelerated pipelines and backend systems for real-time robotics applications',
@@ -171,7 +171,7 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
         technologies: [
           'SolidWorks, Altium, Kicad',
           '3D Printing, Machining, Mechanical Assembly, Sheet metal fabrication',
-          'Arduino, ESP32, Oscilloscope, Multimeter, Soldering Iron, Breadboard'
+          'Arduino, ESP32, Oscilloscope, Multimeter, Soldering Iron, Breadboard',
         ],
         what_you_will_learn: [
           {
@@ -203,8 +203,7 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
             text: 'Gain experience with tools such as Arduino and Altium or Kicad for firmware/electrical development and SolidWorks for mechanical design',
           },
         ],
-        note:
-          'Members are not required to be fluent in all technologies and fields described. Having a strong focus in one aspect of the system is useful and sought after. Members are also welcome to dabble in all aspects of the system (MECH,ELEC, & Software). ',
+        note: 'Members are not required to be fluent in all technologies and fields described. Having a strong focus in one aspect of the system is useful and sought after. Members are also welcome to dabble in all aspects of the system (MECH,ELEC, & Software). ',
       }
       break
     case 'navigation_embedded_systems':
@@ -377,7 +376,7 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
       content = {
         title: 'Web Development',
         description:
-          "The Web Development sub-team builds and maintains AgroBot’s digital platforms, from the public-facing website to internal tools, dashboards, and self-hosted services.",
+          'The Web Development sub-team builds and maintains AgroBot’s digital platforms, from the public-facing website to internal tools, databases, and dashboards. We design self-hosted services using Docker, VMs, and Kubernetes, develop secure backend systems with Supabase, and create dashboards for observability and monitoring of systems, services, and hardware.',
         responsibilities: [
           'Revamping the main AgroBot website with modern UI/UX, frontend frameworks, and backend systems',
           'Designing and deploying an internal documentation platform with authentication, databases, and RBAC',
@@ -386,7 +385,7 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
           'Integrating IoT devices and compute clusters into the team’s web and data platforms',
         ],
         technologies: [
-          'React, Astro, TypeScript, Figma, Docker, PostgreSQL, Supabase, Grafana, Prometheus, Raspberry Pi',
+          'React, Astro, TypeScript, Figma, Docker, Kubernetes, VMs, PostgreSQL, Supabase, Grafana, Prometheus, Raspberry Pi',
         ],
         what_you_will_learn: [
           {
@@ -399,15 +398,15 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
           },
           {
             bold: 'Self-Hosting & Infrastructure: ',
-            text: 'Deploy and maintain services using Docker and custom hosting setups for reliability and control.',
+            text: 'Deploy and maintain services using Docker, VMs, and Kubernetes for reliability, scalability, and control.',
           },
           {
             bold: 'Platform Engineering: ',
             text: 'Build secure documentation platforms with authentication, role-based access control, and integrated workflows.',
           },
           {
-            bold: 'IoT & Data Visualization: ',
-            text: 'Connect Raspberry Pis and compute clusters to monitoring stacks with Grafana and Prometheus for real-time insights.',
+            bold: 'Observability & Monitoring: ',
+            text: 'Develop dashboards with Grafana and Prometheus to monitor systems, services, and hardware performance in real time.',
           },
         ],
       }
