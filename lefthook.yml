@@ -1,7 +1,4 @@
-output: false
-
 pre-commit:
-  parallel: true
   commands:
     prettier:
       run: npx prettier . --write

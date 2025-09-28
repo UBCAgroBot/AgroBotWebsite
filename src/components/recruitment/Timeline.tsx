@@ -29,7 +29,8 @@ function Timeline() {
   if (today > end_day || today < start_day) {
     return (
       <p className="text-[32px] font-medium pt-8">
-        Applications for the team are now closed, stay tuned for updates in early January!
+        Applications for the team are now closed, stay tuned for updates in
+        early January!
         <br />
         Questions? Send us an email at{' '}
         <a href="mailto:ubcagrobot@gmail.com" className="underline">
