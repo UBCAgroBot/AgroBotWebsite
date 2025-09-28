@@ -1,0 +1,11 @@
+output: false
+
+pre-commit:
+  parallel: true
+  commands:
+    prettier:
+      run: npx prettier . --write
+      stage_fixed: true
+    lint:
+      run: npx eslint . --fix
+      stage_fixed: true
