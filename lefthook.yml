@@ -4,5 +4,5 @@ pre-commit:
       run: npx prettier . --write --ignore-path .prettierignore
       stage_fixed: true
     lint:
-      run: npx eslint . --fix --ignore-path .eslintignore
+      run: npx eslint . --fix --ignore-pattern "build/**" --ignore-pattern "node_modules/**" --ignore-pattern "coverage/**" --ignore-pattern ".pnpm-store/**" --ignore-pattern "public/**"
       stage_fixed: true
