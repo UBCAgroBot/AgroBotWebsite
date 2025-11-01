@@ -3,7 +3,6 @@ import AgrobotMoving from './Agrobot-Moving.png'
 import FarmPath from './FarmPath.jpeg'
 import AgrobotModel2D from './AgrobotModel2D.jpg'
 import AgroponicModel2D from './AgroponicModel2D.png'
-import AgroArm2DModel from './Agroarm2DModel.png'
 import apsc from './apsc.png'
 import AGROBOT_ICON from './AGROBOT_ICON.png'
 import chbe from './chbe.png'
@@ -19,7 +18,6 @@ import verdi from './verdi.png'
 import agrobot from './UBC_AGROBOTS.png'
 import HomeFarm from './homeFarm.png'
 import LOGO from './UBC_AGROBOTS.png'
-
 import BP1Team from './BP1Team.webp'
 
 export {
@@ -27,8 +25,6 @@ export {
   AgrobotModel2D,
   AgrobotMoving,
   AgroponicsFarm,
-  AgroArm2DModel,
-  FarmPath,
   AgroponicModel2D,
   apsc,
   chbe,

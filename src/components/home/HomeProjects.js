@@ -1,11 +1,7 @@
 import React from 'react'
 import { useSpring, animated } from 'react-spring'
 import { useState, useEffect, useRef } from 'react'
-import {
-  AgrobotModelView,
-  AgroponicModelView,
-  AgroPickerModelView,
-} from '../models'
+import { AgrobotModelView, AgroponicModelView } from '../models'
 import { AgrobotModel2D, AgroArm2DModel, AgroponicModel2D } from '../../assets'
 import { useMediaQuery } from 'react-responsive'
 import { Link } from 'react-router-dom'
@@ -32,17 +28,6 @@ const AgroponicMod = (
   />
 )
 
-const AgropickerMod = (
-  <AgroPickerModelView
-    id={'agroPickerModelView'}
-    gsapType={'agroPickerModelGsap'}
-    scale={[3, 3, 3]}
-    cameraPosition={[2, 1, -3.5]}
-    groupPosition={[0, 0, 0]}
-    vectorPosition={[0.2, 0.8, 0]}
-  />
-)
-
 const projects = [
   {
     ProjectName: 'AgroBot',
@@ -59,14 +44,6 @@ const projects = [
     MobileImg: AgroponicModel2D,
     background: { background: '#cdff70' },
     href: '/agroponics',
-  },
-  {
-    ProjectName: 'AgroPicker',
-    Text: 'An autonomous robotic arm capable of detecting fruits, assessing their ripeness, and harvesting them efficiently. The robotic arm will be attached to a mobile robot intended for on-field navigation. This system aims to improve the efficiency and accuracy of fruit harvesting, reduce labor costs, and minimize fruit damage. ',
-    ModelComponent: AgropickerMod,
-    MobileImg: AgroArm2DModel,
-    background: { background: '#cdff70' },
-    href: '#',
   },
 ]
 
