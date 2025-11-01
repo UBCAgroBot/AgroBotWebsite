@@ -2,7 +2,7 @@ import React from 'react'
 import { useSpring, animated } from 'react-spring'
 import { useState, useEffect, useRef } from 'react'
 import { AgrobotModelView, AgroponicModelView } from '../models'
-import { AgrobotModel2D, AgroArm2DModel, AgroponicModel2D } from '../../assets'
+import { AgrobotModel2D, AgroponicModel2D } from '../../assets'
 import { useMediaQuery } from 'react-responsive'
 import { Link } from 'react-router-dom'
 
