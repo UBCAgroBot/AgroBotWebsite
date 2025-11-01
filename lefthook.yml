@@ -1,8 +1,8 @@
 pre-commit:
   commands:
     prettier:
-      run: npx prettier . --write
+      run: npx prettier . --write --ignore-path .prettierignore
       stage_fixed: true
     lint:
-      run: npx eslint . --fix
+      run: npx eslint . --fix --ignore-path .eslintignore
       stage_fixed: true
