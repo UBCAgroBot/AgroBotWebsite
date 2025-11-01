@@ -162,9 +162,9 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
       content = {
         title: 'Mechatronics',
         description:
-          'The Mechatronics sub-team designs, builds, and programs precision weed elimination systems that focus on eco-friendly weed management and crop protection. Our active projects include a system for the targeted deployment of herbicide and a laser weeding system based on a 2 axis gantry to burn weeds with a high powered laser. Our project is very self contained and all encompassing, thus requiring members from various engineering disciplines.',
+          'The Mechatronics sub-team designs, builds, and programs the AgroBot’s additional robotic capabilities to allow it to fulfill various functions. Our active projects include a system for the targeted deployment of herbicide and a laser weeding system based on a 2 axis gantry to burn weeds with a high powered laser. Our projects are very self contained and all encompassing, thus requiring members from various engineering disciplines.',
         responsibilities: [
-          'Designing mechanical, electrical, and software elements of the mechatronics system',
+          'Designing mechanical, electrical, and software elements of the mechatronic systems',
           'Prototyping and Iterating on designs',
           'Integrating Mechatronics Systems with Agrobot’s other subteams, notably the Applied AI, Mechanical, and Electrical subteams',
         ],
@@ -176,7 +176,7 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
         what_you_will_learn: [
           {
             bold: 'Mechanical Design: ',
-            text: 'Master the design of precision mechatronics systems using SolidWorks',
+            text: 'Master the design of precision electromechanical systems using SolidWorks',
           },
           {
             bold: 'Electrical Design: ',
@@ -192,7 +192,7 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
           },
           {
             bold: 'Integration & Control: ',
-            text: 'Integrate data from crop detection models and implement control algorithms for accurate extermination methods',
+            text: 'Integrate data from crop detection models and implement control algorithms for precise motion',
           },
           {
             bold: 'Mitigate Environmental Impact: ',
@@ -203,7 +203,7 @@ function SubteamOverlay({ setOverlayId, overlayId }) {
             text: 'Gain experience with tools such as Arduino and Altium or Kicad for firmware/electrical development and SolidWorks for mechanical design',
           },
         ],
-        note: 'Members are not required to be fluent in all technologies and fields described. Having a strong focus in one aspect of the system is useful and sought after. Members are also welcome to dabble in all aspects of the system (MECH,ELEC, & Software). ',
+        note: 'Members are not required to be fluent in all technologies and fields described. Having a strong focus in one aspect of the system is useful and sought after. Members are also welcome to dabble in all aspects of the system (MECH,ELEC, & Software)',
       }
       break
     case 'navigation_embedded_systems':

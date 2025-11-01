@@ -86,10 +86,10 @@ function Recruitment() {
   const mechatronics = {
     overlayId: 'mechatronics',
     bg: '#1F5200',
-    emoji: '🌱',
+    emoji: '🦾',
     title: 'Mechatronics',
     description:
-      'The Mechatronics sub-team tackles multidisciplinary design challenges to create precision mechatronics mechanisms. They focus on minimizing environmental impact while safeguarding crops from damage. The team designs mechatronic systems, implementing control algorithms based on real-time sensor data to ensure effective weed elimination. Mechatronics’s efforts are crucial in enabling AgroBot’s weed management capabilities, improving crop yields, and reducing labor and chemical usage.',
+      'The Mechatronics sub-team tackles multidisciplinary design challenges to create precision robotic capabilities. The team designs mechatronic systems, implementing control algorithms based on real-time sensor data to provide a multitude of capabilities for the Agrobot.',
   }
 
   const navigation_embedded_systems = {
