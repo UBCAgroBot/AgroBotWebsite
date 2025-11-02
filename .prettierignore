@@ -1,3 +1,5 @@
-node_modules# Ignore artifacts:
+node_modules
 build
 coverage
+.pnpm-store
+public

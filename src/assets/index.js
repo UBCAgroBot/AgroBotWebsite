@@ -1,9 +1,7 @@
 import {
   AgroponicModel2D,
-  AgroArm2DModel,
   AgrobotMoving,
   AgroponicsFarm,
-  FarmPath,
   AgrobotModel2D,
   AGROBOT_ICON,
   apsc,
@@ -28,8 +26,6 @@ export {
   AgrobotMoving,
   AgroponicsFarm,
   AgrobotModel2D,
-  FarmPath,
-  AgroArm2DModel,
   AGROBOT_ICON,
   apsc,
   chbe,

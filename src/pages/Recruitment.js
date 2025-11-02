@@ -83,13 +83,13 @@ function Recruitment() {
       'The System Architecture sub-team integrates various components and optimizes deployment infrastructure for production, focusing on robust design and efficient communication between systems.',
   }
 
-  const extermination = {
-    overlayId: 'extermination',
+  const mechatronics = {
+    overlayId: 'mechatronics',
     bg: '#1F5200',
-    emoji: '🌱',
-    title: 'Extermination',
+    emoji: '🦾',
+    title: 'Mechatronics',
     description:
-      'The Extermination sub-team tackles multidisciplinary design challenges to create precision extermination mechanisms. They focus on minimizing environmental impact while safeguarding crops from damage. The team designs mechatronic systems, implementing control algorithms based on real-time sensor data to ensure effective weed elimination. Extermination’s efforts are crucial in enabling AgroBot’s weed management capabilities, improving crop yields, and reducing labor and chemical usage.',
+      'The Mechatronics sub-team tackles multidisciplinary design challenges to create precision robotic capabilities. The team designs mechatronic systems, implementing control algorithms based on real-time sensor data to provide a multitude of capabilities for the Agrobot.',
   }
 
   const navigation_embedded_systems = {
@@ -143,7 +143,7 @@ function Recruitment() {
     emoji: '📝',
     title: 'Agricultural Research',
     description:
-      'The Agricultural Research sub-team provides critical agricultural knowledge and conducts research to support the development of AgroBot, AgroPonics, and AgroPicker, ensuring our projects are informed by the latest advancements in the field.',
+      'The Agricultural Research sub-team provides critical agricultural knowledge and conducts research to support the development of AgroBot, and Agroponics, ensuring our projects are informed by the latest advancements in the field.',
   }
 
   const finance = {
@@ -181,7 +181,7 @@ function Recruitment() {
         chassis_powertrain,
         electrical,
         system_architecture,
-        extermination,
+        mechatronics,
         navigation_embedded_systems,
       ],
     },
