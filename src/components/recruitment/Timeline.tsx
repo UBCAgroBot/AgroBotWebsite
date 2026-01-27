@@ -18,7 +18,7 @@ function Timeline() {
     }
   }, [])
 
-  let recruitment_open = true
+  let recruitment_open = false
 
   if (recruitment_open) {
     return (
@@ -42,7 +42,7 @@ function Timeline() {
     return (
       <p className="text-[32px] font-medium pt-8">
         Applications for the team are now closed, stay tuned for updates in
-        early January!
+        early May!
         <br />
         Questions? Send us an email at{' '}
         <a href="mailto:ubcagrobot@gmail.com" className="underline">
